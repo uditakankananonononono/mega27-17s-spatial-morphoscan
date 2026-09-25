@@ -1,35 +1,76 @@
-# MorphoScan (MEGA27 item 17-spatial)
+# MorphoScan — MEGA27 item 17-spatial
 
-Spatial-transcriptomics + medical-image scanning toolkit: predicts spot-level
-spatial gene expression from H&E morphology and scans breast cancer sections
-for tumor regions. Fully pre-registered (PREREG.md), all gates locked before
-results, negatives preserved.
+Pre-registered prediction of spatial gene expression from H&E morphology, plus a
+tumor-region scanner, in breast cancer — with an honest benchmark against
+published deep-learning baselines.
+
+MorphoScan asks a narrow, falsifiable question: how much spatial expression
+signal is recoverable from hematoxylin-and-eosin morphology alone, with a fully
+interpretable feature set, and where does that honest number sit relative to
+published deep-learning systems? Every gate was locked in `PREREG.md` before
+any result existed. All negatives are preserved and reported in the same voice
+as passes.
 
 ## Cohort
-Mendeley Data 29ntw7sh4r v5 - 68 sections / 23 breast cancer patients
-(LumA/LumB/HER2+/TNBC), ST-array spot counts + H&E images + tumor annotations.
-HER2+ patients: leave-one-patient-out benchmark vs published ST-Net/HisToGene.
-Non-HER2 patients: frozen external transport cohort.
 
-## Layout
-- `PREREG.md` - locked gates (Track A: G-A1..G-A5; Track B: G-B1, G-B2)
-- `src/morphoscan/` - package: metrics, features (color deconvolution, GLCM,
-  entropy), models (vectorized ridge bank, spatial smoothing), dataio, CLI
-- `scripts/` - harvest_accessions, tools_evidence(1,2), extract_features,
-  run_trackA, run_trackB, build_ledgers, make_figures
-- `tests/` - 32 unit tests (metrics + features against known values)
-- `results/` - trackA/trackB results JSON, per-gene table, accession_ledger.csv,
-  tools_ledger.csv, tools/ evidence artifacts, scanner_model.npz
-- `paper/` - Times New Roman research paper (lualatex + fontspec)
-- `figures/` - PDF figures used in the paper
+HER2-ST breast-cancer spatial transcriptomics cohort (Mendeley Data
+`29ntw7sh4r` v5, doi:10.17632/29ntw7sh4r.5): 68 sections / 23 patients, all
+files SHA-256 verified. Evaluation cohort: 10 HER2+ patients / 29 sections
+(leave-one-patient-out); 13 non-HER2 patients / 39 sections frozen for the
+cross-subtype transport test. Gene universe: 11,787-gene intersection.
+
+## Locked gates — outcomes exactly as measured
+
+| Gate | Threshold (locked) | Measured | Outcome |
+|---|---|---|---|
+| G-A1 sanity | M1 > M0, permutation p < 0.05 | M0 0.000, M1 0.014, p = 0.020 | **PASS** |
+| G-A2 method advance | M2 − M1 ≥ +0.005, Wilcoxon p < 0.05 | +0.0029, p = 3.03e-07 | **FAIL** (honest negative; M2 kept) |
+| G-A3 benchmark | match/beat ST-Net median r ≈ 0.19 | 0.014 (HisToGene-class ≈ 0.21) | **FAIL** (gap logged, not hidden) |
+| G-A4 transport | log cross-subtype degradation, no re-fishing | LumA 0.036 / LumB 0.015 / TNBC 0.008 | logged |
+| G-A5 coherence | pathway enrichment of top-25 predictable genes | antigen processing (KEGG p = 9.2e-4); GRB7/ERBB2 signaling (REAC p = 6.7e-3) | **PASS** |
+| G-B1 scanner | patient-held-out AUC ≥ 0.80 | 0.642 (LR) / 0.676 (GB) | **FAIL** (honest negative) |
+| G-B2 calibration | report Brier + sens/spec | Brier 0.189, sens 0.719, spec 0.725 | **PASS** |
+
+Track A runs 10/10 LOPO folds: median held-out per-gene Pearson M0 0.000 /
+M1 0.014 / M2 0.016 across 280 evaluated genes. The comparison to deep
+baselines is reported as measured: 41 handcrafted morphology features and a
+linear ridge bank vs a fine-tuned DenseNet-121 — the probe is linear and
+trains in seconds on a CPU; where it lands relative to those numbers is in
+the paper.
+
+## Audit gates
+
+- **Tools:** 51 certified external tools/services (evidence artifacts in
+  `results/tools/`; failed attempts logged as attempted-failed, never counted).
+- **Datasets:** 629 accession-level records (`results/accession_ledger.csv`),
+  level-of-use disclosed per row (69 analyzed-primary + 560 metadata-mined).
+- **Tests:** 32 unit tests, all passing (`pytest tests/`).
+
+## Paper
+
+21-page research paper (Times New Roman, lualatex): `paper/main.pdf` in this
+repo, and the Drive copy:
+https://drive.google.com/file/d/1U6AETHusYxMZxdN4loNa8dpNA5z-u90N/view
 
 ## CLI
-```
-python3 -m src.morphoscan.cli features --image HE.jpg --x 5200 --y 1160 --half 112
-python3 -m src.morphoscan.cli scan --image HE.jpg --coords spots.csv --model results/scanner_model.npz --out scan.csv
+
+```bash
+PYTHONPATH=src python3 -c "from morphoscan import cli; cli.main(['scan', \
+  '--image', 'HE_BT23287_C1.jpg', \
+  '--coords', 'spots_BT23287_C1.csv.gz', \
+  '--model', 'results/scanner_model.npz', \
+  '--out', '/tmp/scan.csv'])"
+# -> writes per-spot tumor probabilities (smoke-tested: 256 spots, mean p=0.164)
 ```
 
-## Honesty conventions
-- accession_ledger level_of_use: analyzed-primary / metadata-mined (disclosed)
-- tools_ledger status: certified (committed evidence artifact) vs attempted-failed
-- No benchmark claim beyond measured evidence; gaps vs published baselines logged.
+`morphoscan features --image IMG --x X --y Y` prints the 41-feature vector for
+one patch. The CLI runs on any H&E JPEG plus a spot-coordinate CSV (x/y pixel
+columns, any case).
+
+## Layout
+
+`PREREG.md` locked gates · `src/morphoscan/` package (metrics, features,
+models, dataio, cli) · `scripts/` download, harvest, evidence, extraction,
+Track A/B, ledgers, figures, paper tables · `tests/` 32 unit tests ·
+`results/` ledgers, per-gene table, scanner model, evidence artifacts ·
+`figures/` · `paper/`. Randomness seeded (20260925).
