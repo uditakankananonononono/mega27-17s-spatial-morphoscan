@@ -28,8 +28,15 @@ D = pd.concat(rows, ignore_index=True)
 X = np.stack(D["X"].values); y = D["y"].values; groups = D["patient"].values
 print(f"spots={len(y)} tumor_frac={y.mean():.2f} patients={len(set(groups))}")
 
-out = {"folds": []}
+import csv as _csv, os as _os
+PARTIAL = "results/trackB_folds_partial.csv"
+done = set()
+if _os.path.exists(PARTIAL):
+    done = {r["patient"] for r in _csv.DictReader(open(PARTIAL))}
+out = {"folds": list(_csv.DictReader(open(PARTIAL))) if _os.path.exists(PARTIAL) else []}
 for pat in sorted(set(groups)):
+    if pat in done:
+        print("skip", pat); continue
     tr = groups != pat; te = ~tr
     lr = LogisticRegression(max_iter=2000, class_weight="balanced")
     lr.fit(X[tr], y[tr])
@@ -42,9 +49,11 @@ for pat in sorted(set(groups)):
                              auc_gb=metrics.auc_mann_whitney(pg, y[te]),
                              brier_lr=metrics.brier_score(p, y[te])))
     print(pat, out["folds"][-1])
+    with open(PARTIAL, "w", newline="") as _f:
+        _w = _csv.DictWriter(_f, fieldnames=list(out["folds"][0].keys())); _w.writeheader(); _w.writerows(out["folds"])
 
-aucs = [f["auc_lr"] for f in out["folds"] if not np.isnan(f["auc_lr"])]
-aucsg = [f["auc_gb"] for f in out["folds"] if not np.isnan(f["auc_gb"])]
+aucs = [float(f["auc_lr"]) for f in out["folds"] if not (isinstance(f["auc_lr"], float) and np.isnan(float(f["auc_lr"])))]
+aucsg = [float(f["auc_gb"]) for f in out["folds"] if not (isinstance(f["auc_gb"], float) and np.isnan(float(f["auc_gb"])))]
 out["median_auc_lr"] = float(np.median(aucs)); out["median_auc_gb"] = float(np.median(aucsg))
 out["mean_auc_lr"] = float(np.mean(aucs)); out["mean_auc_gb"] = float(np.mean(aucsg))
 
