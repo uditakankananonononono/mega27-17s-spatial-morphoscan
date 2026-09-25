@@ -20,36 +20,48 @@ meta = pd.read_csv(os.path.join(DATA, "metadata.csv"))
 meta["section"] = meta["count_matrix"].str.replace("_stdata.tsv.gz", "", regex=False)
 meta["is_her2"] = meta["type"].str.startswith("HER2")
 
-raw = {}
-gene_sets = []
-for sec in meta["section"]:
-    p = os.path.join(CACHE, f"{sec}.npz")
-    if not os.path.exists(p): continue
-    z = np.load(p, allow_pickle=True)
-    X = z["X"]; ok = np.isfinite(X).all(axis=1)
-    csr = z["counts_sparse"].item()
-    genes = [str(g) for g in z["genes"]]
-    raw[sec] = dict(X=X[ok], csr=csr[ok], genes=genes, px=z["px"][ok],
-                    labels=z["labels"][ok], pitch=float(z["pitch"][0]))
-    gene_sets.append(set(genes))
-say(f"loaded {len(raw)} sections")
-universe = sorted(set.intersection(*gene_sets))
+universe = None
+upos = None
+
+def build_universe(secs):
+    gene_sets = []
+    for sec in secs:
+        z = np.load(os.path.join(CACHE, f"{sec}.npz"), allow_pickle=True)
+        gene_sets.append(set(str(g) for g in z["genes"]))
+        z.close()
+    return sorted(set.intersection(*gene_sets))
+
+def load_sections(secs):
+    """Load + normalize only the requested sections (memory-lean)."""
+    out = {}
+    for sec in secs:
+        p = os.path.join(CACHE, f"{sec}.npz")
+        if not os.path.exists(p): continue
+        z = np.load(p, allow_pickle=True)
+        X = z["X"]; ok = np.isfinite(X).all(axis=1)
+        csr = z["counts_sparse"].item()[ok]
+        genes = [str(g) for g in z["genes"]]
+        px = z["px"][ok]; labels = z["labels"][ok]; pitch = float(z["pitch"][0])
+        z.close()
+        lib = np.asarray(csr.sum(axis=1)).ravel(); lib[lib == 0] = 1.0
+        lut = np.array([upos.get(g, -1) for g in genes])
+        m = csr.tocoo(); nl = lut[m.col]; keep = nl >= 0
+        N = sparse.csr_matrix((m.data[keep].astype(np.float32), (m.row[keep], nl[keep])),
+                              shape=(m.shape[0], len(upos)), dtype=np.float32)
+        N.data *= np.repeat((1e4 / lib).astype(np.float32), np.diff(N.indptr))
+        np.log1p(N.data, out=N.data)
+        out[sec] = dict(X=X[ok], N=N, px=px, labels=labels, pitch=pitch)
+        del csr, m, N
+    import gc; gc.collect()
+    return out
+
+all_secs = [s for s in meta["section"] if os.path.exists(os.path.join(CACHE, f"{s}.npz"))]
+her2_secs = [s for s in meta[meta["is_her2"]]["section"] if s in all_secs]
+universe = build_universe(all_secs)
 upos = {g: i for i, g in enumerate(universe)}
 say(f"gene universe (intersection): {len(universe)}")
-
-def reindex(csr_m, sec_genes, upos):
-    lut = np.array([upos.get(g, -1) for g in sec_genes])
-    m = csr_m.tocoo()
-    nl = lut[m.col]
-    keep = nl >= 0
-    return sparse.csr_matrix((m.data[keep], (m.row[keep], nl[keep])),
-                             shape=(m.shape[0], len(upos)), dtype=np.float32)
-
-sections = {}
-for sec, s in raw.items():
-    N = models.library_normalize_log1p(reindex(s["csr"], s["genes"], upos))
-    sections[sec] = dict(X=s["X"], N=N, px=s["px"], labels=s["labels"], pitch=s["pitch"])
-del raw
+sections = load_sections(her2_secs)
+say(f"loaded {len(sections)} HER2+ sections")
 
 her2 = meta[meta["is_her2"]]
 patients = sorted(her2["patient"].unique())
@@ -109,7 +121,7 @@ for test_pat in patients:
         P2 = metrics.spatial_smooth(P1, W, alpha)
         P0 = np.tile(Ytr.mean(axis=0), (T.shape[0], 1))
         r1 = models.per_gene_pearson(P1, T); r2 = models.per_gene_pearson(P2, T)
-        r1_all.append(r1); r2_all.append(r2); r0_all.append(models.per_gene_pearson(P0, T))
+        r1_all.append(r1); r2_all.append(r2); r0_all.append(np.nan_to_num(models.per_gene_pearson(P0, T), nan=0.0))
         for j in range(len(top)):
             per_gene_records.append(dict(patient=test_pat, section=sec, gene=universe[top[j]],
                                          r_m1=float(r1[j]), r_m2=float(r2[j])))
@@ -123,10 +135,14 @@ for test_pat in patients:
     with open(PG, "w", newline="") as _f:
         _w = _csv.DictWriter(_f, fieldnames=list(per_gene_records[0].keys())); _w.writeheader(); _w.writerows(per_gene_records)
 
-F = pd.DataFrame(fold_rows).apply(pd.to_numeric, errors="ignore")
-G = pd.DataFrame(per_gene_records).apply(pd.to_numeric, errors="ignore")
+F = pd.DataFrame(fold_rows)
+for _c in ("n_sections", "lam", "alpha", "median_r_m0", "median_r_m1", "median_r_m2"):
+    F[_c] = pd.to_numeric(F[_c], errors="coerce")
+G = pd.DataFrame(per_gene_records)
+G["r_m1"] = pd.to_numeric(G["r_m1"], errors="coerce")
+G["r_m2"] = pd.to_numeric(G["r_m2"], errors="coerce")
 res = {"folds": fold_rows, "n_universe": len(universe),
-       "median_r_m0": float(F["median_r_m0"].median()),
+       "median_r_m0": float(F["median_r_m0"].fillna(0.0).median()),
        "median_r_m1": float(F["median_r_m1"].median()),
        "median_r_m2": float(F["median_r_m2"].median()),
        "mean_r_m1": float(F["median_r_m1"].mean()), "mean_r_m2": float(F["median_r_m2"].mean())}
@@ -169,6 +185,9 @@ sch = models.Standardizer().fit(Xh)
 lamh = models.choose_lambda_inner(sch.transform(Xh), Nh[:, toph].toarray(), gh)
 bankh = models.fit_ridge_bank(sch.transform(Xh), Nh[:, toph].toarray(), lamh)
 transport = []
+nonher2_secs = [s for s in meta[~meta["is_her2"]]["section"] if s in all_secs]
+sections = load_sections(nonher2_secs)
+say(f"loaded {len(sections)} non-HER2 sections for transport")
 for _, row in meta[~meta["is_her2"]].iterrows():
     sec = row["section"]
     if sec not in sections: continue

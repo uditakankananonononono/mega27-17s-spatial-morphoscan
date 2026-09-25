@@ -32,34 +32,55 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Models}{3}{subsection.3.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{M0: train-mean baseline.}{3}{paragraph*.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{M1: ridge probe.}{3}{paragraph*.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{M2: spatial graph smoothing (method advance).}{4}{paragraph*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{M2: spatial graph smoothing (method advance).}{3}{paragraph*.6}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{M3: nonlinear check.}{4}{paragraph*.7}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Statistics}{4}{subsection.3.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Track B: tumor-region scanner}{4}{subsection.3.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.6}External tools and services}{4}{subsection.3.6}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Benchmark table. Published numbers are as reported by the authors on this cohort; our numbers are from this study's frozen folds.}}{5}{table.1}\protected@file@percent }
-\newlabel{tab:benchmark}{{1}{5}{Benchmark table. Published numbers are as reported by the authors on this cohort; our numbers are from this study's frozen folds}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Mathematical formulation}{4}{subsection.3.7}\protected@file@percent }
+\newlabel{eq:norm}{{1}{4}{Mathematical formulation}{equation.3.1}{}}
+\newlabel{eq:ridge}{{2}{4}{Mathematical formulation}{equation.3.2}{}}
+\newlabel{eq:smooth}{{3}{5}{Mathematical formulation}{equation.3.3}{}}
+\newlabel{eq:scanner}{{4}{5}{Mathematical formulation}{equation.3.4}{}}
+\newlabel{eq:brier}{{5}{5}{Mathematical formulation}{equation.3.5}{}}
+\newlabel{eq:perm}{{6}{5}{Mathematical formulation}{equation.3.6}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Results -- Track A: morphology predicts spatial expression}{5}{section.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Pre-registered gates}{5}{subsection.4.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Held-out performance}{5}{subsection.4.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Benchmark honesty}{5}{subsection.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Transport across subtypes}{5}{subsection.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Which genes are predictable, and does it make biological sense?}{5}{subsection.4.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Per-fold (held-out patient) median per-gene Pearson correlation for M0, M1 and M2. The dashed line marks the published ST-Net median ($\approx 0.19$) on the HER2-positive subset of this cohort.}}{6}{figure.1}\protected@file@percent }
+\newlabel{fig:folds}{{1}{6}{Per-fold (held-out patient) median per-gene Pearson correlation for M0, M1 and M2. The dashed line marks the published ST-Net median ($\approx 0.19$) on the HER2-positive subset of this cohort}{figure.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Benchmark table. Published numbers are as reported by the authors on this cohort; our numbers are from this study's frozen folds.}}{6}{table.1}\protected@file@percent }
+\newlabel{tab:benchmark}{{1}{6}{Benchmark table. Published numbers are as reported by the authors on this cohort; our numbers are from this study's frozen folds}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Transport across subtypes}{6}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Which genes are predictable, and does it make biological sense?}{6}{subsection.4.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Distribution of per-gene held-out correlations (median over folds), M1 vs M2.}}{7}{figure.2}\protected@file@percent }
+\newlabel{fig:genes}{{2}{7}{Distribution of per-gene held-out correlations (median over folds), M1 vs M2}{figure.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Permutation null (gene-axis shuffles) vs the observed M1 median.}}{7}{figure.3}\protected@file@percent }
+\newlabel{fig:permutation}{{3}{7}{Permutation null (gene-axis shuffles) vs the observed M1 median}{figure.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Results -- Track B: tumor-region scanning}{7}{section.5}\protected@file@percent }
 \gdef \LT@i {\LT@entry 
     {1}{131.50148pt}\LT@entry 
     {1}{85.97733pt}\LT@entry 
     {1}{245.3125pt}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Results -- Track B: tumor-region scanning}{6}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}Tool and dataset audit}{6}{section.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Tools}{6}{subsection.6.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {2}{Certified external tools and services (evidence in \texttt  {results/tools/}).}}{6}{table.2}\protected@file@percent }
-\newlabel{tab:tools}{{2}{6}{Certified external tools and services (evidence in \texttt {results/tools/})}{table.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Datasets}{8}{subsection.6.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Dataset ledger composition.}}{8}{table.3}\protected@file@percent }
-\newlabel{tab:datasets}{{3}{8}{Dataset ledger composition}{table.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Negatives and limitations}{8}{section.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8}Discussion}{8}{section.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Per-gene M2 vs M1 correlations; the diagonal is no change.}}{8}{figure.4}\protected@file@percent }
+\newlabel{fig:scatter}{{4}{8}{Per-gene M2 vs M1 correlations; the diagonal is no change}{figure.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Tool and dataset audit}{8}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Tools}{8}{subsection.6.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{Certified external tools and services (evidence in \texttt  {results/tools/}).}}{8}{table.2}\protected@file@percent }
+\newlabel{tab:tools}{{2}{8}{Certified external tools and services (evidence in \texttt {results/tools/})}{table.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Datasets}{9}{subsection.6.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Cross-subtype transport of the HER2-trained probe (frozen) to non-HER2 cohorts.}}{10}{figure.5}\protected@file@percent }
+\newlabel{fig:transport}{{5}{10}{Cross-subtype transport of the HER2-trained probe (frozen) to non-HER2 cohorts}{figure.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Dataset ledger composition.}}{10}{table.3}\protected@file@percent }
+\newlabel{tab:datasets}{{3}{10}{Dataset ledger composition}{table.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Negatives and limitations}{10}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Discussion}{10}{section.8}\protected@file@percent }
 \bibcite{stnet}{1}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Patient-held-out AUC for the tumor scanner, logistic vs gradient boosting. The dashed line is the locked G-B1 gate.}}{11}{figure.6}\protected@file@percent }
+\newlabel{fig:scanner}{{6}{11}{Patient-held-out AUC for the tumor scanner, logistic vs gradient boosting. The dashed line is the locked G-B1 gate}{figure.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Reproducibility}{11}{section.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {10}Conclusion}{11}{section.10}\protected@file@percent }
 \bibcite{histogene}{2}
 \bibcite{stdata}{3}
 \bibcite{stprotocol}{4}
@@ -68,20 +89,53 @@
 \bibcite{moran}{7}
 \bibcite{bh}{8}
 \bibcite{bleep}{9}
-\@writefile{toc}{\contentsline {section}{\numberline {9}Reproducibility}{9}{section.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {10}Conclusion}{9}{section.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {A}Locked formulas index}{10}{appendix.A}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {B}Test inventory}{10}{appendix.B}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Per-fold (held-out patient) median per-gene Pearson correlation for M0, M1 and M2. The dashed line marks the published ST-Net median ($\approx 0.19$) on the HER2-positive subset of this cohort.}}{11}{figure.1}\protected@file@percent }
-\newlabel{fig:folds}{{1}{11}{Per-fold (held-out patient) median per-gene Pearson correlation for M0, M1 and M2. The dashed line marks the published ST-Net median ($\approx 0.19$) on the HER2-positive subset of this cohort}{figure.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Distribution of per-gene held-out correlations (median over folds), M1 vs M2.}}{12}{figure.2}\protected@file@percent }
-\newlabel{fig:genes}{{2}{12}{Distribution of per-gene held-out correlations (median over folds), M1 vs M2}{figure.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Permutation null (gene-axis shuffles) vs the observed M1 median.}}{12}{figure.3}\protected@file@percent }
-\newlabel{fig:permutation}{{3}{12}{Permutation null (gene-axis shuffles) vs the observed M1 median}{figure.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Per-gene M2 vs M1 correlations; the diagonal is no change.}}{13}{figure.4}\protected@file@percent }
-\newlabel{fig:scatter}{{4}{13}{Per-gene M2 vs M1 correlations; the diagonal is no change}{figure.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Cross-subtype transport of the HER2-trained probe (frozen) to non-HER2 cohorts.}}{13}{figure.5}\protected@file@percent }
-\newlabel{fig:transport}{{5}{13}{Cross-subtype transport of the HER2-trained probe (frozen) to non-HER2 cohorts}{figure.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Patient-held-out AUC for the tumor scanner, logistic vs gradient boosting. The dashed line is the locked G-B1 gate.}}{14}{figure.6}\protected@file@percent }
-\newlabel{fig:scanner}{{6}{14}{Patient-held-out AUC for the tumor scanner, logistic vs gradient boosting. The dashed line is the locked G-B1 gate}{figure.6}{}}
-\gdef \@abspage@last{14}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Locked formulas index}{12}{appendix.A}\protected@file@percent }
+\gdef \LT@ii {\LT@entry 
+    {3}{53.98216pt}\LT@entry 
+    {1}{47.27745pt}\LT@entry 
+    {3}{36.63754pt}\LT@entry 
+    {3}{25.68753pt}\LT@entry 
+    {1}{70.16049pt}\LT@entry 
+    {1}{70.16049pt}}
+\gdef \LT@iii {\LT@entry 
+    {3}{62.48338pt}\LT@entry 
+    {3}{72.8399pt}\LT@entry 
+    {1}{93.2475pt}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Per-fold results}{13}{appendix.B}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {C}Transport results}{13}{appendix.C}\protected@file@percent }
+\gdef \LT@iv {\LT@entry 
+    {3}{88.60732pt}\LT@entry 
+    {1}{58.81026pt}\LT@entry 
+    {3}{40.28398pt}\LT@entry 
+    {3}{50.61913pt}}
+\@writefile{toc}{\contentsline {section}{\numberline {D}Scanner coefficients}{14}{appendix.D}\protected@file@percent }
+\gdef \LT@v {\LT@entry 
+    {3}{264.94496pt}\LT@entry 
+    {1}{70.16049pt}\LT@entry 
+    {1}{70.16049pt}}
+\@writefile{toc}{\contentsline {section}{\numberline {E}Top predictable genes}{15}{appendix.E}\protected@file@percent }
+\gdef \LT@vi {\LT@entry 
+    {1}{108.73918pt}\LT@entry 
+    {1}{47.8816pt}\LT@entry 
+    {3}{89.21684pt}\LT@entry 
+    {1}{228.2411pt}}
+\gdef \LT@vii {\LT@entry 
+    {3}{53.98216pt}\LT@entry 
+    {3}{72.8399pt}\LT@entry 
+    {3}{100.20424pt}\LT@entry 
+    {1}{36.34346pt}\LT@entry 
+    {1}{64.29057pt}\LT@entry 
+    {1}{45.55042pt}}
+\@writefile{toc}{\contentsline {section}{\numberline {F}Dataset ledger composition}{18}{appendix.F}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {G}Cohort manifest}{18}{appendix.G}\protected@file@percent }
+\gdef \LT@viii {\LT@entry 
+    {3}{44.25116pt}\LT@entry 
+    {3}{305.43684pt}\LT@entry 
+    {3}{50.61913pt}\LT@entry 
+    {1}{39.36433pt}}
+\gdef \LT@ix {\LT@entry 
+    {1}{66.4346pt}\LT@entry 
+    {1}{35.11372pt}}
+\@writefile{toc}{\contentsline {section}{\numberline {H}Pathway enrichment of the top-25 predictable genes}{20}{appendix.H}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {I}Test inventory}{20}{appendix.I}\protected@file@percent }
+\gdef \@abspage@last{21}

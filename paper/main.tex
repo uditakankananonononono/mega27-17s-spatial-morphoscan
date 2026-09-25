@@ -1,7 +1,13 @@
 \documentclass[11pt]{article}
 \usepackage{fontspec}
-\setmainfont{Times New Roman}
-\usepackage{mathptmx}
+\setmainfont{Times New Roman}[
+  Path=/home/sandbox/.fonts/,
+  Extension=.TTF,
+  UprightFont=Times,
+  BoldFont=Timesbd,
+  ItalicFont=Timesi,
+  BoldItalicFont=Timesbi]
+% math fonts stay default; text is Times New Roman via fontspec
 \usepackage[a4paper,margin=2.4cm]{geometry}
 \usepackage{amsmath,amssymb,booktabs,graphicx,longtable,array,xcolor,titlesec,fancyhdr,setspace,enumitem,microtype}
 \definecolor{msnblue}{RGB}{31,78,145}
@@ -206,6 +212,54 @@ interactions (IntAct), proteomics (PRIDE), variation (EBI Proteins), data regist
 (DataCite, Figshare, Dryad, Zenodo, CELLxGENE, TCIA, EB-eye, MONARCH, UCSC Genome
 Browser) and the analysis software stack (numpy, scipy, scikit-learn, statsmodels,
 pandas, Pillow, matplotlib, seaborn, pytest).
+
+
+\subsection{Mathematical formulation}
+Each section is a matrix of raw counts $x_{sg}$ (spot $s$, gene $g$). Library
+normalization and log transform give the expression target
+\begin{equation}
+y_{sg} = \ln\!\left(1 + 10^{4}\,\frac{x_{sg}}{\sum_{g'} x_{sg'}}\right),
+\label{eq:norm}
+\end{equation}
+computed per section on the 11{,}787-gene intersection universe. Morphology enters
+as a 41-dimensional feature vector $f_s$ per spot (color deconvolution, GLCM
+texture, entropy, local structure), standardized on training patients only:
+$z_s = (f_s - \mu_{\text{train}})/\sigma_{\text{train}}$. Model M1 is a bank of
+independent ridge regressions, one per target gene,
+\begin{equation}
+\hat\beta_g = (Z^{\top} Z + \lambda I)^{-1} Z^{\top} y_{:g},
+\label{eq:ridge}
+\end{equation}
+with $\lambda$ chosen by inner leave-one-patient-out cross-validation on training
+patients only. Spatial smoothing (M2) mixes each prediction with its neighborhood
+through a row-normalized Gaussian kernel
+\begin{equation}
+W_{ij} = \frac{\exp(-d_{ij}^{2}/2\ell^{2})}{\sum_k \exp(-d_{ik}^{2}/2\ell^{2})},
+\qquad
+\hat y^{(2)} = (1-\alpha)\,\hat y^{(1)} + \alpha\, W \hat y^{(1)},
+\label{eq:smooth}
+\end{equation}
+where $d_{ij}$ is the pixel distance between spots $i$ and $j$, $\ell = 1.5\times$
+spot pitch, and $\alpha$ is selected by inner cross-validation as above. The
+tumor-region scanner is a logistic model on patch features,
+\begin{equation}
+P(\text{tumor}\mid f) = \sigma(w^{\top} f + b), \qquad \sigma(t) = \frac{1}{1+e^{-t}},
+\label{eq:scanner}
+\end{equation}
+with calibration reported by the Brier score
+\begin{equation}
+\mathrm{Brier} = \frac{1}{n}\sum_{i=1}^{n} (p_i - y_i)^2 .
+\label{eq:brier}
+\end{equation}
+All headline correlations are per-gene Pearson coefficients between predicted and
+measured expression across the spots of a held-out section, then median-pooled;
+significance for M1 uses a patient-label permutation test,
+\begin{equation}
+p_{\text{perm}} = \frac{1 + \#\{b : |r_{\text{null}}^{(b)}| \ge |r_{\text{obs}}|\}}{1 + B},
+\qquad B = 50,
+\label{eq:perm}
+\end{equation}
+and the M2--M1 comparison uses the paired Wilcoxon signed-rank test across genes.
 
 \section{Results -- Track A: morphology predicts spatial expression}
 \subsection{Pre-registered gates}
@@ -515,7 +569,23 @@ Workshop / Bioinformatics-adjacent (2023).
 \section{Top predictable genes}
 \input{topgenes_table.tex}
 
+\section{Dataset ledger composition}
+The 629-record accession ledger summarized by source, with example accessions; the
+full ledger is \texttt{results/accession\_ledger.csv}.
+\input{ledger_table.tex}
+
+\section{Cohort manifest}
+One row per analyzed section. Tumor fraction is the share of spots under the
+pathologist tumor annotation for that section.
+\input{cohort_table.tex}
+
+\section{Pathway enrichment of the top-25 predictable genes}
+g:Profiler g:GOSt (GO:BP, KEGG, Reactome) on the 25 genes with the highest
+held-out M1 correlation; full response in \texttt{results/enrichment\_top25.json}.
+\input{enrichment_table.tex}
+
 \section{Test inventory}
+\input{tests_table.tex}
 The \numTests{} unit tests pin every metric against known values (perfect/anti
 correlation, constant-input degeneracies, ridge recovery and shrinkage, kernel
 normalization, smoothing identity at $\alpha=0$, Moran's $I$ sign on clustered vs

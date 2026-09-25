@@ -8,6 +8,8 @@ B = json.load(open("results/trackB_results.json"))
 G = pd.read_csv("results/trackA_per_gene.csv")
 
 F = pd.DataFrame(A["folds"])
+for _c in ("n_sections", "lam", "alpha", "median_r_m0", "median_r_m1", "median_r_m2"):
+    F[_c] = pd.to_numeric(F[_c], errors="coerce")
 with open("paper/folds_table.tex", "w") as f:
     f.write("\\begin{longtable}{lccccc}\\toprule\nPatient & sections & $\\lambda$ & $\\alpha$ & M1 median $r$ & M2 median $r$ \\\\\n\\midrule\n\\endfirsthead\n\\toprule Patient & sections & $\\lambda$ & $\\alpha$ & M1 & M2 \\\\ \\midrule \\endhead\n")
     for _, r in F.iterrows():
@@ -18,21 +20,24 @@ T = pd.DataFrame(A["transport"])
 with open("paper/transport_table.tex", "w") as f:
     f.write("\\begin{longtable}{llc}\\toprule\nSubtype & Section & median per-gene $r$ \\\\\n\\midrule\n\\endfirsthead\n\\toprule Subtype & Section & median $r$ \\\\ \\midrule \\endhead\n")
     for _, r in T.sort_values(["subtype", "section"]).iterrows():
-        f.write(f"{r['subtype']} & {r['section']} & {r['median_r']:.3f} \\\\\n")
+        sub = r['subtype'].replace('_', chr(92)+'_'); sec = r['section'].replace('_', chr(92)+'_')
+        f.write(f"{sub} & {sec} & {r['median_r']:.3f} \\\\\n")
     f.write("\\bottomrule\n\\end{longtable}\n")
 
 coef = pd.read_csv("results/scanner_coefficients.csv")
 with open("paper/scanner_table.tex", "w") as f:
     f.write("\\begin{longtable}{lccc}\\toprule\nFeature & coefficient & $z$ & $p$ \\\\\n\\midrule\n\\endfirsthead\n\\toprule Feature & coef & $z$ & $p$ \\\\ \\midrule \\endhead\n")
-    for _, r in coef.head(20).iterrows():
-        f.write(f"{r['feature'].replace('_','\\_')} & {r['coef']:.3f} & {r['z']:.2f} & {r['p']:.2e} \\\\\n")
+    for _, r in coef.iterrows():
+        feat = r['feature'].replace('_', chr(92)+'_')
+        f.write(f"{feat} & {r['coef']:.3f} & {r['z']:.2f} & {r['p']:.2e} " + chr(92)*2 + chr(10))
     f.write("\\bottomrule\n\\end{longtable}\n")
 
 gg = G.groupby("gene")[["r_m1", "r_m2"]].median().sort_values("r_m1", ascending=False)
 with open("paper/topgenes_table.tex", "w") as f:
     f.write("\\begin{longtable}{lcc}\\toprule\nGene (Ensembl) & M1 median $r$ & M2 median $r$ \\\\\n\\midrule\n\\endfirsthead\n\\toprule Gene & M1 & M2 \\\\ \\midrule \\endhead\n")
-    for g, r in gg.head(30).iterrows():
-        f.write(f"{g} & {r['r_m1']:.3f} & {r['r_m2']:.3f} \\\\\n")
+    for g, r in gg.head(120).iterrows():
+        ge = g.replace("_", chr(92)+"_")
+        f.write(f"\\texttt{{{ge}}} & {r['r_m1']:.3f} & {r['r_m2']:.3f} " + chr(92)*2 + chr(10))
     f.write("\\bottomrule\n\\end{longtable}\n")
 
 op = B["operating_point"]
@@ -48,7 +53,7 @@ with open("paper/numbers.tex", "w") as f:
         "\\newcommand{\\numWilcoxP}{$=%s$}" % (f"{A['wilcoxon_p_m2_vs_m1']:.2e}"),
         "\\newcommand{\\numGeneMedianOne}{%.3f}" % A["median_gene_r_m1"],
         "\\newcommand{\\numGeneMedianTwo}{%.3f}" % A["median_gene_r_m2"],
-        "\\newcommand{\\numTransport}{%s}" % tr_line.replace("%", "\\%"),
+        "\\newcommand{\\numTransport}{%s}" % tr_line.replace("%", "\\%").replace("_", "\\_"),
         "\\newcommand{\\numAucLr}{%.3f}" % B["median_auc_lr"],
         "\\newcommand{\\numAucGb}{%.3f}" % B["median_auc_gb"],
         "\\newcommand{\\numSens}{%.3f}" % op["sensitivity"],
