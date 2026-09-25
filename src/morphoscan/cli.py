@@ -44,6 +44,7 @@ def main(argv=None):
         m = np.load(args.model)
         import pandas as pd
         df = pd.read_csv(args.coords)
+        df.columns = [c.strip().lower() for c in df.columns]
         X = np.stack([features.patch_vector(dataio.extract_patch(img, r.x, r.y, args.half))
                       for r in df.itertuples()])
         Z = (X - m["mu"]) / m["sd"]
