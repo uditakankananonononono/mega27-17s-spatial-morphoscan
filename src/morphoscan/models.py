@@ -6,7 +6,16 @@ from . import metrics
 
 
 def library_normalize_log1p(counts):
-    """Library-size normalize each spot to 1e4 then log1p."""
+    """Library-size normalize each spot to 1e4 then log1p. Accepts dense or scipy CSR."""
+    from scipy import sparse
+    if sparse.issparse(counts):
+        m = counts.tocsr().astype(np.float32)
+        lib = np.asarray(m.sum(axis=1)).ravel()
+        lib[lib == 0] = 1.0
+        inv = sparse.diags(1e4 / lib)
+        m = inv @ m
+        m.data = np.log1p(m.data)
+        return m
     counts = np.asarray(counts, float)
     lib = counts.sum(axis=1, keepdims=True)
     lib[lib == 0] = 1.0
@@ -14,9 +23,13 @@ def library_normalize_log1p(counts):
 
 
 def select_top_genes(normed_train, n_genes):
-    """Top-n genes by mean normalized expression on TRAIN data only."""
-    order = np.argsort(-normed_train.mean(axis=0))
-    return order[:n_genes]
+    """Top-n genes by mean normalized expression on TRAIN data only. CSR-aware."""
+    from scipy import sparse
+    if sparse.issparse(normed_train):
+        means = np.asarray(normed_train.mean(axis=0)).ravel()
+    else:
+        means = normed_train.mean(axis=0)
+    return np.argsort(-means)[:n_genes]
 
 
 class Standardizer:

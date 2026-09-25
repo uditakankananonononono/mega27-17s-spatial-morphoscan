@@ -18,12 +18,12 @@ def read_stdata(path):
 def read_spot_positions(path):
     """spots_BT*.csv.gz: pixel positions of spots in the histology image.
     Returns DataFrame with whatever columns the file carries."""
-    return pd.read_csv(path, compression="gzip")
+    return pd.read_csv(path, compression="gzip", index_col=0)
 
 
 def read_tumor_coords(path):
     """*_Coords.tsv.gz: single-line-per-spot annotation with xcoord/ycoord/lab/tumor."""
-    df = pd.read_csv(path, sep="\t", header=None,
+    df = pd.read_csv(path, sep="\t", header=None, skiprows=1, lineterminator="\r",
                      names=["spot_key", "xcoord", "ycoord", "lab", "tumor"])
     return df
 
