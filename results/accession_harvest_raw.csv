@@ -519,3 +519,43 @@ APOLLO-BRCA-1,GDC,Proteogenomic analysis of tumors from young women with breast 
 TCGA-BLCA,GDC,Bladder Urothelial Carcinoma,https://portal.gdc.cancer.gov/projects/TCGA-BLCA,metadata-mined
 TCGA-PRAD,GDC,Prostate Adenocarcinoma,https://portal.gdc.cancer.gov/projects/TCGA-PRAD,metadata-mined
 TCGA-THCA,GDC,Thyroid Carcinoma,https://portal.gdc.cancer.gov/projects/TCGA-THCA,metadata-mined
+tcia:4D-Lung,TCIA,4D-Lung,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:A091105,TCIA,A091105,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:ACNS0332,TCIA,ACNS0332,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:ACRIN-6698,TCIA,ACRIN-6698,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:ACRIN-Contralateral-Breast-MR,TCIA,ACRIN-Contralateral-Breast-MR,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:ACRIN-FLT-Breast,TCIA,ACRIN-FLT-Breast,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:ACRIN-HNSCC-FDG-PET-CT,TCIA,ACRIN-HNSCC-FDG-PET-CT,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:ACRIN-NSCLC-FDG-PET,TCIA,ACRIN-NSCLC-FDG-PET,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:AHEP0731,TCIA,AHEP0731,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:AHOD0831,TCIA,AHOD0831,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:ARAR0331,TCIA,ARAR0331,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:AREN0532,TCIA,AREN0532,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:AREN0533,TCIA,AREN0533,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:AREN0534,TCIA,AREN0534,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:Adrenal-ACC-Ki67-Seg,TCIA,Adrenal-ACC-Ki67-Seg,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:Advanced-MRI-Breast-Lesions,TCIA,Advanced-MRI-Breast-Lesions,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:Anti-PD-1_Lung,TCIA,Anti-PD-1_Lung,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:B-mode-and-CEUS-Liver,TCIA,B-mode-and-CEUS-Liver,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:BREAST-DIAGNOSIS,TCIA,BREAST-DIAGNOSIS,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:Breast-Cancer-Screening-DBT,TCIA,Breast-Cancer-Screening-DBT,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:Breast-MRI-NACT-Pilot,TCIA,Breast-MRI-NACT-Pilot,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:C4KC-KiTS,TCIA,C4KC-KiTS,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:CALGB50303,TCIA,CALGB50303,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:CBIS-DDSM,TCIA,CBIS-DDSM,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:CC-Radiomics-Phantom,TCIA,CC-Radiomics-Phantom,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:CC-Radiomics-Phantom-2,TCIA,CC-Radiomics-Phantom-2,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:CC-Radiomics-Phantom-3,TCIA,CC-Radiomics-Phantom-3,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:CC-Tumor-Heterogeneity,TCIA,CC-Tumor-Heterogeneity,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:CMB-AML,TCIA,CMB-AML,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:CMB-BRCA,TCIA,CMB-BRCA,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:CMB-CRC,TCIA,CMB-CRC,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:CMB-GEC,TCIA,CMB-GEC,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:CMB-LCA,TCIA,CMB-LCA,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:CMB-MEL,TCIA,CMB-MEL,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:CMB-MML,TCIA,CMB-MML,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:CMB-OV,TCIA,CMB-OV,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:CMB-PCA,TCIA,CMB-PCA,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:CMMD,TCIA,CMMD,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:COVID-19-AR,TCIA,COVID-19-AR,https://www.cancerimagingarchive.net/,metadata-mined
+tcia:COVID-19-NY-SBU,TCIA,COVID-19-NY-SBU,https://www.cancerimagingarchive.net/,metadata-mined

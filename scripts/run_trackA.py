@@ -125,7 +125,7 @@ for test_pat in patients:
 
 F = pd.DataFrame(fold_rows).apply(pd.to_numeric, errors="ignore")
 G = pd.DataFrame(per_gene_records).apply(pd.to_numeric, errors="ignore")
-res = {"folds": fold_rows,
+res = {"folds": fold_rows, "n_universe": len(universe),
        "median_r_m0": float(F["median_r_m0"].median()),
        "median_r_m1": float(F["median_r_m1"].median()),
        "median_r_m2": float(F["median_r_m2"].median()),

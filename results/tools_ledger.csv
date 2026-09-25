@@ -1,0 +1,62 @@
+tool,category,purpose,status,detail,records
+NCBI ESearch PubMed,literature,find spatial transcriptomics breast H&E prediction papers,certified,evidence results/tools/01_NCBI_ESearch_PubMed.json,44.0
+NCBI ESummary PubMed,literature,fetch summaries for those papers,certified,evidence results/tools/02_NCBI_ESummary_PubMed.json,2.0
+NCBI EFetch PubMed,literature,fetch ST-Net abstract text,certified,evidence results/tools/03_NCBI_EFetch_PubMed.json,
+NCBI ClinVar,variant-db,pathogenic ERBB2 variants for clinical context,certified,evidence results/tools/04_NCBI_ClinVar.json,61.0
+NCBI Gene,gene-db,ERBB2 gene record,certified,evidence results/tools/05_NCBI_Gene.json,1.0
+Ensembl REST lookup,gene-db,ERBB2 canonical transcript + location,certified,evidence results/tools/06_Ensembl_REST_lookup.json,1.0
+Ensembl REST xrefs,gene-db,external references for ERBB2,certified,evidence results/tools/07_Ensembl_REST_xrefs.json,2.0
+UniProtKB REST,protein-db,HER2 protein P04626 record,certified,evidence results/tools/08_UniProtKB_REST.json,1.0
+UniProtKB search,protein-db,reviewed human breast-cancer proteins,certified,evidence results/tools/09_UniProtKB_search.json,25.0
+MyGene.info query,gene-db,"ERBB2 annotation (pathways, GO)",certified,evidence results/tools/10_MyGene.info_query.json,1.0
+MyGene.info batch,gene-db,batch-annotate 10 key breast genes,certified,evidence results/tools/11_MyGene.info_batch.json,10.0
+Reactome,pathway-db,pathways containing ERBB2,certified,evidence results/tools/13_Reactome.json,33.0
+STRING-db,network-db,interaction network of 10 key genes,certified,evidence results/tools/14_STRING-db.json,26.0
+KEGG REST,pathway-db,breast cancer pathway hsa05224 genes,certified,evidence results/tools/15_KEGG_REST.json,
+WikiPathways,pathway-db,pathways mentioning breast cancer,certified,evidence results/tools/16_WikiPathways.json,1.0
+ChEMBL,drug-db,ERBB2 (HER2) target + lapatinib mechanisms,certified,evidence results/tools/18_ChEMBL.json,9.0
+PubChem PUG-REST,compound-db,lapatinib compound record,certified,evidence results/tools/19_PubChem_PUG-REST.json,1.0
+ClinicalTrials.gov v2,trial-db,HER2-positive breast cancer trials,certified,evidence results/tools/20_ClinicalTrials.gov_v2.json,10.0
+cBioPortal,cancer-genomics,breast cancer studies list,certified,evidence results/tools/21_cBioPortal.json,100.0
+GDC API genes,cancer-genomics,ERBB2 gene record in GDC,certified,evidence results/tools/22_GDC_API_genes.json,1.0
+TCIA NBIA,imaging-archive,breast imaging collections modality counts,attempted-failed,<HTTPError 500: ''>,
+Human Protein Atlas,protein-atlas,HER2 tissue/pathology expression,certified,evidence results/tools/24_Human_Protein_Atlas.json,1.0
+GTEx API v2,expression-atlas,ERBB2 median expression across tissues,certified,evidence results/tools/25_GTEx_API_v2.json,0.0
+RCSB PDB search,structure-db,ERBB2 crystal/cryoEM structures,certified,evidence results/tools/26_RCSB_PDB_search.json,57.0
+PDBe API,structure-db,HER2 kinase domain entry 3RCD ligands,certified,evidence results/tools/27_PDBe_API.json,1.0
+AlphaFold DB,structure-db,AlphaFold model for HER2 P04626,certified,evidence results/tools/28_AlphaFold_DB.json,6.0
+InterPro,domain-db,protein kinase domain entry IPR000719,certified,evidence results/tools/29_InterPro.json,1.0
+EBI OLS,ontology,breast carcinoma ontology terms,certified,evidence results/tools/30_EBI_OLS.json,2700.0
+GWAS Catalog,gwas-db,breast cancer GWAS associations,certified,evidence results/tools/31_GWAS_Catalog.json,1.0
+Enrichr,enrichment,enrich 10 key genes against GO Biological Process,certified,evidence results/tools/32_Enrichr.json,228.0
+Europe PMC,literature,spatial transcriptomics search + citations,certified,evidence results/tools/33_Europe_PMC.json,11971.0
+Crossref,literature,ST-Net paper metadata by DOI,attempted-failed,<HTTPError 404: 'Not Found'>,
+Semantic Scholar,literature,ST-Net paper citation graph stats,attempted-failed,<HTTPError 404: 'Not Found'>,
+bioRxiv API,literature,recent preprints mentioning spatial transcriptomics,attempted-failed,<HTTPError 404: 'Not Found'>,
+DataCite,data-registry,DOIs for spatial transcriptomics datasets,certified,evidence results/tools/37_DataCite.json,15.0
+Dryad API,data-repository,Dryad datasets on breast cancer,certified,evidence results/tools/39_Dryad_API.json,15.0
+MONARCH,phenotype-db,breast cancer disease-gene associations,certified,evidence results/tools/40_MONARCH.json,10.0
+Harmonizome,gene-db,ERBB2 integrated attribute sets,certified,evidence results/tools/41_Harmonizome.json,1.0
+UCSC Genome Browser API,genome-browser,knownGene track at ERBB2 locus chr17,certified,evidence results/tools/42_UCSC_Genome_Browser_API.json,86.0
+IntAct EBI,interaction-db,HER2 (P04626) molecular interactions,certified,evidence results/tools/43_IntAct_EBI.json,1.0
+QuickGO,ontology,GO annotations for HER2 P04626,certified,evidence results/tools/44_QuickGO.json,424.0
+PRIDE Archive,proteomics-db,breast cancer proteomics projects,certified,evidence results/tools/45_PRIDE_Archive.json,15.0
+EBI Proteins variation,protein-db,HER2 natural variants,attempted-failed,TimeoutError('The read operation timed out'),
+OpenAlex,literature,spatial transcriptomics works + open access stats,certified,evidence results/tools/47_OpenAlex.json,42245.0
+PubTator3,literature-mining,gene mentions in ST-Net paper,certified,evidence results/tools/48_PubTator3.json,1.0
+g:Profiler g:GOSt,enrichment,GO/KEGG/Reactome enrichment of 10 key breast genes,certified,evidence results/tools/60_g:Profiler_g:GOSt.json,17.0
+Open Targets GraphQL,drug-db,approved drugs targeting ERBB2,attempted-failed,<HTTPError 400: 'Bad Request'>,
+Figshare API,data-repository,figshare articles on spatial transcriptomics,certified,evidence results/tools/62_Figshare_API.json,15.0
+Enrichr enrichment,enrichment,GO BP enrichment of key genes,attempted-failed,<HTTPError 400: ''>,
+bioRxiv details API,literature,recent biorxiv submissions scanned for spatial transcriptomics,attempted-failed,JSONDecodeError('Expecting value: line 1 column 1 (char 0)'),
+OSF Preprints,literature,preprints on spatial transcriptomics,attempted-failed,<HTTPError 400: 'Bad Request'>,
+EBI EB-eye search,search-index,cross-resource search: breast cancer expression atlas entries,attempted-failed,<HTTPError 400: ''>,
+numpy,analysis-software,"all numerical arrays, kernels, linear algebra",certified,imported and used in committed pipeline code,
+scipy,analysis-software,"sparse matrices, rank statistics, Mann-Whitney/Wilcoxon",certified,imported and used in committed pipeline code,
+scikit-learn,analysis-software,"logistic regression + gradient boosting scanners, MLP check",certified,imported and used in committed pipeline code,
+statsmodels,analysis-software,scanner coefficient inference with p-values,certified,imported and used in committed pipeline code,
+pandas,analysis-software,all tabular data handling,certified,imported and used in committed pipeline code,
+Pillow,analysis-software,JPEG draft-mode decoding + patch extraction,certified,imported and used in committed pipeline code,
+matplotlib,analysis-software,all paper figures,certified,imported and used in committed pipeline code,
+seaborn,analysis-software,figure styling,certified,imported and used in committed pipeline code,
+pytest,analysis-software,test suite runner,certified,imported and used in committed pipeline code,

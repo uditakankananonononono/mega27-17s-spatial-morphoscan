@@ -14,7 +14,7 @@ from src.morphoscan import dataio, features
 DATA = "/home/sandbox/mega27-17s-spatial-morphoscan/data/her2st"
 OUT = "features_cache"
 os.makedirs(OUT, exist_ok=True)
-MAXDIM = 7000
+MAXDIM = 4500
 Image.MAX_IMAGE_PIXELS = None
 
 meta = dataio.read_metadata(os.path.join(DATA, "metadata.csv"))
@@ -39,6 +39,9 @@ for _, row in meta.iterrows():
         img = Image.open(os.path.join(DATA, row["histology_image"]))
         img.draft("RGB", (MAXDIM, MAXDIM))
         img = img.convert("RGB")
+        if max(img.size) > MAXDIM:
+            r = MAXDIM / max(img.size)
+            img = img.resize((int(img.size[0] * r), int(img.size[1] * r)), Image.LANCZOS)
         arr = np.asarray(img)
         scale = arr.shape[1] / (spots["X"].max() * 1.02)
         sx = (spots["X"].values * scale).astype(float)
@@ -64,6 +67,8 @@ for _, row in meta.iterrows():
                             genes=np.array(gene_ids), pitch=np.array([pitch]))
         log.write(f"OK {sec} spots={len(spots)} pitch={pitch:.0f} half={half} labmatch={lab_found}/{len(spots)} "
                   f"tum_frac={labels.mean():.2f} {time.time()-t0:.0f}s\n"); log.flush()
+        del img, arr, X, C
+        import gc; gc.collect()
     except Exception as e:
         log.write(f"FAIL {sec} {e!r}\n"); log.flush()
 log.write("DONE\n"); log.close()

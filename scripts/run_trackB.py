@@ -60,6 +60,22 @@ fn = int(((pred == 0) & (y == 1)).sum()); tn = int(((pred == 0) & (y == 0)).sum(
 out["operating_point"] = dict(sensitivity=tp / max(1, tp + fn), specificity=tn / max(1, tn + fp),
                               brier=metrics.brier_score(probs, y))
 
+# coefficient inference (statsmodels logistic on standardized features, all data)
+import statsmodels.api as sm
+mu0, sd0 = X.mean(0), X.std(0); sd0[sd0 == 0] = 1
+Z = (X - mu0) / sd0
+names = None
+from src.morphoscan import features as _f
+names = _f.feature_names()
+smres = sm.Logit(y, sm.add_constant(Z)).fit(disp=0, maxiter=200)
+import csv as _c
+with open("results/scanner_coefficients.csv", "w", newline="") as fh:
+    w = _c.writer(fh); w.writerow(["feature", "coef", "z", "p"])
+    order = np.argsort(-np.abs(smres.params[1:]))
+    for j in order:
+        w.writerow([names[j], float(smres.params[1:][j]), float(smres.tvalues[1:][j]), float(smres.pvalues[1:][j])])
+print("scanner coefficients written")
+
 # final scanner model on all data for the CLI
 mu, sd = X.mean(0), X.std(0); sd[sd == 0] = 1
 lr = LogisticRegression(max_iter=3000, class_weight="balanced").fit((X - mu) / sd, y)
