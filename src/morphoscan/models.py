@@ -31,12 +31,30 @@ class Standardizer:
 
 
 def fit_ridge_bank(X, Y, lam):
-    """Fit one ridge per output column. Returns (n_feat+1, n_out) beta bank."""
-    return np.stack([metrics.ridge_fit(X, Y[:, j], lam) for j in range(Y.shape[1])], axis=1)
+    """Vectorized ridge for all output columns at once (shares the Gram solve).
+    beta = (Xa^T Xa + lam P)^-1 Xa^T Y with unpenalized intercept."""
+    X = np.asarray(X, float); Y = np.asarray(Y, float)
+    n = X.shape[0]
+    Xa = np.hstack([X, np.ones((n, 1))])
+    P = np.eye(Xa.shape[1]) * lam; P[-1, -1] = 0.0
+    return np.linalg.solve(Xa.T @ Xa + P, Xa.T @ Y)
 
 
 def predict_bank(X, bank):
-    return np.stack([metrics.ridge_predict(X, bank[:, j]) for j in range(bank.shape[1])], axis=1)
+    X = np.asarray(X, float)
+    Xa = np.hstack([X, np.ones((X.shape[0], 1))])
+    return Xa @ bank
+
+
+def per_gene_pearson(P, T):
+    """Vectorized per-column Pearson between prediction and truth matrices."""
+    P = np.asarray(P, float); T = np.asarray(T, float)
+    Pc = P - P.mean(axis=0); Tc = T - T.mean(axis=0)
+    num = (Pc * Tc).sum(axis=0)
+    den = np.sqrt((Pc ** 2).sum(axis=0) * (Tc ** 2).sum(axis=0))
+    with np.errstate(invalid="ignore", divide="ignore"):
+        r = num / den
+    return r
 
 
 def choose_lambda_inner(X, Y, groups, grid=(0.1, 1.0, 10.0, 100.0)):
@@ -52,8 +70,7 @@ def choose_lambda_inner(X, Y, groups, grid=(0.1, 1.0, 10.0, 100.0)):
                 continue
             bank = fit_ridge_bank(X[tr], Y[tr], lam)
             P = predict_bank(X[te], bank)
-            r = [metrics.pearson_r(P[:, j], Y[te, j]) for j in range(Y.shape[1])]
-            rs.append(np.median(r))
+            rs.append(np.nanmedian(per_gene_pearson(P, Y[te])))
         score = np.mean(rs) if rs else -np.inf
         if score > best_score:
             best, best_score = lam, score
@@ -70,8 +87,7 @@ def choose_alpha_inner(sections_pred, sections_true, sections_coords, length_sca
             d = np.sqrt(((C[:, None, :] - C[None, :, :]) ** 2).sum(-1))
             W = metrics.gaussian_kernel_weights(d, length_scale)
             S = metrics.spatial_smooth(P, W, a)
-            r = [metrics.pearson_r(S[:, j], T[:, j]) for j in range(T.shape[1])]
-            rs.append(np.median(r))
+            rs.append(np.nanmedian(per_gene_pearson(S, T)))
         score = np.mean(rs) if rs else -np.inf
         if score > best_score:
             best, best_score = a, score

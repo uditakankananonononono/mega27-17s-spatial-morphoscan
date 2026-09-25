@@ -1,0 +1,383 @@
+ENTRY       hsa05224                    Pathway
+NAME        Breast cancer - Homo sapiens (human)
+DESCRIPTION Breast cancer is the leading cause of cancer death among women worldwide. The vast majority of breast cancers are carcinomas that originate from cells lining the milk-forming ducts of the mammary gland. The molecular subtypes of breast cancer, which are based on the presence or absence of hormone receptors (estrogen and progesterone subtypes) and human epidermal growth factor receptor-2 (HER2), include: hormone receptor positive and HER2 negative (luminal A subtype), hormone receptor positive and HER2 positive (luminal B subtype), hormone receptor negative and HER2 positive (HER2 positive), and hormone receptor negative and HER2 negative (basal-like or triple-negative breast cancers (TNBCs)). Hormone receptor positive breast cancers are largely driven by the estrogen/ER pathway. In HER2 positive breast tumours, HER2 activates the PI3K/AKT and the RAS/RAF/MAPK pathways, and stimulate cell growth, survival and differentiation. In patients suffering from TNBC, the deregulation of various signalling pathways (Notch and Wnt/beta-catenin), EGFR protein have been confirmed. In the case of breast cancer only 8% of all cancers are hereditary, a phenomenon linked to genetic changes in BRCA1 or BRCA2. Somatic mutations in only three genes (TP53, PIK3CA and GATA3) occurred at >10% incidence across all breast cancers.
+CLASS       Human Diseases; Cancer: specific types
+PATHWAY_MAP hsa05224  Breast cancer
+NETWORK     nt06210  ERK signaling (cancer)
+            nt06214  PI3K signaling (cancer)
+            nt06215  WNT signaling (cancer)
+            nt06216  NOTCH signaling (cancer)
+            nt06227  Nuclear receptor signaling (cancer)
+            nt06230  Cell cycle (cancer)
+            nt06240  Transcription (cancer)
+            nt06260  Colorectal cancer
+            nt06261  Gastric cancer
+            nt06262  Pancreatic cancer
+            nt06263  Hepatocellular carcinoma
+            nt06265  Bladder cancer
+            nt06266  Non-small cell lung cancer
+            nt06267  Small cell lung cancer
+            nt06268  Melanoma
+            nt06269  Basal cell carcinoma
+            nt06270  Breast cancer
+            nt06271  Endometrial cancer
+            nt06272  Prostate cancer
+            nt06273  Glioma
+            nt06274  Thyroid cancer
+            nt06276  Chronic myeloid leukemia
+  ELEMENT   N00020  Amplified FGFR to RAS-ERK signaling pathway
+            N00022  ERBB2-overexpression to RAS-ERK signaling pathway
+            N00034  ERBB2-overexpression to PI3K signaling pathway
+            N00038  Amplified FGFR to PI3K signaling pathway
+            N00041  EGFR-overexpression to RAS-ERK signaling pathway
+            N00042  EGFR-overexpression to PI3K signaling pathway
+            N00049  Mutation-activated PI3K to PI3K signaling pathway
+            N00050  Amplified PI3K to PI3K signaling pathway
+            N00052  Mutation-inactivated PTEN to PI3K signaling pathway
+            N00059  FZD7-overexpression to Wnt signaling pathway
+            N00060  LRP6-overexpression to Wnt signaling pathway
+            N00087  NOTCH-overexpression to Notch signaling pathway
+            N00115  Mutation-inactivated TP53 to transcription
+            N00275  Amplified CCND1 to cell cycle G1/S
+            N00287  ESR1-positive to nuclear-initiated estrogen signaling pathway
+DISEASE     H00031  Breast cancer
+DRUG        D00554  Ethinyl estradiol (USP)
+            D00951  Medroxyprogesterone acetate (JP19/USP)
+            D00966  Tamoxifen citrate (JP19/USP)
+            D00967  Toremifene citrate (JAN/USAN)
+            D01161  Fulvestrant (JAN/USP/INN)
+            D01602  Mepitiostane (JP19/INN)
+            D02714  Everolimus (JAN/USAN/INN)
+            D03257  Trastuzumab (USAN/INN)
+            D04024  Lapatinib ditosylate (USAN)
+            D05446  Pertuzumab (USAN/INN)
+            D08108  Lapatinib (INN)
+            D08950  Neratinib (USAN/INN)
+            D09980  Trastuzumab emtansine (USAN/INN)
+            D10372  Palbociclib (JAN/USAN)
+            D10446  Margetuximab (USAN/INN)
+            D10688  Abemaciclib (JAN/USAN/INN)
+            D10898  Neratinib maleate
+            D10979  Ribociclib succinate (USAN)
+            D11011  Alpelisib (JAN/USAN/INN)
+            D11141  Tucatinib (USAN/INN)
+            D11671  Elacestrant (USAN/INN)
+            D11672  Elacestrant hydrochloride (USAN)
+            D11829  Fluoroestradiol F18
+            D12217  Imlunestrant tosylate (USAN)
+            D12442  Tucatinib ethanolate (JAN)
+ORGANISM    Homo sapiens (human) [GN:hsa]
+GENE        10000  AKT3; RAC-gamma serine/threonine-protein kinase isoform 1 [KO:K04456] [EC:2.7.11.1]
+            10023  FRAT1; proto-oncogene FRAT1 [KO:K03069]
+            1019  CDK4; cyclin-dependent kinase 4 [KO:K02089] [EC:2.7.11.22]
+            1021  CDK6; cyclin-dependent kinase 6 [KO:K02091] [EC:2.7.11.22]
+            1026  CDKN1A; cyclin-dependent kinase inhibitor 1 isoform 1 [KO:K06625]
+            10297  APC2; adenomatous polyposis coli protein 2 isoform 1 [KO:K02085]
+            10683  DLL3; delta-like protein 3 isoform 1 precursor [KO:K06051]
+            10912  GADD45G; growth arrest and DNA damage-inducible protein GADD45 gamma [KO:K04402]
+            110117499  P3R3URF-PIK3R3; LOC110117498-PIK3R3 readthrough [KO:K02649]
+            11211  FZD10; frizzled-10 precursor [KO:K02842]
+            122011  CSNK1A1L; casein kinase I isoform alpha-like [KO:K08957] [EC:2.7.11.1]
+            1452  CSNK1A1; casein kinase I isoform alpha isoform 2 [KO:K08957] [EC:2.7.11.1]
+            1499  CTNNB1; catenin beta-1 isoform 1 [KO:K02105]
+            1643  DDB2; DNA damage-binding protein 2 isoform WT [KO:K10140]
+            1647  GADD45A; growth arrest and DNA damage-inducible protein GADD45 alpha isoform 1 [KO:K04402]
+            182  JAG1; protein jagged-1 precursor [KO:K06052]
+            1855  DVL1; segment polarity protein dishevelled homolog DVL-1 isoform 1 [KO:K02353]
+            1856  DVL2; segment polarity protein dishevelled homolog DVL-2 [KO:K02353]
+            1857  DVL3; segment polarity protein dishevelled homolog DVL-3 [KO:K02353]
+            1869  E2F1; transcription factor E2F1 [KO:K17454]
+            1870  E2F2; transcription factor E2F2 [KO:K09389]
+            1871  E2F3; transcription factor E2F3 isoform 1 [KO:K06620]
+            1950  EGF; pro-epidermal growth factor isoform 1 preproprotein [KO:K04357]
+            1956  EGFR; epidermal growth factor receptor isoform a precursor [KO:K04361] [EC:2.7.10.1]
+            2064  ERBB2; receptor tyrosine-protein kinase erbB-2 isoform a precursor [KO:K05083] [EC:2.7.10.1]
+            207  AKT1; RAC-alpha serine/threonine-protein kinase [KO:K04456] [EC:2.7.11.1]
+            208  AKT2; RAC-beta serine/threonine-protein kinase isoform 1 [KO:K04456] [EC:2.7.11.1]
+            2099  ESR1; estrogen receptor isoform 1 [KO:K08550]
+            2100  ESR2; estrogen receptor beta isoform 1 [KO:K08551]
+            2246  FGF1; fibroblast growth factor 1 isoform 1 precursor [KO:K18496]
+            2247  FGF2; fibroblast growth factor 2 isoform 34 kDa [KO:K18497]
+            2248  FGF3; fibroblast growth factor 3 precursor [KO:K04358]
+            2249  FGF4; fibroblast growth factor 4 precursor [KO:K04358]
+            2250  FGF5; fibroblast growth factor 5 isoform 1 precursor [KO:K04358]
+            2251  FGF6; fibroblast growth factor 6 precursor [KO:K04358]
+            2252  FGF7; fibroblast growth factor 7 precursor [KO:K04358]
+            2253  FGF8; fibroblast growth factor 8 isoform E precursor [KO:K04358]
+            2254  FGF9; fibroblast growth factor 9 precursor [KO:K04358]
+            2255  FGF10; fibroblast growth factor 10 precursor [KO:K04358]
+            2260  FGFR1; fibroblast growth factor receptor 1 isoform 1 precursor [KO:K04362] [EC:2.7.10.1]
+            2324  FLT4; vascular endothelial growth factor receptor 3 isoform 1 precursor [KO:K05097] [EC:2.7.10.1]
+            23401  FRAT2; GSK-3-binding protein FRAT2 [KO:K03096]
+            23462  HEY1; hairy/enhancer-of-split related with YRPW motif protein 1 isoform a [KO:K09091]
+            23493  HEY2; hairy/enhancer-of-split related with YRPW motif protein 2 [KO:K09091]
+            2353  FOS; protein c-Fos [KO:K04379]
+            2475  MTOR; serine/threonine-protein kinase mTOR isoform 1 [KO:K07203] [EC:2.7.11.1]
+            2535  FZD2; frizzled-2 precursor [KO:K02235]
+            25759  SHC2; SHC-transforming protein 2 isoform 1 [KO:K17447]
+            26281  FGF20; fibroblast growth factor 20 [KO:K04358]
+            26291  FGF21; fibroblast growth factor 21 precursor [KO:K22429]
+            26508  HEYL; hairy/enhancer-of-split related with YRPW motif-like protein [KO:K09091]
+            27006  FGF22; fibroblast growth factor 22 isoform 1 precursor [KO:K04358]
+            28514  DLL1; delta-like protein 1 precursor [KO:K06051]
+            2885  GRB2; growth factor receptor-bound protein 2 isoform 1 [KO:K04364]
+            2932  GSK3B; glycogen synthase kinase-3 beta isoform 2 [KO:K03083] [EC:2.7.11.26]
+            324  APC; adenomatous polyposis coli protein isoform b [KO:K02085]
+            3265  HRAS; GTPase HRas isoform 1 [KO:K02833]
+            3280  HES1; transcription factor HES-1 [KO:K06054]
+            3479  IGF1; insulin-like growth factor 1 isoform 3 preproprotein [KO:K05459]
+            3480  IGF1R; insulin-like growth factor 1 receptor isoform 1 precursor [KO:K05087] [EC:2.7.10.1]
+            369  ARAF; serine/threonine-protein kinase A-Raf isoform 1 [KO:K08845] [EC:2.7.11.1]
+            3714  JAG2; protein jagged-2 isoform a precursor [KO:K21635]
+            3725  JUN; transcription factor Jun [KO:K04448]
+            3815  KIT; mast/stem cell growth factor receptor Kit isoform 1 precursor [KO:K05091] [EC:2.7.10.1]
+            3845  KRAS; GTPase KRas isoform a [KO:K07827]
+            388585  HES5; transcription factor HES-5 [KO:K06055]
+            399694  SHC4; SHC-transforming protein 4 [KO:K17449]
+            4040  LRP6; low-density lipoprotein receptor-related protein 6 isoform b precursor [KO:K03068]
+            4041  LRP5; low-density lipoprotein receptor-related protein 5 isoform 1 precursor [KO:K03068]
+            4609  MYC; myc proto-oncogene protein isoform 1 [KO:K04377]
+            4616  GADD45B; growth arrest and DNA damage-inducible protein GADD45 beta [KO:K04402]
+            4791  NFKB2; nuclear factor NF-kappa-B p100 subunit isoform a [KO:K04469]
+            4851  NOTCH1; neurogenic locus notch homolog protein 1 preproprotein [KO:K02599]
+            4853  NOTCH2; neurogenic locus notch homolog protein 2 isoform 1 preproprotein [KO:K20994]
+            4854  NOTCH3; neurogenic locus notch homolog protein 3 precursor [KO:K20995]
+            4855  NOTCH4; neurogenic locus notch homolog protein 4 preproprotein [KO:K20996]
+            4893  NRAS; GTPase NRas [KO:K07828]
+            51176  LEF1; lymphoid enhancer-binding factor 1 isoform 1 [KO:K04492]
+            51384  WNT16; protein Wnt-16 isoform 1 precursor [KO:K01558]
+            51426  POLK; DNA polymerase kappa isoform 1 [KO:K03511] [EC:2.7.7.7]
+            5241  PGR; progesterone receptor isoform B [KO:K08556]
+            5290  PIK3CA; phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform [KO:K00922] [EC:2.7.1.153]
+            5291  PIK3CB; phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit beta isoform isoform 1 [KO:K00922] [EC:2.7.1.153]
+            5293  PIK3CD; phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit delta isoform isoform 1 [KO:K00922] [EC:2.7.1.153]
+            5295  PIK3R1; phosphatidylinositol 3-kinase regulatory subunit alpha isoform 1 [KO:K02649]
+            5296  PIK3R2; phosphatidylinositol 3-kinase regulatory subunit beta [KO:K02649]
+            53358  SHC3; SHC-transforming protein 3 [KO:K17448]
+            54361  WNT4; protein Wnt-4 precursor [KO:K00408]
+            54567  DLL4; delta-like protein 4 precursor [KO:K06051]
+            5594  MAPK1; mitogen-activated protein kinase 1 [KO:K04371] [EC:2.7.11.24]
+            5595  MAPK3; mitogen-activated protein kinase 3 isoform 1 [KO:K04371] [EC:2.7.11.24]
+            5604  MAP2K1; dual specificity mitogen-activated protein kinase kinase 1 isoform 1 [KO:K04368] [EC:2.7.12.2]
+            5605  MAP2K2; dual specificity mitogen-activated protein kinase kinase 2 isoform 1 [KO:K04369] [EC:2.7.12.2]
+            5728  PTEN; phosphatidylinositol 3,4,5-trisphosphate 3-phosphatase and dual-specificity protein phosphatase PTEN isoform PTEN [KO:K01110] [EC:3.1.3.16 3.1.3.48 3.1.3.67]
+            578  BAK1; bcl-2 homologous antagonist/killer [KO:K14021]
+            581  BAX; apoptosis regulator BAX isoform alpha [KO:K02159]
+            5894  RAF1; RAF proto-oncogene serine/threonine-protein kinase isoform b [KO:K04366] [EC:2.7.11.1]
+            5925  RB1; retinoblastoma-associated protein isoform 1 [KO:K06618]
+            595  CCND1; G1/S-specific cyclin-D1 [KO:K04503]
+            6198  RPS6KB1; ribosomal protein S6 kinase beta-1 isoform a [KO:K04688] [EC:2.7.11.1]
+            6199  RPS6KB2; ribosomal protein S6 kinase beta-2 [KO:K04688] [EC:2.7.11.1]
+            6464  SHC1; SHC-transforming protein 1 isoform 1 [KO:K06279]
+            6654  SOS1; son of sevenless homolog 1 isoform 1 [KO:K03099]
+            6655  SOS2; son of sevenless homolog 2 isoform 1 [KO:K03099]
+            6667  SP1; transcription factor Sp1 isoform a [KO:K04684]
+            672  BRCA1; breast cancer type 1 susceptibility protein isoform 1 [KO:K10605] [EC:2.3.2.27]
+            673  BRAF; serine/threonine-protein kinase B-raf isoform 1 [KO:K04365] [EC:2.7.11.1]
+            675  BRCA2; breast cancer type 2 susceptibility protein isoform 1 [KO:K08775]
+            6932  TCF7; transcription factor 7 isoform 1 [KO:K02620]
+            6934  TCF7L2; transcription factor 7-like 2 isoform 17 [KO:K04491]
+            7157  TP53; cellular tumor antigen p53 isoform a [KO:K04451]
+            7471  WNT1; proto-oncogene Wnt-1 precursor [KO:K03209]
+            7472  WNT2; protein Wnt-2 precursor [KO:K00182]
+            7473  WNT3; proto-oncogene Wnt-3 precursor [KO:K00312]
+            7474  WNT5A; protein Wnt-5a isoform 1 precursor [KO:K00444]
+            7475  WNT6; protein Wnt-6 precursor [KO:K00445]
+            7476  WNT7A; protein Wnt-7a precursor [KO:K00572]
+            7477  WNT7B; protein Wnt-7b isoform 2 precursor [KO:K00572]
+            7478  WNT8A; protein Wnt-8a isoform 3 precursor [KO:K00714]
+            7479  WNT8B; protein Wnt-8b precursor [KO:K00714]
+            7480  WNT10B; protein Wnt-10b precursor [KO:K01357]
+            7481  WNT11; protein Wnt-11 precursor [KO:K01384]
+            7482  WNT2B; protein Wnt-2b isoform WNT-2B2 [KO:K00182]
+            7483  WNT9A; protein Wnt-9a precursor [KO:K01064]
+            7484  WNT9B; protein Wnt-9b isoform 1 precursor [KO:K01064]
+            7855  FZD5; frizzled-5 precursor [KO:K02375]
+            7976  FZD3; frizzled-3 isoform 1 precursor [KO:K02329]
+            80326  WNT10A; protein Wnt-10a precursor [KO:K01357]
+            8074  FGF23; fibroblast growth factor 23 precursor [KO:K22428]
+            81029  WNT5B; protein Wnt-5b precursor [KO:K00444]
+            8202  NCOA3; nuclear receptor coactivator 3 isoform a [KO:K11256] [EC:2.3.1.48]
+            8312  AXIN1; axin-1 isoform a [KO:K02157]
+            8313  AXIN2; axin-2 isoform 1 [KO:K04385]
+            8321  FZD1; frizzled-1 [KO:K02432]
+            8322  FZD4; frizzled-4 precursor [KO:K02354]
+            8323  FZD6; frizzled-6 isoform a precursor [KO:K02376]
+            8324  FZD7; frizzled-7 precursor [KO:K02432]
+            8325  FZD8; frizzled-8 precursor [KO:K02375]
+            8326  FZD9; frizzled-9 precursor [KO:K02842]
+            83439  TCF7L1; transcription factor 7-like 1 [KO:K04490]
+            8503  PIK3R3; phosphatidylinositol 3-kinase regulatory subunit gamma isoform 1 [KO:K02649]
+            8600  TNFSF11; tumor necrosis factor ligand superfamily member 11 isoform 1 [KO:K05473]
+            8648  NCOA1; nuclear receptor coactivator 1 isoform 1 [KO:K09101] [EC:2.3.1.48]
+            8817  FGF18; fibroblast growth factor 18 precursor [KO:K04358]
+            8822  FGF17; fibroblast growth factor 17 isoform 1 precursor [KO:K04358]
+            8823  FGF16; fibroblast growth factor 16 [KO:K04358]
+            89780  WNT3A; protein Wnt-3a precursor [KO:K00312]
+            9965  FGF19; fibroblast growth factor 19 precursor [KO:K22603]
+COMPOUND    C00410  Progesterone
+            C00951  Estradiol-17beta
+            C05981  Phosphatidylinositol-3,4,5-trisphosphate
+REFERENCE   PMID:24649067
+  AUTHORS   Zhang MH, Man HT, Zhao XD, Dong N, Ma SL
+  TITLE     Estrogen receptor-positive breast cancer molecular signatures and therapeutic potentials (Review).
+  JOURNAL   Biomed Rep 2:41-52 (2014)
+            DOI:10.3892/br.2013.187
+REFERENCE   PMID:27390604
+  AUTHORS   Dai X, Xiang L, Li T, Bai Z
+  TITLE     Cancer Hallmarks, Biomarkers and Breast Cancer Molecular Subtypes.
+  JOURNAL   J Cancer 7:1281-94 (2016)
+            DOI:10.7150/jca.13141
+REFERENCE   PMID:20436504
+  AUTHORS   Schnitt SJ
+  TITLE     Classification and prognosis of invasive breast cancer: from morphology to molecular taxonomy.
+  JOURNAL   Mod Pathol 23 Suppl 2:S60-4 (2010)
+            DOI:10.1038/modpathol.2010.33
+REFERENCE   PMID:23000897
+  AUTHORS   
+  TITLE     Comprehensive molecular portraits of human breast tumours.
+  JOURNAL   Nature 490:61-70 (2012)
+            DOI:10.1038/nature11412
+REFERENCE   PMID:22178455
+  AUTHORS   Eroles P, Bosch A, Perez-Fidalgo JA, Lluch A
+  TITLE     Molecular biology in breast cancer: intrinsic subtypes and signaling pathways.
+  JOURNAL   Cancer Treat Rev 38:698-707 (2012)
+            DOI:10.1016/j.ctrv.2011.11.005
+REFERENCE   
+  AUTHORS   Karamouzis MV, Papavassiliou KA, Adamopoulos C, Papavassiliou AG.
+  TITLE     Targeting androgen/estrogen receptors crosstalk in cancer
+  JOURNAL   Trends Cancer 2:35-48 (2016)
+            DOI:10.1016/j.trecan.2015.12.001
+REFERENCE   
+  AUTHORS   Sharp A, Harper-Wynne C.
+  TITLE     Treatment of advanced breast cancer (ABC): the expanding landscape of targeted therapies
+  JOURNAL   J Cancer Biol Res 2:1036 (2014)
+REFERENCE   PMID:24596345
+  AUTHORS   Byler S, Goldgar S, Heerboth S, Leary M, Housman G, Moulton K, Sarkar S
+  TITLE     Genetic and epigenetic aspects of breast cancer progression and therapy.
+  JOURNAL   Anticancer Res 34:1071-7 (2014)
+REFERENCE   PMID:23988612
+  AUTHORS   Mohamed A, Krajewski K, Cakar B, Ma CX
+  TITLE     Targeted therapy for breast cancer.
+  JOURNAL   Am J Pathol 183:1096-112 (2013)
+            DOI:10.1016/j.ajpath.2013.07.005
+REFERENCE   PMID:22722193
+  AUTHORS   Ellis MJ, Ding L, Shen D, Luo J, Suman VJ, Wallis JW, Van Tine BA, Hoog J, Goiffon RJ, Goldstein TC, Ng S, Lin L, Crowder R, Snider J, Ballman K, Weber J, Chen K, Koboldt DC, Kandoth C, Schierding WS, McMichael JF, Miller CA, Lu C, Harris CC, McLellan MD, Wendl MC, DeSchryver K, Allred DC, Esserman L, Unzeitig G, Margenthaler J, Babiera GV, Marcom PK, Guenther JM, Leitch M, Hunt K, Olson J, Tao Y, Maher CA, Fulton LL, Fulton RS, Harrison M, Oberkfell B, Du F, Demeter R, Vickery TL, Elhammali A, Piwnica-Worms H, McDonald S, Watson M, Dooling DJ, Ota D, Chang LW, Bose R, Ley TJ, Piwnica-Worms D, Stuart JM, Wilson RK, Mardis ER
+  TITLE     Whole-genome analysis informs breast cancer response to aromatase inhibition.
+  JOURNAL   Nature 486:353-60 (2012)
+            DOI:10.1038/nature11143
+REFERENCE   PMID:25907219
+  AUTHORS   Ma CX, Reinert T, Chmielewska I, Ellis MJ
+  TITLE     Mechanisms of aromatase inhibitor resistance.
+  JOURNAL   Nat Rev Cancer 15:261-75 (2015)
+            DOI:10.1038/nrc3920
+REFERENCE   PMID:16113099
+  AUTHORS   Butt AJ, McNeil CM, Musgrove EA, Sutherland RL
+  TITLE     Downstream targets of growth factor and oestrogen signalling and endocrine resistance: the potential roles of c-Myc, cyclin D1 and cyclin E.
+  JOURNAL   Endocr Relat Cancer 12 Suppl 1:S47-59 (2005)
+            DOI:10.1677/erc.1.00993
+REFERENCE   PMID:24111892
+  AUTHORS   Dasgupta S, Lonard DM, O'Malley BW
+  TITLE     Nuclear receptor coactivators: master regulators of human health and disease.
+  JOURNAL   Annu Rev Med 65:279-92 (2014)
+            DOI:10.1146/annurev-med-051812-145316
+REFERENCE   PMID:23702927
+  AUTHORS   Brisken C
+  TITLE     Progesterone signalling in breast cancer: a neglected hormone coming into the limelight.
+  JOURNAL   Nat Rev Cancer 13:385-96 (2013)
+            DOI:10.1038/nrc3518
+REFERENCE   PMID:20087430
+  AUTHORS   Scarpin KM, Graham JD, Mote PA, Clarke CL
+  TITLE     Progesterone action in human tissues: regulation by progesterone receptor (PR) isoform expression, nuclear positioning and coregulator expression.
+  JOURNAL   Nucl Recept Signal 7:e009 (2009)
+            DOI:10.1621/nrs.07009
+REFERENCE   PMID:24291072
+  AUTHORS   Knutson TP, Lange CA
+  TITLE     Tracking progesterone receptor-mediated actions in breast cancer.
+  JOURNAL   Pharmacol Ther 142:114-25 (2014)
+            DOI:10.1016/j.pharmthera.2013.11.010
+REFERENCE   PMID:25544707
+  AUTHORS   Dittrich A, Gautrey H, Browell D, Tyson-Capper A
+  TITLE     The HER2 Signaling Network in Breast Cancer--Like a Spider in its Web.
+  JOURNAL   J Mammary Gland Biol Neoplasia 19:253-70 (2014)
+            DOI:10.1007/s10911-014-9329-5
+REFERENCE   PMID:21965336
+  AUTHORS   Higgins MJ, Baselga J
+  TITLE     Targeted therapies for breast cancer.
+  JOURNAL   J Clin Invest 121:3797-803 (2011)
+            DOI:10.1172/JCI57152
+REFERENCE   PMID:26028978
+  AUTHORS   Mukohara T
+  TITLE     PI3K mutations in breast cancer: prognostic and therapeutic implications.
+  JOURNAL   Breast Cancer (Dove Med Press) 7:111-23 (2015)
+            DOI:10.2147/BCTT.S60696
+REFERENCE   PMID:19088017
+  AUTHORS   Schneider BP, Winer EP, Foulkes WD, Garber J, Perou CM, Richardson A, Sledge GW, Carey LA
+  TITLE     Triple-negative breast cancer: risk factors to potential targets.
+  JOURNAL   Clin Cancer Res 14:8010-8 (2008)
+            DOI:10.1158/1078-0432.CCR-08-1208
+REFERENCE   PMID:21898546
+  AUTHORS   King TD, Suto MJ, Li Y
+  TITLE     The Wnt/beta-catenin signaling pathway: a potential therapeutic target in the treatment of triple negative breast cancer.
+  JOURNAL   J Cell Biochem 113:13-8 (2012)
+            DOI:10.1002/jcb.23350
+REFERENCE   PMID:11737884
+  AUTHORS   Brown AM
+  TITLE     Wnt signaling in breast cancer: have we come full circle?
+  JOURNAL   Breast Cancer Res 3:351-5 (2001)
+            DOI:10.1186/bcr321
+REFERENCE   PMID:21076461
+  AUTHORS   Geyer FC, Lacroix-Triki M, Savage K, Arnedos M, Lambros MB, MacKay A, Natrajan R, Reis-Filho JS
+  TITLE     beta-Catenin pathway activation in breast cancer is associated with triple-negative phenotype but not with CTNNB1 mutation.
+  JOURNAL   Mod Pathol 24:209-31 (2011)
+            DOI:10.1038/modpathol.2010.205
+REFERENCE   PMID:20971825
+  AUTHORS   Al-Hussaini H, Subramanyam D, Reedijk M, Sridhar SS
+  TITLE     Notch signaling pathway as a therapeutic target in breast cancer.
+  JOURNAL   Mol Cancer Ther 10:9-15 (2011)
+            DOI:10.1158/1535-7163.MCT-10-0677
+REFERENCE   PMID:26968398
+  AUTHORS   Rangel MC, Bertolette D, Castro NP, Klauzinska M, Cuttitta F, Salomon DS
+  TITLE     Developmental signaling pathways regulating mammary stem cells and contributing to the etiology of triple-negative breast cancer.
+  JOURNAL   Breast Cancer Res Treat 156:211-26 (2016)
+            DOI:10.1007/s10549-016-3746-7
+REFERENCE   PMID:26040571
+  AUTHORS   Jamdade VS, Sethi N, Mundhe NA, Kumar P, Lahkar M, Sinha N
+  TITLE     Therapeutic targets of triple-negative breast cancer: a review.
+  JOURNAL   Br J Pharmacol 172:4228-37 (2015)
+            DOI:10.1111/bph.13211
+REFERENCE   PMID:23196196
+  AUTHORS   Karamboulas C, Ailles L
+  TITLE     Developmental signaling pathways in cancer stem cells of solid tumors.
+  JOURNAL   Biochim Biophys Acta 1830:2481-95 (2013)
+            DOI:10.1016/j.bbagen.2012.11.008
+REFERENCE   PMID:23881035
+  AUTHORS   Ignatiadis M, Sotiriou C
+  TITLE     Luminal breast cancer: from biology to treatment.
+  JOURNAL   Nat Rev Clin Oncol 10:494-506 (2013)
+            DOI:10.1038/nrclinonc.2013.124
+REFERENCE   PMID:25013431
+  AUTHORS   Shin SJ, Gong G, Lee HJ, Kang J, Bae YK, Lee A, Cho EY, Lee JS, Suh KS, Lee DW, Jung WH
+  TITLE     Positive expression of insulin-like growth factor-1 receptor is associated with a positive hormone receptor status and a favorable prognosis in breast cancer.
+  JOURNAL   J Breast Cancer 17:113-20 (2014)
+            DOI:10.4048/jbc.2014.17.2.113
+REFERENCE   PMID:11879567
+  AUTHORS   Gasco M, Shami S, Crook T
+  TITLE     The p53 pathway in breast cancer.
+  JOURNAL   Breast Cancer Res 4:70-6 (2002)
+            DOI:10.1186/bcr426
+REFERENCE   PMID:15343273
+  AUTHORS   Narod SA, Foulkes WD
+  TITLE     BRCA1 and BRCA2: 1994 and beyond.
+  JOURNAL   Nat Rev Cancer 4:665-76 (2004)
+            DOI:10.1038/nrc1431
+REL_PATHWAY hsa03440  Homologous recombination
+            hsa04010  MAPK signaling pathway
+            hsa04110  Cell cycle
+            hsa04115  p53 signaling pathway
+            hsa04151  PI3K-Akt signaling pathway
+            hsa04310  Wnt signaling pathway
+            hsa04330  Notch signaling pathway
+            hsa04915  Estrogen signaling pathway
+KO_PATHWAY  ko05224
+///

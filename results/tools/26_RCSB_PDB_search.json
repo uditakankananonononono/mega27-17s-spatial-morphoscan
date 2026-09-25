@@ -1,0 +1,36 @@
+{
+  "query_id" : "53e19220-3f7f-4dea-9aca-7751b681d8f7",
+  "result_type" : "entry",
+  "total_count" : 57,
+  "result_set" : [ {
+    "identifier" : "1IIJ",
+    "score" : 1.0
+  }, {
+    "identifier" : "1MFG",
+    "score" : 1.0
+  }, {
+    "identifier" : "1MFL",
+    "score" : 1.0
+  }, {
+    "identifier" : "1MW4",
+    "score" : 1.0
+  }, {
+    "identifier" : "1QR1",
+    "score" : 1.0
+  }, {
+    "identifier" : "1S78",
+    "score" : 1.0
+  }, {
+    "identifier" : "2A91",
+    "score" : 1.0
+  }, {
+    "identifier" : "2JWA",
+    "score" : 1.0
+  }, {
+    "identifier" : "2KS1",
+    "score" : 1.0
+  }, {
+    "identifier" : "2N2A",
+    "score" : 1.0
+  } ]
+}

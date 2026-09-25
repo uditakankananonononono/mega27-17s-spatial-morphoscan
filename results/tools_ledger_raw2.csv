@@ -1,0 +1,8 @@
+tool,category,purpose,status,detail,records
+g:Profiler g:GOSt,enrichment,GO/KEGG/Reactome enrichment of 10 key breast genes,certified,evidence results/tools/60_g:Profiler_g:GOSt.json,17
+Open Targets GraphQL,drug-db,approved drugs targeting ERBB2,attempted-failed,<HTTPError 400: 'Bad Request'>,
+Figshare API,data-repository,figshare articles on spatial transcriptomics,certified,evidence results/tools/62_Figshare_API.json,15
+Enrichr enrichment,enrichment,GO BP enrichment of key genes,attempted-failed,<HTTPError 400: ''>,
+bioRxiv details API,literature,recent biorxiv submissions scanned for spatial transcriptomics,attempted-failed,JSONDecodeError('Expecting value: line 1 column 1 (char 0)'),
+OSF Preprints,literature,preprints on spatial transcriptomics,attempted-failed,<HTTPError 400: 'Bad Request'>,
+EBI EB-eye search,search-index,cross-resource search: breast cancer expression atlas entries,attempted-failed,<HTTPError 400: ''>,

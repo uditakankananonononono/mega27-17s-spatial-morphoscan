@@ -1,0 +1,521 @@
+accession,source,title,url,level_of_use
+GSE344506,GEO-GSE,Spatial Transcriptomics to Investigate the Impact of HIV/ART on DLBCL Tumorigenesis and Tumor Microenvironment,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE344506,metadata-mined
+GSE348445,GEO-GSE,Identification and Characterization of Adrenergic and Mesenchymal Cancer Cell States in Neuroblastoma Using Spatial-Omics [RNA-Seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE348445,metadata-mined
+GSE337859,GEO-GSE,Exploratory Single-nucleus Multiomics of Myeloid Cell States Associated with Neoadjuvant Chemotherapy Response in Human Pancreatic Ductal Adenocarcinoma,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE337859,metadata-mined
+GSE335777,GEO-GSE,Resident tissue macrophages transfer selenium transporter protein to protect pancreatic cancer from ferroptosis,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE335777,metadata-mined
+GSE313919,GEO-GSE,Complex Human Hair Bearing Skin Organoids Reveal Cell-Type Specific Susceptibility and Innate Immune Responses to Herpes Simplex Virus 1,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE313919,metadata-mined
+GSE313471,GEO-GSE,Identification of a long-term surviving human mesenchymal stromal cell subpopulation upon intradermal injection in immunodeficient mice,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE313471,metadata-mined
+GSE297947,GEO-GSE,IL-33/IL1RL1 (ST2) signalling drives immune suppression in HPV-mediated epithelial hyperplasia,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE297947,metadata-mined
+GSE338671,GEO-GSE,A Novel Heterozygous STAT5B Loss-of-Function Variant Associated with Interleukin-17A-Responsive Systemic Juvenile Idiopathic Arthritis-like Disease,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE338671,metadata-mined
+GSE327879,GEO-GSE,Single-cell spatial transcriptomic analyses of severe Covid-19 lungs identifies  disease-associated spatial niches,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE327879,metadata-mined
+GSE335533,GEO-GSE,Epigenetic reprogramming of CD4⁺ T cell fate by maternal and early-life obesity impairs vaccine responses in the offspring [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE335533,metadata-mined
+GSE347584,GEO-GSE,Spatial transcriptomic analysis of progressing oral epithelial dysplasia reveals unique differentially expressed genes and microenvironmental changes,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE347584,metadata-mined
+GSE343862,GEO-GSE,Zonated Cholesterol Sensing by SIRT2 Drives MASLD-HCC [Spatial transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE343862,metadata-mined
+GSE322724,GEO-GSE,Distinct hepatic transcriptome changes point to impaired metabolic liver zonation and mitochondrial dysfunction in acute-on-chronic liver failure,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE322724,metadata-mined
+GSE316346,GEO-GSE,TGFβ1 and Oncostatin M promotes the organization of two distinct stromal niches controlling different EMT states [Xenium],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE316346,metadata-mined
+GSE315416,GEO-GSE,A High-Resolution Stereo-seq Spatial Transcriptomic Dataset of the Bovine Liver ,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE315416,metadata-mined
+GSE318039,GEO-GSE,Spatial Transcriptomics Reveals Compartment-Specific Cytotoxic T cells Crosstalk with AT2 and Goblet cells in Advanced COPD,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE318039,metadata-mined
+GSE311853,GEO-GSE,A spatiotemporal immune atlas of subarachnoid hemorrhage from single-cell and spatial transcriptomics [ST],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE311853,metadata-mined
+GSE311852,GEO-GSE,A spatiotemporal immune atlas of subarachnoid hemorrhage from single-cell and spatial transcriptomics [scRNA-Seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE311852,metadata-mined
+GSE341918,GEO-GSE,Dual host-pathogen screening of the lung during severe influenza using spatial transcriptomics ,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE341918,metadata-mined
+GSE341382,GEO-GSE,Spatial transcriptomics of mouse lung after tumor induction.,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE341382,metadata-mined
+GSE336853,GEO-GSE,New taxonomy based on individual patient-reported response trajectories defines ulcerative colitis endotypes and reveals vascular inflammation as a mechanism for vedolizumab nonresponse.,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE336853,metadata-mined
+GSE318204,GEO-GSE,Spatial Transcriptomics Reveals that a Novel Microporous [nCounter],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE318204,metadata-mined
+GSE313828,GEO-GSE,Spatial transcriptomics of MRGPRX4-driven melanoma,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE313828,metadata-mined
+GSE311636,GEO-GSE,New taxonomy based on individual patient-reported response trajectories defines ulcerative colitis endotypes and reveals vascular inflammation as a mechanism for vedolizumab nonresponse [cosMx],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE311636,metadata-mined
+GSE311585,GEO-GSE,New taxonomy based on individual patient-reported response trajectories defines ulcerative colitis endotypes and reveals vascular inflammation as a mechanism for vedolizumab nonresponse [CITE-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE311585,metadata-mined
+GSE346572,GEO-GSE,Type-I IFNs in EAE drive synaptic transcriptional responses in neurons and astrocytes in the brain,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE346572,metadata-mined
+GSE338350,GEO-GSE,Nuclear Prohibitin 1 Protects Against Alcohol-Associated Liver Injury and Sensitization to Colon Cancer Liver Metastasis [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE338350,metadata-mined
+GSE346722,GEO-GSE,Spatial compartmentalization shapes distinct germinal center states during respiratory viral infection,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE346722,metadata-mined
+GSE314335,GEO-GSE,Norway spruce spatiotemporal programs of conifer reproductive development,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE314335,metadata-mined
+GSE288244,GEO-GSE,Norway spruce spatiotemporal programs of conifer reproductive development,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE288244,metadata-mined
+GSE320565,GEO-GSE,Genetic and pharmacologic disruption of N-Myc suppresses basal cell carcinoma [RNA-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE320565,metadata-mined
+GSE320484,GEO-GSE,Genetic and pharmacologic disruption of N-Myc suppresses basal cell carcinoma,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE320484,metadata-mined
+GSE316789,GEO-GSE,A long-read-compatible spatial barcoding system: enables isoform-resolved spatial heterogeneity at near-single-cell scale.,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE316789,metadata-mined
+GSE325138,GEO-GSE,Inhibiting Wnt/β-catenin-mTOR Signaling Enhances Porphyrin Clearance in Murine Porphyrias with Hepatic Involvement,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE325138,metadata-mined
+GSE328244,GEO-GSE,COL1A1-Enhanced CD44/SLC7A11 Interaction and Cystine Uptake Result in CD34+ Foam-Like Macrophage Accumulation in Transplant Arteriosclerosis-Spatial Transcriptomic dataset,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE328244,metadata-mined
+GSE328159,GEO-GSE,COL1A1-Enhanced CD44/SLC7A11 Interaction and Cystine Uptake Result in CD34+ Foam-Like Macrophage Accumulation in Transplant Arteriosclerosis,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE328159,metadata-mined
+GSE333529,GEO-GSE,A skin–kidney neutrophil axis links UV exposure to renal angiogenesis and tissue remodeling in healthy and lupus kidneys. [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE333529,metadata-mined
+GSE326903,GEO-GSE,Polarized neocortical organoids with areal signatures upon the formation of anterior and posterior organizers. [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE326903,metadata-mined
+GSE324193,GEO-GSE,Hepatic and Brain Spatial Gene Expression Changes in Intragastric Alcohol Fed APP/PS1 Alzheimer's Disease Mouse Model,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE324193,metadata-mined
+GSE346149,GEO-GSE,Distinct IL‑17A and retinoic acid–associated gene programs are enriched in epithelialized tunnels in severe hidradenitis suppurativa [RNA-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE346149,metadata-mined
+GSE346090,GEO-GSE,Distinct IL‑17A and retinoic acid–associated gene programs are enriched in epithelialized tunnels in severe hidradenitis suppurativa.,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE346090,metadata-mined
+GSE307910,GEO-GSE,Nuclear envelope rupture in cardiomyocytes orchestrates early transcriptomic changes and immune activation in LMNA-DCM that are reversed by LINC complex disruption,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE307910,metadata-mined
+GSE305258,GEO-GSE,Spatial Transcriptomics of Primary and Metastatic ALK-Rearranged NSCLC Reveals Site-Specific Adaptations and Prognostic Signatures Authors,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE305258,metadata-mined
+GSE334433,GEO-GSE,Tissue composition shapes differential skeletal integration strategies during axolotl limb regeneration [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE334433,metadata-mined
+GSE346081,GEO-GSE,A single-nucleus and spatial transcriptomic atlas of the Syrian hamster preoptic area across hibernation states II,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE346081,metadata-mined
+GSE345646,GEO-GSE,Human Adult and Pediatric Multimodal Transcriptomic Atlas of Progression from Pressure-Loaded to Failing Right Ventricle [adult RV single-nucleus RNA-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE345646,metadata-mined
+GSE345643,GEO-GSE,Human Adult and Pediatric Multimodal Transcriptomic Atlas of Progression from Pressure-Loaded to Failing Right Ventricle [Xenium spatial transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE345643,metadata-mined
+GSE330953,GEO-GSE,A necroptotic-to-apoptotic signaling axis underlies inflammatory bowel disease,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE330953,metadata-mined
+GSE345405,GEO-GSE,A single-nucleus and spatial transcriptomic atlas of the Syrian hamster preoptic area across hibernation states [snRNA-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE345405,metadata-mined
+GSE345359,GEO-GSE,A single-nucleus and spatial transcriptomic atlas of the Syrian hamster preoptic area across hibernation states,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE345359,metadata-mined
+GSE326553,GEO-GSE,"Spatial transcriptomics reveals distinct cell type dynamics following opioid dependence in female mice with the common human mu-opioid receptor variant, Oprm1 A118G",https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE326553,metadata-mined
+GSE345596,GEO-GSE,Time-resolved single-cell RNA sequencing of mouse lungs during acute Pseudomonas aeruginosa pneumonia,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE345596,metadata-mined
+GSE344969,GEO-GSE,Spatial transcriptomic profiling of calcified human coronary artery lesions,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE344969,metadata-mined
+GSE344711,GEO-GSE,Multimodal transcriptomics and calcium imaging reveal a novel subset of polymodal nociceptors expressing the interleukin 1 receptor in mice.,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE344711,metadata-mined
+GSE344702,GEO-GSE,Multimodal transcriptomics and calcium imaging reveal a novel subset of polymodal nociceptors expressing the interleukin 1 receptor in mice,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE344702,metadata-mined
+GSE344527,GEO-GSE,Reduced melanocortin tone mediates increased feeding during pregnancy in mice,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE344527,metadata-mined
+GSE337537,GEO-GSE,Persistent Lung Inflammation and Fibrosis After Mouse-Adapted Omicron BA.1 Infection,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE337537,metadata-mined
+GSE337131,GEO-GSE,Spatial transcriptomics of early-grade Huntington’s disease and control Caudate,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE337131,metadata-mined
+GSE327094,GEO-GSE,SIV infection disrupts the spatial cellular and communication networks of pulmonary granulomas during SIV/Mtb co-infection,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE327094,metadata-mined
+GSE306706,GEO-GSE,Spatial transcriptomics and N-glycoproteomics reveal breed-dependent immune and structural responses in Mycoplasma hyopneumoniae-infected pig lungs,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE306706,metadata-mined
+GSE296301,GEO-GSE,Transient Senescence Following Myocardial Infarction: Characterization and Functional Implications in Cardiac Remodeling [SpatialTranscriptome],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE296301,metadata-mined
+GSE296300,GEO-GSE,Transient Senescence Following Myocardial Infarction: Characterization and Functional Implications in Cardiac Remodeling [snMultiome],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE296300,metadata-mined
+GSE255125,GEO-GSE,Rete ridges form through evolutionarily distinct mechanisms from other appendages during mammalian skin development [1],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE255125,metadata-mined
+GSE334960,GEO-GSE,Cerebellar and cerebral frontal lobe alterations in pulmonary hypertension: Evidence of an inflammatory lung vascular-brain axis,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE334960,metadata-mined
+GSE334959,GEO-GSE,Cerebellar and cerebral frontal lobe alterations in pulmonary hypertension: Evidence of an inflammatory lung vascular-brain axis [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE334959,metadata-mined
+GSE316290,GEO-GSE,Spatial and single-nucleus multi-omics profiling reveals heterogeneous endothelial cell overabundance in endocardial fibroelastosis [bulk RNA-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE316290,metadata-mined
+GSE290630,GEO-GSE,Effect of knockout of H3mm15 on gene expression for STRA8-positive cells [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE290630,metadata-mined
+GSE262569,GEO-GSE,Smooth muscle-derived resident vascular adventitial progenitor cell contribution to cardiac fibrosis and inflammation is dependent on KLF4 [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE262569,metadata-mined
+GSE315408,GEO-GSE,Spatial and single-nucleus multi-omics profiling reveals heterogeneous endothelial cell overabundance in endocardial fibroelastosis [MERFISH],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE315408,metadata-mined
+GSE311511,GEO-GSE,Spatial and single-nucleus multi-omics profiling reveals heterogeneous endothelial cell overabundance in endocardial fibroelastosis,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE311511,metadata-mined
+GSE305348,GEO-GSE,A laser capture microdissection-based method for high-sensitivity transcriptomics from archived FFPE tissue slides with single-cell resolution using LCM-FFPEseq,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE305348,metadata-mined
+GSE345302,GEO-GSE,Spatial profiling identifies a distinct and topographically-defined tumor microenvironment that emerges during multiple myeloma evolution,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE345302,metadata-mined
+GSE344692,GEO-GSE,Placental TRPV2 supports trophoblast function and normal fetal development [MERSCOPE],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE344692,metadata-mined
+GSE341984,GEO-GSE,KDM6 Histone Demethylases Tune Pancreatic Cancer Plasticity,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE341984,metadata-mined
+GSE325755,GEO-GSE,Spatial membrane lipid remodeling encodes epithelial lineage and state in human colon cancer,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE325755,metadata-mined
+GSE298899,GEO-GSE,Spatial transcriptomic profiling of ischemia-reperfusion injured mouse kidneys reveals niche-specific metabolic dysfunction,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE298899,metadata-mined
+GSE341607,GEO-GSE,A Tissue Virus Microenvironment with Activated Stress Responses Underlies Durable SIV Persistence [Visium],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE341607,metadata-mined
+GSE324903,GEO-GSE,Early lineage divergence segregates sensory-related and motor-associative identities in the thalamus [Spatial Transcriptomics E12],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE324903,metadata-mined
+GSE324753,GEO-GSE,"Highly sensitive, sub-micron spatial host-microbiome transcriptomics in FFPE tissues via iterative hydrogel expansion",https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE324753,metadata-mined
+GSE300289,GEO-GSE,Early lineage divergence segregates sensory-related and motor-associative identities in the thalamus [Spatial Transcriptomics E17],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE300289,metadata-mined
+GSE289052,GEO-GSE,Overactivation of SHH signaling during embryonic choroid plexus development induces a cascade of dedifferentiation and carcinoma formation.,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE289052,metadata-mined
+GSE344364,GEO-GSE,A single-cell and spatial transcriptomic atlas provides insights into the genetic regulation of secondary growth and specialized metabolism in the carrot taproot [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE344364,metadata-mined
+GSE344363,GEO-GSE,A single-cell and spatial transcriptomic atlas provides insights into the genetic regulation of secondary growth and specialized metabolism in the carrot taproot [scRNA-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE344363,metadata-mined
+GSE344166,GEO-GSE,Integrated spatial and single cell analysis identifies CCL21+ lymphatic endothelial cells as a driver of a favorable immune environment in acral melanoma,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE344166,metadata-mined
+GSE342738,GEO-GSE,Multiscale spatial transcriptomics resolves the cellular and molecular architecture of the human amygdala [Visium HD],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE342738,metadata-mined
+GSE342709,GEO-GSE,Multiscale spatial transcriptomics resolves the cellular and molecular architecture of the human amygdala [Visium],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE342709,metadata-mined
+GSE342687,GEO-GSE,Spatial transcriptomic dissection of intratumoral heterogeneity and microenvironment in sinonasal and skull base adenoid cystic carcinoma,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE342687,metadata-mined
+GSE342289,GEO-GSE,Multiscale spatial transcriptomics resolves the cellular and molecular architecture of the human amygdala [Xenium],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE342289,metadata-mined
+GSE309152,GEO-GSE,Divergent cytotoxic and immunomodulatory immune programs distinguish morbilliform drug eruption from SDRIFE,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE309152,metadata-mined
+GSE308697,GEO-GSE,Divergent cytotoxic and immunomodulatory immune programs distinguish morbilliform drug eruption from SDRIFE,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE308697,metadata-mined
+GSE294442,GEO-GSE,Bioengineered 3D human heart valve tissues with enhanced maturational properties for disease modelling and therapeutic applications [spatial transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE294442,metadata-mined
+GSE314531,GEO-GSE,High-Resolution Spatial Transcriptomics of Irradiated Mouse Submandibular Gland  Treated with Ep-FH,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE314531,metadata-mined
+GSE343269,GEO-GSE,Distinct extracellular matrix states uncouple collagen accumulation from pathological fibrosis in Duchenne muscular dystrophy,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE343269,metadata-mined
+GSE342202,GEO-GSE,nf_xpatial: A Reproducible Framework for Standardized Preprocessing and Clustering of Xenium Data,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE342202,metadata-mined
+GSE332618,GEO-GSE,Identification and Characterization of Adrenergic and Mesenchymal Cancer Cell States in Neuroblastoma Using Spatial-Omics [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE332618,metadata-mined
+GSE331531,GEO-GSE,Identification and Characterization of Adrenergic and Mesenchymal Cancer Cell States in Neuroblastoma Using Spatial-Omics,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE331531,metadata-mined
+GSE306019,GEO-GSE,Genetic deletion of Usp22 in KRASG12D-p53-null driven mouse lung cancer [Visium],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE306019,metadata-mined
+GSE331286,GEO-GSE,Understanding the spatial and temporal regulation of the βIV-spectrin/STAT3 complex in ischemic cardiac remodeling with spatial transcriptomics.,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE331286,metadata-mined
+GSE336890,GEO-GSE,Spatial analysis reveals cellular microenvironments and mechanisms of inflammation and injury in acute interstitial nephritis,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE336890,metadata-mined
+GSE315470,GEO-GSE,Human Achilles tendon spatial transcriptomics,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE315470,metadata-mined
+GSE331133,GEO-GSE,Single-Cell and Spatial Multi-Omics Reveal Estrogen-Mediated Vaginal Wall Microenvironment Remodeling and a Perivascular Reparative Niche in Postmenopausal Pelvic Organ Prolapse,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE331133,metadata-mined
+GSE342215,GEO-GSE,Single-Cell Spatial Transcriptomics Reveals Rewiring of RPE and Muller Glia Signaling toward Photoreceptors Following Outer Segment Disruption in Prph2C213Y Mice,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE342215,metadata-mined
+GSE336159,GEO-GSE,Clonal Hematopoiesis Drives Fibrotic Remodeling of the Bone Marrow Microenvironment [dataset 3],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE336159,metadata-mined
+GSE335962,GEO-GSE,Clonal Hematopoiesis Drives Fibrotic Remodeling of the Bone Marrow Microenvironment [dataset 2],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE335962,metadata-mined
+GSE283283,GEO-GSE,Spatiotemporal transcriptomic niches of complement pathway and serine protease inhibitor activation in aging and infection,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE283283,metadata-mined
+GSE343505,GEO-GSE,"Longitudinal single-cell and spatial transcriptomics reveals intratumor heterogeneity, therapeutic response, and comparative value of canine marginal zone lymphoma",https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE343505,metadata-mined
+GSE343503,GEO-GSE,"Longitudinal single-cell and spatial transcriptomics reveals intratumor heterogeneity, therapeutic response, and comparative value of canine marginal zone lymphoma [scRNAseq data]",https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE343503,metadata-mined
+GSE334550,GEO-GSE,TNFR1 expression on cancer cells is critical for immune escape shaping an immunosuppressive tumor microenvironment,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE334550,metadata-mined
+GSE317987,GEO-GSE,Spatial mapping of Ethiopian cutaneous leishmaniasis lesions reveals patient-defined immune signatures,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE317987,metadata-mined
+GSE310599,GEO-GSE,Spatiotemporal development of deep excitatory neuronal types within the mouse neocortex,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE310599,metadata-mined
+GSE308275,GEO-GSE,Integrated single-cell and spatial transcriptomics of ovarian immune landscape reveal role of distinct macrophages in classic galactosemia associated with premature ovarian insufficiency,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE308275,metadata-mined
+GSE287499,GEO-GSE,Spatial transcriptomics of Slc16a1-Col2a1CreERT2 mouse spinal motion segments reveals compartment-distinct differences in the intervertebral disc,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE287499,metadata-mined
+GSE284052,GEO-GSE,A spatiotemporal atlas of giant-cell formation during Meloidogyne incognita infection in tomato roots,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE284052,metadata-mined
+GSE314035,GEO-GSE,Protective efficacy of AAV-expressed bNAbs co-delivered with PD-L1,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE314035,metadata-mined
+GSE313244,GEO-GSE,Multidimensional Single-Cell Transcriptomic Profiling of Uterine Leiomyosarcomas Identifies Molecular Subtypes with Distinct Therapeutic Vulnerabilities [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE313244,metadata-mined
+GSE306617,GEO-GSE,"Clinical, genomic, and spatial transcriptomic features of pancreatic adenosquamous carcinoma",https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE306617,metadata-mined
+GSE342671,GEO-GSE,"Longitudinal single-cell and spatial transcriptomics reveals intratumor heterogeneity, therapeutic response, and comparative value of canine marginal zone lymphoma [spatial data]",https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE342671,metadata-mined
+GSE337623,GEO-GSE,GDF15 Suppresses Liver Inflammation Independently of Weight Loss through Neuroendocrine Glucocorticoid Signaling,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE337623,metadata-mined
+GSE337622,GEO-GSE,GDF15 Suppresses Liver Inflammation Independently of Weight Loss through Neuroendocrine Glucocorticoid Signaling,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE337622,metadata-mined
+GSE331354,GEO-GSE,A transient epithelial plasticity state defines the developmental window for uterine gland specification [Spatial],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE331354,metadata-mined
+GSE331177,GEO-GSE,A transient epithelial plasticity state defines the developmental window for uterine gland specification,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE331177,metadata-mined
+GSE271370,GEO-GSE,Spatial transcriptomics unveils the in situ cellular and molecular hallmarks of the lung in fatal COVID-19,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE271370,metadata-mined
+GSE342703,GEO-GSE,Spatial-SCB,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE342703,metadata-mined
+GSE304561,GEO-GSE,Heterogeneity in B- and epithelial-cell senescence in the pathogenesis of COPD/emphysema [scRNA-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE304561,metadata-mined
+GSE341412,GEO-GSE,Spatial transcriptomic profiling of the larval complete intestine of Cyrtotrachelus buqueti by Stereo-seq,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE341412,metadata-mined
+GSE306130,GEO-GSE,Spatial biology reveals macrophage dysfunction in immunosuppressed non-melanoma skin cancer [Xenium Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE306130,metadata-mined
+GSE313530,GEO-GSE,Spatial transcriptomics dataset of non-human primates,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE313530,metadata-mined
+GSE313354,GEO-GSE,Intestinal BMP SMADs impart the mid-villus pattern via direct targeting of villus zonation genes and by controlling a transcription factor hierarchy [CUT&Run],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE313354,metadata-mined
+GSE313353,GEO-GSE,Intestinal BMP SMADs impart the mid-villus pattern via direct targeting of villus zonation genes and by controlling a transcription factor hierarchy [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE313353,metadata-mined
+GSE313352,GEO-GSE,Intestinal BMP SMADs impart the mid-villus pattern via direct targeting of villus zonation genes and by controlling a transcription factor hierarchy [ATAC-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE313352,metadata-mined
+GSE313351,GEO-GSE,Intestinal BMP SMADs impart the mid-villus pattern via direct targeting of villus zonation genes and by controlling a transcription factor hierarchy [RNA-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE313351,metadata-mined
+GSE304744,GEO-GSE,Spatial Transcriptomics of Pulmonary Tuberculosis lesions in a Mouse Model,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE304744,metadata-mined
+GSE341914,GEO-GSE,Spatial transcriptomic atlas of intestinal segments from KM mice,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE341914,metadata-mined
+GSE330686,GEO-GSE,CXCL10 contributes to female-specific pathological progression in tauopathy model mice,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE330686,metadata-mined
+GSE330626,GEO-GSE,CXCL10 contributes to female-specific pathological progression in tauopathy model mice,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE330626,metadata-mined
+GSE320442,GEO-GSE,Blocking the Gut–Liver IgA Axis Attenuates Macrophage-Mediated Inflammation and Injury in Alcohol-Associated Liver Disease [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE320442,metadata-mined
+GSE303548,GEO-GSE,Cytokine-linked remodeling of the immune microenvironment is a hallmark of transformation in follicular lymphoma [bulkRNA-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE303548,metadata-mined
+GSE303546,GEO-GSE,Cytokine-linked remodeling of the immune microenvironment is a hallmark of transformation in follicular lymphoma [VisiumHD],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE303546,metadata-mined
+GSE303545,GEO-GSE,Cytokine-linked remodeling of the immune microenvironment is a hallmark of transformation in follicular lymphoma [GeoMX],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE303545,metadata-mined
+GSE303544,GEO-GSE,Cytokine-linked remodeling of the immune microenvironment is a hallmark of transformation in follicular lymphoma [scRNA-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE303544,metadata-mined
+GSE335552,GEO-GSE,An Integrated Spatial Multi-Omics Workflow for Sequential RNA and Protein Profiling in FFPE Tumor Tissue,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE335552,metadata-mined
+GSE301933,GEO-GSE,CD36-mediated lipid-accumulation in reactive microglia drives retinal degeneration through Nlrp3-IL-1β pathway [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE301933,metadata-mined
+GSE296517,GEO-GSE,Interrogating the Synergistic Potential of Gemcitabine and Focused Ultrasound–Induced Thermal Ablation in Breast Cancer: Insights from the BR54 Trial via Spatial Transcriptomics,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE296517,metadata-mined
+GSE338506,GEO-GSE,Spatial transcriptomic profiling of human gastric cancer FFPE specimens,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE338506,metadata-mined
+GSE335898,GEO-GSE,Spatial atlas of the human brain vasculature reveals specialized cell ensembles,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE335898,metadata-mined
+GSE330974,GEO-GSE,Two waves of activation drive systemic innate immune responses to alphavirus infection,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE330974,metadata-mined
+GSE324427,GEO-GSE,Myasthenia thymus reprograms class switched B cells into BAFF dependent survivors,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE324427,metadata-mined
+GSE302677,GEO-GSE,Spatial transcriptomics reveals injury-responsive compartments and coordinated immune–fibrotic signaling  in ANCA-associated renal vasculitis,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE302677,metadata-mined
+GSE302356,GEO-GSE,Decoding Lymphangioleiomyomatosis (LAM) Niche Environment via Integrative Analysis of Single Cell Multiomics and Spatial Transcriptomics,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE302356,metadata-mined
+GSE341225,GEO-GSE,Spatial analysis reveals the evolving organization of IDH-mutant glioma,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE341225,metadata-mined
+GSE337238,GEO-GSE,Smarcc1 drives optic stalk patterning and optic nerve head astrocyte differentiation,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE337238,metadata-mined
+GSE336196,GEO-GSE,Spatial Transcriptomic Activity Atlas of Spinal Sympathetic Neurons Delineates Neural Control of Lipolysis,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE336196,metadata-mined
+GSE334356,GEO-GSE,Evolutionary decoupling of somatosensory circuit architecture and sensory neuron identity,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE334356,metadata-mined
+GSE329415,GEO-GSE,Spatial transcriptomics of bone taken from two PRF1-/-  B16F10-injected  and one PRF1-/-  healthy control- bone tissues using Xenium,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE329415,metadata-mined
+GSE334980,GEO-GSE,Transcriptomics of chronic antibody-mediated rejection,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE334980,metadata-mined
+GSE311690,GEO-GSE,Deconvolution of Low-count RNA Sequencing Data for Tumor Cells Using Embedded Negative Binomial Distributions,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE311690,metadata-mined
+GSE305003,GEO-GSE,RHOAY42C-driven cell lineage plasticity and immune remodeling of diffuse gastric cancer [CUT&Run],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE305003,metadata-mined
+GSE304907,GEO-GSE,RHOAY42C-driven cell lineage plasticity and immune remodeling of diffuse gastric cancer [scRNA-Seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE304907,metadata-mined
+GSE304811,GEO-GSE,RHOAY42C-driven cell lineage plasticity and immune remodeling of diffuse gastric cancer,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE304811,metadata-mined
+GSE338936,GEO-GSE,Myofiber-specific pathological programs in mTORC1-driven myopathy,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE338936,metadata-mined
+GSE324535,GEO-GSE,CD36-mediated lipid-accumulation in reactive microglia drives retinal degeneration through NLRP3-IL-1β pathway,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE324535,metadata-mined
+GSE324526,GEO-GSE,CD36-mediated lipid-accumulation in reactive microglia drives retinal degeneration through Nlrp3-IL-1β pathway,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE324526,metadata-mined
+GSE333693,GEO-GSE,Rat thymic epithelium-free areas are specialized medullary niches enriched for mature thymocytes and distinct stromal subsets,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE333693,metadata-mined
+GSE303707,GEO-GSE,Decoding Schwann cell activation in pancreatic cancer neural invasion by mimicking nerve injury responses and using spatial transcriptomics,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE303707,metadata-mined
+GSE341250,GEO-GSE,Xenium spatial transcriptomics identifies mesenchymal fibroblast expansion and conserved fibrotic ECM programs in keloid,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE341250,metadata-mined
+GSE327700,GEO-GSE,Spatial Transcriptomic Profiling Reveals Joint Inflammation Signatures in Borrelia burgdorferi–Infected C3H Mice,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE327700,metadata-mined
+GSE339456,GEO-GSE,Integrated bulk and spatial transcriptomic analysis identifies progression-associated molecular signatures in biopsy-proven hypertensive nephropathy [RNA-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE339456,metadata-mined
+GSE339455,GEO-GSE,Integrated bulk and spatial transcriptomic analysis identifies progression-associated molecular signatures in biopsy-proven hypertensive nephropathy [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE339455,metadata-mined
+GSE339454,GEO-GSE,Integrated bulk and spatial transcriptomic analysis identifies progression-associated molecular signatures in biopsy-proven hypertensive nephropathy [NanoString],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE339454,metadata-mined
+GSE327213,GEO-GSE,Increased mRNA translation delays tumor initiation and exposes a therapeutic vulnerability in lung cancer,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE327213,metadata-mined
+GSE319630,GEO-GSE,Charting Postnatal Heart Development Using In Vivo Single-Cell Functional Genomic,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE319630,metadata-mined
+GSE306506,GEO-GSE,Unveiling Transcriptional Heterogeneity and Discovering Footprints in Pediatric Medulloblastoma via Spatial RNA-Seq and Machine Learning,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE306506,metadata-mined
+GSE304826,GEO-GSE,Multi-Omics Analysis Reveals Nono-Kcnq2 Regulation of Neuronal Excitability in Neuropathic Pain,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE304826,metadata-mined
+GSE304729,GEO-GSE,Multi-Omics Analysis Reveals Nono-Kcnq2 Regulation of Neuronal Excitability in Neuropathic Pain [scRNA-Seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE304729,metadata-mined
+GSE290989,GEO-GSE,Charting Postnatal Heart Development Using In Vivo Single-Cell Functional Genomic [snRNA-Seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE290989,metadata-mined
+GSE290986,GEO-GSE,Charting Postnatal Heart Development Using In Vivo Single-Cell Functional Genomic [PIP-Seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE290986,metadata-mined
+GSE335211,GEO-GSE,The H3K36M oncohistone inhibits NSD2 to activate a SETD2-dependent antiviral-like immune response in KRAS-driven lung cancer,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE335211,metadata-mined
+GSE334924,GEO-GSE,Matched single-cell and Visium HD spatial transcriptomics of a chronic antibody-mediated rejection kidney graft,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE334924,metadata-mined
+GSE334923,GEO-GSE,Single-cell RNA-seq atlas of peripheral blood and kidney graft immune cells in chronic antibody-mediated rejection,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE334923,metadata-mined
+GSE334922,GEO-GSE,Peripheral blood bulk RNA-seq validation cohort for chronic antibody-mediated rejection,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE334922,metadata-mined
+GSE338525,GEO-GSE,Spatial transcriptomics supports a role for SOX-4 driven signaling throughout the disease course of biliary atresia,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE338525,metadata-mined
+GSE335053,GEO-GSE,Fibroblast-derived Spondin-2 promotes dysplastic transition in metaplastic gastric epithelial cells,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE335053,metadata-mined
+GSE328460,GEO-GSE,Single-cell resolution spatial transcriptomics of a mucinous tubular and spindle cell carcinoma using CosMX,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE328460,metadata-mined
+GSE272421,GEO-GSE,Spatial transcriptomics stereo-seq was used to reveal the functional compartmentalization of Unicentric Castleman Disease.,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE272421,metadata-mined
+GSE322553,GEO-GSE,Dendritic cell-mediated antigen presentation regulates tertiary lymphoid structure development in cancer.,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE322553,metadata-mined
+GSE301610,GEO-GSE,Spatial profiling reveals TREM2+ macrophages as central to Mycobacterium tuberculosis pathogenesis in human pulmonary tuberculosis,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE301610,metadata-mined
+GSE287826,GEO-GSE,Hepatocytes spatial transcriptomics analysis of healthy and MASH patients,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE287826,metadata-mined
+GSE287820,GEO-GSE,Spatial transcriptomics analysis of hepatocytes from liver tissues of 24-week-old mice on NCD and FFD diets.,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE287820,metadata-mined
+GSE337521,GEO-GSE,"Efficacy, safety, and spatial transcriptomic rationale of orelabrutinib plus obinutuzumab in marginal zone lymphoma",https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE337521,metadata-mined
+GSE334364,GEO-GSE,Spatial Transcriptomic Atlas Reveals that FOXO3-Mediated Mitochondrial Dynamics Imbalance Drives Premature Ovarian Insufficiency in Mice,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE334364,metadata-mined
+GSE328216,GEO-GSE,NSD2 Degradation Remediates the Oncogenic Cistrome in t(4;14) Multiple Myeloma [RNA-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE328216,metadata-mined
+GSE328215,GEO-GSE,NSD2 Degradation Remediates the Oncogenic Cistrome in t(4;14) Multiple Myeloma [ATAC-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE328215,metadata-mined
+GSE315482,GEO-GSE,Single-Cell Multi-omics Profiling of Mouse Hepatic Immune Microenvironment Reveals Neutrophil-Kupffer Cell Crosstalk via Thrombospondin-1/CD36 after Surgical Stress,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE315482,metadata-mined
+GSE301306,GEO-GSE,Spatial transcriptomics of the human first trimester decidua,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE301306,metadata-mined
+GSE310248,GEO-GSE,Remodeling of the SAMP1/YitFc mouse ileum during chronic ileitis,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE310248,metadata-mined
+GSE308816,GEO-GSE,Comprehensive transcriptomic profiling reveals impaired polyamine metabolism as a contributor to age-related muscle decline.,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE308816,metadata-mined
+GSE338314,GEO-GSE,Benchmarking cell-type deconvolution in cross-platform transcriptomic data [Visium],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE338314,metadata-mined
+GSE338249,GEO-GSE,Spatiotemporal transcriptome atlas of water lily floral organogenesis provide insight to the evolutionary origin of novel traits of angiosperms [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE338249,metadata-mined
+GSE338144,GEO-GSE,Benchmarking cell-type deconvolution in cross-platform transcriptomic data [GeoMx],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE338144,metadata-mined
+GSE338104,GEO-GSE,Iron-Catalyzed Oxidative Stress Reveals an Exposome-Related Ferroptosis-Resistant Karyomegalic Niche in BRCA1-Linked Renal Carcinogenesis,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE338104,metadata-mined
+GSE292589,GEO-GSE,Type I interferon–activated myeloid states are associated with less fibrotic stages in idiopathic pulmonary fibrosis,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE292589,metadata-mined
+GSE337812,GEO-GSE,Spatial transcriptomics reveals D2-associated synaptic transcriptional attenuation in the chronically stressed dorsal striatum,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE337812,metadata-mined
+GSE337578,GEO-GSE,The spatial transcriptomics of the mouse brain 3 days after tMCAO,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE337578,metadata-mined
+GSE338040,GEO-GSE,Longitudinal whole transcriptomic profiling of live cells through domain adaptation,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE338040,metadata-mined
+GSE316662,GEO-GSE,Spatial Transcriptomic Mapping of Postnatal Mouse Uterine Development,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE316662,metadata-mined
+GSE312659,GEO-GSE,Repeated TLR7 Activation Increases Alcohol Consumption and Induces Cell Type-Specific Transcriptome Changes in Mice,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE312659,metadata-mined
+GSE273952,GEO-GSE,GABA promotes resistance to immunotherapy of patients with TLS-positive tumors [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE273952,metadata-mined
+GSE337786,GEO-GSE,Integrated multi-omics reveals the cellular and molecular interactions governing the invasive niche in skin cancer II,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE337786,metadata-mined
+GSE337336,GEO-GSE,Genomic and spatial transcriptomics identify fibroblast-associated microenvironment in early mycosis fungoides progression,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE337336,metadata-mined
+GSE309608,GEO-GSE,Morphological and Functional Diversity of Spatially Resolved Vestibular Ganglion Neuron Cell Types [scRNA-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE309608,metadata-mined
+GSE309565,GEO-GSE,Morphological and Functional Diversity of Spatially Resolved Vestibular Ganglion Neuron Cell Types,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE309565,metadata-mined
+GSE305149,GEO-GSE,Sustained AMPAR expression in CA3 neurons may mediate neuroprotection following FLASH-RT,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE305149,metadata-mined
+GSE318507,GEO-GSE,Evaluating exon skipping in the central nervous system in Duchenne muscular dystrophy using spatial transcriptomics,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE318507,metadata-mined
+GSE302187,GEO-GSE,Murine model of MRSA-induced kidney injury (spatial transcriptomics),https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE302187,metadata-mined
+GSE337447,GEO-GSE,Comprehensive spatial profiling of the spleen in murine myelofibrosis identifies targetable immune-stromal interactions,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE337447,metadata-mined
+GSE329811,GEO-GSE,"Single-cell spatial transcriptomics analysis of murine normal pancreas (N), pancreatitis (P), and PDAC formalin-fixed paraffin-embedded (FFPE) samples using Visium HD.",https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE329811,metadata-mined
+GSE336713,GEO-GSE,Comprehensive single cell RNA profiling of the spleen in murine myelofibrosis identifies targetable immune-stromal interactions,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE336713,metadata-mined
+GSE335811,GEO-GSE,Macrophage-Induced Senescent Cancer-Associated Fibroblasts Promote SASP-Mediated Chemoresistance in Colorectal Cancer,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE335811,metadata-mined
+GSE332731,GEO-GSE,Local control of Cre-regulated genetic modeling in vivo using wireless implantable optoelectronics [Spatial transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE332731,metadata-mined
+GSE324601,GEO-GSE,Spatial transcriptomic analysis of human iPSC-derived hemanoids at day 16 and day 28,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE324601,metadata-mined
+GSE317867,GEO-GSE,Sleep Homeostasis Ensembles in the Hypothalamic PVN Reprogram Systemic Fuel Utilization via Adipose Lipolysis,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE317867,metadata-mined
+GSE299610,GEO-GSE,Subclinical Neonatal HSV-1 Infection Triggers Immune Responses and Modulates Neurological Pathways Leading to Long-Term Sequelae [Visium],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE299610,metadata-mined
+GSE299440,GEO-GSE,Subclinical Neonatal HSV-1 Infection Triggers Immune Responses and Modulates Neurological Pathways Leading to Long-Term Sequelae,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE299440,metadata-mined
+GSE297388,GEO-GSE,Spatial transcriptomics and scRNA-sequencing on gastrocnemius muscle form B6-mdx and D2-mdx mice,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE297388,metadata-mined
+GSE290108,GEO-GSE,KSHV-infected endothelial cells expand and up-regulate angiogenic pathways and CXCR4 in patient-derived Kaposi sarcoma models,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE290108,metadata-mined
+GSE289496,GEO-GSE,Granzyme K CD8⁺ T cells with tissue-resident features promote intestinal inflammation in patients with Crohn’s disease,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE289496,metadata-mined
+GSE287472,GEO-GSE,LUAD spatial transcriptomics,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE287472,metadata-mined
+GSE287471,GEO-GSE,"LUAD tumor, normal adjacent and tumoroid bulk transcriptomics",https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE287471,metadata-mined
+GSE277153,GEO-GSE,KSHV-infected endothelial cells expand and up-regulate angiogenic pathways and CXCR4 in patient-derived Kaposi sarcoma models,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE277153,metadata-mined
+GSE336978,GEO-GSE,scRNA and spatial transcriptomics analysis of allele-specific MHC expression in peripheral blood mononuclear cells and tissues of Mauritian-origin cynomologus and Indian-origin rhesus macaques,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE336978,metadata-mined
+GSE336518,GEO-GSE,Multinucleated giant cells in human pancreatic cancer are a distinct macrophage population undergoing a DNA damage response and associated to an aggressive tumor microenvironment [RNA-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE336518,metadata-mined
+GSE336517,GEO-GSE,Multinucleated giant cells in human pancreatic cancer are a distinct macrophage population undergoing a DNA damage response and associated to an aggressive tumor microenvironment [GeoMx DSP],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE336517,metadata-mined
+GSE331276,GEO-GSE,"Pan-cancer analysis reveals oncogenic roles of KCNQ3 in tumor progression, immune microenvironment remodeling, and its mechanistic dependence on ERK1/2 signaling in cholangiocarcinoma",https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE331276,metadata-mined
+GSE330351,GEO-GSE,Ferritin-mediated iron homeostasis regulates fibroblast activation and shapes post-infarction cardiac remodeling,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE330351,metadata-mined
+GSE327650,GEO-GSE,Mutual interaction between Schwann cells and CD4+T cells promotes the progression of perineural invasion in colorectal cancer [ATAC-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE327650,metadata-mined
+GSE325846,GEO-GSE,Spatial transcriptomic analysis of rat gut tissue reveals transcriptional changes associated with high-fat diet and tirzepatide treatment,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE325846,metadata-mined
+GSE324769,GEO-GSE,Spatial Transcriptomics Reveals Molecular Differences Associated with Malignant Transformation in Oral Epithelial Dysplasia,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE324769,metadata-mined
+GSE300827,GEO-GSE,Spatial transcriptome of pre-invasive lung adenocarcinoma,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE300827,metadata-mined
+GSE336951,GEO-GSE,Smarcc1 drives optic stalk patterning and optic nerve head astrocyte differentiation,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE336951,metadata-mined
+GSE336556,GEO-GSE,Spatial transcriptomics reveals differences in bronchus-associated lymphoid tissue composition in stable and rejecting human lung allografts,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE336556,metadata-mined
+GSE332563,GEO-GSE,Comprehensive spatial profiling of the spleen in human myelofibrosis [ST_Visium],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE332563,metadata-mined
+GSE332562,GEO-GSE,Comprehensive spatial profiling of the spleen in human myelofibrosis [snRNAseq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE332562,metadata-mined
+GSE329813,GEO-GSE,Spatial Transcriptomics Unveils Immune Microenvironment Heterogeneity and Response-related Subtypes in NSCLC Treated with Neoadjuvant Chemoimmunotherapy,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE329813,metadata-mined
+GSE325817,GEO-GSE,Stroke drives glioma progression through remodeling of the tumor microenvironment [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE325817,metadata-mined
+GSE303166,GEO-GSE,A novel CAF population coordinates hyper-suppressive regulatory T cell recruitment and localization in lung cancer,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE303166,metadata-mined
+GSE303165,GEO-GSE,A novel CAF population coordinates hyper-suppressive regulatory T cell recruitment and localization in lung cancer [scRNA-seq_PDGFRa+ fibroblasts),https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE303165,metadata-mined
+GSE303164,GEO-GSE,A novel CAF population coordinates hyper-suppressive regulatory T cell recruitment and localization in lung cancer [scRNA-seq_all_cells],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE303164,metadata-mined
+GSE303163,GEO-GSE,A novel CAF population coordinates hyper-suppressive regulatory T cell recruitment and localization in lung cancer [bulkRNA-seq_Tregs],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE303163,metadata-mined
+GSE303162,GEO-GSE,A novel CAF population coordinates hyper-suppressive regulatory T cell recruitment and localization in lung cancer [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE303162,metadata-mined
+GSE328422,GEO-GSE,Spatio-temporal mapping of immune cell dynamics during human sequential lymph node metastasis,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE328422,metadata-mined
+GSE328275,GEO-GSE,"Single-cell RNA sequencing of CD45+ immune cells across primary tumor, sentinel tumor-draining lymph node, and axillary lymph node in treatment-naive triple-negative breast cancer",https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE328275,metadata-mined
+GSE322775,GEO-GSE,Coordinated immune activation following KRAS inhibition reveals molecular pathways that potentiate and limit anti-tumor immunity,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE322775,metadata-mined
+GSE316007,GEO-GSE,Single-cell sequencing and spatial transcriptomics revealed that the coacervate–cell–drug system effectively protects articular cartilage in osteoarthritic rats from wear and degenerative deterioration.,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE316007,metadata-mined
+GSE335761,GEO-GSE,Human Cellular Clock of the Aging Lung Parenchyma spatial transcriptomics data,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE335761,metadata-mined
+GSE335372,GEO-GSE,CAR-T-drug conjugate against solid tumor [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE335372,metadata-mined
+GSE307588,GEO-GSE,Spatial profiling of hypoxic injury in human kidney organoids,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE307588,metadata-mined
+GSE295974,GEO-GSE,Single-cell multi-omics reveal coordinated neoplastic and immune remodeling following KRAS inhibition,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE295974,metadata-mined
+GSE295967,GEO-GSE,Single-cell multi-omics reveal coordinated neoplastic and immune remodeling following KRAS inhibition [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE295967,metadata-mined
+GSE295965,GEO-GSE,Single-cell multi-omics reveal coordinated neoplastic and immune remodeling following KRAS inhibition [scRNA-Seq 1],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE295965,metadata-mined
+GSE336633,GEO-GSE,Spatial Transcriptomics of MHC Expression in Mauritian Cynomolgus Macaque Tissues,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE336633,metadata-mined
+GSE336618,GEO-GSE,Spatiotemporal Transcriptomic Immune Responses to a Recombinant Hemagglutinin Protein Vaccine [CosMx SMI profiling],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE336618,metadata-mined
+GSE333617,GEO-GSE,Targeting JAK1/3-STAT1 signaling attenuates cytotoxic T lymphocytes activation for the treatment in Stevens-Johnson syndrome and toxic epidermal necrolysis,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE333617,metadata-mined
+GSE326753,GEO-GSE,"Ubiquitin-like proteins NEDD8 and SUMO2 control epithelial homeostasis, regeneration, and inflammation",https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE326753,metadata-mined
+GSE326639,GEO-GSE,"Ubiquitin-like proteins NEDD8 and SUMO2 control epithelial homeostasis, regeneration, and inflammation [Xenium]",https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE326639,metadata-mined
+GSE312015,GEO-GSE,Single-cell spatial transcriptomics reveals sex-dependent gene expression and intercellular signaling in the mouse adrenal cortex,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE312015,metadata-mined
+GSE307215,GEO-GSE,Spatiotemporal Single-Cell Profiling Reveals T Cell Clonal Dynamics and Phenotypic Plasticity in Human Graft-versus-Host Disease,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE307215,metadata-mined
+GSE268014,GEO-GSE,Spatial transcriptomic analysis of tumor heterogeneity in HPV+ and HPV- Head and Neck Squamous Cell Carcinoma,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE268014,metadata-mined
+GSE300445,GEO-GSE,Spatial tumour-immune ecosystems shape the efficacy of anti-PD1 immunotherapy in primary cutaneous melanoma [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE300445,metadata-mined
+GSE335702,GEO-GSE,Pericyte KATP Channel Hyperactivity Redistributes Cortical Blood Flow in a CADASIL Mouse Model,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE335702,metadata-mined
+GSE324171,GEO-GSE,Spatially-Resolved Multiomic Atlas of Leiomyosarcoma Identifies Two Clinically Relevant Epigenetically-Driven Cell States [CUT&RUN],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE324171,metadata-mined
+GSE324064,GEO-GSE,Spatially-Resolved Multiomic Atlas of Leiomyosarcoma Identifies Two Clinically Relevant Epigenetically-Driven Cell States,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE324064,metadata-mined
+GSE272337,GEO-GSE,Xenium spatial transcriptomics reveals C10 tumor transcriptomic changes induced by Smarta cell,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE272337,metadata-mined
+GSE254861,GEO-GSE,Spatial transcriptomics reveals C10 tumor transcriptomic changes generated by Smarta cell transfer,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE254861,metadata-mined
+GSE312358,GEO-GSE,Multi-omics Analysis of Immune Cells Induced by Artificial Adjuvant Vector Cell (aAVC) Therapy in HPV-Positive Tumor-Bearing Mice [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE312358,metadata-mined
+GSE312357,GEO-GSE,Multi-omics Analysis of Immune Cells Induced by Artificial Adjuvant Vector Cell (aAVC) Therapy in HPV-Positive Tumor-Bearing Mice [scRNA-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE312357,metadata-mined
+GSE300023,GEO-GSE,Multi-omics uncovers the immune landscape and molecular signatures associated with antibody-dependent cellular cytotoxicity in SARS-CoV-2 clearance,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE300023,metadata-mined
+GSE279017,GEO-GSE,Spatial transcriptomic analysis of head and neck squamous cell carcinoma reveals novel regulators of hybrid epithelial-to-mesenchymal transition,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE279017,metadata-mined
+GSE335515,GEO-GSE,Neurog1 and Neurog2 couple non-IT fate specification with cross-lineage cortical regionalization and bias recruitment into active circuits,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE335515,metadata-mined
+GSE335102,GEO-GSE,Spatial transcriptomic analysis of Yersinia pseudotuberculosis infected ileum reveals novel enterocyte transcriptional state and bacterial localization,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE335102,metadata-mined
+GSE308929,GEO-GSE,An Integrated Transcriptomics Atlas of Healthy Human Skin Focusing on the Pilosebaceous Unit,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE308929,metadata-mined
+GSE329112,GEO-GSE,Aging disrupts spatiotemporal coordination in the cycling murine ovary,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE329112,metadata-mined
+GSE328285,GEO-GSE,Inhibition of Salt-Inducible Kinases 2 and 3 reduces inflammatory signature in Psoriasis,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE328285,metadata-mined
+GSE311362,GEO-GSE,Quiescent tumor cells shape the immunosuppressive microenvironment in pancreatic ductal adenocarcinoma [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE311362,metadata-mined
+GSE335452,GEO-GSE,Single-cell RNA-seq and spatial transcriptomics characterize CD8+ exhausted T cells in pancreatic ductal adenocarcinoma,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE335452,metadata-mined
+GSE295663,GEO-GSE,Spatiotemporal Transcriptomics of Human Cardiovascular Progenitors in Pig Hearts Identifies MIDKINE as a Positive Regulator of Neovascularization,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE295663,metadata-mined
+GSE298379,GEO-GSE,A cross model spatial and single-cell atlas reveals the conserved involvement of osteopontin in polycystic kidney disease,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE298379,metadata-mined
+GSE305735,GEO-GSE,Whole-transcriptome-scale isoform-resolved spatial imaging of single cells in tissues,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE305735,metadata-mined
+GSE335345,GEO-GSE,"10X Visium spatial transcriptomics of mouse thoracic spine intervertebral disc, IVD2 (area D1)",https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE335345,metadata-mined
+GSE335275,GEO-GSE,Mapping the spatial architecture of glioblastoma from core to edge delineates niche-specific tumor cell states and intercellular interactions [xenium_cohort3],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE335275,metadata-mined
+GSE318564,GEO-GSE,Mapping the spatial architecture of glioblastoma from core to edge delineates niche-specific tumor cell states and intercellular interactions [scRNA-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE318564,metadata-mined
+GSE318562,GEO-GSE,Mapping the spatial architecture of glioblastoma from core to edge delineates niche-specific tumor cell states and intercellular interactions [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE318562,metadata-mined
+GSE316917,GEO-GSE,Mapping the spatial architecture of glioblastoma from core to edge delineates niche-specific tumor cell states and intercellular interactions,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE316917,metadata-mined
+GSE249405,GEO-GSE,Spatial mapping of RNA turnover kinetics in the mouse brain,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE249405,metadata-mined
+GSE249403,GEO-GSE,Spatial mapping of RNA turnover kinetics in the mouse brain [Spatial NT-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE249403,metadata-mined
+GSE249398,GEO-GSE,Spatial mapping of RNA turnover kinetics in the mouse brain [scNT-seq2],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE249398,metadata-mined
+GSE319236,GEO-GSE,Spatially resolved maternal and fetal cell contributions to severe Preeclampsia,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE319236,metadata-mined
+GSE299590,GEO-GSE,Clonal dynamics reveal cancer resistance arises from adaptive programs [CROP-Seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE299590,metadata-mined
+GSE328870,GEO-GSE,A single-cell and spatial immune atlas of chronic antibody-mediated rejection reveals autoimmune-shared immune states and a CXCL12-CXCR4 fibroblast-immune niche,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE328870,metadata-mined
+GSE318917,GEO-GSE,Epigenetic Subtypes of High-Grade T1 Bladder Cancer Reveal Intra-Tumor Heterogeneity and Distinct Interactions with Tumor Microenvironment [scATAC-Seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE318917,metadata-mined
+GSE318916,GEO-GSE,Epigenetic Subtypes of High-Grade T1 Bladder Cancer Reveal Intra-Tumor Heterogeneity and Distinct Interactions with Tumor Microenvironment [VisiumHD],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE318916,metadata-mined
+GSE281743,GEO-GSE,Epigenetic Subtypes of High-Grade T1 Bladder Cancer Reveal Intra-Tumor Heterogeneity and Distinct Interactions with Tumor Microenvironment,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE281743,metadata-mined
+GSE330163,GEO-GSE,Human Myometrial Cell Fate under Chronic Oxidative Stress for Leiomyomagenesis,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE330163,metadata-mined
+GSE322681,GEO-GSE,Spatial transcriptomics reveals molecular mechanisms underlying neuroinflammatory and neurodegenerative sequelae of immune checkpoint inhibition [RNA-Seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE322681,metadata-mined
+GSE322277,GEO-GSE,Spatial transcriptomics reveals molecular mechanisms underlying neuroinflammatory and neurodegenerative sequelae of immune checkpoint inhibition [MERFISH],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE322277,metadata-mined
+GSE299660,GEO-GSE,Spatial transcriptomic profiling of seborrhoeic keratoses,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE299660,metadata-mined
+GSE292299,GEO-GSE,Conserved principles of spatial biology define tumor heterogeneity and immunotherapy sensitivity,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE292299,metadata-mined
+GSE334710,GEO-GSE,Spatial transcriptomic data for skin tissue of systemic sclerosis or localized scleroderma,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE334710,metadata-mined
+GSE334323,GEO-GSE,Custom Probe-Based Spatial Transcriptomics Enables Microbiome Detection in FFPE Colorectal Cancer Tissue,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE334323,metadata-mined
+GSE334234,GEO-GSE,ECM1/SQSTM1 Axis Remodels Colorectal Cancer Immune Microenvironment via CXCL1-CXCR2-Dependent Neutrophil Recruitment and NETosis (Spatial transcriptomics),https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE334234,metadata-mined
+GSE327687,GEO-GSE,High-Resolution Lineage Tracing in Native Tissue Contexts [SPACE-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE327687,metadata-mined
+GSE326431,GEO-GSE,High-Resolution Lineage Tracing in Native Tissue Contexts [I],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE326431,metadata-mined
+GSE312713,GEO-GSE,Assessment of the effect of CLDN1 knockdown in cholangiocarcinoma patient-derived organoids,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE312713,metadata-mined
+GSE312711,GEO-GSE,Assessment of the effect of CLDN1 knockout in cholangiocarcinoma cells in vivo,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE312711,metadata-mined
+GSE312708,GEO-GSE,Assessment of the effect of CLDN1 knockout in cholangiocarcinoma cells in vitro,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE312708,metadata-mined
+GSE298420,GEO-GSE,Treatment of cholangiocarcinoma using humanized monoclonal antibodies targeting Claudin-1 (RNA-Seq of HuCC-A1 CDX tumors short treatment),https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE298420,metadata-mined
+GSE298419,GEO-GSE,Characterization of cholangiocarcinoma cell line-derived xenograft (CDX) tumors,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE298419,metadata-mined
+GSE262162,GEO-GSE,Treatment of cholangiocarcinoma using humanized monoclonal antibodies targeting Claudin-1 (CCA patient tissues),https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE262162,metadata-mined
+GSE261999,GEO-GSE,Treatment of cholangiocarcinoma using humanized monoclonal antibodies targeting Claudin-1(PDX tumors),https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE261999,metadata-mined
+GSE261998,GEO-GSE,Treatment of cholangiocarcinoma using humanized monoclonal antibodies targeting Claudin-1(HuCC-A1 CDX tumors),https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE261998,metadata-mined
+GSE261997,GEO-GSE,Treatment of cholangiocarcinoma using humanized monoclonal antibodies targeting Claudin-1(CCA organoids),https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE261997,metadata-mined
+GSE334067,GEO-GSE,Paired mutation calling and spatial transcriptomics identify cellular neighborhoods associated with neoplastic outcomes in mouse colitis,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE334067,metadata-mined
+GSE319755,GEO-GSE,Cytotoxic CD39+ tumor-associated NK cells respond to NKG2A blockade in lung cancer (10x Xenium),https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE319755,metadata-mined
+GSE306288,GEO-GSE,Spatial transcriptomic profiling of the human aortic valve reveals cellular sex differences near sites of calcification,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE306288,metadata-mined
+GSE287743,GEO-GSE,"In vitro PI3Kδ inhibition skews CD8 T cell differentiation towards progenitor exhaustion in vivo and reprograms tumor microenvironment metabolism, immune composition, and inflammation [Spatial Transcriptomics]",https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE287743,metadata-mined
+GSE286925,GEO-GSE,"In vitro PI3Kδ inhibition skews CD8 T cell differentiation towards progenitor exhaustion in vivo and reprograms tumor microenvironment metabolism, immune composition, and inflammation [scRNA-seq]",https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE286925,metadata-mined
+GSE333737,GEO-GSE,MERFISH spatial transcriptomic profiling of extracellular matrix and vascular-associated populations in the adult human pancreas,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE333737,metadata-mined
+GSE298774,GEO-GSE,Spatial gene expression and microenvironmental changes in the transition of nevus to melanoma,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE298774,metadata-mined
+GSE328048,GEO-GSE,Single-cell transcriptome reveals keratinocyte subclusters that contribute to altered differentiation and inflammatory responses in atopic dermatitis,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE328048,metadata-mined
+GSE318959,GEO-GSE,Modeling development of tertiary lymphoid structures in pulmonary tuberculosis by 3D profiling and trajectory analysis,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE318959,metadata-mined
+GSE318238,GEO-GSE,Spatially resolved gene expression and tumour-microenvironment interactions across malignant transformation in IDH-mutant glioma,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE318238,metadata-mined
+GSE300434,GEO-GSE,Migratory astrocyte subset drives CNS regeneration after astrocyte loss,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE300434,metadata-mined
+GSE298848,GEO-GSE,A molecular atlas of cellular vulnerability and resilience in the parkinsonian striatum. [snRNA_seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE298848,metadata-mined
+GSE298680,GEO-GSE,A molecular atlas of cellular vulnerability and resilience in the parkinsonian striatum.,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE298680,metadata-mined
+GSE312281,GEO-GSE,MicroRNA-200 family inhibits sebaceous gland fate specification by disrupting SOX9 function [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE312281,metadata-mined
+GSE299027,GEO-GSE,Molecular Characterization of Meningioma,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE299027,metadata-mined
+GSE331432,GEO-GSE,Characterizing Cellular Heterogeneity and Transcriptomic Features of Senotype Using Deep Graph Representation Learning,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE331432,metadata-mined
+GSE328481,GEO-GSE,Uncovering ectopic GC-like niches for tumor reactive lymphocyte priming in lung adenocarcinoma using Stereo-XCR-seq,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE328481,metadata-mined
+GSE231496,GEO-GSE,A masked generative graph representation learning framework empowering precise spatial domain identification,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE231496,metadata-mined
+GSE333479,GEO-GSE,A unified spatial transcriptome profiling of ten mouse organs,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE333479,metadata-mined
+GSE332850,GEO-GSE,Xenium Spatial Transcriptomics Reveals the Mechanism of TGFBRIIDN-Armored GPC3-CAR-T Cells in Hepatocellular Carcinoma Patients,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE332850,metadata-mined
+GSE319771,GEO-GSE,Integrative Molecular Analyses of Inflammatory and Autoimmune Signals in Cardiac Sarcoidosis [Xenium],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE319771,metadata-mined
+GSE332601,GEO-GSE,Spatial transcriptomics profiling of NDMA-induced liver injury in Mgmt-deficient mice across sex and time,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE332601,metadata-mined
+GSE319763,GEO-GSE,Inflammatory immune modulators of AML lung infiltration and respiratory failure,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE319763,metadata-mined
+GSE316710,GEO-GSE,Dissecting tissue-specific microenvironments in acute myeloid leukemia [RNA-Seq anti-IL33],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE316710,metadata-mined
+GSE301336,GEO-GSE,Interferon-Stimulated Neutrophils Impair Breast Cancer Response to Immunotherapy and Disrupt Immunological Memory,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE301336,metadata-mined
+GSE284747,GEO-GSE,Inflammatory immune modulators of AML lung infiltration and respiratory failure,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE284747,metadata-mined
+GSE275542,GEO-GSE,Dissecting tissue-specific microenvironments in acute myeloid leukemia [scRNA-Seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE275542,metadata-mined
+GSE269045,GEO-GSE,Inflammatory immune modulators of AML lung infiltration and respiratory failure,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE269045,metadata-mined
+GSE269043,GEO-GSE,Dissecting tissue-specific microenvironments in acute myeloid leukemia (Spatial),https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE269043,metadata-mined
+GSE269042,GEO-GSE,Dissecting tissue-specific microenvironments in acute myeloid leukemia (scRNA-Seq Niche),https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE269042,metadata-mined
+GSE269041,GEO-GSE,Dissecting tissue-specific microenvironments in acute myeloid leukemia (scRNA-Seq Immune),https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE269041,metadata-mined
+GSE269040,GEO-GSE,Dissecting tissue-specific microenvironments in acute myeloid leukemia (RNA-Seq VecadAML),https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE269040,metadata-mined
+GSE269039,GEO-GSE,Dissecting tissue-specific microenvironments in acute myeloid leukemia (RNA-Seq AML),https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE269039,metadata-mined
+GSE269038,GEO-GSE,Dissecting tissue-specific microenvironments in acute myeloid leukemia (CRISPR),https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE269038,metadata-mined
+GSE331374,GEO-GSE,Glioma-intrinsic MAPK/ERK signaling promotes immunotherapy efficacy through T cell infiltration and interferon responses,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE331374,metadata-mined
+GSE307817,GEO-GSE,A MEF2C transcription factor network regulates proliferation of glomerular endothelial cells in diabetic kidney disease,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE307817,metadata-mined
+GSE295815,GEO-GSE,The DLX/Notch axis is necessary for spatiotemporal regulation of neural cell fate,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE295815,metadata-mined
+GSE292680,GEO-GSE,The DLX/Notch axis is necessary for spatiotemporal regulation of neural cell fate,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE292680,metadata-mined
+GSE292536,GEO-GSE,The DLX/Notch axis is necessary for spatiotemporal regulation of neural cell fate,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE292536,metadata-mined
+GSE292443,GEO-GSE,The DLX/Notch axis is necessary for spatiotemporal regulation of neural cell fate,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE292443,metadata-mined
+GSE292442,GEO-GSE,The DLX/Notch axis is necessary for spatiotemporal regulation of neural cell fate,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE292442,metadata-mined
+GSE282124,GEO-GSE,"Single-cell spatial transcriptomics of formalin-fixed, paraffin-embedded biopsies reveals colitis-associated cell networks [Merscope]",https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE282124,metadata-mined
+GSE282123,GEO-GSE,"Single-cell spatial transcriptomics of formalin-fixed, paraffin-embedded biopsies reveals colitis-associated cell networks [Xenium]",https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE282123,metadata-mined
+GSE331446,GEO-GSE,Epicardial fat drives macrophage response in atrial cardiomyopathy,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE331446,metadata-mined
+GSE331382,GEO-GSE,Inhibition of Salt-Inducible Kinases 2 and 3 reduces inflammatory signature in Psoriasis,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE331382,metadata-mined
+GSE304124,GEO-GSE,Mapping Cellular Senescence in Human Dental Follicle and Odontogenic Keratocyst,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE304124,metadata-mined
+GSE303460,GEO-GSE,Spatiotemporal single-cell atlas of suture stem cell dynamics in craniosynostosis [scRNA-Seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE303460,metadata-mined
+GSE303344,GEO-GSE,Spatiotemporal single-cell atlas of suture stem cell dynamics in craniosynostosis,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE303344,metadata-mined
+GSE289363,GEO-GSE,Intratumoral spatiotemporal heterogeneity of HPV status in HPV-associated oropharyngeal squamous cell carcinoma with clinical record,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE289363,metadata-mined
+GSE320059,GEO-GSE,Nur77 agonism invigorates Natural Killer cell immunity against hepatocellular carcinoma [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE320059,metadata-mined
+GSE271824,GEO-GSE,High resolution mapping of erythroid niches in human using subcellular spatial transcriptomics,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE271824,metadata-mined
+GSE271693,GEO-GSE,High resolution mapping of erythroid niches in mice using subcellular spatial transcriptomics,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE271693,metadata-mined
+GSE271150,GEO-GSE,Spatial mapping reveals erythroid niches in human during development and stress,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE271150,metadata-mined
+GSE271077,GEO-GSE,Spatial mapping reveals erythroid niches in mice during development and stress,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE271077,metadata-mined
+GSE330215,GEO-GSE,Spatial transcriptomic characterization of obesity-associated gene expression programs in endometrial cancer,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE330215,metadata-mined
+GSE293015,GEO-GSE,The spatially resolved kidney transcriptome signatures in rat models of trauma-induced acute kidney injury,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE293015,metadata-mined
+GSE310921,GEO-GSE,Use of Organ Transplant Solution to Preserve Skeletal Muscle for Cellular and Spatial Transcriptomic Analyses,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE310921,metadata-mined
+GSE283159,GEO-GSE,SPTEdU-seq: Parallel optics-free newborn cell tracking and spatial total transcriptomics decipher spatiotemporal dynamics across tissues and species ,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE283159,metadata-mined
+GSE293042,GEO-GSE,Human and mouse adrenal glands are characterized by species-specific steroidogenic states and tissue turnover [VisiumHD],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE293042,metadata-mined
+GSE319722,GEO-GSE,Spatial dynamics links PD-L1 and Tumor-Associated Macrophage–Enriched Niches to Immune and Mesenchymal States in microsatellite stable colorectal cancer,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE319722,metadata-mined
+GSE293043,GEO-GSE,Human and mouse adrenal glands are characterized by species-specific steroidogenic states and tissue turnover [Stereo-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE293043,metadata-mined
+GSE253850,GEO-GSE,Human and mouse adrenal glands are characterized by species-specific steroidogenic states and tissue turnover [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE253850,metadata-mined
+GSE253849,GEO-GSE,Human and mouse adrenal glands are characterized by species-specific steroidogenic states and tissue turnover [scRNA-seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE253849,metadata-mined
+GSE310110,GEO-GSE,CD38⁺ endothelial remodeling marks spatially patterned vasculopathy in rapidly advancing periodontitis and peri-implantitis,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE310110,metadata-mined
+GSE297144,GEO-GSE,The HFE H63D variant in pancreatic cancer promotes epithelial-to-mesenchymal transition at the expense of cell cycle,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE297144,metadata-mined
+GSE284695,GEO-GSE,Obesity-mediated intratumoral innervation increases pancreatic cancer tumorigenesis [Spatial Transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE284695,metadata-mined
+GSE327901,GEO-GSE,A 3D Amphioxus Brain Atlas Illuminates the Blueprint of the Ancestral Chordate Brain and Highlights Unique Vertebrate Innovations,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE327901,metadata-mined
+GSE320041,GEO-GSE,High-resolution and noninvasive profiling of the tumor microenvironment with spatial ecotypes [Visium],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE320041,metadata-mined
+GSE330161,GEO-GSE,Transcriptomic Signatures of Hippocampal Active Place Avoidance Memory Maintenance [scRNA-Seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE330161,metadata-mined
+GSE330153,GEO-GSE,Transcriptomic Signatures of Hippocampal Active Place Avoidance Memory Maintenance,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE330153,metadata-mined
+GSE312327,GEO-GSE,Spatially-guided metabolomics profiling of heterogeneous human tumor tissues,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE312327,metadata-mined
+GSE326226,GEO-GSE,A Xenium Spatial Atlas of Muscle-Invasive Bladder Cancer Reveals Lineage-Specific Vulnerabilities,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE326226,metadata-mined
+GSE319969,GEO-GSE,Spatial and Bulk Transcriptomic Profiling Defines the Molecular Evolution of Cutaneous Squamous Cell Carcinoma and Reveals Stage-Specific Biomarkers of Clinical Relevance [RNA-Seq],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE319969,metadata-mined
+GSE319968,GEO-GSE,Spatial and Bulk Transcriptomic Profiling Defines the Molecular Evolution of Cutaneous Squamous Cell Carcinoma and Reveals Stage-Specific Biomarkers of Clinical Relevance [GeoMx],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE319968,metadata-mined
+GSE319536,GEO-GSE,A Spatial Atlas of Muscle-Invasive Bladder Cancer Reveals Lineage-Specific Vulnerabilities and Immune Architecture,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE319536,metadata-mined
+GSE329449,GEO-GSE,Tumor cells with cholangiocytic phenotype form oncogenic niches with fibroblasts in hepatocellular carcinoma,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE329449,metadata-mined
+GSE329229,GEO-GSE,Analysis of mouse livers fed with high cholesterol diet and alcohol by spatial transcriptomics,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE329229,metadata-mined
+GSE241872,GEO-GSE,RAS pathway activation and microenvironmental adaptation as hallmarks of myeloid sarcoma,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE241872,metadata-mined
+GSE328664,GEO-GSE,PD-1 regulates latent effector differentiation of thymic cytotoxic CD8+ T cells [spatial transcriptomics],https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE328664,metadata-mined
+GSE322883,GEO-GSE,Spatial Transcriptomics Analysis of inflamed versus healthy Dental Pulps,https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE322883,metadata-mined
+cxg:af893e86-8e9f-41f1-a474-ef05359b1fb7,CELLxGENE,Single-cell transcriptomic atlas for adult human retina,https://cellxgene.cziscience.com/collections/af893e86-8e9f-41f1-a474-ef05359b1fb7,metadata-mined
+cxg:3a5dbf8a-9b3e-4309-b4c5-d8a024f83734,CELLxGENE,Bronchopulmonary Dysplasia,https://cellxgene.cziscience.com/collections/3a5dbf8a-9b3e-4309-b4c5-d8a024f83734,metadata-mined
+cxg:16876983-d454-43db-a8ec-77fafca9bf38,CELLxGENE,Multi-Region Brain Single-Cell Atlas of Parkinson's Disease and Control Samples,https://cellxgene.cziscience.com/collections/16876983-d454-43db-a8ec-77fafca9bf38,metadata-mined
+cxg:ad10cef8-9c6c-488f-9b50-d252d49b6837,CELLxGENE,Context-aware single-cell multiomics approach identifies cell-type specific lung cancer susceptibility genes,https://cellxgene.cziscience.com/collections/ad10cef8-9c6c-488f-9b50-d252d49b6837,metadata-mined
+cxg:bd552f76-1f1b-43a3-b9ee-0aace57e90d6,CELLxGENE,"Transcriptome Analysis of Archived Tumor Tissues by Visium, GeoMx DSP, and Chromium Methods Reveals Inter- and Intra-Patient Heterogeneity",https://cellxgene.cziscience.com/collections/bd552f76-1f1b-43a3-b9ee-0aace57e90d6,metadata-mined
+cxg:7f7fdf50-aa0e-4a6f-979c-53655cac9d5d,CELLxGENE,IBDverse: Cell type-resolved genetic variation shapes inflammatory bowel disease risk,https://cellxgene.cziscience.com/collections/7f7fdf50-aa0e-4a6f-979c-53655cac9d5d,metadata-mined
+cxg:35928d1c-36fc-4f93-9a8d-0b921ab41745,CELLxGENE,HVS: Human variation study,https://cellxgene.cziscience.com/collections/35928d1c-36fc-4f93-9a8d-0b921ab41745,metadata-mined
+cxg:e02201d7-f49f-401f-baf0-1eb1406546c0,CELLxGENE,"Early role for a Na+,K+-ATPase (ATP1A3) in brain development",https://cellxgene.cziscience.com/collections/e02201d7-f49f-401f-baf0-1eb1406546c0,metadata-mined
+cxg:0540ee09-5b45-43ec-9fc1-b9a7fa7f8f53,CELLxGENE,T cells from gastric cancer patients,https://cellxgene.cziscience.com/collections/0540ee09-5b45-43ec-9fc1-b9a7fa7f8f53,metadata-mined
+cxg:9b02383a-9358-4f0f-9795-a891ec523bcc,CELLxGENE,Single cell transcriptional and chromatin accessibility profiling redefine cellular heterogeneity in the adult human kidney,https://cellxgene.cziscience.com/collections/9b02383a-9358-4f0f-9795-a891ec523bcc,metadata-mined
+cxg:8a05eaf6-5680-41f2-9be7-eddc383b178a,CELLxGENE,Determinants of Sensitivity to HER2-targeted Antibody Drug Conjugates in Urothelial Cancer,https://cellxgene.cziscience.com/collections/8a05eaf6-5680-41f2-9be7-eddc383b178a,metadata-mined
+cxg:c69bd2e0-32fe-431d-b855-ae2b35d7de84,CELLxGENE,Wild type adult thymus,https://cellxgene.cziscience.com/collections/c69bd2e0-32fe-431d-b855-ae2b35d7de84,metadata-mined
+cxg:29f92179-ca10-4309-a32b-d383d80347c1,CELLxGENE,Longitudinal profiling of respiratory and systemic immune responses reveals myeloid cell-driven lung inflammation in severe COVID-19,https://cellxgene.cziscience.com/collections/29f92179-ca10-4309-a32b-d383d80347c1,metadata-mined
+cxg:6ff3401b-d72c-4940-a00c-3f0792397082,CELLxGENE,SARS-CoV-2 receptor ACE2 and TMPRSS2 are primarily expressed in bronchial transient secretory cells,https://cellxgene.cziscience.com/collections/6ff3401b-d72c-4940-a00c-3f0792397082,metadata-mined
+cxg:a98b828a-622a-483a-80e0-15703678befd,CELLxGENE,HCA kidney seed network: University of Michigan,https://cellxgene.cziscience.com/collections/a98b828a-622a-483a-80e0-15703678befd,metadata-mined
+cxg:43d4bb39-21af-4d05-b973-4c1fed7b916c,CELLxGENE,Transcriptional Programming of Normal and Inflamed Human Epidermis at Single-Cell Resolution,https://cellxgene.cziscience.com/collections/43d4bb39-21af-4d05-b973-4c1fed7b916c,metadata-mined
+cxg:7c4552fd-8a6d-4da3-9854-2dfa8baca8bf,CELLxGENE,Deciphering glial contributions to CSF1R-related disorder via single-nuclear transcriptomic profiling,https://cellxgene.cziscience.com/collections/7c4552fd-8a6d-4da3-9854-2dfa8baca8bf,metadata-mined
+cxg:68cba939-4e72-4405-80ef-512a05044fba,CELLxGENE,Profiling the heterogeneity of colorectal cancer consensus molecular subtypes using spatial transcriptomics,https://cellxgene.cziscience.com/collections/68cba939-4e72-4405-80ef-512a05044fba,metadata-mined
+cxg:0a77d4c0-d5d0-40f0-aa1a-5e1429bcbd7e,CELLxGENE,A transcriptional cross species map of pancreatic islet cells,https://cellxgene.cziscience.com/collections/0a77d4c0-d5d0-40f0-aa1a-5e1429bcbd7e,metadata-mined
+cxg:113a558a-e96e-4643-81db-140e95c58578,CELLxGENE,Single-cell RNA sequencing of glioblastoma cases with tissue sampled from tumor core to macroscopically normal cortex,https://cellxgene.cziscience.com/collections/113a558a-e96e-4643-81db-140e95c58578,metadata-mined
+cxg:b953c942-f5d8-434f-9da7-e726ba7c1481,CELLxGENE,Single-soma transcriptomics of tangle-bearing neurons in Alzheimer’s disease,https://cellxgene.cziscience.com/collections/b953c942-f5d8-434f-9da7-e726ba7c1481,metadata-mined
+cxg:b3ab2f02-ba90-4abf-87c2-f9d5bd850abc,CELLxGENE,A single-cell eQTL atlas of the human cerebellum reveals vulnerability of oligodendrocytes in essential tremor,https://cellxgene.cziscience.com/collections/b3ab2f02-ba90-4abf-87c2-f9d5bd850abc,metadata-mined
+cxg:03608e22-227a-4492-910b-3cb3f16f952e,CELLxGENE,iPain atlas,https://cellxgene.cziscience.com/collections/03608e22-227a-4492-910b-3cb3f16f952e,metadata-mined
+cxg:e75342a8-0f3b-4ec5-8ee1-245a23e0f7cb,CELLxGENE,Pathogenic variants damage cell composition and single cell transcription in cardiomyopathies,https://cellxgene.cziscience.com/collections/e75342a8-0f3b-4ec5-8ee1-245a23e0f7cb,metadata-mined
+cxg:63d03351-06be-478e-a0db-f7a653b6b19b,CELLxGENE,Cell atlas of the human ocular anterior segment: Tissue-specific and shared cell types,https://cellxgene.cziscience.com/collections/63d03351-06be-478e-a0db-f7a653b6b19b,metadata-mined
+cxg:398e34a9-8736-4b27-a9a7-31a47a67f446,CELLxGENE,Comparative Analysis of Commercial Single-Cell RNA Sequencing Technologies,https://cellxgene.cziscience.com/collections/398e34a9-8736-4b27-a9a7-31a47a67f446,metadata-mined
+cxg:5c868b6f-62c5-4532-9d7f-a346ad4b50a7,CELLxGENE,The landscape of immune dysregulation in Crohn’s disease revealed through single-cell transcriptomic profiling in the ileum and colon,https://cellxgene.cziscience.com/collections/5c868b6f-62c5-4532-9d7f-a346ad4b50a7,metadata-mined
+cxg:4195ab4c-20bd-4cd3-8b3d-65601277e731,CELLxGENE,A spatially resolved single cell genomic atlas of the adult human breast,https://cellxgene.cziscience.com/collections/4195ab4c-20bd-4cd3-8b3d-65601277e731,metadata-mined
+cxg:4f586cb6-972b-4ef7-a4ef-3c3800a3c004,CELLxGENE,Human cortical expansion involves diversification and specialization of supragranular intratelencephalic-projecting neurons,https://cellxgene.cziscience.com/collections/4f586cb6-972b-4ef7-a4ef-3c3800a3c004,metadata-mined
+cxg:0c8a364b-97b5-4cc8-a593-23c38c6f0ac5,CELLxGENE,Single-cell and spatial transcriptomics characterisation of the immunological landscape in the healthy and PSC human liver,https://cellxgene.cziscience.com/collections/0c8a364b-97b5-4cc8-a593-23c38c6f0ac5,metadata-mined
+cxg:10bf5c50-8d85-4c5f-94b4-22c1363d9f31,CELLxGENE,Intratumoral heterogeneity in recurrent pediatric pilocytic astrocytomas,https://cellxgene.cziscience.com/collections/10bf5c50-8d85-4c5f-94b4-22c1363d9f31,metadata-mined
+cxg:d1e0e64d-6d2a-4a3e-b7f4-43ed909a9d9c,CELLxGENE,Ancestral and environmental diversity shape the immune landscape in Indonesia,https://cellxgene.cziscience.com/collections/d1e0e64d-6d2a-4a3e-b7f4-43ed909a9d9c,metadata-mined
+cxg:32f2fd23-ec74-486f-9544-e5b2f41725f5,CELLxGENE,Mapping the temporal and spatial dynamics of the human endometrium in vivo and in vitro,https://cellxgene.cziscience.com/collections/32f2fd23-ec74-486f-9544-e5b2f41725f5,metadata-mined
+cxg:b0cf0afa-ec40-4d65-b570-ed4ceacc6813,CELLxGENE,Integrated analysis of multimodal single-cell data,https://cellxgene.cziscience.com/collections/b0cf0afa-ec40-4d65-b570-ed4ceacc6813,metadata-mined
+cxg:367d95c0-0eb0-4dae-8276-9407239421ee,CELLxGENE,"Evolution of cellular diversity in primary motor cortex of human, marmoset monkey, and mouse",https://cellxgene.cziscience.com/collections/367d95c0-0eb0-4dae-8276-9407239421ee,metadata-mined
+cxg:13d1c580-4b17-4b2e-85c4-75b36917413f,CELLxGENE,Single cell derived mRNA signals across human kidney tumors,https://cellxgene.cziscience.com/collections/13d1c580-4b17-4b2e-85c4-75b36917413f,metadata-mined
+cxg:a96133de-e951-4e2d-ace6-59db8b3bfb1d,CELLxGENE,HTAN/HTAPP Broad - Spatio-molecular dissection of the breast cancer metastatic microenvironment,https://cellxgene.cziscience.com/collections/a96133de-e951-4e2d-ace6-59db8b3bfb1d,metadata-mined
+cxg:fbc5881f-1ee3-4ffe-8095-35e15e1a08fc,CELLxGENE,Urethral luminal epithelia are castration-insensitive cells of the proximal prostate,https://cellxgene.cziscience.com/collections/fbc5881f-1ee3-4ffe-8095-35e15e1a08fc,metadata-mined
+cxg:b52eb423-5d0d-4645-b217-e1c6d38b2e72,CELLxGENE,Cells of the adult human heart,https://cellxgene.cziscience.com/collections/b52eb423-5d0d-4645-b217-e1c6d38b2e72,metadata-mined
+cxg:20eea6c8-9d64-42c9-9b6f-c11b5249e0e9,CELLxGENE,Single-cell genomics improves the discovery of risk variants and genes of atrial fibrillation,https://cellxgene.cziscience.com/collections/20eea6c8-9d64-42c9-9b6f-c11b5249e0e9,metadata-mined
+TCGA-LUAD,GDC,Lung Adenocarcinoma,https://portal.gdc.cancer.gov/projects/TCGA-LUAD,metadata-mined
+ALCHEMIST-ALCH,GDC,Adjuvant Lung Cancer Enrichment Marker Identification and Sequencing Trial,https://portal.gdc.cancer.gov/projects/ALCHEMIST-ALCH,metadata-mined
+MATCH-S1,GDC,Genomic Characterization CS-MATCH-0007 Arm S1,https://portal.gdc.cancer.gov/projects/MATCH-S1,metadata-mined
+MATCH-W,GDC,Genomic Characterization CS-MATCH-0007 Arm W,https://portal.gdc.cancer.gov/projects/MATCH-W,metadata-mined
+MATCH-Z1D,GDC,Genomic Characterization CS-MATCH-0007 Arm Z1D,https://portal.gdc.cancer.gov/projects/MATCH-Z1D,metadata-mined
+MATCH-Z1A,GDC,Genomic Characterization CS-MATCH-0007 Arm Z1A,https://portal.gdc.cancer.gov/projects/MATCH-Z1A,metadata-mined
+MATCH-Y,GDC,Genomic Characterization CS-MATCH-0007 Arm Y,https://portal.gdc.cancer.gov/projects/MATCH-Y,metadata-mined
+MATCH-R,GDC,Genomic Characterization CS-MATCH-0007 Arm R,https://portal.gdc.cancer.gov/projects/MATCH-R,metadata-mined
+MATCH-Z1I,GDC,Genomic Characterization CS-MATCH-0007 Arm Z1I,https://portal.gdc.cancer.gov/projects/MATCH-Z1I,metadata-mined
+MATCH-N,GDC,Genomic Characterization CS-MATCH-0007 Arm N,https://portal.gdc.cancer.gov/projects/MATCH-N,metadata-mined
+MATCH-Z1B,GDC,Genomic Characterization CS-MATCH-0007 Arm Z1B,https://portal.gdc.cancer.gov/projects/MATCH-Z1B,metadata-mined
+CDDP_EAGLE-1,GDC,CDDP Integrative Analysis of Lung Adenocarcinoma (Phase 2),https://portal.gdc.cancer.gov/projects/CDDP_EAGLE-1,metadata-mined
+CGCI-HTMCP-CC,GDC,HIV+ Tumor Molecular Characterization Project - Cervical Cancer,https://portal.gdc.cancer.gov/projects/CGCI-HTMCP-CC,metadata-mined
+BEATAML1.0-COHORT,GDC,Functional Genomic Landscape of Acute Myeloid Leukemia,https://portal.gdc.cancer.gov/projects/BEATAML1.0-COHORT,metadata-mined
+TCGA-CHOL,GDC,Cholangiocarcinoma,https://portal.gdc.cancer.gov/projects/TCGA-CHOL,metadata-mined
+TCGA-ESCA,GDC,Esophageal Carcinoma,https://portal.gdc.cancer.gov/projects/TCGA-ESCA,metadata-mined
+TARGET-CCSK,GDC,Clear Cell Sarcoma of the Kidney,https://portal.gdc.cancer.gov/projects/TARGET-CCSK,metadata-mined
+CTSP-DLBCL1,GDC,CTSP Diffuse Large B-Cell Lymphoma (DLBCL) CALGB 50303,https://portal.gdc.cancer.gov/projects/CTSP-DLBCL1,metadata-mined
+CMI-MBC,GDC,Count Me In (CMI): The Metastatic Breast Cancer (MBC) Project,https://portal.gdc.cancer.gov/projects/CMI-MBC,metadata-mined
+TCGA-SKCM,GDC,Skin Cutaneous Melanoma,https://portal.gdc.cancer.gov/projects/TCGA-SKCM,metadata-mined
+TCGA-DLBC,GDC,Lymphoid Neoplasm Diffuse Large B-cell Lymphoma,https://portal.gdc.cancer.gov/projects/TCGA-DLBC,metadata-mined
+TCGA-COAD,GDC,Colon Adenocarcinoma,https://portal.gdc.cancer.gov/projects/TCGA-COAD,metadata-mined
+TARGET-OS,GDC,Osteosarcoma,https://portal.gdc.cancer.gov/projects/TARGET-OS,metadata-mined
+CGCI-BLGSP,GDC,Burkitt Lymphoma Genome Sequencing Project,https://portal.gdc.cancer.gov/projects/CGCI-BLGSP,metadata-mined
+TCGA-THYM,GDC,Thymoma,https://portal.gdc.cancer.gov/projects/TCGA-THYM,metadata-mined
+APOLLO-OV,GDC,APOLLO2: Proteogenomic characterization of ovarian serous cystadenocarcinoma,https://portal.gdc.cancer.gov/projects/APOLLO-OV,metadata-mined
+TARGET-RT,GDC,Rhabdoid Tumor,https://portal.gdc.cancer.gov/projects/TARGET-RT,metadata-mined
+FM-AD,GDC,Foundation Medicine Adult Cancer Clinical Dataset (FM-AD),https://portal.gdc.cancer.gov/projects/FM-AD,metadata-mined
+TARGET-NBL,GDC,Neuroblastoma,https://portal.gdc.cancer.gov/projects/TARGET-NBL,metadata-mined
+TCGA-SARC,GDC,Sarcoma,https://portal.gdc.cancer.gov/projects/TCGA-SARC,metadata-mined
+TCGA-CESC,GDC,Cervical Squamous Cell Carcinoma and Endocervical Adenocarcinoma,https://portal.gdc.cancer.gov/projects/TCGA-CESC,metadata-mined
+TCGA-PAAD,GDC,Pancreatic Adenocarcinoma,https://portal.gdc.cancer.gov/projects/TCGA-PAAD,metadata-mined
+REBC-THYR,GDC,Comprehensive genomic characterization of radiation-related papillary thyroid cancer in the Ukraine,https://portal.gdc.cancer.gov/projects/REBC-THYR,metadata-mined
+TARGET-ALL-P2,GDC,Acute Lymphoblastic Leukemia - Phase II,https://portal.gdc.cancer.gov/projects/TARGET-ALL-P2,metadata-mined
+TCGA-KIRP,GDC,Kidney Renal Papillary Cell Carcinoma,https://portal.gdc.cancer.gov/projects/TCGA-KIRP,metadata-mined
+MATCH-P,GDC,Genomic Characterization CS-MATCH-0007 Arm P,https://portal.gdc.cancer.gov/projects/MATCH-P,metadata-mined
+MATCH-B,GDC,Genomic Characterization CS-MATCH-0007 Arm B,https://portal.gdc.cancer.gov/projects/MATCH-B,metadata-mined
+MATCH-U,GDC,Genomic Characterization CS-MATCH-0007 Arm U,https://portal.gdc.cancer.gov/projects/MATCH-U,metadata-mined
+CMI-ASC,GDC,Count Me In (CMI): The Angiosarcoma (ASC) Project,https://portal.gdc.cancer.gov/projects/CMI-ASC,metadata-mined
+MATCH-C1,GDC,Genomic Characterization CS-MATCH-0007 Arm C1,https://portal.gdc.cancer.gov/projects/MATCH-C1,metadata-mined
+BEATAML1.0-CRENOLANIB,GDC,Clinical Resistance to Crenolanib in Acute Myeloid Leukemia Due to Diverse Molecular Mechanisms,https://portal.gdc.cancer.gov/projects/BEATAML1.0-CRENOLANIB,metadata-mined
+CMI-MPC,GDC,Count Me In (CMI): The Metastatic Prostate Cancer (MPC) Project,https://portal.gdc.cancer.gov/projects/CMI-MPC,metadata-mined
+ORGANOID-PANCREATIC,GDC,Pancreas Cancer Organoid Profiling,https://portal.gdc.cancer.gov/projects/ORGANOID-PANCREATIC,metadata-mined
+MP2PRT-WT,GDC,Molecular Profiling to Predict Response to Treatment - Wilms Tumor,https://portal.gdc.cancer.gov/projects/MP2PRT-WT,metadata-mined
+MATCH-S2,GDC,Genomic Characterization CS-MATCH-0007 Arm S2,https://portal.gdc.cancer.gov/projects/MATCH-S2,metadata-mined
+MATCH-I,GDC,Genomic Characterization CS-MATCH-0007 Arm I,https://portal.gdc.cancer.gov/projects/MATCH-I,metadata-mined
+EXCEPTIONAL_RESPONDERS-ER,GDC,Exceptional Responders,https://portal.gdc.cancer.gov/projects/EXCEPTIONAL_RESPONDERS-ER,metadata-mined
+MATCH-Q,GDC,Genomic Characterization CS-MATCH-0007 Arm Q,https://portal.gdc.cancer.gov/projects/MATCH-Q,metadata-mined
+MATCH-H,GDC,Genomic Characterization CS-MATCH-0007 Arm H,https://portal.gdc.cancer.gov/projects/MATCH-H,metadata-mined
+TARGET-ALL-P3,GDC,Acute Lymphoblastic Leukemia - Phase III,https://portal.gdc.cancer.gov/projects/TARGET-ALL-P3,metadata-mined
+OHSU-CNL,GDC,Philadelphia-Negative Neutrophilic Leukemias (CNL/aCML/MDS/MPNu),https://portal.gdc.cancer.gov/projects/OHSU-CNL,metadata-mined
+VAREPOP-APOLLO,GDC,VA Research Precision Oncology Program,https://portal.gdc.cancer.gov/projects/VAREPOP-APOLLO,metadata-mined
+NCICCR-DLBCL,GDC,Genomic Variation in Diffuse Large B Cell Lymphomas,https://portal.gdc.cancer.gov/projects/NCICCR-DLBCL,metadata-mined
+TRIO-CRU,GDC,Ukrainian National Research Center for Radiation Medicine Trio Study,https://portal.gdc.cancer.gov/projects/TRIO-CRU,metadata-mined
+CGCI-HTMCP-LC,GDC,HIV+ Tumor Molecular Characterization Project - Lung Cancer,https://portal.gdc.cancer.gov/projects/CGCI-HTMCP-LC,metadata-mined
+CPTAC-2,GDC,"CPTAC-Breast, Colon, Ovary",https://portal.gdc.cancer.gov/projects/CPTAC-2,metadata-mined
+CGCI-HTMCP-DLBCL,GDC,HIV+ Tumor Molecular Characterization Project - Diffuse Large B-Cell Lymphoma,https://portal.gdc.cancer.gov/projects/CGCI-HTMCP-DLBCL,metadata-mined
+TCGA-UCS,GDC,Uterine Carcinosarcoma,https://portal.gdc.cancer.gov/projects/TCGA-UCS,metadata-mined
+TCGA-MESO,GDC,Mesothelioma,https://portal.gdc.cancer.gov/projects/TCGA-MESO,metadata-mined
+TCGA-UVM,GDC,Uveal Melanoma,https://portal.gdc.cancer.gov/projects/TCGA-UVM,metadata-mined
+TCGA-LAML,GDC,Acute Myeloid Leukemia,https://portal.gdc.cancer.gov/projects/TCGA-LAML,metadata-mined
+WCDT-MCRPC,GDC,Genomic Characterization of Metastatic Castration Resistant Prostate Cancer,https://portal.gdc.cancer.gov/projects/WCDT-MCRPC,metadata-mined
+TCGA-ACC,GDC,Adrenocortical Carcinoma,https://portal.gdc.cancer.gov/projects/TCGA-ACC,metadata-mined
+TCGA-PCPG,GDC,Pheochromocytoma and Paraganglioma,https://portal.gdc.cancer.gov/projects/TCGA-PCPG,metadata-mined
+TCGA-READ,GDC,Rectum Adenocarcinoma,https://portal.gdc.cancer.gov/projects/TCGA-READ,metadata-mined
+TARGET-AML,GDC,Acute Myeloid Leukemia,https://portal.gdc.cancer.gov/projects/TARGET-AML,metadata-mined
+TCGA-OV,GDC,Ovarian Serous Cystadenocarcinoma,https://portal.gdc.cancer.gov/projects/TCGA-OV,metadata-mined
+TARGET-WT,GDC,High-Risk Wilms Tumor,https://portal.gdc.cancer.gov/projects/TARGET-WT,metadata-mined
+TCGA-KICH,GDC,Kidney Chromophobe,https://portal.gdc.cancer.gov/projects/TCGA-KICH,metadata-mined
+APOLLO-LUAD,GDC,APOLLO1: Proteogenomic characterization of lung adenocarcinoma,https://portal.gdc.cancer.gov/projects/APOLLO-LUAD,metadata-mined
+TCGA-HNSC,GDC,Head and Neck Squamous Cell Carcinoma,https://portal.gdc.cancer.gov/projects/TCGA-HNSC,metadata-mined
+TCGA-UCEC,GDC,Uterine Corpus Endometrial Carcinoma,https://portal.gdc.cancer.gov/projects/TCGA-UCEC,metadata-mined
+MP2PRT-ALL,GDC,Molecular Profiling to Predict Response to Treatment for Acute Lymphoblastic Leukemia,https://portal.gdc.cancer.gov/projects/MP2PRT-ALL,metadata-mined
+PECGS-COPECC,GDC,USC PE-CGS: Optimizing Engagement of Hispanic Colorectal Cancer Patients in Cancer Genomic Characterization Studies,https://portal.gdc.cancer.gov/projects/PECGS-COPECC,metadata-mined
+TCGA-LIHC,GDC,Liver Hepatocellular Carcinoma,https://portal.gdc.cancer.gov/projects/TCGA-LIHC,metadata-mined
+TCGA-TGCT,GDC,Testicular Germ Cell Tumors,https://portal.gdc.cancer.gov/projects/TCGA-TGCT,metadata-mined
+APOLLO-BRCA-1,GDC,Proteogenomic analysis of tumors from young women with breast cancer,https://portal.gdc.cancer.gov/projects/APOLLO-BRCA-1,metadata-mined
+TCGA-BLCA,GDC,Bladder Urothelial Carcinoma,https://portal.gdc.cancer.gov/projects/TCGA-BLCA,metadata-mined
+TCGA-PRAD,GDC,Prostate Adenocarcinoma,https://portal.gdc.cancer.gov/projects/TCGA-PRAD,metadata-mined
+TCGA-THCA,GDC,Thyroid Carcinoma,https://portal.gdc.cancer.gov/projects/TCGA-THCA,metadata-mined
