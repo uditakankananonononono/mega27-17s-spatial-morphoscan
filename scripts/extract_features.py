@@ -12,13 +12,13 @@ from scipy import sparse
 from src.morphoscan import dataio, features
 
 DATA = "/home/sandbox/mega27-17s-spatial-morphoscan/data/her2st"
-OUT = "features_cache"
+OUT = "features_cache2"  # corrected-geometry rerun; features_cache/ (buggy) kept untouched for provenance
 os.makedirs(OUT, exist_ok=True)
 MAXDIM = 4500
 Image.MAX_IMAGE_PIXELS = None
 
 meta = dataio.read_metadata(os.path.join(DATA, "metadata.csv"))
-log = open("/tmp/extract.log", "w")
+log = open("/tmp/extract2.log", "a")
 
 for _, row in meta.iterrows():
     sec = row["count_matrix"].replace("_stdata.tsv.gz", "")
@@ -37,15 +37,20 @@ for _, row in meta.iterrows():
         tum["ay"] = tum["ycoord"].round().astype(int)
         lab_map = {f"{r.ax}x{r.ay}": r.tumor for r in tum.itertuples()}
         img = Image.open(os.path.join(DATA, row["histology_image"]))
+        orig_w, orig_h = img.size  # header size BEFORE draft decode
         img.draft("RGB", (MAXDIM, MAXDIM))
         img = img.convert("RGB")
         if max(img.size) > MAXDIM:
             r = MAXDIM / max(img.size)
             img = img.resize((int(img.size[0] * r), int(img.size[1] * r)), Image.LANCZOS)
         arr = np.asarray(img)
-        scale = arr.shape[1] / (spots["X"].max() * 1.02)
-        sx = (spots["X"].values * scale).astype(float)
-        sy = (spots["Y"].values * scale).astype(float)
+        # PHASE-1 BUG FIX (PHASE1-GEOMETRY-BUG.md): exact header-derived scale.
+        # Old code used arr.width/(max(spotX)*1.02), misplacing the grid and
+        # NaN-ing ~82% of spots on affected sections.
+        xcol = "X" if "X" in spots.columns else "x"
+        ycol = "Y" if "Y" in spots.columns else "y"
+        sx = (spots[xcol].values * (arr.shape[1] / orig_w)).astype(float)
+        sy = (spots[ycol].values * (arr.shape[0] / orig_h)).astype(float)
         d = np.sqrt((sx[:, None] - sx[None, :]) ** 2 + (sy[:, None] - sy[None, :]) ** 2)
         np.fill_diagonal(d, np.inf)
         pitch = np.median(d.min(axis=1))

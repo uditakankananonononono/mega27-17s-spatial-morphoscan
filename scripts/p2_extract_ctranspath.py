@@ -20,15 +20,20 @@ Image.MAX_IMAGE_PIXELS = None
 MEAN = np.array([0.485, 0.456, 0.406], np.float32)
 STD = np.array([0.229, 0.224, 0.225], np.float32)
 
-torch.set_num_threads(2)
+torch.set_num_threads(int(os.environ.get("P2_THREADS", "2")))
 model = ctranspath()
-sd = torch.load("/home/sandbox/models/ctranspath.pth", map_location="cpu", weights_only=False)
+# mmap=False + clone: default torch.load mmaps the checkpoint, leaving weights
+# file-backed; under memory pressure they get evicted and re-faulted from the
+# REMOTE home mount every forward pass (observed 10x inference slowdown).
+sd = torch.load("/home/sandbox/models/ctranspath.pth", map_location="cpu", weights_only=False, mmap=False)
 sd = sd["model"] if "model" in sd else sd
 remap = {}
 for k, v in sd.items():
     m = re.match(r"layers\.(\d+)\.downsample\.(.*)", k)
-    remap[f"layers.{int(m.group(1))+1}.downsample.{m.group(2)}" if m else k] = v
+    remap[f"layers.{int(m.group(1))+1}.downsample.{m.group(2)}" if m else k] = v.clone()
+del sd
 missing, _ = model.load_state_dict(remap, strict=False)
+del remap
 assert all(m.startswith("head.") for m in missing), missing
 model.eval()
 
@@ -57,6 +62,7 @@ for _, row in meta.iterrows():
             r = MAXDIM / max(img.size)
             img = img.resize((int(img.size[0] * r), int(img.size[1] * r)), Image.LANCZOS)
         arr = np.asarray(img)
+        t_img = time.time()
         # PHASE-1 BUG FIX: exact header-derived scale factors (spot pixel coords
         # are in original-image space). Phase 1 used arr.width/(max(spotX)*1.02),
         # which misplaces the grid and drops ~82% of spots (210/256 on
@@ -90,6 +96,7 @@ for _, row in meta.iterrows():
                             sx=sx, sy=sy, keep_idx=np.array(keep))
         done += 1
         msg = f"{sec}: {len(spots)} spots half={half} {time.time()-t0:.0f}s"
+        msg = msg + f" [img {t_img - t0:.0f}s infer {time.time() - t_img:.0f}s]"
         print(msg, flush=True); log.write(msg + "\n"); log.flush()
     except Exception as e:
         log.write(f"{sec}: ERROR {e}\n"); log.flush()

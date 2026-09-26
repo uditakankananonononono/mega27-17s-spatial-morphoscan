@@ -9,7 +9,7 @@ import pandas as pd
 from scipy import sparse
 from src.morphoscan import models, metrics
 
-CACHE = "features_cache"
+CACHE = os.environ.get("CACHE_DIR", "features_cache")  # CACHE_DIR=features_cache2 for the corrected-geometry rerun
 DATA = "/home/sandbox/mega27-17s-spatial-morphoscan/data/her2st"
 N_GENES = 250
 rng = np.random.default_rng(20260925)
