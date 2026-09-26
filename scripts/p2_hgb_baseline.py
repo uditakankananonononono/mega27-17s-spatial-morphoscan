@@ -65,7 +65,7 @@ for test_pat in patients:
     Ytr = np.stack([pw_train[n] for n in Pnames], axis=1)
     models_hgb = []
     for k, n in enumerate(Pnames):
-        h = HistGradientBoostingRegressor(max_iter=200, learning_rate=0.08,
+        h = HistGradientBoostingRegressor(max_iter=100, learning_rate=0.08,  # halved 2026-09-27: fold time ~80min at 200 iters on this box; HGB config not gate-locked, documented in JUDGE_ROUNDS round-2 adoption A7
                                           early_stopping=False, random_state=20260927)
         h.fit(Ztr, Ytr[:, k])
         models_hgb.append(h)
