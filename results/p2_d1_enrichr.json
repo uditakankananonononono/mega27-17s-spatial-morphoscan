@@ -1,0 +1,1447 @@
+{
+ "set_r_m1": [
+  "ACTG1",
+  "AEBP1",
+  "APOE",
+  "B2M",
+  "C3",
+  "COL1A1",
+  "ERBB2",
+  "FASN",
+  "FN1",
+  "GNAS",
+  "H3-3B",
+  "HLA-DRA",
+  "HSP90AB1",
+  "IGLL5",
+  "LAPTM5",
+  "PTMA",
+  "RPLP1",
+  "RPLP2",
+  "TAGLN",
+  "XBP1"
+ ],
+ "set_r_m2_sensitivity": [
+  "ACTG1",
+  "AEBP1",
+  "APOE",
+  "ATP1A1",
+  "B2M",
+  "BGN",
+  "C3",
+  "COL1A1",
+  "COL1A2",
+  "CTSB",
+  "EIF4A1",
+  "ERBB2",
+  "FASN",
+  "FN1",
+  "GNAS",
+  "H3-3B",
+  "HLA-B",
+  "HLA-DRA",
+  "HSP90AB1",
+  "IGLL5",
+  "LAPTM5",
+  "LGALS1",
+  "PLXNB2",
+  "PTMA",
+  "RPLP1",
+  "RPLP2",
+  "SSR4",
+  "VIM",
+  "XBP1"
+ ],
+ "results": {
+  "primary": {
+   "GO_Biological_Process_2023": [
+    {
+     "term": "Positive Regulation Of Receptor Catabolic Process (GO:2000646)",
+     "p": 1.4215693891863761e-05,
+     "adj_p": 0.005986796064071525,
+     "overlap": "2/6193.205890662571",
+     "genes": [
+      "LAPTM5",
+      "APOE"
+     ]
+    },
+    {
+     "term": "Regulation Of T Cell Activation (GO:0050863)",
+     "p": 3.1145039317832526e-05,
+     "adj_p": 0.005986796064071525,
+     "overlap": "3/618.2971284537232",
+     "genes": [
+      "LAPTM5",
+      "HLA-DRA",
+      "B2M"
+     ]
+    },
+    {
+     "term": "Negative Regulation Of Transforming Growth Factor Beta Production (GO:0071635)",
+     "p": 3.405659800132413e-05,
+     "adj_p": 0.005986796064071525,
+     "overlap": "2/3261.459893047559",
+     "genes": [
+      "HSP90AB1",
+      "FN1"
+     ]
+    },
+    {
+     "term": "Fatty Acid Homeostasis (GO:0055089)",
+     "p": 4.2545300346497585e-05,
+     "adj_p": 0.005986796064071525,
+     "overlap": "2/2791.9028448786567",
+     "genes": [
+      "XBP1",
+      "APOE"
+     ]
+    },
+    {
+     "term": "Negative Regulation Of Nitrogen Compound Metabolic Process (GO:0051172)",
+     "p": 5.196871583395421e-05,
+     "adj_p": 0.005986796064071525,
+     "overlap": "2/2432.2381677726335",
+     "genes": [
+      "HSP90AB1",
+      "APOE"
+     ]
+    },
+    {
+     "term": "Positive Regulation Of Endocytosis (GO:0045807)",
+     "p": 6.442041756915408e-05,
+     "adj_p": 0.0061843600866387915,
+     "overlap": "3/445.9950254687972",
+     "genes": [
+      "C3",
+      "APOE",
+      "B2M"
+     ]
+    },
+    {
+     "term": "Positive Regulation Of T Cell Activation (GO:0050870)",
+     "p": 0.00015883263691889363,
+     "adj_p": 0.013069656980754676,
+     "overlap": "3/295.0257020076404",
+     "genes": [
+      "XBP1",
+      "HLA-DRA",
+      "B2M"
+     ]
+    },
+    {
+     "term": "Regulation Of Supramolecular Fiber Organization (GO:1902903)",
+     "p": 0.00025876610708752327,
+     "adj_p": 0.018631159710301676,
+     "overlap": "2/832.5495793111635",
+     "genes": [
+      "AEBP1",
+      "APOE"
+     ]
+    },
+    {
+     "term": "Regulation Of Lipid Biosynthetic Process (GO:0046890)",
+     "p": 0.0003535487787187227,
+     "adj_p": 0.021496206681199694,
+     "overlap": "2/677.710245242856",
+     "genes": [
+      "C3",
+      "APOE"
+     ]
+    },
+    {
+     "term": "Positive Regulation Of Transferase Activity (GO:0051347)",
+     "p": 0.0003731980326597169,
+     "adj_p": 0.021496206681199694,
+     "overlap": "3/197.40136511759883",
+     "genes": [
+      "HSP90AB1",
+      "ERBB2",
+      "APOE"
+     ]
+    },
+    {
+     "term": "Triglyceride Homeostasis (GO:0070328)",
+     "p": 0.00043414010265241555,
+     "adj_p": 0.022032494055775047,
+     "overlap": "2/591.8141768431133",
+     "genes": [
+      "XBP1",
+      "APOE"
+     ]
+    },
+    {
+     "term": "Negative Regulation Of Programmed Cell Death (GO:0043069)",
+     "p": 0.0004931842663648496,
+     "adj_p": 0.022032494055775047,
+     "overlap": "4/98.98511046015412",
+     "genes": [
+      "XBP1",
+      "ERBB2",
+      "LAPTM5",
+      "PTMA"
+     ]
+    },
+    {
+     "term": "Positive Regulation Of Multicellular Organismal Process (GO:0051240)",
+     "p": 0.0005230975927536048,
+     "adj_p": 0.022032494055775047,
+     "overlap": "4/96.65136159161707",
+     "genes": [
+      "COL1A1",
+      "XBP1",
+      "GNAS",
+      "APOE"
+     ]
+    },
+    {
+     "term": "Platelet Aggregation (GO:0070527)",
+     "p": 0.0005541829397838258,
+     "adj_p": 0.022032494055775047,
+     "overlap": "2/503.57885305588366",
+     "genes": [
+      "GNAS",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Positive Regulation Of Immune Effector Process (GO:0002699)",
+     "p": 0.0006195695304718364,
+     "adj_p": 0.022032494055775047,
+     "overlap": "2/467.69351055771176",
+     "genes": [
+      "XBP1",
+      "HLA-DRA"
+     ]
+    }
+   ],
+   "Reactome_2022": [
+    {
+     "term": "Disease R-HSA-1643685",
+     "p": 1.640330687880421e-07,
+     "adj_p": 5.117831746186914e-05,
+     "overlap": "11/202.07511963418858",
+     "genes": [
+      "C3",
+      "IGLL5",
+      "HSP90AB1",
+      "RPLP1",
+      "ERBB2",
+      "FN1",
+      "GNAS",
+      "RPLP2",
+      "B2M",
+      "ACTG1",
+      "H3-3B"
+     ]
+    },
+    {
+     "term": "Infectious Disease R-HSA-5663205",
+     "p": 2.0735748783850884e-06,
+     "adj_p": 0.0003234776810280738,
+     "overlap": "8/174.18105691148153",
+     "genes": [
+      "C3",
+      "IGLL5",
+      "HSP90AB1",
+      "RPLP1",
+      "GNAS",
+      "RPLP2",
+      "B2M",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Leishmania Infection R-HSA-9658195",
+     "p": 3.6757976612140252e-06,
+     "adj_p": 0.0003822829567662586,
+     "overlap": "5/340.2151625059203",
+     "genes": [
+      "C3",
+      "IGLL5",
+      "HSP90AB1",
+      "GNAS",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Binding And Uptake Of Ligands By Scavenger Receptors R-HSA-2173782",
+     "p": 8.896823842210735e-06,
+     "adj_p": 0.0006939522596924373,
+     "overlap": "3/1077.0361996489462",
+     "genes": [
+      "COL1A1",
+      "IGLL5",
+      "APOE"
+     ]
+    },
+    {
+     "term": "Regulation Of Actin Dynamics For Phagocytic Cup Formation R-HSA-2029482",
+     "p": 3.1145039317832526e-05,
+     "adj_p": 0.0019434504534327497,
+     "overlap": "3/618.2971284537232",
+     "genes": [
+      "IGLL5",
+      "HSP90AB1",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Amyloid Fiber Formation R-HSA-977225",
+     "p": 6.442041756915408e-05,
+     "adj_p": 0.003349861713596012,
+     "overlap": "3/445.9950254687972",
+     "genes": [
+      "APOE",
+      "B2M",
+      "H3-3B"
+     ]
+    },
+    {
+     "term": "Fcgamma Receptor (FCGR) Dependent Phagocytosis R-HSA-2029480",
+     "p": 8.590796714019896e-05,
+     "adj_p": 0.0038290408211060106,
+     "overlap": "3/391.3256456951274",
+     "genes": [
+      "IGLL5",
+      "HSP90AB1",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Signaling By Nuclear Receptors R-HSA-9006931",
+     "p": 0.00011475958098646147,
+     "adj_p": 0.004234806418567642,
+     "overlap": "4/174.75524131375536",
+     "genes": [
+      "HSP90AB1",
+      "FASN",
+      "APOE",
+      "H3-3B"
+     ]
+    },
+    {
+     "term": "Axon Guidance R-HSA-422475",
+     "p": 0.0001295578327600729,
+     "adj_p": 0.004234806418567642,
+     "overlap": "5/113.0010539595503",
+     "genes": [
+      "HSP90AB1",
+      "RPLP1",
+      "ERBB2",
+      "RPLP2",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Post-translational Protein Phosphorylation R-HSA-8957275",
+     "p": 0.00015447781314025097,
+     "adj_p": 0.004234806418567642,
+     "overlap": "3/298.85177601622246",
+     "genes": [
+      "C3",
+      "FN1",
+      "APOE"
+     ]
+    },
+    {
+     "term": "Scavenging By Class A Receptors R-HSA-3000480",
+     "p": 0.0001608034054265043,
+     "adj_p": 0.004234806418567642,
+     "overlap": "2/1139.760479290825",
+     "genes": [
+      "COL1A1",
+      "APOE"
+     ]
+    },
+    {
+     "term": "Nervous System Development R-HSA-9675108",
+     "p": 0.00016287716994490932,
+     "adj_p": 0.004234806418567642,
+     "overlap": "5/104.67017039814857",
+     "genes": [
+      "HSP90AB1",
+      "RPLP1",
+      "ERBB2",
+      "RPLP2",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Initial Triggering Of Complement R-HSA-166663",
+     "p": 0.00019724142352188197,
+     "adj_p": 0.004674302690822535,
+     "overlap": "2/995.8416923242859",
+     "genes": [
+      "C3",
+      "IGLL5"
+     ]
+    },
+    {
+     "term": "RHOBTB2 GTPase Cycle R-HSA-9013418",
+     "p": 0.00023734441315945642,
+     "adj_p": 0.004674302690822535,
+     "overlap": "2/881.3639106067293",
+     "genes": [
+      "HSP90AB1",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Immunoregulatory Interactions Between A Lymphoid And A non-Lymphoid Cell R-HSA-198933",
+     "p": 0.00023970783029859157,
+     "adj_p": 0.004674302690822535,
+     "overlap": "3/243.46285652146054",
+     "genes": [
+      "C3",
+      "IGLL5",
+      "B2M"
+     ]
+    }
+   ],
+   "MSigDB_Hallmark_2020": [
+    {
+     "term": "Myogenesis",
+     "p": 0.0009905301969888136,
+     "adj_p": 0.011886362363865763,
+     "overlap": "3/122.58377707877821",
+     "genes": [
+      "COL1A1",
+      "TAGLN",
+      "AEBP1"
+     ]
+    },
+    {
+     "term": "Epithelial Mesenchymal Transition",
+     "p": 0.0009905301969888136,
+     "adj_p": 0.011886362363865763,
+     "overlap": "3/122.58377707877821",
+     "genes": [
+      "COL1A1",
+      "TAGLN",
+      "FN1"
+     ]
+    },
+    {
+     "term": "Cholesterol Homeostasis",
+     "p": 0.0024576407666974747,
+     "adj_p": 0.019661126133579798,
+     "overlap": "2/184.5961136225927",
+     "genes": [
+      "FASN",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Coagulation",
+     "p": 0.00827845252321301,
+     "adj_p": 0.04312546332069441,
+     "overlap": "2/77.72394195190645",
+     "genes": [
+      "C3",
+      "FN1"
+     ]
+    },
+    {
+     "term": "UV Response Dn",
+     "p": 0.00898447152514467,
+     "adj_p": 0.04312546332069441,
+     "overlap": "2/73.14692162054195",
+     "genes": [
+      "COL1A1",
+      "ERBB2"
+     ]
+    },
+    {
+     "term": "Adipogenesis",
+     "p": 0.016794888254868964,
+     "adj_p": 0.044786368679650565,
+     "overlap": "2/45.36628383483138",
+     "genes": [
+      "C3",
+      "APOE"
+     ]
+    },
+    {
+     "term": "Estrogen Response Early",
+     "p": 0.016794888254868964,
+     "adj_p": 0.044786368679650565,
+     "overlap": "2/45.36628383483138",
+     "genes": [
+      "XBP1",
+      "FASN"
+     ]
+    },
+    {
+     "term": "Allograft Rejection",
+     "p": 0.016794888254868964,
+     "adj_p": 0.044786368679650565,
+     "overlap": "2/45.36628383483138",
+     "genes": [
+      "HLA-DRA",
+      "B2M"
+     ]
+    },
+    {
+     "term": "Complement",
+     "p": 0.016794888254868964,
+     "adj_p": 0.044786368679650565,
+     "overlap": "2/45.36628383483138",
+     "genes": [
+      "C3",
+      "FN1"
+     ]
+    },
+    {
+     "term": "Protein Secretion",
+     "p": 0.09178727400735918,
+     "adj_p": 0.182171186958547,
+     "overlap": "1/26.310792233027552",
+     "genes": [
+      "GNAS"
+     ]
+    },
+    {
+     "term": "Interferon Alpha Response",
+     "p": 0.09269986559485559,
+     "adj_p": 0.182171186958547,
+     "overlap": "1/25.927561451957157",
+     "genes": [
+      "B2M"
+     ]
+    },
+    {
+     "term": "Androgen Response",
+     "p": 0.09543241646248146,
+     "adj_p": 0.182171186958547,
+     "overlap": "1/24.83103038927071",
+     "genes": [
+      "B2M"
+     ]
+    },
+    {
+     "term": "Unfolded Protein Response",
+     "p": 0.10718338491793168,
+     "adj_p": 0.182171186958547,
+     "overlap": "1/20.850327266654197",
+     "genes": [
+      "XBP1"
+     ]
+    },
+    {
+     "term": "Fatty Acid Metabolism",
+     "p": 0.1467499768501904,
+     "adj_p": 0.182171186958547,
+     "overlap": "1/12.752541783227706",
+     "genes": [
+      "FASN"
+     ]
+    },
+    {
+     "term": "Apoptosis",
+     "p": 0.14932763619504633,
+     "adj_p": 0.182171186958547,
+     "overlap": "1/12.398012987267279",
+     "genes": [
+      "ERBB2"
+     ]
+    }
+   ],
+   "KEGG_2021_Human": [
+    {
+     "term": "Focal adhesion",
+     "p": 4.228282513730505e-05,
+     "adj_p": 0.002831953580611137,
+     "overlap": "4/252.83903105451668",
+     "genes": [
+      "COL1A1",
+      "ERBB2",
+      "FN1",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Proteoglycans in cancer",
+     "p": 4.565999666887439e-05,
+     "adj_p": 0.002831953580611137,
+     "overlap": "4/245.8669429733868",
+     "genes": [
+      "COL1A1",
+      "ERBB2",
+      "FN1",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Antigen processing and presentation",
+     "p": 6.201358205717819e-05,
+     "adj_p": 0.002831953580611137,
+     "overlap": "3/453.7476887104782",
+     "genes": [
+      "HSP90AB1",
+      "HLA-DRA",
+      "B2M"
+     ]
+    },
+    {
+     "term": "Amoebiasis",
+     "p": 0.00013783717764729214,
+     "adj_p": 0.004720923334419756,
+     "overlap": "3/315.0283525400414",
+     "genes": [
+      "COL1A1",
+      "FN1",
+      "GNAS"
+     ]
+    },
+    {
+     "term": "Platelet activation",
+     "p": 0.0002454944793371601,
+     "adj_p": 0.006726548733838186,
+     "overlap": "3/240.74773458183122",
+     "genes": [
+      "COL1A1",
+      "GNAS",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Systemic lupus erythematosus",
+     "p": 0.00031521034703415614,
+     "adj_p": 0.007197302923946565,
+     "overlap": "3/213.93040424584777",
+     "genes": [
+      "C3",
+      "HLA-DRA",
+      "H3-3B"
+     ]
+    },
+    {
+     "term": "PI3K-Akt signaling pathway",
+     "p": 0.00037354493274437866,
+     "adj_p": 0.007310807969425697,
+     "overlap": "4/110.66373602829673",
+     "genes": [
+      "COL1A1",
+      "HSP90AB1",
+      "ERBB2",
+      "FN1"
+     ]
+    },
+    {
+     "term": "Phagosome",
+     "p": 0.000446186551915373,
+     "adj_p": 0.007640944701550762,
+     "overlap": "3/181.19818981917135",
+     "genes": [
+      "C3",
+      "HLA-DRA",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Neutrophil extracellular trap formation",
+     "p": 0.0008410563013618914,
+     "adj_p": 0.012802745920731011,
+     "overlap": "3/132.9775935363802",
+     "genes": [
+      "C3",
+      "ACTG1",
+      "H3-3B"
+     ]
+    },
+    {
+     "term": "Vibrio cholerae infection",
+     "p": 0.0011307590059983252,
+     "adj_p": 0.015491398382177054,
+     "overlap": "2/313.0461870363529",
+     "genes": [
+      "GNAS",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Coronavirus disease",
+     "p": 0.0015180696685314105,
+     "adj_p": 0.017566026324298174,
+     "overlap": "3/98.78517249790646",
+     "genes": [
+      "C3",
+      "RPLP1",
+      "RPLP2"
+     ]
+    },
+    {
+     "term": "Viral myocarditis",
+     "p": 0.0016240769248208164,
+     "adj_p": 0.017566026324298174,
+     "overlap": "2/245.12516052672734",
+     "genes": [
+      "HLA-DRA",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Pathways in cancer",
+     "p": 0.001696928036084082,
+     "adj_p": 0.017566026324298174,
+     "overlap": "4/58.86595644003467",
+     "genes": [
+      "HSP90AB1",
+      "ERBB2",
+      "FN1",
+      "GNAS"
+     ]
+    },
+    {
+     "term": "Shigellosis",
+     "p": 0.0017950683835049228,
+     "adj_p": 0.017566026324298174,
+     "overlap": "3/90.62554097587316",
+     "genes": [
+      "C3",
+      "ACTG1",
+      "H3-3B"
+     ]
+    },
+    {
+     "term": "Adherens junction",
+     "p": 0.002265165629135075,
+     "adj_p": 0.0202272354936255,
+     "overlap": "2/195.26590722566357",
+     "genes": [
+      "ERBB2",
+      "ACTG1"
+     ]
+    }
+   ]
+  },
+  "sensitivity_r_m2": {
+   "GO_Biological_Process_2023": [
+    {
+     "term": "Positive Regulation Of Macromolecule Biosynthetic Process (GO:0010557)",
+     "p": 2.7813864779222393e-05,
+     "adj_p": 0.007285899083646816,
+     "overlap": "4/282.3830401478901",
+     "genes": [
+      "XBP1",
+      "ERBB2",
+      "PLXNB2",
+      "VIM"
+     ]
+    },
+    {
+     "term": "Positive Regulation Of Receptor Catabolic Process (GO:2000646)",
+     "p": 3.0340475624808975e-05,
+     "adj_p": 0.007285899083646816,
+     "overlap": "2/3846.615893194714",
+     "genes": [
+      "LAPTM5",
+      "APOE"
+     ]
+    },
+    {
+     "term": "Skin Morphogenesis (GO:0043589)",
+     "p": 5.653401620655799e-05,
+     "adj_p": 0.007285899083646816,
+     "overlap": "2/2410.7535494184467",
+     "genes": [
+      "COL1A1",
+      "COL1A2"
+     ]
+    },
+    {
+     "term": "Negative Regulation Of Transforming Growth Factor Beta Production (GO:0071635)",
+     "p": 7.262136299941514e-05,
+     "adj_p": 0.007285899083646816,
+     "overlap": "2/2013.3538562256686",
+     "genes": [
+      "HSP90AB1",
+      "FN1"
+     ]
+    },
+    {
+     "term": "Supramolecular Fiber Organization (GO:0097435)",
+     "p": 8.296197113048951e-05,
+     "adj_p": 0.007285899083646816,
+     "overlap": "5/123.75907093155409",
+     "genes": [
+      "COL1A1",
+      "COL1A2",
+      "HSP90AB1",
+      "VIM",
+      "B2M"
+     ]
+    },
+    {
+     "term": "Regulation Of Dendritic Cell Differentiation (GO:2001198)",
+     "p": 9.069521855500593e-05,
+     "adj_p": 0.007285899083646816,
+     "overlap": "2/1720.5159460048703",
+     "genes": [
+      "LGALS1",
+      "HLA-B"
+     ]
+    },
+    {
+     "term": "Fatty Acid Homeostasis (GO:0055089)",
+     "p": 9.069521855500593e-05,
+     "adj_p": 0.007285899083646816,
+     "overlap": "2/1720.5159460048703",
+     "genes": [
+      "XBP1",
+      "APOE"
+     ]
+    },
+    {
+     "term": "Regulation Of T Cell Activation (GO:0050863)",
+     "p": 9.786292329817246e-05,
+     "adj_p": 0.007285899083646816,
+     "overlap": "3/359.5041298036626",
+     "genes": [
+      "LAPTM5",
+      "HLA-DRA",
+      "B2M"
+     ]
+    },
+    {
+     "term": "Negative Regulation Of Nitrogen Compound Metabolic Process (GO:0051172)",
+     "p": 0.0001107501888077093,
+     "adj_p": 0.007285899083646816,
+     "overlap": "2/1496.4490206891242",
+     "genes": [
+      "HSP90AB1",
+      "APOE"
+     ]
+    },
+    {
+     "term": "Positive Regulation Of Cellular Biosynthetic Process (GO:0031328)",
+     "p": 0.00011089648529142795,
+     "adj_p": 0.007285899083646816,
+     "overlap": "4/169.7185801186645",
+     "genes": [
+      "HSP90AB1",
+      "ERBB2",
+      "PLXNB2",
+      "VIM"
+     ]
+    },
+    {
+     "term": "Positive Regulation Of Protein Metabolic Process (GO:0051247)",
+     "p": 0.0001753438078189349,
+     "adj_p": 0.01047280743064002,
+     "overlap": "4/142.55321793873645",
+     "genes": [
+      "ERBB2",
+      "PLXNB2",
+      "VIM",
+      "APOE"
+     ]
+    },
+    {
+     "term": "Positive Regulation Of Endocytosis (GO:0045807)",
+     "p": 0.00020126575616439093,
+     "adj_p": 0.011019300150000404,
+     "overlap": "3/257.0709173190997",
+     "genes": [
+      "C3",
+      "APOE",
+      "B2M"
+     ]
+    },
+    {
+     "term": "Positive Regulation Of Amide Metabolic Process (GO:0034250)",
+     "p": 0.0002499179552645476,
+     "adj_p": 0.01263046896990829,
+     "overlap": "3/232.1297582282843",
+     "genes": [
+      "ERBB2",
+      "PLXNB2",
+      "VIM"
+     ]
+    },
+    {
+     "term": "Cytoplasmic Translation (GO:0002181)",
+     "p": 0.0003258007686017775,
+     "adj_p": 0.014726178770164773,
+     "overlap": "3/204.65257992017186",
+     "genes": [
+      "EIF4A1",
+      "RPLP1",
+      "RPLP2"
+     ]
+    },
+    {
+     "term": "Cellular Response To Hormone Stimulus (GO:0032870)",
+     "p": 0.00033621412717271175,
+     "adj_p": 0.014726178770164773,
+     "overlap": "3/201.60039925159742",
+     "genes": [
+      "XBP1",
+      "ATP1A1",
+      "CTSB"
+     ]
+    }
+   ],
+   "Reactome_2022": [
+    {
+     "term": "Disease R-HSA-1643685",
+     "p": 2.7329528285771406e-07,
+     "adj_p": 6.15504552937526e-05,
+     "overlap": "13/130.0456409491269",
+     "genes": [
+      "HSP90AB1",
+      "RPLP1",
+      "BGN",
+      "FN1",
+      "HLA-B",
+      "ACTG1",
+      "C3",
+      "IGLL5",
+      "ERBB2",
+      "GNAS",
+      "RPLP2",
+      "B2M",
+      "H3-3B"
+     ]
+    },
+    {
+     "term": "Binding And Uptake Of Ligands By Scavenger Receptors R-HSA-2173782",
+     "p": 3.4774268527543845e-07,
+     "adj_p": 6.15504552937526e-05,
+     "overlap": "4/1281.9654997417383",
+     "genes": [
+      "COL1A1",
+      "IGLL5",
+      "COL1A2",
+      "APOE"
+     ]
+    },
+    {
+     "term": "Scavenging By Class A Receptors R-HSA-3000480",
+     "p": 2.6146061187398285e-06,
+     "adj_p": 0.00030852352201129975,
+     "overlap": "3/1849.8280820388536",
+     "genes": [
+      "COL1A1",
+      "COL1A2",
+      "APOE"
+     ]
+    },
+    {
+     "term": "Infectious Disease R-HSA-5663205",
+     "p": 5.513337206729439e-06,
+     "adj_p": 0.00048793034279555537,
+     "overlap": "9/108.8548710049838",
+     "genes": [
+      "C3",
+      "IGLL5",
+      "HSP90AB1",
+      "RPLP1",
+      "HLA-B",
+      "GNAS",
+      "RPLP2",
+      "B2M",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Immune System R-HSA-168256",
+     "p": 7.324311651450877e-06,
+     "adj_p": 0.0005185612649227221,
+     "overlap": "12/77.97626732680385",
+     "genes": [
+      "C3",
+      "IGLL5",
+      "EIF4A1",
+      "COL1A2",
+      "HSP90AB1",
+      "FN1",
+      "HLA-B",
+      "HLA-DRA",
+      "VIM",
+      "B2M",
+      "CTSB",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Post-translational Protein Phosphorylation R-HSA-8957275",
+     "p": 1.598468831420098e-05,
+     "adj_p": 0.0008792883744997006,
+     "overlap": "4/344.20523498159747",
+     "genes": [
+      "C3",
+      "LGALS1",
+      "FN1",
+      "APOE"
+     ]
+    },
+    {
+     "term": "RHOBTB GTPase Cycle R-HSA-9706574",
+     "p": 1.7387058252818938e-05,
+     "adj_p": 0.0008792883744997006,
+     "overlap": "3/787.9584421598367",
+     "genes": [
+      "HSP90AB1",
+      "VIM",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Leishmania Infection R-HSA-9658195",
+     "p": 2.571219189364608e-05,
+     "adj_p": 0.0010166894921368474,
+     "overlap": "5/179.49968142528",
+     "genes": [
+      "C3",
+      "IGLL5",
+      "HSP90AB1",
+      "GNAS",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Immunoregulatory Interactions Between A Lymphoid And A non-Lymphoid Cell R-HSA-198933",
+     "p": 2.87200421507584e-05,
+     "adj_p": 0.0010166894921368474,
+     "overlap": "4/279.1402157332194",
+     "genes": [
+      "C3",
+      "IGLL5",
+      "HLA-B",
+      "B2M"
+     ]
+    },
+    {
+     "term": "Regulation Of IGF Transport And Uptake By IGFBPs R-HSA-381426",
+     "p": 2.87200421507584e-05,
+     "adj_p": 0.0010166894921368474,
+     "overlap": "4/279.1402157332194",
+     "genes": [
+      "C3",
+      "LGALS1",
+      "FN1",
+      "APOE"
+     ]
+    },
+    {
+     "term": "Metabolism Of Proteins R-HSA-392499",
+     "p": 3.6059963104317965e-05,
+     "adj_p": 0.0011604751762662325,
+     "overlap": "11/60.19626010401142",
+     "genes": [
+      "C3",
+      "EIF4A1",
+      "LGALS1",
+      "SSR4",
+      "RPLP1",
+      "FN1",
+      "HLA-B",
+      "RPLP2",
+      "APOE",
+      "B2M",
+      "H3-3B"
+     ]
+    },
+    {
+     "term": "Cytokine Signaling In Immune System R-HSA-1280215",
+     "p": 5.061185367099975e-05,
+     "adj_p": 0.0014930496832944926,
+     "overlap": "7/87.289485332878",
+     "genes": [
+      "EIF4A1",
+      "COL1A2",
+      "FN1",
+      "HLA-B",
+      "HLA-DRA",
+      "VIM",
+      "B2M"
+     ]
+    },
+    {
+     "term": "Extracellular Matrix Organization R-HSA-1474244",
+     "p": 5.618520550575802e-05,
+     "adj_p": 0.0015299663653106413,
+     "overlap": "5/140.33674364644995",
+     "genes": [
+      "COL1A1",
+      "COL1A2",
+      "BGN",
+      "FN1",
+      "CTSB"
+     ]
+    },
+    {
+     "term": "Assembly Of Collagen Fibrils And Other Multimeric Structures R-HSA-2022090",
+     "p": 7.608262829740284e-05,
+     "adj_p": 0.001923803601234329,
+     "overlap": "3/403.6039862334888",
+     "genes": [
+      "COL1A1",
+      "COL1A2",
+      "CTSB"
+     ]
+    },
+    {
+     "term": "Regulation Of Actin Dynamics For Phagocytic Cup Formation R-HSA-2029482",
+     "p": 9.786292329817246e-05,
+     "adj_p": 0.00230956498983687,
+     "overlap": "3/359.5041298036626",
+     "genes": [
+      "IGLL5",
+      "HSP90AB1",
+      "ACTG1"
+     ]
+    }
+   ],
+   "MSigDB_Hallmark_2020": [
+    {
+     "term": "Epithelial Mesenchymal Transition",
+     "p": 3.637619320678757e-07,
+     "adj_p": 9.457810233764768e-06,
+     "overlap": "6/394.3015985500817",
+     "genes": [
+      "COL1A1",
+      "COL1A2",
+      "LGALS1",
+      "BGN",
+      "FN1",
+      "VIM"
+     ]
+    },
+    {
+     "term": "Coagulation",
+     "p": 0.0010298443623580577,
+     "adj_p": 0.010091121601413436,
+     "overlap": "3/116.61444687871654",
+     "genes": [
+      "C3",
+      "FN1",
+      "CTSB"
+     ]
+    },
+    {
+     "term": "UV Response Dn",
+     "p": 0.0011643601847784735,
+     "adj_p": 0.010091121601413436,
+     "overlap": "3/109.62620426104738",
+     "genes": [
+      "COL1A1",
+      "COL1A2",
+      "ERBB2"
+     ]
+    },
+    {
+     "term": "Myogenesis",
+     "p": 0.0029718848603480213,
+     "adj_p": 0.01545380127380971,
+     "overlap": "3/67.38940857682955",
+     "genes": [
+      "COL1A1",
+      "PLXNB2",
+      "AEBP1"
+     ]
+    },
+    {
+     "term": "Complement",
+     "p": 0.0029718848603480213,
+     "adj_p": 0.01545380127380971,
+     "overlap": "3/67.38940857682955",
+     "genes": [
+      "C3",
+      "FN1",
+      "CTSB"
+     ]
+    },
+    {
+     "term": "Cholesterol Homeostasis",
+     "p": 0.005139896952313379,
+     "adj_p": 0.022272886793357975,
+     "overlap": "2/107.90339713070315",
+     "genes": [
+      "FASN",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Protein Secretion",
+     "p": 0.008508369595094972,
+     "adj_p": 0.03160251563892418,
+     "overlap": "2/74.66335234524666",
+     "genes": [
+      "GNAS",
+      "ATP1A1"
+     ]
+    },
+    {
+     "term": "Unfolded Protein Response",
+     "p": 0.011629269499553745,
+     "adj_p": 0.03779512587354967,
+     "overlap": "2/59.03303991022321",
+     "genes": [
+      "EIF4A1",
+      "XBP1"
+     ]
+    },
+    {
+     "term": "Fatty Acid Metabolism",
+     "p": 0.021897619373481076,
+     "adj_p": 0.05500210892152375,
+     "overlap": "2/35.95469716966088",
+     "genes": [
+      "LGALS1",
+      "FASN"
+     ]
+    },
+    {
+     "term": "Apoptosis",
+     "p": 0.02267917318308949,
+     "adj_p": 0.05500210892152375,
+     "overlap": "2/34.947281238737716",
+     "genes": [
+      "ERBB2",
+      "BGN"
+     ]
+    },
+    {
+     "term": "Adipogenesis",
+     "p": 0.03384745164401461,
+     "adj_p": 0.05500210892152375,
+     "overlap": "2/25.046477343523872",
+     "genes": [
+      "C3",
+      "APOE"
+     ]
+    },
+    {
+     "term": "Estrogen Response Early",
+     "p": 0.03384745164401461,
+     "adj_p": 0.05500210892152375,
+     "overlap": "2/25.046477343523872",
+     "genes": [
+      "XBP1",
+      "FASN"
+     ]
+    },
+    {
+     "term": "Interferon Gamma Response",
+     "p": 0.03384745164401461,
+     "adj_p": 0.05500210892152375,
+     "overlap": "2/25.046477343523872",
+     "genes": [
+      "HLA-B",
+      "B2M"
+     ]
+    },
+    {
+     "term": "Myc Targets V1",
+     "p": 0.03384745164401461,
+     "adj_p": 0.05500210892152375,
+     "overlap": "2/25.046477343523872",
+     "genes": [
+      "EIF4A1",
+      "HSP90AB1"
+     ]
+    },
+    {
+     "term": "heme Metabolism",
+     "p": 0.03384745164401461,
+     "adj_p": 0.05500210892152375,
+     "overlap": "2/25.046477343523872",
+     "genes": [
+      "C3",
+      "CTSB"
+     ]
+    }
+   ],
+   "KEGG_2021_Human": [
+    {
+     "term": "Antigen processing and presentation",
+     "p": 8.742031359144616e-08,
+     "adj_p": 1.302562672512548e-05,
+     "overlap": "5/922.9252406231742",
+     "genes": [
+      "HSP90AB1",
+      "HLA-B",
+      "HLA-DRA",
+      "B2M",
+      "CTSB"
+     ]
+    },
+    {
+     "term": "Focal adhesion",
+     "p": 9.519225220393863e-06,
+     "adj_p": 0.0005113980113835594,
+     "overlap": "5/243.02981249033462",
+     "genes": [
+      "COL1A1",
+      "COL1A2",
+      "ERBB2",
+      "FN1",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Proteoglycans in cancer",
+     "p": 1.0473115966974236e-05,
+     "adj_p": 0.0005113980113835594,
+     "overlap": "5/236.15427635626352",
+     "genes": [
+      "COL1A1",
+      "COL1A2",
+      "ERBB2",
+      "FN1",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Amoebiasis",
+     "p": 1.3728805674726427e-05,
+     "adj_p": 0.0005113980113835594,
+     "overlap": "4/363.26268204171964",
+     "genes": [
+      "COL1A1",
+      "COL1A2",
+      "FN1",
+      "GNAS"
+     ]
+    },
+    {
+     "term": "Platelet activation",
+     "p": 2.964770599584804e-05,
+     "adj_p": 0.0008835016386762717,
+     "overlap": "4/275.95869780574327",
+     "genes": [
+      "COL1A1",
+      "COL1A2",
+      "GNAS",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Phagosome",
+     "p": 6.568304724969495e-05,
+     "adj_p": 0.0016311290067007578,
+     "overlap": "4/206.38785452253651",
+     "genes": [
+      "C3",
+      "HLA-B",
+      "HLA-DRA",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Viral myocarditis",
+     "p": 8.872018830307839e-05,
+     "adj_p": 0.001888472579594097,
+     "overlap": "3/376.1094734082781",
+     "genes": [
+      "HLA-B",
+      "HLA-DRA",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Human papillomavirus infection",
+     "p": 0.00010319701651228562,
+     "adj_p": 0.0019220444325413197,
+     "overlap": "5/115.2344793159684",
+     "genes": [
+      "COL1A1",
+      "COL1A2",
+      "FN1",
+      "HLA-B",
+      "GNAS"
+     ]
+    },
+    {
+     "term": "PI3K-Akt signaling pathway",
+     "p": 0.00014137264593402959,
+     "adj_p": 0.0023405026937967123,
+     "overlap": "5/103.82735878449714",
+     "genes": [
+      "COL1A1",
+      "COL1A2",
+      "HSP90AB1",
+      "ERBB2",
+      "FN1"
+     ]
+    },
+    {
+     "term": "Gastric acid secretion",
+     "p": 0.00017944539884950534,
+     "adj_p": 0.002665988984969545,
+     "overlap": "3/271.28499955096464",
+     "genes": [
+      "GNAS",
+      "ATP1A1",
+      "ACTG1"
+     ]
+    },
+    {
+     "term": "Epstein-Barr virus infection",
+     "p": 0.00019681797875614092,
+     "adj_p": 0.002665988984969545,
+     "overlap": "4/136.34551996251002",
+     "genes": [
+      "HLA-B",
+      "HLA-DRA",
+      "VIM",
+      "B2M"
+     ]
+    },
+    {
+     "term": "ECM-receptor interaction",
+     "p": 0.00027685572008301264,
+     "adj_p": 0.00343762519103074,
+     "overlap": "3/221.1398979229575",
+     "genes": [
+      "COL1A1",
+      "COL1A2",
+      "FN1"
+     ]
+    },
+    {
+     "term": "AGE-RAGE signaling pathway in diabetic complications",
+     "p": 0.0004032210189685461,
+     "adj_p": 0.00462153321740872,
+     "overlap": "3/184.7767981808264",
+     "genes": [
+      "COL1A1",
+      "COL1A2",
+      "FN1"
+     ]
+    },
+    {
+     "term": "Protein digestion and absorption",
+     "p": 0.0004397168246319511,
+     "adj_p": 0.004679843347868622,
+     "overlap": "3/177.2198104633972",
+     "genes": [
+      "COL1A1",
+      "COL1A2",
+      "ATP1A1"
+     ]
+    },
+    {
+     "term": "Relaxin signaling pathway",
+     "p": 0.0008472977328612016,
+     "adj_p": 0.008416490813087936,
+     "overlap": "3/128.54650380592753",
+     "genes": [
+      "COL1A1",
+      "COL1A2",
+      "GNAS"
+     ]
+    }
+   ]
+  }
+ },
+ "confirmatory": {
+  "hypothesis": "antigen processing & presentation enrichment (GO_Biological_Process_2023)",
+  "alpha": 0.05,
+  "one_sided": true,
+  "hit_terms": [],
+  "pass": false
+ }
+}
