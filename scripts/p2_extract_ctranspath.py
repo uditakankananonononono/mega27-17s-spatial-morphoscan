@@ -50,15 +50,19 @@ for _, row in meta.iterrows():
         xcol = "X" if "X" in spots.columns else "x"
         ycol = "Y" if "Y" in spots.columns else "y"
         img = Image.open(os.path.join(DATA, row["histology_image"]))
+        orig_w, orig_h = img.size  # header size BEFORE draft decode
         img.draft("RGB", (MAXDIM, MAXDIM))
         img = img.convert("RGB")
         if max(img.size) > MAXDIM:
             r = MAXDIM / max(img.size)
             img = img.resize((int(img.size[0] * r), int(img.size[1] * r)), Image.LANCZOS)
         arr = np.asarray(img)
-        scale = arr.shape[1] / (spots[xcol].max() * 1.02)
-        sx = spots[xcol].values * scale
-        sy = spots[ycol].values * scale
+        # PHASE-1 BUG FIX: exact header-derived scale factors (spot pixel coords
+        # are in original-image space). Phase 1 used arr.width/(max(spotX)*1.02),
+        # which misplaces the grid and drops ~82% of spots (210/256 on
+        # BC23287_C1, verified against Phase-1's own features_cache NaN rows).
+        sx = spots[xcol].values * (arr.shape[1] / orig_w)
+        sy = spots[ycol].values * (arr.shape[0] / orig_h)
         d = np.sqrt((sx[:, None] - sx[None, :]) ** 2 + (sy[:, None] - sy[None, :]) ** 2)
         np.fill_diagonal(d, np.inf)
         pitch = np.median(d.min(axis=1))
