@@ -1,0 +1,38 @@
+{
+ "n_folds": 10,
+ "G2-R": {
+  "median_per_gene_r": 0.05214122081646316,
+  "frac_genes_beat_M1": 0.8727272727272727,
+  "n_genes_common": 275,
+  "wilcoxon_p": 1.6827177695331062e-37,
+  "pass": false,
+  "caveat": "Phase-2 top-250 are fold-varying; comparison on genes present in both runs"
+ },
+ "G2-P": {
+  "median_pathway_r": 0.32811983730006056,
+  "perm_p": 0.004975124378109453,
+  "n_perm": 200,
+  "immune_auc_median": 0.6334434692901278,
+  "pass": false
+ },
+ "G2-B": {
+  "median_per_gene_r": 0.05214122081646316,
+  "stnet": 0.19,
+  "gap": -0.13785877918353684,
+  "note": "round-2 pre-committed: benchmark characterization, not pass/fail"
+ },
+ "G2-A": {
+  "perm_gene_median": 0.0003840589884403317,
+  "perm_pathway_median": 0.005424431694628927,
+  "pass": true,
+  "threshold": "|r| < 0.02"
+ },
+ "G2-S": {
+  "scanner_auc_median": 0.9260755531113838,
+  "pass": true
+ },
+ "D1": {
+  "genes_ge_015": 22,
+  "note": "enrichment (confirmatory antigen-processing + exploratory) evaluated separately"
+ }
+}

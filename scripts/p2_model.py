@@ -186,6 +186,7 @@ for test_pat in patients:
     t0 = time.time()
     train_pats = [p for p in patients if p != test_pat]
     Xtr, Ntr, Ltr, _ = assemble(train_pats)
+    import gc; gc.collect()
     top = models.select_top_genes(Ntr, N_GENES)
     Ytr = Ntr[:, top].toarray()
     sc = models.Standardizer().fit(Xtr)
@@ -220,6 +221,8 @@ for test_pat in patients:
             inner_pred.append(models.predict_bank(sci.transform(s["X"]), banki))
             inner_true.append(s["N"][:, topi].toarray())
             inner_px.append(s["px"])
+        del Xi, Ni, banki
+        import gc; gc.collect()
     alpha = models.choose_alpha_inner(inner_pred, inner_true, inner_px,
                                       length_scale=1.5 * np.median([sections[s]["pitch"] for s in sections]))
 
