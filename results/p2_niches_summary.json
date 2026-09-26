@@ -1,0 +1,209 @@
+{
+ "k": 8,
+ "n_null": 200,
+ "n_sections": 29,
+ "niche_I_median_across_sections": 0.21295077518769462,
+ "frac_sections_all_niches_sig": 0.9655172413793104,
+ "pathway_spatial": {
+  "TNF-alpha Signaling via NF-kB": {
+   "I_median": 0.2623615022154533,
+   "frac_p_lt_05": 1.0
+  },
+  "Hypoxia": {
+   "I_median": 0.2768916451996223,
+   "frac_p_lt_05": 1.0
+  },
+  "Cholesterol Homeostasis": {
+   "I_median": 0.26457979750812793,
+   "frac_p_lt_05": 1.0
+  },
+  "Mitotic Spindle": {
+   "I_median": 0.3461261934929585,
+   "frac_p_lt_05": 1.0
+  },
+  "Wnt-beta Catenin Signaling": {
+   "I_median": 0.12459471007208442,
+   "frac_p_lt_05": 0.8275862068965517
+  },
+  "TGF-beta Signaling": {
+   "I_median": 0.19927642030944345,
+   "frac_p_lt_05": 0.9310344827586207
+  },
+  "IL-6/JAK/STAT3 Signaling": {
+   "I_median": 0.14362700773699066,
+   "frac_p_lt_05": 0.9655172413793104
+  },
+  "DNA Repair": {
+   "I_median": 0.27432286917286985,
+   "frac_p_lt_05": 1.0
+  },
+  "G2-M Checkpoint": {
+   "I_median": 0.3403999551147738,
+   "frac_p_lt_05": 1.0
+  },
+  "Apoptosis": {
+   "I_median": 0.24680188878280648,
+   "frac_p_lt_05": 0.9655172413793104
+  },
+  "Notch Signaling": {
+   "I_median": 0.14171368153192362,
+   "frac_p_lt_05": 0.896551724137931
+  },
+  "Adipogenesis": {
+   "I_median": 0.27549697479501356,
+   "frac_p_lt_05": 1.0
+  },
+  "Estrogen Response Early": {
+   "I_median": 0.27013261777599457,
+   "frac_p_lt_05": 1.0
+  },
+  "Estrogen Response Late": {
+   "I_median": 0.2582563350450292,
+   "frac_p_lt_05": 1.0
+  },
+  "Androgen Response": {
+   "I_median": 0.303371515409589,
+   "frac_p_lt_05": 1.0
+  },
+  "Myogenesis": {
+   "I_median": 0.2314690328695553,
+   "frac_p_lt_05": 1.0
+  },
+  "Protein Secretion": {
+   "I_median": 0.28457131812484204,
+   "frac_p_lt_05": 1.0
+  },
+  "Interferon Alpha Response": {
+   "I_median": 0.23248725562248673,
+   "frac_p_lt_05": 1.0
+  },
+  "Interferon Gamma Response": {
+   "I_median": 0.2882173313445685,
+   "frac_p_lt_05": 1.0
+  },
+  "Apical Junction": {
+   "I_median": 0.2734814060683901,
+   "frac_p_lt_05": 1.0
+  },
+  "Apical Surface": {
+   "I_median": 0.13717674158898724,
+   "frac_p_lt_05": 0.9310344827586207
+  },
+  "Hedgehog Signaling": {
+   "I_median": 0.10450874645014345,
+   "frac_p_lt_05": 0.8275862068965517
+  },
+  "Complement": {
+   "I_median": 0.25210613787963604,
+   "frac_p_lt_05": 1.0
+  },
+  "Unfolded Protein Response": {
+   "I_median": 0.3008945747144131,
+   "frac_p_lt_05": 1.0
+  },
+  "PI3K/AKT/mTOR  Signaling": {
+   "I_median": 0.24659072098785945,
+   "frac_p_lt_05": 1.0
+  },
+  "mTORC1 Signaling": {
+   "I_median": 0.33900420957306154,
+   "frac_p_lt_05": 1.0
+  },
+  "E2F Targets": {
+   "I_median": 0.3289846028958413,
+   "frac_p_lt_05": 1.0
+  },
+  "Myc Targets V1": {
+   "I_median": 0.3618085727512148,
+   "frac_p_lt_05": 1.0
+  },
+  "Myc Targets V2": {
+   "I_median": 0.18269974798499136,
+   "frac_p_lt_05": 0.9310344827586207
+  },
+  "Epithelial Mesenchymal Transition": {
+   "I_median": 0.304932165757629,
+   "frac_p_lt_05": 1.0
+  },
+  "Inflammatory Response": {
+   "I_median": 0.19497179427447855,
+   "frac_p_lt_05": 0.9655172413793104
+  },
+  "Xenobiotic Metabolism": {
+   "I_median": 0.28718131487662657,
+   "frac_p_lt_05": 1.0
+  },
+  "Fatty Acid Metabolism": {
+   "I_median": 0.27835437605185737,
+   "frac_p_lt_05": 1.0
+  },
+  "Oxidative Phosphorylation": {
+   "I_median": 0.30211585043544564,
+   "frac_p_lt_05": 1.0
+  },
+  "Glycolysis": {
+   "I_median": 0.30761162567722306,
+   "frac_p_lt_05": 1.0
+  },
+  "Reactive Oxygen Species Pathway": {
+   "I_median": 0.16356647311469968,
+   "frac_p_lt_05": 0.9655172413793104
+  },
+  "p53 Pathway": {
+   "I_median": 0.25521090419724723,
+   "frac_p_lt_05": 0.9655172413793104
+  },
+  "UV Response Up": {
+   "I_median": 0.25855185492620136,
+   "frac_p_lt_05": 1.0
+  },
+  "UV Response Dn": {
+   "I_median": 0.2547793874693062,
+   "frac_p_lt_05": 1.0
+  },
+  "Angiogenesis": {
+   "I_median": 0.18376234487562076,
+   "frac_p_lt_05": 0.896551724137931
+  },
+  "heme Metabolism": {
+   "I_median": 0.25942336767400886,
+   "frac_p_lt_05": 1.0
+  },
+  "Coagulation": {
+   "I_median": 0.2289661843790631,
+   "frac_p_lt_05": 1.0
+  },
+  "IL-2/STAT5 Signaling": {
+   "I_median": 0.23775151495019597,
+   "frac_p_lt_05": 1.0
+  },
+  "Bile Acid Metabolism": {
+   "I_median": 0.16451688669954578,
+   "frac_p_lt_05": 0.9310344827586207
+  },
+  "Pperoxisome": {
+   "I_median": 0.2560401438280996,
+   "frac_p_lt_05": 1.0
+  },
+  "Allograft Rejection": {
+   "I_median": 0.2022704200427099,
+   "frac_p_lt_05": 1.0
+  },
+  "Spermatogenesis": {
+   "I_median": 0.16322574471737816,
+   "frac_p_lt_05": 0.9310344827586207
+  },
+  "KRAS Signaling Up": {
+   "I_median": 0.22163908713421793,
+   "frac_p_lt_05": 0.9310344827586207
+  },
+  "KRAS Signaling Dn": {
+   "I_median": 0.11366050330371154,
+   "frac_p_lt_05": 0.896551724137931
+  },
+  "Pancreas Beta Cells": {
+   "I_median": 0.0720734587440345,
+   "frac_p_lt_05": 0.8275862068965517
+  }
+ }
+}
