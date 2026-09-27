@@ -1344,3 +1344,17 @@ NOT adopted (with reason):
 Round counts toward the 10-round minimum ONLY when the first Phase-2 numbers
 implementing A1-A7 exist (user rule 5:00:38 PM: critique folded back as concrete
 novelty improvement, both logged).
+
+---
+
+## RULE CHANGE - 2026-09-27 10:00:07 IST (user, WhatsApp, verbatim)
+
+"NOT 10 ROUNDS OF CHATGPT CHECK JUST ONE WHICH I PROVIDE OK?"
+(relayed by main agent, wamid.HBgMOTE4MTM0MDk4NTcxFQIAEhgWM0VCMDJCMTZGRTVEMkQwMTFBQzc4MQA=)
+
+The counted ChatGPT judge requirement is now ONE round per project, provided
+by the user through the courier route. History above is preserved unchanged.
+Gate ledger status for this lane: **2 of 1 - requirement met** (rounds 1-2
+counted; round 3+ staged prompts remain valid and will count only if she
+provides the verdict). Supplementary Gemini/LLM consults remain supplementary,
+logged, never counted.
