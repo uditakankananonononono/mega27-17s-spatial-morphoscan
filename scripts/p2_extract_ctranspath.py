@@ -83,7 +83,8 @@ for _, row in meta.iterrows():
             if not batch: return
             t = torch.from_numpy(np.stack(batch)).permute(0, 3, 1, 2)
             with torch.no_grad():
-                f = model.forward_features(t).mean(dim=(1, 2))
+                ff = model.forward_features(t)
+                f = ff.mean(dim=(1, 2)) if ff.dim() == 4 else (ff.mean(dim=1) if ff.dim() == 3 else ff)  # (B,H,W,C) / (B,L,C) / pre-pooled (B,C): same 768-d global average
             for j, k in enumerate(bidx):
                 X[k] = f[j].numpy().astype(np.float16)
             batch.clear(); bidx.clear()
