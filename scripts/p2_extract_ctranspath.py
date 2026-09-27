@@ -9,7 +9,8 @@ sys.path.insert(0, "/home/sandbox/ctranspath_src")
 import numpy as np
 from PIL import Image
 import torch, torch.nn as nn
-from ctran import ctranspath
+from ctran import ConvStem
+import timm
 from src.morphoscan import dataio
 
 DATA = "/home/sandbox/mega27-17s-spatial-morphoscan/data/her2st"
@@ -21,20 +22,22 @@ MEAN = np.array([0.485, 0.456, 0.406], np.float32)
 STD = np.array([0.229, 0.224, 0.225], np.float32)
 
 torch.set_num_threads(int(os.environ.get("P2_THREADS", "2")))
-model = ctranspath()
+model = timm.create_model("swin_tiny_patch4_window7_224", pretrained=False)
+model.patch_embed = ConvStem(embed_dim=96, norm_layer=torch.nn.LayerNorm)
+# Post-wipe reconstruction (2026-09-27): timm 0.5.4 + jamesdolezal/CTransPath checkpoint.
+# ConvStem built directly (timm 0.5.4 create_model ignores embed_layer kwarg);
+# embed_dim=96 + LayerNorm matches checkpoint patch_embed keys exactly; NO downsample
+# remap needed with this timm/checkpoint pair (the old +1 remap mismatched here).
+# Verified: missing == head.* only, zero unexpected keys, forward pass OK.
 # mmap=False + clone: default torch.load mmaps the checkpoint, leaving weights
 # file-backed; under memory pressure they get evicted and re-faulted from the
 # REMOTE home mount every forward pass (observed 10x inference slowdown).
 sd = torch.load("/home/sandbox/models/ctranspath.pth", map_location="cpu", weights_only=False, mmap=False)
 sd = sd["model"] if "model" in sd else sd
-remap = {}
-for k, v in sd.items():
-    m = re.match(r"layers\.(\d+)\.downsample\.(.*)", k)
-    remap[f"layers.{int(m.group(1))+1}.downsample.{m.group(2)}" if m else k] = v.clone()
+sd = {k: v.clone() for k, v in sd.items()}
+missing, unexpected = model.load_state_dict(sd, strict=False)
 del sd
-missing, _ = model.load_state_dict(remap, strict=False)
-del remap
-assert all(m.startswith("head.") for m in missing), missing
+assert all(m.startswith("head.") for m in missing) and not unexpected, (missing, unexpected)
 model.eval()
 
 meta = dataio.read_metadata(os.path.join(DATA, "metadata.csv"))

@@ -35,10 +35,10 @@ BLOCKED marks items needing inputs destroyed in the 2026-09-27 sandbox wipe
 ## Tier 3 - BLOCKED on sandbox-wipe re-acquisition
 | # | Addition | Status | Evidence / Action |
 |---|----------|--------|-------------------|
-| 6 | Morphology ablations (stain/texture/color/entropy/nuclear-density only) | TODO-BLOCKED | Needs features_cache (wiped). |
-| 7 | Technical artifact controls (Macenko/Reinhard normalization) | TODO-BLOCKED | Needs raw HER2ST images (wiped). |
-| 10 | Learned image baseline, same patient-held-out split | TODO-BLOCKED | Needs CTransPath weights + embeddings (wiped). |
-| 16 | External cohort validation, frozen model, no retraining | TODO-BLOCKED | = PREREG-2 G2-X gate. Data prep spec done pre-wipe (10x Parent_Visium_Human_BreastCancer URLs live-verified); needs re-download + embeddings rebuild. |
+| 6 | Morphology ablations (stain/texture/color/entropy/nuclear-density only) | REBUILD-IN-PROGRESS | HER2ST re-acquired 2026-09-27 16:27 (273/273 files, sha256-verified vs Mendeley API); features_cache2 re-extraction launching. |
+| 7 | Technical artifact controls (Macenko/Reinhard normalization) | REBUILD-IN-PROGRESS | Images re-acquired with HER2ST (68 JPGs, sha256-verified). |
+| 10 | Learned image baseline, same patient-held-out split | REBUILD-IN-PROGRESS | CTransPath weights re-downloaded + loader verified (missing=head.* only, 0 unexpected); embeddings re-extraction launching. |
+| 16 | External cohort validation, frozen model, no retraining | REBUILD-IN-PROGRESS | = PREREG-2 G2-X gate. External 10x data re-download owed (URLs live-verified pre-wipe); HER2ST side rebuilding now. |
 | 20 | Challenge-style hidden evaluation protocol | TODO-CONSTRAINED | Extends #16; freeze code+model, evaluate on unseen public sections. |
 
 Execution order: 2 -> 1+5 -> 13 -> 17 -> 3 -> 4 -> 9 -> 11 -> 12 -> 14,15,8,18,19 -> (rebuild) 6,7,10 -> 16 -> 20.
