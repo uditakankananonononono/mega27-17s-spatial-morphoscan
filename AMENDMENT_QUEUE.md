@@ -12,10 +12,10 @@ BLOCKED marks items needing inputs destroyed in the 2026-09-27 sandbox wipe
 ## Tier 1 - cheap, high rigor value (no wiped inputs needed)
 | # | Addition | Status | Evidence / Action |
 |---|----------|--------|-------------------|
-| 2 | Permutation resolution 50 -> 10k (or Monte Carlo stopping rule) | TODO | Rerun G2-P permutation at 10k; report resolution-corrected p. |
-| 1 | Bootstrap CIs for all headline metrics (median r, fold medians, M2 delta, scanner AUC) | TODO | 10k bootstrap over committed per-gene/per-fold results. |
-| 5 | Per-gene confidence intervals | TODO | Ships with #1. |
-| 13 | Label-permutation scanner control (Track B AUC -> ~0.5) | TODO | Permute tumor labels within patients, confirm collapse. |
+| 2 | Permutation resolution 50 -> 10k (or Monte Carlo stopping rule) | IN PROGRESS | scripts/p2_perm10k.py running: exact stream continuation of committed 200-perm run (reps 0-19/patient replayed+verified, reps 20-999 appended, Cholesky-shared fits). |
+| 1 | Bootstrap CIs for all headline metrics (median r, fold medians, M2 delta, scanner AUC) | DONE | results/p2_bootstrap_ci.json (seed 20260927, 10k patient-level boots): pathway r 0.326 [0.104, 0.571]; immune AUC 0.633 [0.575, 0.743]; m1 0.046 [0.036, 0.072]; m2 0.052 [0.039, 0.080]; M2-M1 delta 0.0061 [0.0046, 0.0116] (excludes 0); scanner AUC 0.926 [0.887, 0.954]. |
+| 5 | Per-gene confidence intervals | DONE | results/p2_bootstrap_ci.json per_gene_r_m2: 266 genes, 2k boots over held-out sections; 171/266 with CI95_lo > 0. |
+| 13 | Label-permutation scanner control (Track B AUC -> ~0.5) | DONE | results/p2_scanner_labelperm.json: exact replication of p2_model scanner (LogReg C=1.0), 20 label perms/section, 27 sections. Perm AUC median 0.506, p95 0.577 < 0.6 - signal is real, not artifact. True AUCs match fidelity rerun exactly; vs pre-rebuild CSV dev <=2.97e-3 (LogReg sensitivity to 1e-8 embedding deltas; scanner CSV refreshed to canonical rebuilt output). |
 | 17 | Scanner feature-importance stability (bootstrap coefficients) | TODO | With #1 bootstrap machinery. |
 | 9 | Multi-task gene prediction: elastic-net multi-output, PLS, reduced-rank vs independent ridge | TODO | sklearn over committed features where available; blocked portions noted. |
 | 11 | Nested evaluation of the 250-gene selection rule | TODO | Sensitivity of results to the selection rule. |
