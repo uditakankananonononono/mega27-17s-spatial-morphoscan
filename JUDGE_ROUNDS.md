@@ -1354,10 +1354,12 @@ novelty improvement, both logged).
 
 The counted ChatGPT judge requirement is now ONE round per project, provided
 by the user through the courier route. History above is preserved unchanged.
-Gate ledger status for this lane: **2 of 1, PENDING her provided verdict**.
-Rounds 1-2 above were agent-initiated (run in her account but not pasted back
-by her through the courier route), so per main's 10:01 hold they do NOT yet
-satisfy "ONE WHICH I PROVIDE" - main has asked her directly; her answer
-settles whether they count. Round-3 staged prompt remains valid and will
-count if she provides the verdict. Supplementary Gemini/LLM consults remain
+Gate ledger status for this lane: **0 of 1, PENDING her provided verdict**.
+SETTLED 10:01:47 (user, WhatsApp, wamid.HBgMOTE4MTM0MDk4NTcxFQIAEhgWM0VCMDMwREI5RDQ0QUNCRDc2MTNDMwA=):
+"EACH PROJECTS NEED ONE FROM ME TO PASS". Only a verdict she personally
+pastes back through the courier route counts. Rounds 1-2 above were
+agent-initiated and are preserved as supplementary history - they do NOT
+count. The round-3 staged prompt (judge_prompts/round3_staged.md) is the
+courier route for this lane's ONE round; it counts when her verdict returns
+with wamid provenance. Supplementary Gemini/LLM consults remain
 supplementary, logged, never counted.
