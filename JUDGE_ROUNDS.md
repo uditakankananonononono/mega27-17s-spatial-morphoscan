@@ -1349,7 +1349,7 @@ novelty improvement, both logged).
 
 ## RULE CHANGE - 2026-09-27 10:00:07 IST (user, WhatsApp, verbatim)
 
-"NOT 10 ROUNDS OF CHATGPT CHECK JUST ONE WHICH I PROVIDE OK?"
+"NOT 10 ROUNDS OOF CHATGPT CHECK JUST ONE WHICH I PROVIDE OK?" [sic - verbatim incl. typo]
 (relayed by main agent, wamid.HBgMOTE4MTM0MDk4NTcxFQIAEhgWM0VCMDJCMTZGRTVEMkQwMTFBQzc4MQA=)
 
 The counted ChatGPT judge requirement is now ONE round per project, provided
