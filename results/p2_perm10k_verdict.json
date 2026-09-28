@@ -1,0 +1,11 @@
+{
+ "n_perm": 10000,
+ "real_median_pathway_r": 0.32608904513982784,
+ "perm_p_10k": 0.0010998900109989002,
+ "note": "reps 0-19/patient committed (p2_perm_partial.json); reps 20-999 same rng stream, Cholesky-shared fits (Gram invariant under row permutation)",
+ "verification": {
+  "fit_path_equivalence": "same-permutation Cholesky-shared fit vs models.fit_ridge_bank: max |delta beta| = 1.79e-05 (BC23287 fold, seed-123 probe) - fast path is the identical estimator",
+  "replay_deviation_explained": "results/p2_perm10k_verify.json shows per-rep replay of committed reps 0-19 does NOT reproduce values (max dev pathway 0.356): p2_model.py consumed rng draws before its permutation loop, so committed reps sit at an unknown stream offset. Appended reps 20-999 are fresh valid null draws, NOT the literal stream continuation originally documented - wording corrected here.",
+  "null_distribution_equivalence": "committed 200 pathway nulls: mean 0.0056 sd 0.0712, p95 0.1355, p99 0.2060; appended 9800: mean -0.0009 sd 0.0791, p95 0.1287, p99 0.2174 - same null distribution within sampling error; p-value unaffected (null is exchangeable over permutations)"
+ }
+}
