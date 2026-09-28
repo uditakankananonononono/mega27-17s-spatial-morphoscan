@@ -27,7 +27,7 @@ BLOCKED marks items needing inputs destroyed in the 2026-09-27 sandbox wipe
 | # | Addition | Status | Evidence / Action |
 |---|----------|--------|-------------------|
 | 8 | Full MLP specification + result table (layers, units, optimizer, epochs, params) | TODO | Paper-level; extract from committed M3 code. |
-| 14 | Scanner subgroup analyses (AUC by subgroups per verdict) | TODO | From committed scanner outputs. |
+| 14 | Scanner subgroup analyses (AUC by subgroups per verdict) | DONE | results/p2_scanner_subgroups.json (29 sections): subtype-robust - HER2_luminal AUC 0.933 (n=14) vs HER2_non_luminal 0.926 (n=15); tumor-fraction tertiles 0.885-0.948; size tertiles ~0.93; hardest difficulty tertile (near-balanced labels) 0.847; one anti-predictive outlier (BC24105_D1, 0.065) sits in extreme-fraction stratum - named, not hidden. |
 | 15 | Scanner calibration diagnostics | TODO | Reliability curve, Brier, ECE. |
 | 18 | Full pipeline reproducibility artifacts | PARTIAL | Repo scripts/results committed. Gap: per verdict sub-items (env lock, run manifest). |
 | 19 | Computational cost benchmarking | TODO | Rerun timing on committed pipelines; paper table. |
