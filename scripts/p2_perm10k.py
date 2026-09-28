@@ -1,9 +1,15 @@
 """Amendment-queue Tier-1 #2: extend G2-A/G2-P permutation resolution 200 -> 10,000
 (1,000 per patient), per judge verdict ("replace 50 permutations with at least
-1,000-10,000"). EXACT continuation of the committed stream: rng = default_rng(20260926),
-reps 0-19/patient already committed in results/p2_perm_partial.json; this script
-replays and verifies reps 0-19 numerically, then appends reps 20-999 to
-results/p2_perm10k.json. Speed: the ridge Gram Xa^T Xa + lam*P is INVARIANT under
+1,000-10,000"). NOTE (corrected 2026-09-28, verdict b1510b9): replay of committed reps 0-19 does
+NOT reproduce their values - p2_model.py consumed rng draws before its permutation
+loop, so committed reps sit at an unknown stream offset. The appended reps 20-999
+are fresh valid null draws from the same procedure (fits verified identical to
+models.fit_ridge_bank at 1.79e-05 on a same-permutation probe), and the committed
+vs appended null distributions were verified equivalent (see
+results/p2_perm10k_verdict.json). The empirical p is unaffected: the null is
+exchangeable over permutations. This script replays reps 0-19 into
+results/p2_perm10k_verify.json (documenting the offset) and appends reps 20-999
+to results/p2_perm10k.json. Speed: the ridge Gram Xa^T Xa + lam*P is INVARIANT under
 row permutation of Z (column sums and Z^T Z unchanged), so the Cholesky
 factorization is computed ONCE per fold and each rep only recomputes the cross
 term - mathematically identical to models.fit_ridge_bank on shuffled Z (verified
