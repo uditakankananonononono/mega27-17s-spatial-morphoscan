@@ -32,3 +32,17 @@ spatial smoothing gain (M2-M1 delta CI excludes 0). Novelty path: benchmark agai
 HGB; pathway-level prediction as our distinct axis (gene-level r is modest everywhere
 in the literature - pathway programs are where morphology carries signal). Negatives
 stay compact in limitations.
+
+## 2026-09-28 follow-up: DeepSpot-M artifacts CONFIRMED public (live check)
+
+- Code: https://github.com/ratschlab/DeepSpotM (PolyForm Noncommercial 1.0.0 - non-commercial OK)
+- Weights: https://huggingface.co/ratschlab/DeepSpotM (CC-BY-NC-SA-4.0 - non-commercial + attribution OK)
+- `DeepSpotM.from_pretrained("ratschlab/DeepSpotM", source="scgpt")` predicts a ~19k-gene panel
+  from 224x224 H&E tiles; `predict_genes` allows a targeted gene subset (cheaper).
+- Feasibility for HER2ST head-to-head: our spots are 100um diameter (approx 224px at 20x);
+  image tiles are already extracted for CTransPath - same tiles can feed DeepSpot-M. Then
+  compare per-spot pathway-level r on the same 10 pathways and gene-level r on the shared
+  gene panel. Compute: single forward pass per tile per fold is cheap; full WSI example needs
+  pyvips (installable). License: our use is non-commercial academic benchmarking - within terms.
+- NEXT ACTION (after #9 multitask): download weights (safetensors ~size TBD), run tile-level
+  inference on held-out fold patients, pathway-score both prediction sets, report r comparison.
