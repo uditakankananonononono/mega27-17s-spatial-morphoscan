@@ -670,6 +670,17 @@ Workshop / Bioinformatics-adjacent (2023).
 \end{thebibliography}
 
 \appendix
+\appendix
+\section{Per-pathway held-out performance (Phase 2)}
+\input{pathway_table.tex}
+
+\section{Per-gene held-out performance with bootstrap CIs (Phase 2)}
+Of the \pPerGeneN{} genes with patient-bootstrap CIs, \pPerGeneSig{} (marked $^*$)
+have lower bounds above zero. The distribution is long-tailed: a minority of genes
+are strongly morphology-coupled, most are weakly coupled. This table is generated
+directly from \texttt{results/p2\_bootstrap\_ci.json} and is not hand-edited.
+\input{pergene_table.tex}
+
 \section{Locked formulas index}
 \begin{enumerate}[leftmargin=1.6em]
 \item Pearson $r = \frac{\sum (x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum (x_i-\bar{x})^2 \sum (y_i-\bar{y})^2}}$
@@ -689,6 +700,12 @@ Workshop / Bioinformatics-adjacent (2023).
 \item Softmax $\alpha_i = e^{s_i/\tau} / \sum_j e^{s_j/\tau}$
 \item Library normalization $\log(1 + 10^4 x / \sum x)$
 \end{enumerate}
+
+\paragraph{Provenance note.} The appendix tables from here on (per-fold, transport,
+scanner coefficients, top predictable genes, enrichment, ledgers, cohort manifest) are
+Phase-1 artifacts from the handcrafted-feature pipeline (commit \texttt{84b076a}), preserved
+for provenance. Phase-2 equivalents are Appendix~\ref{tab:pathways}--\ref{tab:pergene} and
+the refreshed scanner outputs in \texttt{results/}.
 
 \section{Per-fold results}
 \input{folds_table.tex}
