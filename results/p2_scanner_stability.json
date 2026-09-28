@@ -1,0 +1,14 @@
+{
+ "n_folds": 10,
+ "n_features": 768,
+ "top_k": 50,
+ "pairwise_spearman_median": 0.8569473384388198,
+ "pairwise_spearman_min": 0.7528686307163335,
+ "pairwise_spearman_max": 0.9421827077784352,
+ "spearman_median_boot95": [
+  0.8390180454560098,
+  0.8739746924077223
+ ],
+ "top50_jaccard_median": 0.62,
+ "top50_overlap_sign_consistency_median": 1.0
+}
