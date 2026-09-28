@@ -1,13 +1,13 @@
 \documentclass[11pt]{article}
-\usepackage{fontspec}
-\setmainfont{Times New Roman}[
-  Path=/home/sandbox/.fonts/,
-  Extension=.TTF,
-  UprightFont=Times,
-  BoldFont=Timesbd,
-  ItalicFont=Timesi,
-  BoldItalicFont=Timesbi]
-% math fonts stay default; text is Times New Roman via fontspec
+\IfFileExists{fontspec.sty}{%
+  \usepackage{fontspec}
+  \IfFileExists{/home/sandbox/.fonts/Times.TTF}{%
+    \setmainfont{Times New Roman}[Path=/home/sandbox/.fonts/,Extension=.TTF,UprightFont=Times,BoldFont=Timesbd,ItalicFont=Timesi,BoldItalicFont=Timesbi]%
+  }{\setmainfont{TeX Gyre Termes}}%
+}{%
+  \usepackage{tgtermes}% Times-clone fallback when fontspec/custom fonts are unavailable
+}
+% math fonts stay default; text is Times (New Roman via fontspec when available)
 \usepackage[a4paper,margin=2.4cm]{geometry}
 \usepackage{amsmath,amssymb,booktabs,graphicx,longtable,array,xcolor,titlesec,fancyhdr,setspace,enumitem,microtype}
 \definecolor{msnblue}{RGB}{31,78,145}
@@ -30,22 +30,29 @@
 \noindent Spatial transcriptomics (ST) measures gene expression at hundreds of tissue
 locations but requires specialized assays; histology images are essentially free by
 comparison. MorphoScan asks a narrow, falsifiable question: how much spatial
-expression signal is recoverable from hematoxylin-and-eosin (H\&E) morphology alone
-with a fully interpretable feature set, and where does that honest number sit relative
-to published deep-learning systems? We pre-registered every gate before seeing results
-(PREREG.md, committed first). On the public 68-section, 23-patient breast-cancer ST
-cohort (Mendeley 29ntw7sh4r v5), using leave-one-patient-out evaluation on the ten
-HER2-positive patients and a frozen cross-subtype transport cohort, a ridge probe over
-41 handcrafted morphology features reaches a median per-gene held-out Pearson
-correlation of \numMedianRmOne{} across 250 genes (permutation $p$ \numPermP).
-A Gaussian-kernel spatial smoothing stage (the MorphoScan method advance) shifts this
-to \numMedianRmTwo{} (paired Wilcoxon $p$ \numWilcoxP). We report the comparison to
-the published ST-Net baseline (median $r \approx 0.19$) and HisToGene-class systems
-exactly as measured, including where we do not beat them. A companion tumor-region
-scanner reaches patient-held-out AUC \numAucLr{} (logistic) / \numAucGb{} (gradient
-boosting). The full toolchain exercises \numTools{} certified external research
-tools/services, \numDatasets{} accession-level public dataset records (disclosed by
-level of use), and ships with \numTests{} unit tests. All negatives are preserved.
+expression signal is recoverable from hematoxylin-and-eosin (H\&E) morphology alone,
+and where does that honest number sit relative to published systems? Every gate was
+pre-registered before results were seen (PREREG.md and PREREG-2.md, committed first).
+Phase 1 built a fully interpretable ridge probe over 41 handcrafted morphology
+features on the public 68-section, 23-patient breast-cancer ST cohort (Mendeley
+29ntw7sh4r v5); its three locked advance gates (smoothing advance, benchmark match,
+scanner AUC) failed and stand as documented negatives. Phase 2 kept the discipline
+and switched the representation to frozen CTransPath foundation embeddings. The
+headline result is at the pathway level: across ten leave-one-patient-out folds on
+the HER2-positive patients, morphology predicts MSigDB Hallmark-50 pathway activity
+at median Pearson $r$ \pPathwayR{} \pPathwayCI{} (patient-level bootstrap),
+permutation $p$ \pPermPtenk{} at \pNperm{} permutations. Per-gene prediction is
+weaker (median $r$ \pMoneR{} \pMoneCI) and does not match ST-Net's published 0.19;
+that gap is logged as measured. Spatial smoothing adds a small but real gain
+(median $\Delta$ \pDeltaR{} \pDeltaCI). A companion tumor-region scanner on the same
+embeddings passes its locked gate at patient-held-out AUC \pScannerAuc{}
+\pScannerCI{}, with a label-permutation control at chance (null median
+\pScannerPermMed), stable coefficients across folds (pairwise Spearman
+\pCoefStab), and consistent performance across HER2-luminal and non-luminal strata
+(\pSubLum{} vs \pSubNonLum). The full toolchain exercises \numTools{} certified
+external research tools/services, \numDatasets{} accession-level public dataset
+records (disclosed by level of use), and ships with \numTests{} unit tests. All
+negatives are preserved.
 \end{abstract}
 
 \section{Introduction}
@@ -71,15 +78,21 @@ signal is when the evaluation is honestly patient-held-out rather than spot-held
 and (iii) how far predictions transport across tumor subtypes and platforms.
 
 \subsection{What this project claims, and what it does not}
-MorphoScan is deliberately built on interpretable features --- color-deconvolution
-stain concentrations, gray-level co-occurrence textures, entropy and color moments ---
-so that every predictor weight maps to a morphology a pathologist can name. We do
+MorphoScan runs in two phases under one discipline. Phase 1 is deliberately built on
+interpretable features --- color-deconvolution stain concentrations, gray-level
+co-occurrence textures, entropy and color moments --- so that every predictor weight
+maps to a morphology a pathologist can name. Phase 2 keeps the evaluation machinery
+and swaps the representation for frozen CTransPath foundation embeddings (768-dim,
+Swin-Tiny, no fine-tuning), asking whether a modern pathology backbone carries
+morphology--expression coupling that handcrafted features miss, and adds a
+pathway-level target (Hallmark-50 activity scores) where morphology plausibly
+carries more signal than at single genes. We do
 \emph{not} claim to beat deep networks at their own game; where published systems
-outperform our probe we say so, in numbers. We \emph{do} claim: (a) a pre-registered,
-leakage-free estimate of morphology-expression coupling on a standard cohort;
-(b) a simple, principled method advance --- spatial graph smoothing of predictions ---
-that exploits spatial autocorrelation the per-spot models ignore, evaluated against
-its own locked gate; (c) an honest transport experiment to non-HER2 subtypes; and
+outperform our probes we say so, in numbers. We \emph{do} claim: (a) pre-registered,
+leakage-free estimates of morphology--expression coupling on a standard cohort at
+both the gene and pathway level; (b) a simple, principled method advance --- spatial
+graph smoothing of predictions --- evaluated against its own locked gate in both
+phases; (c) an honest transport experiment to non-HER2 subtypes; and
 (d) a working, tested, documented tool that performs both expression prediction and
 tumor-region scanning end to end.
 
@@ -196,6 +209,36 @@ locked gate G-B1 (patient-held-out AUC $\ge 0.80$). A final model trained on all
 sections ships as \texttt{results/scanner\_model.npz} and drives the
 \texttt{morphoscan scan} CLI.
 
+\subsection{Phase 2: foundation embeddings, pathway targets, and the new scanner gate}
+Phase 2 (locked in \texttt{PREREG-2.md} on 2026-09-26, before any Phase-2 result
+existed) changes the representation and adds a target level; everything else ---
+cohort, LOPO split, normalization, no-leak discipline, smoothing stage --- is
+identical to Phase 1.
+\paragraph{Representation.} Each spot-centered tile is resized to $224\times224$ and
+encoded by a frozen CTransPath backbone (Swin-Tiny, 768-dim; weights publicly
+released at github.com/Xiyue-Wang/TransPath). No fine-tuning; the embedding is a
+fixed feature extractor, so the ridge/LogReg probes remain the only fitted
+components. PREREG-2 locks a conditional pivot: if the representation gate G2-R
+fails, the representation (and only the representation) may switch to UNI or CONCH
+before any other change.
+\paragraph{Pathway-level targets.} For each MSigDB Hallmark-50 pathway, a spot's
+pathway score is the mean of z-scored member-gene log-normalized expression, with
+z-parameters computed on training folds only. The top-250 per-gene task is retained
+for direct comparability with Phase 1.
+\paragraph{Statistics upgrades.} The gene-axis permutation test is extended from 50
+to \pNperm{} permutations by sharing one Cholesky factorization per fold across
+permutations (the ridge Gram matrix is invariant under row permutation; equivalence
+to the reference fitter verified at $1.79\times10^{-5}$ max coefficient deviation on
+a same-permutation probe). Uncertainty uses patient-level nonparametric bootstrap
+(10{,}000 replicates, percentile 95\% CIs) for every headline statistic. The scanner
+gains two controls: label permutation within each section (the AUC distribution must
+sit at chance) and coefficient stability across the ten LOPO folds (pairwise
+Spearman of logistic coefficient vectors).
+\paragraph{Phase-2 scanner (gate G2-S).} The tumor scanner is a class-balanced
+logistic regression over the 768-dim embeddings, patient-held-out, with the locked
+gate AUC $\ge 0.85$. Phase-1's scanner gate G-B1 failed at 0.642--0.676; G2-S is a
+new gate on a new representation, not a re-fish of the old one.
+
 \subsection{External tools and services}
 The study genuinely calls \numTools{} external research tools and services, each with
 a committed evidence artifact under \texttt{results/tools/} and a row in
@@ -260,6 +303,20 @@ p_{\text{perm}} = \frac{1 + \#\{b : |r_{\text{null}}^{(b)}| \ge |r_{\text{obs}}|
 \label{eq:perm}
 \end{equation}
 and the M2--M1 comparison uses the paired Wilcoxon signed-rank test across genes.
+In Phase 2 the feature vector is a frozen CTransPath embedding $z_s \in
+\mathbb{R}^{768}$ in place of the 41 handcrafted features; the ridge bank
+(\ref{eq:ridge}) and smoothing (\ref{eq:smooth}) are unchanged. A pathway score for
+pathway $P$ at spot $s$ is
+\begin{equation}
+a_{sP} = \frac{1}{|P|}\sum_{g \in P} \frac{y_{sg} - \mu_g^{\text{train}}}{\sigma_g^{\text{train}}},
+\label{eq:pathway}
+\end{equation}
+with $\mu_g^{\text{train}}, \sigma_g^{\text{train}}$ from training folds only, and
+pathway predictions use the same ridge bank with $a_{:P}$ as targets. The Phase-2
+permutation test (\ref{eq:perm}) uses $B = 10{,}000$: the Gram matrix
+$Z^{\top}Z + \lambda I$ is invariant under gene-axis permutation of the targets, so
+one Cholesky factorization per fold is shared across all null fits (equivalence to
+the reference fitter verified numerically at $1.79\times10^{-5}$).
 
 \section{Results -- Track A: morphology predicts spatial expression}
 \subsection{Pre-registered gates}
@@ -365,6 +422,82 @@ disorganization rather than slide artifacts.
 \caption{Patient-held-out AUC for the tumor scanner, logistic vs gradient boosting.
 The dashed line is the locked G-B1 gate.}\label{fig:scanner}
 \end{figure}
+
+\section{Results -- Phase 2: embeddings, pathways, and the scanner}
+\subsection{Locked gates, as they landed}
+Table~\ref{tab:g2gates} lists every Phase-2 gate with its locked criterion and the
+measured result. Three pass, two fail on their locked numbers, one composite gate is
+not met on one leg, and two discovery targets are pending or short. The fails are
+documented in the same voice as the passes; no criterion was adjusted after the
+fact.
+
+\begin{table}[t]\centering\small
+\caption{Phase-2 locked gates (PREREG-2.md, committed 2026-09-26 before any Phase-2
+result). CIs are patient-level bootstrap 95\%.}\label{tab:g2gates}
+\begin{tabular}{llll}
+\toprule
+Gate & Locked criterion & Measured & Verdict \\
+\midrule
+G2-R & per-gene $r \ge 0.08$; $\ge 80\%$ genes beat Phase-1 M1 & M2 \pMtwoR{} \pMtwoCI{} (M1 \pMoneR); \pFracBeat & FAIL (level leg) \\
+G2-P & pathway $r \ge 0.20$; perm $p<0.01$; immune AUC $\ge 0.75$ & \pPathwayR; $p$ \pPermPtenk; \pImmuneAuc & NOT MET (immune leg) \\
+G2-B & match/beat ST-Net 0.19 & \pMtwoR, gap $-0.138$ & FAIL (logged) \\
+G2-A & shuffled controls at chance & gene 0.0004; pathway 0.0054 & PASS \\
+G2-S & scanner AUC $\ge 0.85$ & \pScannerAuc{} \pScannerCI & PASS \\
+G2-X & external Visium pathway $r \ge 0.10$ & --- & PENDING \\
+D1 & $\ge 50$ genes at $r \ge 0.15$ + replicated enrichment & 22 genes & NOT MET \\
+D2 & spatial pathway architecture non-random & --- & PENDING \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{The headline positive: morphology predicts pathway activity}
+Across the ten HER2-positive leave-one-patient-out folds, ridge probes over frozen
+CTransPath embeddings predict Hallmark-50 pathway activity scores at median Pearson
+$r$ \pPathwayR{} (bootstrap 95\% CI \pPathwayCI). The gene-axis permutation test at
+\pNperm{} permutations gives $p$ \pPermPtenk{} --- the real fit beats every one of
+the first thousand null draws, and the full null distribution (mean $-0.001$, sd
+$0.079$ over 9{,}800 fresh draws; committed 200 draws mean $0.006$, sd $0.071$)
+never approaches the observed value. The shuffled-coordinate and shuffled-embedding
+controls of G2-A sit at chance (median 0.0004 and 0.0054), so the signal is
+morphology-specific and spatially coherent. Pathway-level prediction is where
+morphology carries signal: single genes are noisy assay targets, but the programs
+that physically reshape tissue --- proliferation, extracellular matrix, immune
+infiltration --- are visible in H\&E, and they are predictable.
+
+\subsection{Per-gene performance and the benchmark gap, as measured}
+Per-gene held-out medians are \pMoneR{} \pMoneCI{} (M1) and \pMtwoR{} \pMtwoCI{}
+(M2 with spatial smoothing); the smoothing gain \pDeltaR{} \pDeltaCI{} excludes zero
+but is small. The embeddings beat Phase-1 handcrafted features on \pFracBeat{} of
+the 250 genes (paired Wilcoxon $p = 1.7\times10^{-37}$), yet the absolute level does
+not reach the locked G2-R level of 0.08, and the gap to ST-Net's published 0.19
+(G2-B) stands at $-0.138$. Of \pPerGeneN{} genes with bootstrap CIs, \pPerGeneSig{}
+have CI lower bounds above zero: a real, long-tailed predictable set exists, but it
+is a minority of genes, and per-gene prediction is not where this representation
+earns its keep. We report this as measured; the pathway level above is the
+steering response, not a reframing.
+
+\subsection{The scanner passes its gate with controls}
+The embedding-based scanner reaches patient-held-out median AUC \pScannerAuc{}
+\pScannerCI{} across the 29 HER2 sections, passing G2-S ($\ge 0.85$). Three controls
+support the number: (i) label permutation within each section puts the null where it
+belongs (540 permuted fits: median AUC \pScannerPermMed, 95th percentile
+\pScannerPermPfive); (ii) coefficient vectors are stable across the ten LOPO folds
+(pairwise Spearman median \pCoefStab{} \pCoefStabCI; top-50 feature overlap Jaccard
+\pTopJaccard; sign consistency 1.0), so the classifier is not re-learning a
+different rule per patient; and (iii) performance is consistent across subtypes ---
+HER2-luminal median \pSubLum{} (14 sections) vs HER2-non-luminal \pSubNonLum{} (15
+sections) --- with every tumor-fraction tertile at or above 0.85 except one named
+outlier section (BC24105\_D1, AUC 0.065, reported as an outlier, not removed).
+
+\subsection{What Phase 2 changes about the Phase-1 negatives}
+Phase-1's three failed gates (G-A2 smoothing advance, G-A3 benchmark, G-B1 scanner)
+stand as documented results of the handcrafted representation. Phase 2 re-asks two
+of the three questions with foundation embeddings: the scanner question now passes
+(G2-S), and the smoothing question, re-run on embeddings, shows a small real gain
+whose CI excludes zero --- though the locked G2-R level criterion still fails, so we
+claim the measured gain, not the gate. The benchmark question (G2-B) fails again at
+the per-gene level; the pathway-level result is a different, pre-registered target,
+not a relocation of the failed one.
 
 \section{Tool and dataset audit}
 \subsection{Tools}
