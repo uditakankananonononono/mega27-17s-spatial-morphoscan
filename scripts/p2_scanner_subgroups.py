@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 
 scan = pd.read_csv("results/p2_scanner_partial.csv")
-scan = scan[scan["auc"] != ""].copy()
+scan = scan.dropna(subset=["auc"]).copy()  # NaN != "" kept NaN rows before; n_sections miscounted 29 vs 27 (medians were already NaN-skipping and unchanged)
 scan["auc"] = scan["auc"].astype(float)
 meta = pd.read_csv("data/her2st/metadata.csv")
 meta["section"] = meta["count_matrix"].str.replace("_stdata.tsv.gz", "", regex=False)

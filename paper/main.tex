@@ -331,33 +331,15 @@ checks the predictable genes for pathway enrichment.
 Across the ten HER2-positive patients (\numFolds{} leave-one-patient-out folds),
 median per-gene held-out Pearson correlations are: M0 train-mean \numMedianRmZero,
 M1 ridge probe \numMedianRmOne, M2 spatially smoothed \numMedianRmTwo{}
-(Figure~\ref{fig:folds}). The per-gene distribution (Figure~\ref{fig:genes}) shows
+(per-fold values in the Phase-1 appendix). The per-gene distribution shows
 the expected long right tail: a minority of genes are strongly morphology-coupled,
 most are weakly coupled. The permutation null distribution
-(Figure~\ref{fig:permutation}) sits near zero; the observed M1 median gives
+sits near zero; the observed M1 median gives
 $p$ \numPermP{} under 50 permutations, so G-A1 passes. The M2 advance is evaluated
-gene-by-gene in Figure~\ref{fig:scatter}: the median shift and the paired Wilcoxon
+gene-by-gene: the median shift and the paired Wilcoxon
 $p$ \numWilcoxP{} decide G-A2 exactly as locked, whichever way it lands.
+(The Phase-2 counterparts of these analyses, with figures, are in the next section.)
 
-\begin{figure}[t]\centering
-\includegraphics[width=\textwidth]{../figures/fig1_folds.pdf}
-\caption{Per-fold (held-out patient) median per-gene Pearson correlation for M0, M1
-and M2. The dashed line marks the published ST-Net median ($\approx 0.19$) on the
-HER2-positive subset of this cohort.}\label{fig:folds}
-\end{figure}
-\begin{figure}[t]\centering
-\includegraphics[width=0.62\textwidth]{../figures/fig2_genes.pdf}
-\caption{Distribution of per-gene held-out correlations (median over folds), M1 vs
-M2.}\label{fig:genes}
-\end{figure}
-\begin{figure}[t]\centering
-\includegraphics[width=0.62\textwidth]{../figures/fig3_permutation.pdf}
-\caption{Permutation null (gene-axis shuffles) vs the observed M1 median.}\label{fig:permutation}
-\end{figure}
-\begin{figure}[t]\centering
-\includegraphics[width=0.55\textwidth]{../figures/fig6_scatter.pdf}
-\caption{Per-gene M2 vs M1 correlations; the diagonal is no change.}\label{fig:scatter}
-\end{figure}
 
 \subsection{Benchmark honesty}
 ST-Net's published median on the HER2-positive subset of this cohort is
@@ -408,7 +390,7 @@ the programs that physically reshape tissue --- and we report what the enrichmen
 actually returns, significant or not.
 
 \section{Results -- Track B: tumor-region scanning}
-Patient-held-out scanner performance is in Figure~\ref{fig:scanner}. The logistic
+Phase-1 patient-held-out scanner performance: the logistic
 scanner reaches median AUC \numAucLr{} and the gradient-boosting scanner \numAucGb{};
 at the 0.5 operating point the pooled held-out sensitivity is \numSens{} with
 specificity \numSpec{} and Brier score \numBrier{}. Gate G-B1 (AUC $\ge 0.80$) is
@@ -417,11 +399,6 @@ coefficient $z$-tests) is reported in the appendix: hematoxylin concentration an
 texture statistics should dominate if the scanner is reading nuclear density and
 disorganization rather than slide artifacts.
 
-\begin{figure}[t]\centering
-\includegraphics[width=\textwidth]{../figures/fig5_scanner_auc.pdf}
-\caption{Patient-held-out AUC for the tumor scanner, logistic vs gradient boosting.
-The dashed line is the locked G-B1 gate.}\label{fig:scanner}
-\end{figure}
 
 \section{Results -- Phase 2: embeddings, pathways, and the scanner}
 \subsection{Locked gates, as they landed}
@@ -431,7 +408,7 @@ not met on one leg, and two discovery targets are pending or short. The fails ar
 documented in the same voice as the passes; no criterion was adjusted after the
 fact.
 
-\begin{table}[t]\centering\small
+\begin{table}[t]\centering\footnotesize
 \caption{Phase-2 locked gates (PREREG-2.md, committed 2026-09-26 before any Phase-2
 result). CIs are patient-level bootstrap 95\%.}\label{tab:g2gates}
 \begin{tabular}{llll}
@@ -459,7 +436,13 @@ the first thousand null draws, and the full null distribution (mean $-0.001$, sd
 $0.079$ over 9{,}800 fresh draws; committed 200 draws mean $0.006$, sd $0.071$)
 never approaches the observed value. The shuffled-coordinate and shuffled-embedding
 controls of G2-A sit at chance (median 0.0004 and 0.0054), so the signal is
-morphology-specific and spatially coherent. Pathway-level prediction is where
+morphology-specific and spatially coherent.
+
+\begin{figure}[t]\centering
+\includegraphics[width=0.62\textwidth]{../figures/fig3_permutation.pdf}
+\caption{Phase-2 permutation null (gene-axis shuffles, $B=10{,}000$) for the median
+pathway-level correlation vs the observed value.}\label{fig:permutation}
+\end{figure} Pathway-level prediction is where
 morphology carries signal: single genes are noisy assay targets, but the programs
 that physically reshape tissue --- proliferation, extracellular matrix, immune
 infiltration --- are visible in H\&E, and they are predictable.
@@ -473,21 +456,44 @@ not reach the locked G2-R level of 0.08, and the gap to ST-Net's published 0.19
 (G2-B) stands at $-0.138$. Of \pPerGeneN{} genes with bootstrap CIs, \pPerGeneSig{}
 have CI lower bounds above zero: a real, long-tailed predictable set exists, but it
 is a minority of genes, and per-gene prediction is not where this representation
-earns its keep. We report this as measured; the pathway level above is the
+earns its keep.
+\begin{figure}[t]\centering
+\includegraphics[width=\textwidth]{../figures/fig1_folds.pdf}
+\caption{Phase-2 per-fold (held-out patient) median per-gene Pearson correlation for
+M1 (ridge over CTransPath embeddings) and M2 (+ spatial smoothing). The dashed line
+marks the published ST-Net median ($\approx 0.19$) on this cohort.}\label{fig:folds}
+\end{figure}
+\begin{figure}[t]\centering
+\includegraphics[width=0.62\textwidth]{../figures/fig2_genes.pdf}
+\caption{Phase-2 distribution of per-gene held-out correlations (median over
+sections), M1 vs M2.}\label{fig:genes}
+\end{figure}
+\begin{figure}[t]\centering
+\includegraphics[width=0.55\textwidth]{../figures/fig6_scatter.pdf}
+\caption{Phase-2 per-gene M2 vs M1 correlations; the diagonal is no change.}\label{fig:scatter}
+\end{figure}
+
+ We report this as measured; the pathway level above is the
 steering response, not a reframing.
 
 \subsection{The scanner passes its gate with controls}
 The embedding-based scanner reaches patient-held-out median AUC \pScannerAuc{}
-\pScannerCI{} across the 29 HER2 sections, passing G2-S ($\ge 0.85$). Three controls
+\pScannerCI{} across the 27 evaluable HER2 sections (two all-tumor sections have undefined AUC and are excluded), passing G2-S ($\ge 0.85$). Three controls
 support the number: (i) label permutation within each section puts the null where it
 belongs (540 permuted fits: median AUC \pScannerPermMed, 95th percentile
 \pScannerPermPfive); (ii) coefficient vectors are stable across the ten LOPO folds
 (pairwise Spearman median \pCoefStab{} \pCoefStabCI; top-50 feature overlap Jaccard
 \pTopJaccard; sign consistency 1.0), so the classifier is not re-learning a
 different rule per patient; and (iii) performance is consistent across subtypes ---
-HER2-luminal median \pSubLum{} (14 sections) vs HER2-non-luminal \pSubNonLum{} (15
+HER2-luminal median \pSubLum{} (14 sections) vs HER2-non-luminal \pSubNonLum{} (13
 sections) --- with every tumor-fraction tertile at or above 0.85 except one named
 outlier section (BC24105\_D1, AUC 0.065, reported as an outlier, not removed).
+\begin{figure}[t]\centering
+\includegraphics[width=\textwidth]{../figures/fig5_scanner_auc.pdf}
+\caption{Phase-2 scanner: left, per-section held-out AUC (sorted) against the locked
+G2-S gate; right, the within-section label-permutation null with the real median
+marked.}\label{fig:scanner}
+\end{figure}
 
 \subsection{What Phase 2 changes about the Phase-1 negatives}
 Phase-1's three failed gates (G-A2 smoothing advance, G-A3 benchmark, G-B1 scanner)
