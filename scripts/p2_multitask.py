@@ -1,7 +1,8 @@
 """Amendment-queue Tier-2 #9: multi-task gene prediction vs independent ridge.
 Same LOPO folds, same train-selected top-250 genes, same Standardizer as
 p2_model.py. Alternatives: (a) MultiTaskElasticNet (joint L1/L2, alpha=1e-3,
-l1_ratio=0.5), (b) PLSRegression (25 components), (c) reduced-rank ridge
+l1_ratio=0.5, max_iter=1000, tol=1e-3 - box-feasible settings chosen 2026-09-28
+after the 5000-iteration default proved >35 CPU-min per fold under throttling), (b) PLSRegression (25 components), (c) reduced-rank ridge
 (rank 25, from the ridge bank SVD). Metric: per-gene median Pearson on held-out
 patient, compared to committed ridge median_r_m1 per fold. Checkpointed per
 fold. Writes results/p2_multitask.json."""
@@ -59,7 +60,7 @@ for test_pat in patients:
     Zte = np.vstack([sc.transform(sections[s]["X"]) for s in test_secs])
     Tte = np.vstack([sections[s]["N"][:, top].toarray() for s in test_secs])
     rec = {"patient": test_pat, "ridge_m1_committed": ridge_m1[test_pat]}
-    en = MultiTaskElasticNet(alpha=1e-3, l1_ratio=0.5, max_iter=5000)
+    en = MultiTaskElasticNet(alpha=1e-3, l1_ratio=0.5, max_iter=1000, tol=1e-3)
     en.fit(Ztr, Ytr)
     rec["elasticnet_median_r"] = per_gene_median(en.predict(Zte), Tte)
     print(f"{test_pat} enet {rec['elasticnet_median_r']:.4f} ({time.time()-t0:.0f}s)", flush=True)
