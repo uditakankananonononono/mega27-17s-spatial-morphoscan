@@ -118,7 +118,8 @@ for test_pat in patients:
 prev = {r["patient"]: float(r["median_r_m3"]) for r in _csv.DictReader(open(PARTIAL))}
 meds = sorted(prev.values())
 R = np.concatenate(all_rs) if all_rs else np.array([np.nan])
-n_params = sum(w.size for w in mlp.coefs_) + sum(b.size for b in mlp.intercepts_)
+din = sections[sorted(sections)[0]]["X"].shape[1]
+n_params = din*256 + 256 + 256*128 + 128 + 128*250 + 250
 res = {"item": "M3 MLP nonlinear check (PREREG model ladder, descriptive, no gate)",
        "spec": {"hidden": [256, 128], "activation": "relu", "solver": "adam",
                 "lr_init": 1e-3, "batch_size": 512, "max_iter": 150,

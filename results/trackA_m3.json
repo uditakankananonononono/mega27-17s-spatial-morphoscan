@@ -1,0 +1,32 @@
+{
+ "item": "M3 MLP nonlinear check (PREREG model ladder, descriptive, no gate)",
+ "spec": {
+  "hidden": [
+   256,
+   128
+  ],
+  "activation": "relu",
+  "solver": "adam",
+  "lr_init": 0.001,
+  "batch_size": 512,
+  "max_iter": 150,
+  "early_stopping": true,
+  "val_fraction_train_only": 0.1,
+  "random_state": 20260929,
+  "n_params": 75898
+ },
+ "median_r_m3_all_folds": 0.01861174990680688,
+ "per_fold": {
+  "BC23287": 0.004744550963494288,
+  "BC23450": 0.017668998046510426,
+  "BC23567": 0.019554501767103334,
+  "BC23810": 0.03201438732990356,
+  "BC23901": -0.011502246858892454,
+  "BC23903": 0.0521825960680526,
+  "BC23944": 0.005874549478167349,
+  "BC24044": 0.061244506800393964,
+  "BC24105": -0.017168446789757215,
+  "BC24220": 0.025669799225091557
+ },
+ "protocol": "identical folds/features/genes protocol as committed M1/M2 (run_trackA.py)"
+}
