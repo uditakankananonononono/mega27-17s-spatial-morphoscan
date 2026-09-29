@@ -1,0 +1,59 @@
+\begin{longtable}{lrrr}
+\caption{Track B corrected-geometry scanner: feature-level inference. statsmodels logistic
+fit on standardized corrected features, all sections; coefficients sorted by $|z|$. Stain and
+color channels (blue-channel mean, red-channel mean, eosin and DAB deconvolution means) carry
+the largest effects, with GLCM texture statistics behind them - the scanner reads stain
+composition and local disorganization, exactly the morphology a pathologist weighs. Supersedes
+the buggy-geometry inference (\texttt{results/scanner\_coefficients.csv}, preserved as
+audit trail).}\label{tab:trackb-v2-coefs}\\
+\toprule
+Feature & Coef & $z$ & $p$ \\
+\midrule
+\endfirsthead
+\toprule
+Feature & Coef & $z$ & $p$ \\
+\midrule
+\endhead
+b\_mean & +9.659 & +17.30 & 4.54e-67 \\
+r\_mean & -5.694 & -17.84 & 3.63e-71 \\
+eosin\_mean & +5.144 & +12.06 & 1.69e-33 \\
+dab\_mean & +4.933 & +13.69 & 1.24e-42 \\
+glcm3\_contrast & +4.388 & +3.85 & 1.20e-04 \\
+glcm1\_energy & -4.344 & -2.72 & 6.46e-03 \\
+glcm3\_corr & +4.009 & +5.54 & 3.03e-08 \\
+glcm1\_contrast & -3.606 & -3.32 & 9.15e-04 \\
+glcm1\_corr & -3.581 & -4.95 & 7.29e-07 \\
+r\_kurt & -3.573 & -5.68 & 1.32e-08 \\
+glcm2\_homog & -3.199 & -5.48 & 4.21e-08 \\
+hema\_mean & +2.649 & +9.74 & 1.94e-22 \\
+glcm0\_energy & +2.168 & +1.38 & 1.68e-01 \\
+r\_std & +2.140 & +11.38 & 5.33e-30 \\
+b\_skew & +2.139 & +11.62 & 3.25e-31 \\
+glcm0\_homog & +1.951 & +3.31 & 9.27e-04 \\
+glcm2\_contrast & +1.940 & +1.68 & 9.34e-02 \\
+b\_kurt & +1.906 & +6.72 & 1.76e-11 \\
+hema\_std & -1.750 & -14.52 & 9.56e-48 \\
+eosin\_std & +1.539 & +8.17 & 3.18e-16 \\
+glcm2\_corr & +1.431 & +1.95 & 5.10e-02 \\
+g\_std & -1.431 & -6.72 & 1.77e-11 \\
+gray\_entropy & -1.385 & -16.11 & 2.15e-58 \\
+glcm0\_contrast & -1.309 & -1.19 & 2.36e-01 \\
+b\_std & -1.292 & -8.54 & 1.29e-17 \\
+glcm0\_corr & -1.232 & -1.69 & 9.10e-02 \\
+glcm2\_energy & +1.212 & +0.97 & 3.32e-01 \\
+g\_mean & -1.150 & -3.38 & 7.21e-04 \\
+hema\_dense\_frac & +0.952 & +3.44 & 5.86e-04 \\
+eosin\_fracpos & -0.764 & -11.22 & 3.33e-29 \\
+glcm3\_energy & +0.731 & +0.57 & 5.66e-01 \\
+glcm1\_homog & +0.603 & +1.03 & 3.03e-01 \\
+g\_kurt & -0.541 & -1.20 & 2.29e-01 \\
+glcm3\_homog & -0.538 & -0.94 & 3.48e-01 \\
+hema\_fracpos & -0.435 & -5.39 & 6.97e-08 \\
+grad\_mag\_mean & +0.397 & +2.19 & 2.82e-02 \\
+g\_skew & -0.300 & -1.32 & 1.87e-01 \\
+hema\_entropy & +0.205 & +5.09 & 3.52e-07 \\
+r\_skew & +0.155 & +0.66 & 5.08e-01 \\
+dab\_fracpos & +0.131 & +2.72 & 6.50e-03 \\
+dab\_std & +0.129 & +2.00 & 4.52e-02 \\
+\bottomrule
+\end{longtable}

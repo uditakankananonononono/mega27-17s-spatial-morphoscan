@@ -429,9 +429,10 @@ scanner reaches median AUC \numAucLr{} and the gradient-boosting scanner \numAuc
 at the 0.5 operating point the pooled held-out sensitivity is \numSens{} with
 specificity \numSpec{} and Brier score \numBrier{}. Gate G-B1 (AUC $\ge 0.80$) is
 evaluated exactly as locked. Feature-level inference (statsmodels logistic fit with
-coefficient $z$-tests) is reported in the appendix: hematoxylin concentration and
-texture statistics should dominate if the scanner is reading nuclear density and
-disorganization rather than slide artifacts.
+coefficient $z$-tests) is reported for the corrected-geometry model in Appendix
+Table~\ref{tab:trackb-v2-coefs}: stain/color channels and texture statistics
+dominate, so the scanner reads stain composition and local disorganization rather
+than slide artifacts.
 
 \subsection{Corrected-geometry rerun: G-B1 flips to PASS, with full lineage}
 \label{sec:trackb-v2}
@@ -451,7 +452,11 @@ all 68 sections; cache regeneration reproduces the committed corrected
 Track A fold medians exactly). The gate flips: median patient-held-out AUC
 rises from $0.642$ (LR) / $0.676$ (GB) to $\mathbf{0.892}$ (LR) /
 $\mathbf{0.877}$ (GB), both above the locked $0.80$ criterion, with
-16 of 23 folds at or above $0.80$ under either model. The four folds below
+16 of 23 folds at or above $0.80$ under either model. At the pooled 0.5
+operating point the corrected logistic scanner reaches held-out sensitivity
+0.807 with specificity 0.774 and Brier score 0.152 (against $0.151$ for the
+prevalence baseline), a substantial improvement on the buggy-geometry
+operating point reported above. The four folds below
 $0.70$ are named, not removed: BC23270 ($0.235$) and BC24105 ($0.693$) have
 near-degenerate labels (tumor fraction $\approx 1.0$), BC24223 ($0.656$) is
 near-balanced the other way ($0.09$), and BC23567 ($0.689$) is the cohort's
@@ -1212,6 +1217,7 @@ finfiniteness and name uniqueness, textured-vs-flat discriminability).
 
 \input{m3_folds_appendix.tex}
 \input{trackB_v2_folds.tex}
+\input{trackB_v2_coefs.tex}
 \input{learned_vs_handcrafted_table.tex}
 \input{selection_sensitivity_table.tex}
 \input{gene_negcontrol_table.tex}
