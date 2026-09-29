@@ -1,0 +1,19 @@
+{
+ "reference_section": "BC23901_C2",
+ "n_tiles": 292,
+ "tile_px": 224,
+ "half_px": 48,
+ "pitch_px": 127.59252107604401,
+ "lab_mean": [
+  55.85067795947307,
+  8.874954936022462,
+  -22.260374538985783
+ ],
+ "lab_std": [
+  16.763937003846827,
+  2.5733121500138396,
+  7.597008466603097
+ ],
+ "space": "CIELAB via skimage.color.rgb2lab (L in [0,100])",
+ "note": "Reinhard normalization reference; computed from internal tiles only, never external"
+}
