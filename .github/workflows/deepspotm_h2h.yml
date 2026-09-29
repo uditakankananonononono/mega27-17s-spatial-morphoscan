@@ -1,0 +1,68 @@
+name: Lane B DeepSpot-M head-to-head (G2-X section)
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/deepspotm_h2h.yml'
+permissions:
+  contents: write
+concurrency:
+  group: deepspotm-h2h
+  cancel-in-progress: false
+jobs:
+  h2h:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned environment (CPU torch)
+        run: |
+          pip install -r requirements_h2h.txt
+          pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+      - name: Completion guard
+        id: guard
+        run: |
+          if [ -f results/deepspotm_h2h.json ]; then echo 'status=complete' >> "$GITHUB_OUTPUT"; else echo 'status=incomplete' >> "$GITHUB_OUTPUT"; fi
+      - name: Fetch external data (byte-size gates per dfb54b8)
+        if: steps.guard.outputs.status == 'incomplete'
+        run: |
+          set -e
+          mkdir -p /home/runner/g2x
+          cd /home/runner/g2x
+          BASE='https://cf.10xgenomics.com/samples/spatial-exp/1.2.0/Parent_Visium_Human_BreastCancer'
+          curl -sL --retry 3 -O "$BASE/Parent_Visium_Human_BreastCancer_filtered_feature_bc_matrix.h5"
+          curl -sL --retry 3 -O "$BASE/Parent_Visium_Human_BreastCancer_spatial.tar.gz"
+          curl -sL --retry 3 -o image.tif "$BASE/Parent_Visium_Human_BreastCancer_image.tif"
+          [ "$(stat -c%s Parent_Visium_Human_BreastCancer_filtered_feature_bc_matrix.h5)" = "21452440" ]
+          [ "$(stat -c%s Parent_Visium_Human_BreastCancer_spatial.tar.gz)" = "11759586" ]
+          [ "$(stat -c%s image.tif)" = "1763006484" ]
+          tar xzf Parent_Visium_Human_BreastCancer_spatial.tar.gz
+      - name: Run head-to-head with checkpoint commits
+        if: steps.guard.outputs.status == 'incomplete'
+        env:
+          G2X_DATA: /home/runner/g2x
+          P2_THREADS: '4'
+        run: |
+          git config user.name 'laneB-offload-bot'
+          git config user.email 'offload@localhost'
+          python -u scripts/deepspotm_h2h.py 2>&1 | tee results/deepspotm_h2h_log.txt &
+          PID=$!
+          while kill -0 $PID 2>/dev/null; do
+            sleep 180
+            git add -f results/deepspotm_h2h_ckpt.npz results/deepspotm_h2h_log.txt 2>/dev/null || true
+            if ! git diff --cached --quiet; then
+              git commit -q -m 'h2h checkpoint (prediction progress)'
+              for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break || sleep 10; done
+            fi
+          done
+          wait $PID
+          RC=$?
+          git add -f results/deepspotm_h2h.json results/deepspotm_h2h_log.txt
+          if ! git diff --cached --quiet; then
+            git commit -q -m "h2h complete rc=$RC"
+            for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break || sleep 10; done
+          fi
+          exit $RC
