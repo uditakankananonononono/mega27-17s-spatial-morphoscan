@@ -7,3 +7,6 @@ BC23450 enet 0.0439 n_iter 500 (673s)
 /opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/sklearn/linear_model/_coordinate_descent.py:2712: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 7.498e+05, tolerance: 6.557e+03
   ) = cd_fast.enet_coordinate_descent_multi_task(
 BC23567 enet 0.0386 n_iter 500 (612s)
+/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/site-packages/sklearn/linear_model/_coordinate_descent.py:2712: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 7.650e+05, tolerance: 6.835e+03
+  ) = cd_fast.enet_coordinate_descent_multi_task(
+BC23810 enet 0.0658 n_iter 500 (602s)
