@@ -1,0 +1,13 @@
+python 3.10.12
+Linux-6.1.158+-x86_64-with-glibc2.35
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.15.3
+scikit-learn==1.7.2
+torch==2.14.0+cpu
+timm==0.5.4
+tifffile==2025.5.10
+imagecodecs==2025.3.30
+scikit-image==0.25.2
+h5py==3.16.0
+matplotlib==3.10.9
