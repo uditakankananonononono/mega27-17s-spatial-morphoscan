@@ -83,12 +83,16 @@ if sm is not None:
     names = _f.feature_names()
     smres = sm.Logit(y, sm.add_constant(Z)).fit(disp=0, maxiter=200)
 import csv as _c
-with open("results/scanner_coefficients_v2.csv", "w", newline="") as fh:
-    w = _c.writer(fh); w.writerow(["feature", "coef", "z", "p"])
-    order = np.argsort(-np.abs(smres.params[1:]))
-    for j in order:
-        w.writerow([names[j], float(smres.params[1:][j]), float(smres.tvalues[1:][j]), float(smres.pvalues[1:][j])])
-print("scanner coefficients written")
+if sm is not None:
+    with open("results/scanner_coefficients_v2.csv", "w", newline="") as fh:
+        w = _c.writer(fh); w.writerow(["feature", "coef", "z", "p"])
+        order = np.argsort(-np.abs(smres.params[1:]))
+        for j in order:
+            w.writerow([names[j], float(smres.params[1:][j]), float(smres.tvalues[1:][j]), float(smres.pvalues[1:][j])])
+    print("scanner coefficients written")
+else:
+    out["scanner_coefficients"] = "skipped: statsmodels not installed"
+    print("scanner coefficients skipped (statsmodels absent)")
 
 # final scanner model on all data for the CLI
 mu, sd = X.mean(0), X.std(0); sd[sd == 0] = 1
