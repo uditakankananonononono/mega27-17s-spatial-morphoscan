@@ -42,36 +42,42 @@ for test_pat in patients:
     t0 = time.time()
     lam = folds[test_pat]
     train_pats = [p for p in patients if p != test_pat]
-    Xs, Ns = [], []
-    for pat in train_pats:
-        for sec in her2[her2["patient"] == pat]["section"]:
-            if sec not in sections: continue
-            s = sections[sec]; Xs.append(s["X"]); Ns.append(s["N"])
-    Xtr, Ntr = np.vstack(Xs), sparse.vstack(Ns)
-    gc.collect()
-    means = np.asarray(Ntr.mean(axis=0)).ravel()
-    variances = np.asarray(Ntr.power(2).mean(axis=0)).ravel() - means ** 2
+    train_secs = [sec for pat in train_pats for sec in her2[her2["patient"] == pat]["section"]
+                  if sec in sections]
+    # memory-lean: accumulate gene stats per section, never a full sparse vstack
+    sum_x, sum_x2, n_tot = None, None, 0
+    for sec in train_secs:
+        N = sections[sec]["N"]
+        sx = np.asarray(N.sum(axis=0)).ravel()
+        sx2 = np.asarray(N.power(2).sum(axis=0)).ravel()
+        sum_x = sx if sum_x is None else sum_x + sx
+        sum_x2 = sx2 if sum_x2 is None else sum_x2 + sx2
+        n_tot += N.shape[0]
+    means = sum_x / n_tot
+    variances = sum_x2 / n_tot - means ** 2
     sel = {"top100_mean": np.argsort(-means)[:100],
            "top250_mean": np.argsort(-means)[:250],
            "top500_mean": np.argsort(-means)[:500],
            "top250_var": np.argsort(-variances)[:250]}
+    Xtr = np.vstack([sections[s]["X"] for s in train_secs])
     sc = models.Standardizer().fit(Xtr)
     Ztr = sc.transform(Xtr)
     test_secs = [s for s in her2[her2["patient"] == test_pat]["section"] if s in sections]
     Zte = np.vstack([sc.transform(sections[s]["X"]) for s in test_secs])
     rec = {"patient": test_pat}
     for rule, idx in sel.items():
-        Ytr = Ntr[:, idx].toarray()
+        Ytr = np.vstack([sections[s]["N"][:, idx].toarray() for s in train_secs])
         Tte = np.vstack([sections[s]["N"][:, idx].toarray() for s in test_secs])
         bank = models.fit_ridge_bank(Ztr, Ytr, lam)
         rec[rule] = per_gene_median(models.predict_bank(Zte, bank), Tte)
+        del Ytr, Tte, bank
     ov = len(set(sel["top250_mean"].tolist()) & set(sel["top250_var"].tolist()))
     rec["overlap_mean_vs_var_250"] = ov
     state["folds"].append(rec)
     json.dump(state, open(OUT, "w"))
     print(f"{test_pat} " + " ".join(f"{k} {v:.4f}" for k, v in rec.items() if k.startswith("top"))
           + f" overlap {ov} ({time.time()-t0:.0f}s)", flush=True)
-    del Xtr, Ntr, Ztr, Zte
+    del Xtr, Ztr, Zte
     gc.collect()
 
 fs = state["folds"]
