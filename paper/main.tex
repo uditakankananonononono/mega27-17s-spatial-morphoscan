@@ -420,12 +420,42 @@ G2-P & pathway $r \ge 0.20$; perm $p<0.01$; immune AUC $\ge 0.75$ & \pPathwayR; 
 G2-B & match/beat ST-Net 0.19 & \pMtwoR, gap $-0.138$ & FAIL (logged) \\
 G2-A & shuffled controls at chance & gene 0.0004; pathway 0.0054 & PASS \\
 G2-S & scanner AUC $\ge 0.85$ & \pScannerAuc{} \pScannerCI & PASS \\
-G2-X & external Visium pathway $r \ge 0.10$ & --- & PENDING \\
+G2-X & external Visium pathway $r \ge 0.10$ & $-0.155$ (v1); v2 stain-normalized below & FAIL (locked) \\
 D1 & $\ge 50$ genes at $r \ge 0.15$ + replicated enrichment & 22 genes & NOT MET \\
 D2 & spatial pathway architecture non-random & --- & PENDING \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+\subsection{The external-validity boundary (G2-X)}
+The frozen all-HER2$^+$ pathway model (29 sections, 12{,}897 spots, in-sample
+sanity $r=0.710$) was evaluated without any refitting on an independent 10x
+Visium breast section (4{,}325 in-tissue spots, identical tile geometry and
+identical unsmoothed ridge protocol). The transfer fails the locked gate:
+median pathway Pearson $r=-0.155$ against the required $\ge 0.10$, with 42 of
+50 pathways negative (range $-0.421$ to $0.235$). The failure is structured,
+not noise: the only positive transfers are stromal programs (Wnt $\beta$-catenin
+$0.235$, angiogenesis $0.222$, EMT $0.095$), and input QC verified the external
+image is genuine H\&E brightfield. A literature calibration
+(\texttt{docs/LIT\_TRANSFER\_CALIBRATION.md}) places this squarely inside the
+documented field norm: the 2026 DeepSpot-M foundation model reports zero-shot
+external correlations near $0.19$ only after per-slide adaptation, with stromal
+genes transferring best (COL1A2 $0.47$, LUM $0.41$) --- our stromal-only-positive
+pattern is an independent replication of that published behavior, and pathology
+foundation models are documented to degrade under unseen scanner/stain domains.
+A stain-normalization re-evaluation (v2) with an identical gate and full lineage
+disclosure is reported in \S\ref{sec:g2xv2}; the v1 failure stands regardless.
+
+\subsection{G2-X v2: stain-normalized re-evaluation}\label{sec:g2xv2}
+Per the v2 prespec (committed before the run, with the v1 failure already on
+record), exactly one input-processing step changed: each external tile is
+Reinhard-normalized in CIELAB space to reference statistics computed from 292
+internal BC23901\_C2 tiles (identical extraction geometry; reference statistics
+never touch external data). The frozen model, the external section, the spot
+set, the tile geometry, the unsmoothed ridge protocol, and the gate (median
+pathway $r \ge 0.10$) are all identical to v1. \emph{[Results paragraph lands
+with the run output; this section is committed ahead of the result so the
+method text cannot be shaped by it.]}
 
 \subsection{The headline positive: morphology predicts pathway activity}
 Across the ten HER2-positive leave-one-patient-out folds, ridge probes over frozen
