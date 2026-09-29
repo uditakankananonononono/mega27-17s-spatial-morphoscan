@@ -1031,6 +1031,31 @@ features, patient-held-out evaluation, a locked gate, and a shipped model artifa
 that anyone can run through the CLI on their own sections.
 
 \section{Reproducibility}
+\subsection{Audit trail: the Phase-1 geometry bug}
+The revival audit found that Phase 1's feature extraction mapped spot pixel
+coordinates to the decoded histology image with a scale factor normalized by
+the maximum spot coordinate rather than the decoded image size. Whenever the
+tissue does not span the full slide width - the common case - the entire
+spot grid lands at wrong positions. The failure is visible in Phase 1's own
+committed cache: on the audited example section, 210 of 256 spots (82\%)
+fall outside the decoded image and are NaN, and the surviving 46 patches sit
+at wrong positions with an extracted pitch of 485.6 px against the corrected
+139.2 px. The fix reads exact header-derived scale factors (JPEG header size
+before draft decode, per-axis scaling); the corrected extraction places
+100\% of spots in-bounds on all 68 sections, verified both numerically and
+by a rendered spot-grid overlay sitting exactly on the tissue blob. Every
+corrected-geometry rerun in this paper descends from this audit: the Track A
+rerun (whose committed fold medians an independent cache regeneration
+reproduces exactly), the Track B rerun of
+Section~\ref{sec:trackb-v2}, the ablations and the Reinhard control, and
+the Phase-2 pipeline, which used the corrected geometry from the start. The
+buggy-geometry artifacts and gate verdicts are preserved in the repository
+and cited above as the audit trail; the corrected measurements are the
+verdicts of record. We report this in the main text rather than a footnote
+because it is the single largest measured effect in the project: the
+scanner's gate verdict moved by $+0.25$ AUC on the bug fix alone, larger
+than any modeling change we evaluated.
+
 \subsection{Run manifest, environment lock, and measured computational cost}
 Every number in this paper traces to a committed artifact, and every artifact
 to the script that produced it: \texttt{results/run\_manifest.json} lists
