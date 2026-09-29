@@ -20,7 +20,7 @@ import numpy as np
 import pandas as pd
 from scipy import sparse
 from sklearn.neural_network import MLPRegressor
-from src.morphoscan import models, metrics
+from src.morphoscan import models
 
 CACHE = "features_cache"
 DATA = "/home/sandbox/mega27-17s-spatial-morphoscan/data/her2st"
@@ -100,9 +100,8 @@ for test_pat in patients:
         s = sections[sec]
         pred = mlp.predict(sc.transform(s["X"]))
         true = s["N"][:, top].toarray()
-        for j in range(len(top)):
-            rs.append(metrics.pearson_safe(pred[:, j], true[:, j]))
-    rs = np.array(rs, dtype=float)
+        rs.append(models.per_gene_pearson(pred, true))
+    rs = np.concatenate(rs).astype(float)
     med = float(np.nanmedian(rs))
     row = {"patient": test_pat, "n_genes": len(rs), "median_r_m3": med,
            "mean_r_m3": float(np.nanmean(rs)), "n_iter": int(mlp.n_iter_),
