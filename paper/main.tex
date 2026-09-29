@@ -609,6 +609,21 @@ G2-S gate; right, the within-section label-permutation null with the real median
 marked.}\label{fig:scanner}
 \end{figure}
 
+\subsection{Scanner robustness: stable coefficients, subtype-uniform accuracy}
+Two pre-registered checks bound the scanner's generality. First, the logistic
+coefficients are stable across the ten leave-one-patient-out folds: pairwise
+Spearman correlation of the 768-dimensional weight vectors has median $0.857$
+(95\% CI $[0.839, 0.874]$, range $0.753$--$0.942$), the top-50 feature sets
+overlap at median Jaccard $0.62$, and every shared top-50 feature keeps its
+sign in every fold pair (sign consistency $1.0$) --- the scanner keys on the
+same morphology everywhere, not on patient-specific quirks. Second, accuracy
+is uniform across the cohort's structure: HER2-luminal sections median AUC
+$0.933$ (IQR $[0.885, 0.979]$) versus HER2-non-luminal $0.926$ (IQR $[0.845,
+0.952]$), and by tumor-fraction tertile $0.963$ / $0.849$ / $0.924$ (per-section
+values in the scanner appendix tables).
+The mid-tertile dip and the single non-luminal outlier section (AUC $0.065$)
+are reported as measured; neither changes the gate.
+
 \subsection{What Phase 2 changes about the Phase-1 negatives}
 Phase-1's three failed gates (G-A2 smoothing advance, G-A3 benchmark, G-B1 scanner)
 stand as documented results of the handcrafted representation. Phase 2 re-asks two
