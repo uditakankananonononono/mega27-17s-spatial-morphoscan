@@ -95,7 +95,9 @@ for i in range(start, min(MAX_SPOTS, len(bcs))):
     im = np.asarray(Image.fromarray(tile).resize((224, 224), Image.BILINEAR), np.float32) / 255.0
     t = torch.from_numpy(((im - MEAN) / STD).transpose(2, 0, 1)[None]).float()
     with torch.no_grad():
-        Xs.append(model(t)[0].numpy().astype(np.float32))
+        ff = model.forward_features(t)  # identical to p2_extract_ctranspath.py
+        f = ff.mean(dim=(1, 2)) if ff.dim() == 4 else (ff.mean(dim=1) if ff.dim() == 3 else ff)
+        Xs.append(f[0].numpy().astype(np.float32))
     done_bcs.append(bcs[i])
     if (i + 1) % 500 == 0 or i + 1 == len(bcs):
         np.savez(CKPT, Xs=np.stack(Xs), bcs=np.array(done_bcs))
@@ -110,8 +112,8 @@ h5 = h5py.File(os.path.join(G2X, "Parent_Visium_Human_BreastCancer_filtered_feat
 m = h5["matrix"]
 feat_ids = [g.decode().split(".")[0] for g in m["features"]["id"][:]]
 hbc = [b.decode() for b in m["barcodes"][:]]
-N_all = sparse.csr_matrix((m["data"][:], m["indices"][:], m["indptr"][:]),
-                          shape=(len(feat_ids), len(hbc))).T.tocsr()  # spots x genes
+N_all = sparse.csc_matrix((m["data"][:], m["indices"][:], m["indptr"][:]),
+                          shape=(len(feat_ids), len(hbc))).T.tocsr()  # 10x stores CSC (features x barcodes); -> spots x genes
 upos = {g: i for i, g in enumerate(universe)}
 lut = np.array([upos.get(g, -1) for g in feat_ids])
 mm = N_all.tocoo(); nl = lut[mm.col]; keep = nl >= 0
