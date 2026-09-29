@@ -492,12 +492,14 @@ not the harness. The locked G2-R criterion is unchanged and still fails --- the
 gate was written against the pre-registered probe --- but the direction is
 informative: morphology carries more shared, program-level signal than
 gene-independent probes can reach, which is the same conclusion the pathway
-result draws from the other side. A multi-output elastic-net leg was attempted
-in three configurations and did not complete a single fold on this box
-(5000-iteration default $>$35 CPU-minutes per fold; 1000-iteration cyclic $>$15;
-500-iteration random-selection 26+ CPU-minutes under overnight throttling); it
-remains queued with per-fold checkpointing, and its absence is a compute
-limitation, not a measured result.
+result draws from the other side. A multi-output elastic-net leg (alpha $10^{-3}$,
+l1-ratio 0.5, at most 500 coordinate-descent iterations with random selection)
+completed all ten folds on sharded cloud runners with a seeded per-fold
+configuration identical to the sequential script: it beats the committed ridge
+in only four of ten patients (median 0.0453 vs 0.0462). Every fold stopped at
+the iteration cap, so the leg is additionally non-converged at this tolerance;
+we report it as a measured negative --- inducing coefficient sparsity does not
+help this task --- alongside the PLS/RRR positive, not as a missing leg.
 
 \subsection{The scanner passes its gate with controls}
 The embedding-based scanner reaches patient-held-out median AUC \pScannerAuc{}
