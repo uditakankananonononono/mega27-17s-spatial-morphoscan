@@ -1,0 +1,115 @@
+name: Lane B enet offload
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 */6 * * *'
+  push:
+    paths:
+      - '.github/workflows/offload_enet.yml'
+      - 'results/enet_kick.txt'
+permissions:
+  contents: write
+concurrency:
+  group: enet-offload
+  cancel-in-progress: false
+jobs:
+  enet:
+    runs-on: ubuntu-latest
+    timeout-minutes: 345
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned environment
+        run: pip install -r requirements_offload.txt
+      - name: Completion guard
+        id: guard
+        run: |
+          python3 - <<'PY'
+          import json, os
+          p = 'results/p2_multitask.json'
+          done = False
+          n = -1
+          if os.path.exists(p):
+              try:
+                  d = json.load(open(p))
+                  fs = d.get('folds', [])
+                  n = sum(1 for f in fs if 'elasticnet_median_r' in f)
+                  done = len(fs) > 0 and all('elasticnet_median_r' in f for f in fs)
+              except Exception:
+                  pass
+          print(f'enet folds already complete: {n}; job done = {done}')
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
+              fh.write('status=' + ('complete' if done else 'incomplete') + '\n')
+          PY
+      - name: Fetch and verify offload data
+        if: steps.guard.outputs.status == 'incomplete'
+        run: |
+          set -e
+          base='https://github.com/uditakankananonononono/mega27-17s-spatial-morphoscan/releases/download'
+          mkdir -p /tmp/off
+          for spec in 'offload-data-v1 part_aa' 'offload-data-v1-ab part_ab' 'offload-data-v1-ac part_ac' 'offload-data-v1-ad part_ad'; do
+            set -- $spec
+            curl -sL --retry 3 -o /tmp/off/laneB_her2_data.$2 "$base/$1/laneB_her2_data.$2"
+          done
+          cat /tmp/off/laneB_her2_data.part_a* > /tmp/off/data.tar.gz
+          echo '226cf5f54f838b6582b8a80cde9b898f  /tmp/off/data.tar.gz' | md5sum -c -
+          mkdir -p /tmp/off/x
+          tar -xzf /tmp/off/data.tar.gz -C /tmp/off/x
+          cp -r /tmp/off/x/features_cache . 2>/dev/null || true
+          cp -r /tmp/off/x/embeddings_cache . 2>/dev/null || true
+          mkdir -p data
+          cp -r /tmp/off/x/data/her2st data/ 2>/dev/null || true
+          cp /tmp/off/x/data/ensg_symbol_map.json data/ 2>/dev/null || true
+          python3 - <<'PY'
+          import json, os, shutil
+          def n_enet(p):
+              try:
+                  d = json.load(open(p))
+                  return sum(1 for f in d.get('folds', []) if 'elasticnet_median_r' in f)
+              except Exception:
+                  return -1
+          n_repo = n_enet('results/p2_multitask.json')
+          n_tar = n_enet('/tmp/off/x/results/p2_multitask.json')
+          if n_tar > n_repo:
+              os.makedirs('results', exist_ok=True)
+              shutil.copy('/tmp/off/x/results/p2_multitask.json', 'results/p2_multitask.json')
+              print(f'using tarball JSON (enet folds {n_tar} > repo {n_repo})')
+          else:
+              print(f'keeping repo JSON (enet folds {n_repo} >= tarball {n_tar})')
+          if not os.path.exists('results/p2_folds_partial.csv') and os.path.exists('/tmp/off/x/results/p2_folds_partial.csv'):
+              shutil.copy('/tmp/off/x/results/p2_folds_partial.csv', 'results/p2_folds_partial.csv')
+              print('restored p2_folds_partial.csv from tarball')
+          PY
+      - name: Replay gate (must print REPLAY PASS)
+        if: steps.guard.outputs.status == 'incomplete'
+        env:
+          MS_DATA: ${{ github.workspace }}/data/her2st
+        run: python scripts/offload_replay_check.py
+      - name: Run enet with per-fold checkpoint commits
+        if: steps.guard.outputs.status == 'incomplete'
+        env:
+          MS_DATA: ${{ github.workspace }}/data/her2st
+        run: |
+          git config user.name 'laneB-offload-bot'
+          git config user.email 'offload@localhost'
+          python -u scripts/p2_multitask.py 2>&1 | tee results/enet_run_log.txt &
+          PID=$!
+          while kill -0 $PID 2>/dev/null; do
+            sleep 180
+            git add -f results/p2_multitask.json results/enet_run_log.txt 2>/dev/null || true
+            if ! git diff --cached --quiet; then
+              git commit -q -m 'enet checkpoint (resumes from last committed fold on retrigger)'
+              git push -q origin HEAD:main || true
+            fi
+          done
+          wait $PID
+          RC=$?
+          git add -f results/p2_multitask.json results/enet_run_log.txt
+          if ! git diff --cached --quiet; then
+            git commit -q -m "enet run exit rc=$RC"
+            git push -q origin HEAD:main || true
+          fi
+          echo "p2_multitask exited rc=$RC"
+          exit $RC
