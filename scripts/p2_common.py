@@ -8,7 +8,7 @@ import pandas as pd
 from scipy import sparse
 
 FC = "features_cache"; EC = "embeddings_cache"
-DATA = "/home/sandbox/mega27-17s-spatial-morphoscan/data/her2st"
+DATA = os.environ.get("MS_DATA", "/home/sandbox/mega27-17s-spatial-morphoscan/data/her2st")  # env-overridable for offload runs (Colab/local); box default unchanged
 MAP_PATH = "data/ensg_symbol_map.json"
 
 def load_meta():
