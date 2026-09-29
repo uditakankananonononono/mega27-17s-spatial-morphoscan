@@ -476,6 +476,29 @@ sections), M1 vs M2.}\label{fig:genes}
  We report this as measured; the pathway level above is the
 steering response, not a reframing.
 
+\subsection{Multi-task structure beats independent ridge at the per-gene level}
+The per-gene numbers above come from independent ridge probes, one per gene. Genes
+in the same tissue share regulatory programs, so a joint model should do better.
+Re-fitting the same 250 train-selected genes per fold with two multi-task models
+--- partial least squares with 25 latent components, and reduced-rank ridge at
+rank 25 from the ridge-bank SVD --- gives a consistent positive: PLS beats the
+committed independent ridge in all ten held-out patients (median per-gene Pearson
+0.0673 vs 0.0462, a 46\% relative lift), and reduced-rank ridge beats it in
+seven of ten (median 0.0596). Per-fold values are in
+Appendix~\ref{tab:multitask}. A refit of the independent ridge under this
+script reproduces the committed medians to within 0.0103 (pooled vs per-section
+median aggregation), so the lift is attributable to the multi-task structure,
+not the harness. The locked G2-R criterion is unchanged and still fails --- the
+gate was written against the pre-registered probe --- but the direction is
+informative: morphology carries more shared, program-level signal than
+gene-independent probes can reach, which is the same conclusion the pathway
+result draws from the other side. A multi-output elastic-net leg was attempted
+in three configurations and did not complete a single fold on this box
+(5000-iteration default $>$35 CPU-minutes per fold; 1000-iteration cyclic $>$15;
+500-iteration random-selection 26+ CPU-minutes under overnight throttling); it
+remains queued with per-fold checkpointing, and its absence is a compute
+limitation, not a measured result.
+
 \subsection{The scanner passes its gate with controls}
 The embedding-based scanner reaches patient-held-out median AUC \pScannerAuc{}
 \pScannerCI{} across the 27 evaluable HER2 sections (two all-tumor sections have undefined AUC and are excluded), passing G2-S ($\ge 0.85$). Three controls
@@ -762,5 +785,8 @@ finfiniteness and name uniqueness, textured-vs-flat discriminability).
 
 \section{Phase-2 scanner: label-permutation controls}
 \input{tab_scanner_labelperm.tex}
+
+\section{Multi-task per-fold results}
+\input{tab_multitask_folds.tex}
 
 \end{document}
