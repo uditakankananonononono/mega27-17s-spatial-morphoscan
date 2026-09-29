@@ -96,7 +96,7 @@ for rec in state["folds"]:
     test_pat = rec["patient"]
     t0 = time.time()
     Ztr, Ytr, Zte, Tte = build_fold(test_pat)
-    en = MultiTaskElasticNet(alpha=1e-3, l1_ratio=0.5, max_iter=500, tol=2e-3, selection="random")
+    en = MultiTaskElasticNet(alpha=1e-3, l1_ratio=0.5, max_iter=500, tol=2e-3, selection="random", random_state=20260929)
     en.fit(Ztr, Ytr)
     rec["elasticnet_median_r"] = per_gene_median(en.predict(Zte), Tte)
     rec["elasticnet_n_iter"] = int(en.n_iter_)  # convergence honesty
