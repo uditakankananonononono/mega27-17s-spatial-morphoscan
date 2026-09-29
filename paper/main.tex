@@ -539,6 +539,57 @@ the iteration cap, so the leg is additionally non-converged at this tolerance;
 we report it as a measured negative --- inducing coefficient sparsity does not
 help this task --- alongside the PLS/RRR positive, not as a missing leg.
 
+\subsection{Spatial controls: what the smoothing gain is made of}
+Phase-2's spatial smoothing adds a small but real gain over the unsmoothed
+model (median $+0.0073$ per-gene $r$, 8/10 folds positive; the two negative
+folds, BC23450 $-0.0001$ and BC23901 $-0.0041$, are named, not averaged away).
+Three pre-registered nulls decompose that gain. Value-shuffling within
+sections destroys the signal ($-0.0503$; the real gain beats all 10 folds'
+nulls), so the gain is not an artifact of the smoothing operator itself.
+Graph-shuffling leaves $-0.0011$ (real beats 9/10), so true neighborhoods
+matter. A distance-shell null that preserves spatial scale but not geometry
+retains $+0.0039$ (real still beats 9/10): about half the gain is generic
+local denoising that any scale-matched smoother would get, and half requires
+the true tissue geometry. Both legs are reported; the architecture claim is
+accordingly narrower than ``smoothing helps'' and stronger than ``smoothing is
+cosmetic.''
+
+\subsection{Spatial-only baselines: morphology is not autocorrelation in disguise}
+Could a purely spatial predictor do as well? Section-mean prediction is
+degenerate by construction (constant per section, no within-section signal).
+Oracle spatial baselines --- kNN on neighbor expression ($k=6$) and Gaussian
+kernel smoothing of the truth --- reach medians of $0.1130$ and $0.1441$ and
+define the autocorrelation ceiling: oracle predictability tracks Moran's $I$
+at $r=0.957$, i.e.\ spatial-only predictability \emph{is} autocorrelation.
+The median Moran's $I$ across genes is only $0.040$ (weak average
+autocorrelation), and the morphology model's per-gene $r$ tracks Moran's $I$
+at just $0.491$ (95\% CI $[0.289, 0.680]$). Roughly half of what the model
+predicts is therefore independent of spatial autocorrelation --- morphology
+carries signal no deployable spatial-only method can reach, and the autocorrelation
+ceiling numbers say how much room a hybrid could still use.
+
+\subsection{Selection-rule sensitivity and negative-control genes}
+Two pre-registered checks bound how much the headline depends on the
+250-gene selection rule. Across four alternative rules (top-100 by expression,
+top-250, top-500, top-250 by variance), per-fold ridge medians move only
+$\pm 0.005$ (0.0571 / 0.0502 / 0.0472 / 0.0546; mean- and variance-selected
+panels overlap on just 171.5 of 250 genes), the committed rule sits mid-pack,
+and every rule's median stays below the locked G2-R $0.08$ --- the gate
+conclusion is selection-rule-robust. The negative-control experiment drew
+250-gene panels from train-expression ranks 251--2250 (5 draws per fold, same
+harness) under a pre-declared expectation of $\approx 0$ predictability. That
+expectation was falsified in the informative direction: control panels reach
+median $0.0342$ (range $[0.0087, 0.0876]$ across folds) --- per-gene
+predictability is broad across expressed genes, driven by cell-type
+composition, not special to the selected panel. The selected panel still beats
+controls in 9/10 folds ($0.0462$ vs $0.0342$, Wilcoxon $p=0.0488$) and PLS
+beats controls in 10/10 ($p=0.0020$); the one fold where a control draw beat
+the selected panel (BC23287: $0.0814$ vs $0.0588$) is named. Together these
+two checks reframe the per-gene result honestly: the ceiling on gene-level
+prediction is low everywhere, composition explains much of what is
+predictable, and the defensible signal lives at the pathway level ---
+consistent with the headline positive.
+
 \subsection{The scanner passes its gate with controls}
 The embedding-based scanner reaches patient-held-out median AUC \pScannerAuc{}
 \pScannerCI{} across the 27 evaluable HER2 sections (two all-tumor sections have undefined AUC and are excluded), passing G2-S ($\ge 0.85$). Three controls
