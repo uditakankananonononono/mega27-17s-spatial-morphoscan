@@ -746,6 +746,30 @@ accession-level and disclosed as such. (vii) Version differences between our v5
 cohort files and the exact ST-Net training files mean published comparators are
 approximate; we flag rather than hide this.
 
+\section{Field calibration: how our transfer numbers sit in 2026 norms}
+Before treating the G2-X boundary as a property of this model, we calibrated
+against the current literature (full note with sources:
+\texttt{docs/LIT\_TRANSFER\_CALIBRATION.md}). Three findings frame it.
+First, the strongest published spatial-expression foundation model available to
+us (DeepSpot-M, 2026) reports zero-shot external correlations near $0.19$
+\emph{only after} per-slide adaptation; its zero-shot numbers without
+adaptation sit lower, and its best-transferring genes are stromal (COL1A2
+$0.47$, LUM $0.41$) --- the same stromal-only-positive pattern our frozen model
+shows on the external section, making our failure an independent replication
+of the published behavior rather than an idiosyncratic bug. Second, a 2026
+foundation-model survey documents that pathology foundation models are fragile
+under unseen domains, with scanner and staining shifts named as primary
+degradation modes --- consistent with our v2 measurement that stain
+normalization recovers part ($+0.082$ of median $r$) but not most of the gap.
+Third, scanner/stain degradation studies show the effect persists even within
+the same tissue type across sites. The practical conclusion for the field:
+zero-shot cross-site transfer of morphology-to-expression models is currently
+bounded at the stromal-program level regardless of model scale, and per-site
+adaptation is not optional. Our boundary section quantifies that bound on one
+independent section with a pre-declared gate; DeepSpot-M's own head-to-head on
+the same section is pre-registered and will be added when its license-gated
+weights are accessible.
+
 \section{Discussion}
 The question this project set out to answer was deliberately modest: how much spatial
 expression is honestly recoverable from morphology alone, measured without leakage,
