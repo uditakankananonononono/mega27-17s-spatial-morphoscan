@@ -1,0 +1,73 @@
+name: Lane B G2-X external eval (frozen model on 10x Visium)
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/g2x_external.yml'
+permissions:
+  contents: write
+concurrency:
+  group: g2x-external
+  cancel-in-progress: false
+jobs:
+  g2x:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned environment (CPU torch)
+        run: |
+          pip install -r requirements_g2x.txt
+          pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+      - name: Completion guard
+        id: guard
+        run: |
+          if [ -f results/g2x_external_eval.json ]; then echo 'status=complete' >> "$GITHUB_OUTPUT"; else echo 'status=incomplete' >> "$GITHUB_OUTPUT"; fi
+      - name: Fetch external data (byte-size gates per dfb54b8) + CTransPath weights (md5 gate)
+        if: steps.guard.outputs.status == 'incomplete'
+        run: |
+          set -e
+          mkdir -p /home/runner/g2x /home/runner/models /home/runner/ctranspath_src
+          cd /home/runner/g2x
+          BASE='https://cf.10xgenomics.com/samples/spatial-exp/1.2.0/Parent_Visium_Human_BreastCancer'
+          curl -sL --retry 3 -O "$BASE/Parent_Visium_Human_BreastCancer_filtered_feature_bc_matrix.h5"
+          curl -sL --retry 3 -O "$BASE/Parent_Visium_Human_BreastCancer_spatial.tar.gz"
+          curl -sL --retry 3 -o image.tif "$BASE/Parent_Visium_Human_BreastCancer_image.tif"
+          [ "$(stat -c%s Parent_Visium_Human_BreastCancer_filtered_feature_bc_matrix.h5)" = "21452440" ]
+          [ "$(stat -c%s Parent_Visium_Human_BreastCancer_spatial.tar.gz)" = "11759586" ]
+          [ "$(stat -c%s image.tif)" = "1763006484" ]
+          tar xzf Parent_Visium_Human_BreastCancer_spatial.tar.gz
+          curl -sL --retry 3 -o /home/runner/models/ctranspath.pth "https://huggingface.co/jamesdolezal/CTransPath/resolve/main/ctranspath.pth"
+          echo '355c89ad5c495fd5dfc74812fd2bd1c0  /home/runner/models/ctranspath.pth' | md5sum -c -
+          curl -sL --retry 3 -o /home/runner/ctranspath_src/ctran.py "https://raw.githubusercontent.com/Xiyue-Wang/TransPath/main/ctran.py"
+      - name: Run G2-X extraction + eval with checkpoint commits
+        if: steps.guard.outputs.status == 'incomplete'
+        env:
+          G2X_DATA: /home/runner/g2x
+          CTRAN_PTH: /home/runner/models/ctranspath.pth
+          CTRAN_DIR: /home/runner/ctranspath_src
+          P2_THREADS: '4'
+        run: |
+          git config user.name 'laneB-offload-bot'
+          git config user.email 'offload@localhost'
+          python -u scripts/g2x_external_eval.py 2>&1 | tee results/g2x_run_log.txt &
+          PID=$!
+          while kill -0 $PID 2>/dev/null; do
+            sleep 180
+            git add -f results/g2x_embed_ckpt.npz results/g2x_run_log.txt 2>/dev/null || true
+            if ! git diff --cached --quiet; then
+              git commit -q -m 'g2x checkpoint (embedding progress)'
+              for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break || sleep 10; done
+            fi
+          done
+          wait $PID
+          RC=$?
+          git add -f results/g2x_external_eval.json results/g2x_run_log.txt
+          if ! git diff --cached --quiet; then
+            git commit -q -m "g2x external eval complete rc=$RC"
+            for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break || sleep 10; done
+          fi
+          exit $RC
