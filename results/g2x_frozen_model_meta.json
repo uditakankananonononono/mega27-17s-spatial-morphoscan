@@ -1,0 +1,9 @@
+{
+ "protocol": "results/g2x_protocol_prespec.json v1.1",
+ "n_sections": 29,
+ "n_patients": 10,
+ "n_spots": 12897,
+ "n_pathways": 50,
+ "lam": 100.0,
+ "in_sample_median_pathway_r_sanity": 0.7100005518466317
+}
