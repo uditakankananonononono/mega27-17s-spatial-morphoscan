@@ -1,0 +1,15 @@
+\section{M3 per-fold results}
+Per-patient held-out medians for the M3 MLP nonlinear check against the committed M1/M2 values (same folds, same features; M3 spec in Table~\ref{tab:m3spec}). M3 loses to the ridge in 9 of 10 folds.
+\begin{table}[h]\centering\small\caption{M3 vs M1/M2 per LOPO fold (median per-gene Pearson).}\label{tab:m3folds}
+\begin{tabular}{lrrrr}\hline\hline patient & M1 ridge & M2 smoothed & M3 MLP & M3 $-$ M1\\\hline
+BC23287 & 0.0598 & 0.0672 & 0.0047 & -0.0551\\
+BC23450 & 0.0427 & 0.0440 & 0.0177 & -0.0250\\
+BC23567 & 0.0214 & 0.0203 & 0.0196 & -0.0019\\
+BC23810 & 0.0286 & 0.0276 & 0.0320 & +0.0035\\
+BC23901 & 0.0093 & 0.0072 & -0.0115 & -0.0208\\
+BC23903 & 0.0686 & 0.0749 & 0.0522 & -0.0165\\
+BC23944 & 0.0338 & 0.0375 & 0.0059 & -0.0279\\
+BC24044 & 0.0710 & 0.0766 & 0.0612 & -0.0098\\
+BC24105 & -0.0016 & -0.0093 & -0.0172 & -0.0156\\
+BC24220 & 0.0458 & 0.0469 & 0.0257 & -0.0201\\
+\hline\end{tabular}\end{table}
