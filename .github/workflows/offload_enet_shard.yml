@@ -1,0 +1,86 @@
+name: Lane B enet SHARDED offload (6 parallel folds)
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/offload_enet_shard.yml'
+permissions:
+  contents: write
+concurrency:
+  group: enet-shards
+  cancel-in-progress: false
+jobs:
+  shard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        patient: [BC23901, BC23903, BC23944, BC24044, BC24105, BC24220]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned environment
+        run: pip install -r requirements_offload.txt
+      - name: Fetch and verify offload data (md5 gate)
+        run: |
+          set -e
+          base='https://github.com/uditakankananonononono/mega27-17s-spatial-morphoscan/releases/download'
+          mkdir -p /tmp/off
+          for spec in 'offload-data-v1 part_aa' 'offload-data-v1-ab part_ab' 'offload-data-v1-ac part_ac' 'offload-data-v1-ad part_ad'; do
+            set -- $spec
+            curl -sL --retry 3 -o /tmp/off/laneB_her2_data.$2 "$base/$1/laneB_her2_data.$2"
+          done
+          cat /tmp/off/laneB_her2_data.part_a* > /tmp/off/data.tar.gz
+          echo '226cf5f54f838b6582b8a80cde9b898f  /tmp/off/data.tar.gz' | md5sum -c -
+          mkdir -p /tmp/off/x
+          tar -xzf /tmp/off/data.tar.gz -C /tmp/off/x
+          cp -r /tmp/off/x/features_cache . 2>/dev/null || true
+          cp -r /tmp/off/x/embeddings_cache . 2>/dev/null || true
+          mkdir -p data
+          cp -r /tmp/off/x/data/her2st data/ 2>/dev/null || true
+          cp /tmp/off/x/data/ensg_symbol_map.json data/ 2>/dev/null || true
+          cp /tmp/off/x/results/p2_folds_partial.csv results/ 2>/dev/null || true
+      - name: Replay gate (must print REPLAY PASS)
+        env:
+          MS_DATA: ${{ github.workspace }}/data/her2st
+        run: python scripts/offload_replay_check.py
+      - name: Compute ONE enet fold (statistics identical to sequential PASS 2)
+        env:
+          MS_DATA: ${{ github.workspace }}/data/her2st
+        run: python -u scripts/p2_enet_shard.py ${{ matrix.patient }} 2>&1 | tee results/enet_shard_${{ matrix.patient }}.log
+      - name: Commit shard fragment (rebase-retry, never overwrites other shards)
+        run: |
+          git config user.name 'laneB-offload-bot'
+          git config user.email 'offload@localhost'
+          git add -f results/enet_shards/${{ matrix.patient }}.json results/enet_shard_${{ matrix.patient }}.log
+          if git diff --cached --quiet; then echo 'nothing to commit'; exit 0; fi
+          git commit -q -m 'enet shard ${{ matrix.patient }} (parallel fold, identical statistics to sequential PASS 2)'
+          for i in 1 2 3 4 5; do
+            git pull -q --rebase origin main && git push -q origin HEAD:main && echo PUSHED && exit 0
+            sleep 15
+          done
+          echo 'push failed after retries' && exit 1
+  merge:
+    needs: shard
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Merge fragments into p2_multitask.json
+        run: |
+          git config user.name 'laneB-offload-bot'
+          git config user.email 'offload@localhost'
+          for i in 1 2 3 4 5; do git pull -q --rebase origin main && break || sleep 10; done
+          python3 scripts/p2_enet_merge.py
+          git add -f results/p2_multitask.json
+          if git diff --cached --quiet; then echo 'no merge changes'; exit 0; fi
+          git commit -q -m 'enet merge: shard fragments folded into p2_multitask.json (summary + wins recomputed)'
+          for i in 1 2 3 4 5; do
+            git pull -q --rebase origin main && git push -q origin HEAD:main && echo MERGED && exit 0
+            sleep 15
+          done
+          exit 1
