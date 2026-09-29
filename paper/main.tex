@@ -453,9 +453,17 @@ Reinhard-normalized in CIELAB space to reference statistics computed from 292
 internal BC23901\_C2 tiles (identical extraction geometry; reference statistics
 never touch external data). The frozen model, the external section, the spot
 set, the tile geometry, the unsmoothed ridge protocol, and the gate (median
-pathway $r \ge 0.10$) are all identical to v1. \emph{[Results paragraph lands
-with the run output; this section is committed ahead of the result so the
-method text cannot be shaped by it.]}
+pathway $r \ge 0.10$) are all identical to v1. The v2 run (4{,}325 spots, same frozen weights) also fails the locked gate:
+median pathway Pearson $r=-0.073$ versus $\ge 0.10$, with 24\% of pathways
+positive (v1: $-0.155$, 16\%). Stain normalization moves the median $+0.082$
+toward zero --- consistent with the documented scanner/stain degradation mode
+--- but recovers only part of the gap and nothing near the gate. We conclude
+the dominant transfer-failure mode on this section is not stain shift but the
+deeper domain gap (HER2$^+$-selected training cohort versus an unselected
+tumor, plus site-level protocol differences). Both evaluations are reported
+with their pre-declared gates; no normalization variant beyond the single
+pre-specified one was attempted, and the G2-X line is closed with the boundary
+characterized quantitatively.
 
 \subsection{The headline positive: morphology predicts pathway activity}
 Across the ten HER2-positive leave-one-patient-out folds, ridge probes over frozen
