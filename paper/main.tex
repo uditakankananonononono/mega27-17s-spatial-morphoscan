@@ -662,6 +662,18 @@ for the handcrafted pipeline, cohering with the G2-X v2 finding at the
 embedding level, where the same normalization gained $+0.082$ but remained
 far under the gate.
 
+\subsection{Nonlinearity does not rescue the pathway model either}
+The M3 result (Section above) showed nonlinearity does not help at the gene
+level. The same question at the pathway level, pre-declared and run on the
+committed 50-pathway scores across all folds (1,450 patient$\times$pathway
+pairs): a HistGradientBoosting regressor reaches median $r$ $0.350$ against
+the ridge's $0.300$, but the paired difference is not significant (Wilcoxon
+$p=0.183$; HGB wins $53\%$ of pairs). Together with M3 (gene level,
+$0.0186$ vs $0.0382$ for the linear probe) this closes the nonlinearity
+question at both granularities: the linear probe is the representation's
+ceiling on this cohort, and the pathway-level advantage over gene level
+($0.30$ vs $0.05$) comes from aggregation, not from model class.
+
 \subsection{Learned versus handcrafted: the representation upgrade is real and insufficient}
 Queue closure \#10 asks the cleanest representation question available on
 this cohort: same ten patients, same held-out splits, same ridge probe,
@@ -986,6 +998,25 @@ features, patient-held-out evaluation, a locked gate, and a shipped model artifa
 that anyone can run through the CLI on their own sections.
 
 \section{Reproducibility}
+\subsection{Run manifest, environment lock, and measured computational cost}
+Every number in this paper traces to a committed artifact, and every artifact
+to the script that produced it: \texttt{results/run\_manifest.json} lists
+the 21 pipeline stages as script $\to$ output pairs, and a self-check
+verified every listed output present with zero missing at commit time.
+\texttt{results/env\_lock.txt} pins the measured environment (Python
+3.10.12, exact package versions, hardware). Cost is measured, not estimated
+(queue \#19; 2-core Xeon 2.60\,GHz, 1\,GB RAM, no GPU, CPU wall seconds):
+the Phase-2 ridge probe (250 genes + 50 pathways) costs 390\,s across the
+ten LOPO folds; the scanner logistic fit 55\,s; the calibration refit
+59\,s; the G2-X v2 external evaluation 2{,}176\,s (0.50\,s per spot for
+embedding extraction); the 68-section feature extraction at most
+45{,}463\,s including reruns; the pathway 10{,}000-permutation test
+51{,}496\,s in total - bimodal across patients, with 5 patients
+$\sim$270\,s under the Gram-invariant shortcut and 5 patients
+7.2-13.7\,ks requiring full refits; the multi-task PLS+RRR comparison
+$\sim$19\,s per patient. The full pipeline is reproducible on commodity
+CPU hardware in under a day; no stage requires a GPU.
+
 Everything in this paper regenerates from the repository: \texttt{PREREG.md} (locked
 gates), \texttt{src/morphoscan/} (package), \texttt{scripts/} (download, harvest,
 evidence, extraction, Track A/B, ledgers, figures), \texttt{tests/} (\numTests{}
