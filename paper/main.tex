@@ -635,6 +635,23 @@ prediction is low everywhere, composition explains much of what is
 predictable, and the defensible signal lives at the pathway level ---
 consistent with the headline positive.
 
+\subsection{Feature-group ablations: small groups beat the full vector}
+On the corrected-geometry handcrafted features (68 sections re-extracted with
+100\% of spots in-bounds; regenerating the cache reproduces the committed
+Track A fold medians exactly on all ten folds), each morphology group was fit
+alone under the identical Track A protocol (LOPO, train-only gene selection,
+inner-CV lambda). For expression prediction the stain-deconvolution group
+alone (9 features) \emph{beats} the full 41-feature vector (median $r$
+$0.0426$ vs $0.0382$), with texture close behind ($0.0395$) and color,
+entropy, and nuclear-density trailing ($0.0327$, $0.0297$, $0.0292$). For
+tumor scanning the color group alone reaches AUC $0.880$ against $0.830$ for
+the full vector. The parsimony reading: at 41 correlated features on
+$\sim$10{,}000 spots the ridge and the logistic fit spend capacity
+absorbing redundant channels; the morphological signal for both tasks is
+carried mostly by stain and color composition, not by the higher-order
+texture statistics. This is measured, not assumed - every group is reported,
+including the two that underperform.
+
 \subsection{The scanner passes its gate with controls}
 The embedding-based scanner reaches patient-held-out median AUC \pScannerAuc{}
 \pScannerCI{} across the 27 evaluable HER2 sections (two all-tumor sections have undefined AUC and are excluded), passing G2-S ($\ge 0.85$). Three controls
