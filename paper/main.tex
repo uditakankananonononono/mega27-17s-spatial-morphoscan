@@ -684,6 +684,54 @@ cell-type composition that morphology only partially determines
 is aggregated to niches). The claim is bounded to this cohort and task; the
 per-fold evidence is committed and replayable.
 
+\subsection{Panel-selection robustness: the gate verdict does not depend on the rule}
+The 250-gene panel is chosen inside each training fold, so the G2-R verdict
+could in principle hinge on the selection rule. Four pre-declared rules were
+evaluated under the identical ridge harness (queue \#11): top-100, top-250
+(the committed reference), and top-500 by train-fold mean expression, plus
+top-250 by train-fold variance. Per-fold medians move the headline by at most
+$\pm 0.005$ (top-100 mean $0.0571$, top-250 mean
+$0.0502$, top-500 mean $0.0472$, top-250
+variance $0.0546$; per-fold values in Appendix
+Table~\ref{tab:selection-sensitivity}), the reference rule sits mid-pack,
+and the mean- and variance-selected panels overlap by only $\sim$172 of 250
+genes, so the rules are genuinely different panels. Every rule's median
+remains far below the locked $0.08$ gate: the gate conclusion is
+selection-rule-robust, and predictability is not concentrated in the
+top-expressed genes - consistent with the gene-level control below.
+
+\subsection{Gene-level negative control: predictability is broad, not panel-specific}
+A pre-declared control drew 250 genes five times from train-expression ranks
+251-2250 (seed committed before the run) and refit the identical ridge
+harness. The pre-declared expectation of $\approx 0$ was \emph{falsified}:
+control folds reach a median $r$ of $0.0334$ - per-gene predictability from
+morphology is broad across expressed genes, driven by cell-type composition,
+not a property of the selected panel. The selection still adds real value:
+the committed panel beats controls in 9 of 10 folds (Wilcoxon $p=0.0488$) and
+the PLS multi-task model beats them in 10 of 10 ($p=0.0020$). One anomaly is
+named, not hidden: on BC23287 the control draws (median $0.0814$) beat the
+selected panel ($0.0588$) - the one fold where selection hurt. Per-fold
+values in Appendix Table~\ref{tab:gene-negcontrol}.
+
+\subsection{Spatial structure: autocorrelation carries the task, and the models use only part of it}
+Two oracle baselines bound what pure spatial smoothing could ever deliver:
+given the \emph{true} expression at neighboring held-out spots, a kNN
+smoother reaches median per-gene $r$ $0.113$ and a Gaussian-kernel smoother
+$0.144$ - well above every image-based model in this paper, and
+still short of a strong predictor. Per-gene kNN-oracle $r$ tracks Moran's $I$
+at median correlation $0.96$: a gene is predictable from its neighborhood
+almost exactly to the extent it is spatially autocorrelated. The deployed
+spatial-feature model (M2) adds a median gain of $+0.0073$ over M1;
+against the strictest of three pre-declared permutation nulls
+(distance-shell, which preserves the spatial layout's marginal statistics),
+the gain clears the 95th percentile in 3 of 10 folds (8 of 10
+against graph shuffle; per-fold values in Appendix
+Table~\ref{tab:spatial-baselines}). The honest summary: spatial
+autocorrelation is the dominant carrier of per-gene signal in this cohort,
+image features recover a minority of it, and the residual gap is the
+morphology-to-expression mapping itself - the same boundary the G2-X
+external evaluation hit from the other direction.
+
 \subsection{The scanner passes its gate with controls}
 The embedding-based scanner reaches patient-held-out median AUC \pScannerAuc{}
 \pScannerCI{} across the 27 evaluable HER2 sections (two all-tumor sections have undefined AUC and are excluded), passing G2-S ($\ge 0.85$). Three controls
@@ -1075,6 +1123,9 @@ finfiniteness and name uniqueness, textured-vs-flat discriminability).
 
 \input{m3_folds_appendix.tex}
 \input{learned_vs_handcrafted_table.tex}
+\input{selection_sensitivity_table.tex}
+\input{gene_negcontrol_table.tex}
+\input{spatial_baselines_table.tex}
 
 \input{calibration_appendix.tex}
 

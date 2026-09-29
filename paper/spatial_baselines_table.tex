@@ -1,0 +1,30 @@
+\begin{longtable}{lrrrrrr}
+\caption{Spatial structure of the expression task, per held-out patient. kNN / Gaussian
+oracles: median per-gene $r$ of smoothing predictors given the \emph{true} expression at
+neighboring held-out spots (an upper bound on what pure spatial autocorrelation carries).
+Moran's $I$: median spatial autocorrelation of the 250-gene panel; its correlation with the
+kNN-oracle $r$ shows per-gene predictability tracks autocorrelation. Gain: M2 (spatial-feature
+model) minus M1 held-out $r$; shell p95: 95th percentile of the same gain under distance-shell
+permutations (the strictest of three pre-declared nulls).}\label{tab:spatial-baselines}\\
+\toprule
+Patient & kNN oracle & Gaussian oracle & Moran's $I$ & corr($I$, kNN $r$) & M2$-$M1 gain & shell null p95 \\
+\midrule
+\endfirsthead
+\toprule
+Patient & kNN oracle & Gaussian oracle & Moran's $I$ & corr($I$, kNN $r$) & M2$-$M1 gain & shell null p95 \\
+\midrule
+\endhead
+BC23287 & 0.123 & 0.146 & 0.029 & 0.89 & +0.0138 & 0.0173 \\
+BC23450 & 0.110 & 0.137 & 0.038 & 0.94 & -0.0001 & 0.0070 \\
+BC23567 & 0.166 & 0.214 & 0.071 & 0.98 & +0.0074 & 0.0099 \\
+BC23810 & 0.112 & 0.151 & 0.045 & 0.96 & +0.0053 & 0.0024 \\
+BC23901 & 0.114 & 0.141 & 0.038 & 0.95 & -0.0041 & 0.0033 \\
+BC23903 & 0.158 & 0.184 & 0.053 & 0.96 & +0.0114 & 0.0096 \\
+BC23944 & 0.108 & 0.143 & 0.042 & 0.95 & +0.0075 & 0.0165 \\
+BC24044 & 0.165 & 0.201 & 0.062 & 0.97 & +0.0133 & 0.0095 \\
+BC24105 & 0.105 & 0.116 & 0.034 & 0.96 & +0.0067 & 0.0072 \\
+BC24220 & 0.090 & 0.114 & 0.033 & 0.97 & +0.0071 & 0.0091 \\
+\midrule
+Median & 0.113 & 0.144 & 0.040 & 0.96 & +0.0073 & 0.0093 \\
+\bottomrule
+\end{longtable}

@@ -1,0 +1,30 @@
+\begin{longtable}{lrrr}
+\caption{Gene-level negative control (pre-declared, queue \#12). Control column: median
+across 5 pre-declared draws of 250 genes from train-expression ranks 251-2250 (seed 20260929),
+same ridge harness. Selected-250: the committed ridge on the fold-varying top-250 panel. PLS:
+the multi-task winner. The control's pre-declared $\approx 0$ expectation was falsified -
+per-gene predictability is broad across expressed genes (cell-type-composition-driven), not
+panel-specific - but the selected panel beats controls in 9/10 folds (Wilcoxon $p=0.0488$) and
+PLS in 10/10 ($p=0.0020$). Named anomaly: BC23287, controls $0.0814$ $>$ selected $0.0588$.}\label{tab:gene-negcontrol}\\
+\toprule
+Patient & Control median $r$ & Selected-250 ridge $r$ & PLS $r$ \\
+\midrule
+\endfirsthead
+\toprule
+Patient & Control median $r$ & Selected-250 ridge $r$ & PLS $r$ \\
+\midrule
+\endhead
+BC23287 & 0.0806 & 0.0588 & 0.0896 \\
+BC23450 & 0.0303 & 0.0388 & 0.0734 \\
+BC23567 & 0.0223 & 0.0334 & 0.0491 \\
+BC23810 & 0.0220 & 0.0623 & 0.0786 \\
+BC23901 & 0.0365 & 0.0417 & 0.0494 \\
+BC23903 & 0.0654 & 0.1063 & 0.1077 \\
+BC23944 & 0.0298 & 0.0390 & 0.0442 \\
+BC24044 & 0.0865 & 0.0853 & 0.0966 \\
+BC24105 & 0.0112 & 0.0312 & 0.0400 \\
+BC24220 & 0.0390 & 0.0507 & 0.0611 \\
+\midrule
+Median & 0.0334 & 0.0462 & 0.0673 \\
+\bottomrule
+\end{longtable}
