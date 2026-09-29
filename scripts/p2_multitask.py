@@ -12,7 +12,7 @@ fold. Writes results/p2_multitask.json.
 frozen ~95% of wall time overnight). PLS/RRR/ridge-refold now run first with
 per-fold checkpoints (pass 1); enet is a separate per-fold-checkpointed pass 2
 so the multi-task verdict cannot be held hostage by the one infeasible leg."""
-import os, sys, json, time, csv as _csv
+import os, sys, json, time, csv as _csv, gc
 sys.path.insert(0, os.path.dirname(__file__) + "/..")
 sys.path.insert(0, "scripts")
 import numpy as np
