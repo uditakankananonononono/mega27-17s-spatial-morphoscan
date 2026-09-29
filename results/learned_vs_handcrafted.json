@@ -1,0 +1,96 @@
+{
+ "description": "Queue #10: learned image baseline (CTransPath 768-d embeddings, Phase-2 ridge) vs handcrafted morphology baseline (41 features, Track A M1 ridge), identical 10-patient leave-one-patient-out splits, median per-gene Pearson r on held-out spots.",
+ "sources": {
+  "handcrafted": "results/trackA_folds_partial.csv (corrected-geometry rerun 123b892)",
+  "learned": "results/p2_multitask.json ridge_m1_committed (rebuilt canonical embeddings)"
+ },
+ "patients": [
+  "BC23287",
+  "BC23450",
+  "BC23567",
+  "BC23810",
+  "BC23901",
+  "BC23903",
+  "BC23944",
+  "BC24044",
+  "BC24105",
+  "BC24220"
+ ],
+ "per_fold": [
+  {
+   "patient": "BC23287",
+   "handcrafted_r": 0.05979665213186225,
+   "learned_r": 0.058768569093153616,
+   "delta": -0.0010280830387086326
+  },
+  {
+   "patient": "BC23450",
+   "handcrafted_r": 0.04266885272769062,
+   "learned_r": 0.03877566993499195,
+   "delta": -0.0038931827926986726
+  },
+  {
+   "patient": "BC23567",
+   "handcrafted_r": 0.021439772373443626,
+   "learned_r": 0.03342535471323228,
+   "delta": 0.011985582339788657
+  },
+  {
+   "patient": "BC23810",
+   "handcrafted_r": 0.028556362236934564,
+   "learned_r": 0.06227226247165066,
+   "delta": 0.033715900234716094
+  },
+  {
+   "patient": "BC23901",
+   "handcrafted_r": 0.009276415577148877,
+   "learned_r": 0.04165437661397513,
+   "delta": 0.03237796103682625
+  },
+  {
+   "patient": "BC23903",
+   "handcrafted_r": 0.06863762776878383,
+   "learned_r": 0.10630909036141929,
+   "delta": 0.03767146259263546
+  },
+  {
+   "patient": "BC23944",
+   "handcrafted_r": 0.033794072539685395,
+   "learned_r": 0.03902663360627926,
+   "delta": 0.005232561066593866
+  },
+  {
+   "patient": "BC24044",
+   "handcrafted_r": 0.07103124235784455,
+   "learned_r": 0.0852605227322133,
+   "delta": 0.014229280374368741
+  },
+  {
+   "patient": "BC24105",
+   "handcrafted_r": -0.00157156102755131,
+   "learned_r": 0.031190590708244908,
+   "delta": 0.03276215173579622
+  },
+  {
+   "patient": "BC24220",
+   "handcrafted_r": 0.04577680062128251,
+   "learned_r": 0.050716810190650934,
+   "delta": 0.004940009569368423
+  }
+ ],
+ "median_handcrafted": 0.03823146263368801,
+ "median_learned": 0.04618559340231303,
+ "median_paired_delta": 0.0131074313570787,
+ "folds_learned_better": 8,
+ "wilcoxon_W": 3.0,
+ "wilcoxon_p": 0.009765625,
+ "gate_context": {
+  "G2_R_gate": 0.08,
+  "both_below_gate": true
+ },
+ "caveats": [
+  "Phase-2 gene panel is fold-varying top-250 by train-fold mean expression; Track A uses its committed 250-gene panel - panels overlap but are not identical.",
+  "Elastic-net l1_ratio differs slightly (Track A alpha=0.4, Phase-2 alpha=0.5); both are ridge-dominant linear probes at lambda=100.",
+  "No new model fitting in this script; it compares two committed, replay-verified artifacts."
+ ]
+}
