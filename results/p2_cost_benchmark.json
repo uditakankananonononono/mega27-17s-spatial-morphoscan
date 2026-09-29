@@ -1,0 +1,50 @@
+{
+ "item": "Tier-2 #19 computational cost benchmark (measured wall times)",
+ "hardware": {
+  "cpu": "Intel Xeon 2.60GHz, 2 vCPU",
+  "ram_gb": 1,
+  "note": "single small shared box; no GPU; times are CPU wall seconds"
+ },
+ "stages": [
+  {
+   "stage": "Phase-2 ridge probe, 250 genes + 50 pathways, per LOPO fold (10 folds)",
+   "wall_seconds": 390,
+   "n_units": 10,
+   "basis": "per-fold times printed by scripts/p2_model.py; total = sum of folds"
+  },
+  {
+   "stage": "Scanner logistic fit, per LOPO fold",
+   "wall_seconds": 55,
+   "n_units": 10,
+   "basis": "per-fold times in scanner stability run (same recipe as committed scanner)"
+  },
+  {
+   "stage": "Pathway permutation test, 10,000 reps, per patient (BIMODAL: 5 patients 261-276s via Gram-invariant shared fits; 5 patients 7,196-13,703s full refits before the invariant path; total is sum of both)",
+   "wall_seconds": 51496,
+   "n_units": 10,
+   "basis": "per-patient times in tier1_perm10k.log: 276, 276, 261, 270, 13703, 10930, 7196, 10899, 7418, 267"
+  },
+  {
+   "stage": "G2-X external evaluation v2 (4,325 spots: CTransPath embed + frozen head + gates)",
+   "wall_seconds": 2176,
+   "n_units": 4325,
+   "basis": "wall time printed by scripts/g2x_external_eval_v2.py; embed alone 2171s (0.50 s/spot)"
+  },
+  {
+   "stage": "CTransPath extraction, all 68 sections (batch run incl. interrupted reruns)",
+   "wall_seconds": 45463,
+   "n_units": 68,
+   "basis": "first-to-last mtime of embeddings_cache/*.npz; upper bound incl. idle gaps; steady-state rate 0.50 s/spot from G2-X line"
+  },
+  {
+   "stage": "Multitask PLS + reduced-rank ridge, per patient (both fits)",
+   "wall_seconds": 189,
+   "n_units": 20,
+   "basis": "per-patient times in multitask.log"
+  }
+ ],
+ "fresh_rerun_checks": {
+  "scanner_calibration_full_refit_seconds": 59,
+  "basis": "wall time of scripts/p2_scanner_calibration.py run 2026-09-29 (10 LOPO folds, 12,897 held-out spots, replay-exact)"
+ }
+}
