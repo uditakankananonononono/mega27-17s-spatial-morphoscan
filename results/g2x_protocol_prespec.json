@@ -1,0 +1,22 @@
+{
+  "item": "G2-X external-cohort gate eval - frozen-model construction protocol",
+  "declared_before_external_data_use": "2026-09-29",
+  "gate_locked_in": "PREREG-2.md: frozen model on external Visium breast cohort, no retraining, median pathway Pearson >= 0.10",
+  "external_cohort": "10x Visium Parent_Visium_Human_BreastCancer v1.2.0 (public no-auth; download recipe + byte sizes committed dfb54b8, re-verified HTTP 200 2026-09-28)",
+  "frozen_model_construction": [
+    "cohort: ALL internal HER2+ sections (the full internal cohort - external cohort is disjoint, no leakage possible)",
+    "features: cached CTransPath 768-d embeddings (embeddings_cache), StandardScaler fit on ALL internal spots",
+    "targets: Hallmark-50 pathway scores exactly as scripts/p2_common.py (universe = gene intersection, CPM-1e4 log1p, z-params mu/sd from all internal spots, >=5 mapped member genes per pathway)",
+    "ridge: models.fit_ridge_bank with lambda chosen by the SAME choose_lambda_inner procedure run once on the full internal cohort",
+    "spatial smoothing: alpha chosen once by choose_alpha_inner on the full internal cohort (same procedure as per-fold); external predictions smoothed with the same alpha and the same neighbor-graph construction as internal eval (p2_model.py line ~244 pattern)",
+    "artifact: frozen model (scaler params, ridge coefs, lam, alpha, universe, z-params, pathway index map) committed to results/g2x_frozen_model.npz BEFORE external embedding extraction begins"
+  ],
+  "external_eval": [
+    "tiles: spot-centered, resized 224x224, SAME physical tile extent as internal extraction (scaled by external scalefactors spot diameter vs internal pitch) - physical-scale match declared as the transfer assumption",
+    "embeddings: identical CTransPath weights + recipe (timm 0.5.4 ConvStem construction, no downsample remap; verified missing=head.* only)",
+    "external pathway scores: SAME universe genes (by symbol), SAME internal z-params (frozen transfer), SAME scoring formula",
+    "primary endpoint: median per-pathway Pearson between predicted and observed pathway scores across spots, over pathways passing the >=5-member rule on the external gene set",
+    "gate: median >= 0.10 PASS per PREREG-2; result reported either way, no adjustment"
+  ],
+  "known_gaps": "single external sample (n=1 tissue section) - declared; external section is a different tumor (not HER2+-selected) - declared; spot-level pathway Pearson across one section measures regional co-variation, not patient-level generalization"
+}
