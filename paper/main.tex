@@ -662,6 +662,28 @@ for the handcrafted pipeline, cohering with the G2-X v2 finding at the
 embedding level, where the same normalization gained $+0.082$ but remained
 far under the gate.
 
+\subsection{Learned versus handcrafted: the representation upgrade is real and insufficient}
+Queue closure \#10 asks the cleanest representation question available on
+this cohort: same ten patients, same held-out splits, same ridge probe,
+same 250-gene task - only the image representation changes, from the 41
+handcrafted morphology features (Track A M1, corrected geometry) to the
+768-dimensional CTransPath embeddings (Phase-2). The learned representation
+wins decisively at the fold level: 8 of 10 patients, median paired
+$\Delta r = +0.0131$, Wilcoxon signed-rank $p = 0.0098$ (per-fold values in
+Appendix Table~\ref{tab:learned-vs-handcrafted}). Yet both medians sit far
+below the locked G2-R gate of $0.08$ (handcrafted $0.0382$, learned
+$0.0462$). The reading is the inverse of the ablation parsimony finding:
+moving \emph{up} in representation power helps significantly and still does
+not come close to the gate, while moving \emph{down} to single feature
+groups costs little. Together with the G2-X external double-FAIL, this
+triangulates the bottleneck: it is not the handcrafting, not the stain, and
+not the training data seen so far - it is the spot-level prediction task
+itself at this resolution, where expression variance is dominated by
+cell-type composition that morphology only partially determines
+(Section on niche-level recovery shows the signal re-emerges when the task
+is aggregated to niches). The claim is bounded to this cohort and task; the
+per-fold evidence is committed and replayable.
+
 \subsection{The scanner passes its gate with controls}
 The embedding-based scanner reaches patient-held-out median AUC \pScannerAuc{}
 \pScannerCI{} across the 27 evaluable HER2 sections (two all-tumor sections have undefined AUC and are excluded), passing G2-S ($\ge 0.85$). Three controls
@@ -1052,6 +1074,7 @@ finfiniteness and name uniqueness, textured-vs-flat discriminability).
 \input{g2x_perpath_appendix.tex}
 
 \input{m3_folds_appendix.tex}
+\input{learned_vs_handcrafted_table.tex}
 
 \input{calibration_appendix.tex}
 

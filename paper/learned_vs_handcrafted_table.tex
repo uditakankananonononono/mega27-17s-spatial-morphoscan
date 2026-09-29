@@ -1,0 +1,29 @@
+\begin{longtable}{lrrr}
+\caption{Learned versus handcrafted representation, per held-out patient. Handcrafted:
+Track A M1 ridge on 41 morphology features (corrected-geometry rerun); learned: Phase-2
+ridge on 768-dimensional CTransPath embeddings. Values are median per-gene Pearson $r$
+on the held-out patient's spots. The learned representation wins 8 of 10 folds (median
+paired delta $+0.0131$, Wilcoxon $p=0.0098$); both medians remain far below the locked
+G2-R gate of $0.08$.}\label{tab:learned-vs-handcrafted}\\
+\toprule
+Patient & Handcrafted $r$ & Learned $r$ & $\Delta$ (learned $-$ handcrafted) \\
+\midrule
+\endfirsthead
+\toprule
+Patient & Handcrafted $r$ & Learned $r$ & $\Delta$ \\
+\midrule
+\endhead
+BC23287 & 0.0598 & 0.0588 & -0.0010 \\
+BC23450 & 0.0427 & 0.0388 & -0.0039 \\
+BC23567 & 0.0214 & 0.0334 & +0.0120 \\
+BC23810 & 0.0286 & 0.0623 & +0.0337 \\
+BC23901 & 0.0093 & 0.0417 & +0.0324 \\
+BC23903 & 0.0686 & 0.1063 & +0.0377 \\
+BC23944 & 0.0338 & 0.0390 & +0.0052 \\
+BC24044 & 0.0710 & 0.0853 & +0.0142 \\
+BC24105 & -0.0016 & 0.0312 & +0.0328 \\
+BC24220 & 0.0458 & 0.0507 & +0.0049 \\
+\midrule
+Median & 0.0382 & 0.0462 & +0.0131 \\
+\bottomrule
+\end{longtable}
