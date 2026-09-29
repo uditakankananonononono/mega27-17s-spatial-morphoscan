@@ -652,6 +652,16 @@ carried mostly by stain and color composition, not by the higher-order
 texture statistics. This is measured, not assumed - every group is reported,
 including the two that underperform.
 
+A companion artifact control asks whether stain shift is the limiter for the
+handcrafted representation: every spot patch was Reinhard-normalized in CIELAB
+to an internal reference section and the full Track A protocol re-run
+(single changed variable, pre-declared). Normalization moves expression
+prediction by $-0.0035$ median $r$ (paired across folds) and scanning by
+$+0.013$ AUC - neither direction material - so stain is not the bottleneck
+for the handcrafted pipeline, cohering with the G2-X v2 finding at the
+embedding level, where the same normalization gained $+0.082$ but remained
+far under the gate.
+
 \subsection{The scanner passes its gate with controls}
 The embedding-based scanner reaches patient-held-out median AUC \pScannerAuc{}
 \pScannerCI{} across the 27 evaluable HER2 sections (two all-tumor sections have undefined AUC and are excluded), passing G2-S ($\ge 0.85$). Three controls
