@@ -341,6 +341,38 @@ $p$ \numWilcoxP{} decide G-A2 exactly as locked, whichever way it lands.
 (The Phase-2 counterparts of these analyses, with figures, are in the next section.)
 
 
+\subsection{M3 nonlinear check: an MLP does not beat the ridge}
+The pre-registered model ladder ends with M3, a multilayer perceptron intended
+as a nonlinear check on the ridge. The original pipeline left M3 marked
+\emph{not run}; we now run it under a specification committed before any M3
+result was seen (Table~\ref{tab:m3spec}), on identical folds, features,
+normalization, and train-only gene selection as M1/M2. The result is a clean
+measured negative: the MLP's all-fold median per-gene Pearson is $0.0186$,
+against $0.0382$ (M1) and $0.0408$ (M2), and it loses to the ridge in 9 of 10
+folds (the one win, BC23810, is by $+0.003$). At this sample size and feature
+scale the morphology-to-expression map is effectively linear; the ridge is the
+representation's ceiling, not a placeholder for a better nonlinear model. This
+also bounds how much of the Phase-1 gap to the published benchmark could be
+closed by model class alone: none.
+
+\begin{table}[h]
+\centering\small
+\caption{M3 specification (pre-declared, commit \texttt{cd7fb09}, before any M3 result).}
+\label{tab:m3spec}
+\begin{tabular}{ll}
+\hline
+Component & Value \\
+\hline
+Architecture & $41 \to 256 \to 128 \to 250$ fully connected, ReLU \\
+Parameters & 75{,}898 \\
+Optimizer & Adam, learning rate $10^{-3}$, batch 512 \\
+Training & max 150 epochs, early stopping (patience 10) on a train-only 10\% split \\
+Input scaling & train-fold Standardizer, identical to M1/M2 \\
+Mean wall time & $\approx$27\,s per fold \\
+\hline
+\end{tabular}
+\end{table}
+
 \subsection{Benchmark honesty}
 ST-Net's published median on the HER2-positive subset of this cohort is
 $\approx 0.19$ with a fine-tuned DenseNet-121; HisToGene-class attention models
@@ -655,6 +687,43 @@ features. Consequence: AUC-based conclusions stand, but the raw probabilities
 need post-hoc recalibration (e.g. isotonic or Platt) before any thresholded
 application; we report this as a limitation and apply no recalibration here,
 as the diagnostic was pre-declared as descriptive.
+
+\subsection{Computational cost}
+All measured wall times come from a single small shared box (2-core Xeon
+2.60\,GHz, 1\,GB RAM, no GPU); Table~\ref{tab:cost} lists them by pipeline
+stage. Only directly measured times appear; the two spans that include
+interrupted reruns are marked as upper bounds. The full Phase-2 analysis
+(ridge probe, scanner, pathway permutation test) reruns end-to-end in roughly
+a day on this hardware, dominated by the permutation test; everything else is
+minutes. Feature extraction is the one inherently slow stage at $0.50$\,s per
+spot CPU-bound, so a new 30-section cohort costs about four hours of
+extraction before any modeling.
+
+\begin{table}[h]
+\centering\small
+\caption{Measured computational cost by pipeline stage (results/p2\_cost\_benchmark.json).}
+\label{tab:cost}
+\begin{tabular}{lr}
+\hline
+Stage & Wall time \\
+\hline
+Phase-2 ridge probe, 250 genes + 50 pathways (10 LOPO folds) & 390\,s \\
+Scanner logistic fits (10 folds) & 55\,s \\
+Scanner calibration refit (10 folds, 12{,}897 held-out spots) & 59\,s \\
+M3 MLP nonlinear check (10 folds) & $\approx$270\,s \\
+Multitask PLS + reduced-rank ridge (10 patients) & 190\,s \\
+Pathway permutation test, 10{,}000 reps (10 patients) & 51{,}496\,s \\
+G2-X external evaluation v2 (4{,}325 spots, embed + gates) & 2{,}176\,s \\
+CTransPath extraction, 68 sections (upper bound, incl.\ reruns) & $\le$45{,}463\,s \\
+\hline
+\end{tabular}
+\end{table}
+
+The permutation-test line is bimodal by construction: five patients ran the
+Gram-invariant shared-fit path at 261--276\,s each, while five ran full
+refits at 7{,}196--13{,}703\,s each before the invariant path was used;
+the total is the sum of both and the fast path is the representative
+steady-state cost.
 
 \subsection{What Phase 2 changes about the Phase-1 negatives}
 Phase-1's three failed gates (G-A2 smoothing advance, G-A3 benchmark, G-B1 scanner)
