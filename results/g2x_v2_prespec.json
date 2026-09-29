@@ -1,0 +1,18 @@
+{
+ "id": "g2x_v2_stainnorm_external",
+ "created": "2026-09-29",
+ "lineage": "v1 FAIL locked in 34afa2f (median pathway r=-0.1547 vs gate >=0.10 on raw external 10x Visium breast section). v1 result remains on record unadjusted; v2 is a NEW pre-declared run with one changed input-processing step, fully disclosed as post-FAIL redesign (user steering sequence: FAIL locked -> literature calibration ab1ac6d -> head-to-head 50b8c85 -> this v2).",
+ "motivation": "Literature calibration (docs/LIT_TRANSFER_CALIBRATION.md) identifies stain/scanner domain shift as a documented failure mode (bioRxiv 2025.08.18.670932); v1 input QC verified the external image is genuine H&E brightfield (mean RGB ~155), so the failure is plausibly stain-space shift, not an image-content error.",
+ "design": {
+  "model": "frozen all-HER2+ pathway ridge (results/g2x_frozen_model.npz, e9f6ee4) - UNCHANGED, weights not refit",
+  "protocol": "identical to results/g2x_protocol_prespec.json (unsmoothed ridge pathway eval per p2_model.py, same 4,325 spots/tiles, same 50 Hallmark pathways)",
+  "single_change": "stain normalization of external tiles to the internal reference stain vector before CTransPath embedding. Method: Reinhard normalization in LAB space, statistics computed on the internal BC23901 reference section tiles and applied to external tiles (deterministic, no fitting on external labels). Pinned implementation committed with the run script.",
+  "external_data": "same 10x Visium breast section as v1 (same h5, same image, same spot selection)"
+ },
+ "gate": "PRIMARY: median external pathway r >= 0.10 (identical gate to v1). SECONDARY descriptive: fraction of pathways with r > 0, stromal-program pattern vs v1.",
+ "verdict_rule": "PASS/FAIL declared against the pre-declared gate before unblinding pathway-level results; FAIL stays on record exactly as v1 did. v2 does not replace v1; both are reported with lineage.",
+ "analysis": [
+  "scripts/g2x_external_eval_v2.py (to be committed before run)"
+ ],
+ "predeclared_before": "DeepSpot-M head-to-head verdict (run 36556434182, in flight) - this v2 design is independent of that result."
+}
