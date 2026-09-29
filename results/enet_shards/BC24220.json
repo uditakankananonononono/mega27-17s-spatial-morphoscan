@@ -1,0 +1,7 @@
+{
+ "patient": "BC24220",
+ "elasticnet_median_r": 0.05114558124552211,
+ "elasticnet_n_iter": 500,
+ "wall_seconds": 562.4,
+ "enet_config": "alpha=1e-3 l1_ratio=0.5 max_iter=500 tol=2e-3 selection=random random_state=20260929 (identical to p2_multitask.py PASS 2)"
+}
