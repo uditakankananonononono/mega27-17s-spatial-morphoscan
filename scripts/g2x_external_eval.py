@@ -22,7 +22,7 @@ from scipy import sparse
 from src.morphoscan import models
 
 G2X = os.environ.get("G2X_DATA", "/home/sandbox/g2x")
-CKPT = "results/g2x_embed_ckpt.npz"
+CKPT = os.environ.get("G2X_CKPT", "results/g2x_embed_ckpt.npz")
 OUT = "results/g2x_external_eval.json"
 Image.MAX_IMAGE_PIXELS = None
 MEAN = np.array([0.485, 0.456, 0.406], np.float32)
@@ -80,7 +80,8 @@ if os.path.exists(CKPT):
 else:
     Xs, done_bcs = [], []
 t0 = time.time()
-for i in range(start, len(bcs)):
+MAX_SPOTS = int(os.environ.get("MAX_SPOTS", "0")) or len(bcs)
+for i in range(start, min(MAX_SPOTS, len(bcs))):
     x, y = pos[bcs[i]]
     x0, x1 = int(round(x - half)), int(round(x + half))
     y0, y1 = int(round(y - half)), int(round(y + half))
@@ -100,6 +101,9 @@ for i in range(start, len(bcs)):
         np.savez(CKPT, Xs=np.stack(Xs), bcs=np.array(done_bcs))
         print(f"embed {i+1}/{len(bcs)} ({time.time()-t0:.0f}s)", flush=True)
 X = np.stack(Xs)
+if MAX_SPOTS < len(bcs):
+    print(f"SMOKE MODE: {MAX_SPOTS} spots embedded OK - skipping eval/final JSON", flush=True)
+    sys.exit(0)
 
 # --- external expression -> pathway scores with frozen universe/mu/sd
 h5 = h5py.File(os.path.join(G2X, "Parent_Visium_Human_BreastCancer_filtered_feature_bc_matrix.h5"), "r")

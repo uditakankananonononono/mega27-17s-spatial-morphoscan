@@ -7,3 +7,4 @@ timm==0.5.4
 tifffile==2025.5.10
 h5py==3.16.0
 zarr==2.18.3
+imagecodecs==2025.3.30
