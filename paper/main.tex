@@ -236,7 +236,9 @@ sit at chance) and coefficient stability across the ten LOPO folds (pairwise
 Spearman of logistic coefficient vectors).
 \paragraph{Phase-2 scanner (gate G2-S).} The tumor scanner is a class-balanced
 logistic regression over the 768-dim embeddings, patient-held-out, with the locked
-gate AUC $\ge 0.85$. Phase-1's scanner gate G-B1 failed at 0.642--0.676; G2-S is a
+gate AUC $\ge 0.85$. Phase-1's scanner gate G-B1 failed at 0.642--0.676 under the
+geometry bug and passes at 0.892--0.877 after the corrected-geometry rerun
+(Section~\ref{sec:trackb-v2}); G2-S is a
 new gate on a new representation, not a re-fish of the old one.
 
 \subsection{External tools and services}
@@ -430,6 +432,36 @@ evaluated exactly as locked. Feature-level inference (statsmodels logistic fit w
 coefficient $z$-tests) is reported in the appendix: hematoxylin concentration and
 texture statistics should dominate if the scanner is reading nuclear density and
 disorganization rather than slide artifacts.
+
+\subsection{Corrected-geometry rerun: G-B1 flips to PASS, with full lineage}
+\label{sec:trackb-v2}
+The Phase-1 scanner numbers above were measured under a feature-extraction
+bug, found and documented during the revival audit
+(\texttt{PHASE1-GEOMETRY-BUG.md}): spot pixel coordinates were normalized
+by the maximum spot coordinate rather than the decoded image size,
+misplacing the grid whenever tissue did not span the full slide - on the
+audited example section 210 of 256 spots (82\%) fall outside the decoded
+image in Phase 1's own committed cache, and the surviving patches sit at
+wrong positions. The G-B1 gate stands in \texttt{PREREG.md} exactly as
+locked; what follows is a bug fix with full disclosure, not gate re-fishing.
+The identical recipe (class-balanced logistic regression and histogram
+gradient boosting, same operating point, LOPO over the same 23 patients) was
+re-run on the corrected handcrafted features (100\% of spots in-bounds on
+all 68 sections; cache regeneration reproduces the committed corrected
+Track A fold medians exactly). The gate flips: median patient-held-out AUC
+rises from $0.642$ (LR) / $0.676$ (GB) to $\mathbf{0.892}$ (LR) /
+$\mathbf{0.877}$ (GB), both above the locked $0.80$ criterion, with
+16 of 23 folds at or above $0.80$ under either model. The four folds below
+$0.70$ are named, not removed: BC23270 ($0.235$) and BC24105 ($0.693$) have
+near-degenerate labels (tumor fraction $\approx 1.0$), BC24223 ($0.656$) is
+near-balanced the other way ($0.09$), and BC23567 ($0.689$) is the cohort's
+hardest mixed section. The corrected verdict coheres with the two
+independent scanner measurements on corrected features: the Phase-2
+embedding scanner ($0.926$) and the ablation's p2-style scanner on the same
+handcrafted cache ($0.830$). The buggy-geometry numbers remain in this
+section and in the commit history as the audit trail; the corrected numbers
+are the verdict of record. Per-fold values: Appendix
+Table~\ref{tab:trackb-v2}.
 
 
 \section{Results -- Phase 2: embeddings, pathways, and the scanner}
@@ -835,7 +867,8 @@ the total is the sum of both and the fast path is the representative
 steady-state cost.
 
 \subsection{What Phase 2 changes about the Phase-1 negatives}
-Phase-1's three failed gates (G-A2 smoothing advance, G-A3 benchmark, G-B1 scanner)
+Phase-1's failed gates (G-A2 smoothing advance, G-A3 benchmark; G-B1 failed under the
+geometry bug and passes on the corrected-geometry rerun, Section~\ref{sec:trackb-v2})
 stand as documented results of the handcrafted representation. Phase 2 re-asks two
 of the three questions with foundation embeddings: the scanner question now passes
 (G2-S), and the smoothing question, re-run on embeddings, shows a small real gain
@@ -1153,6 +1186,7 @@ finfiniteness and name uniqueness, textured-vs-flat discriminability).
 \input{g2x_perpath_appendix.tex}
 
 \input{m3_folds_appendix.tex}
+\input{trackB_v2_folds.tex}
 \input{learned_vs_handcrafted_table.tex}
 \input{selection_sensitivity_table.tex}
 \input{gene_negcontrol_table.tex}

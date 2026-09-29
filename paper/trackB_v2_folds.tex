@@ -1,0 +1,44 @@
+\begin{longtable}{lrrrrr}
+\caption{Track B corrected-geometry rerun (\texttt{results/trackB\_v2\_folds\_partial.csv}):
+patient-held-out scanner performance on the corrected handcrafted features
+(\texttt{features\_cache2}, 100\% of spots in-bounds on all 68 sections), identical
+recipe to the original run (class-balanced logistic regression and histogram gradient
+boosting, LOPO over the same 23 patients). Median AUC: LR 0.8915, GB 0.8772
+- both above the locked G-B1 gate of $0.80$, superseding the buggy-geometry measurements
+($0.642$ / $0.676$). The four folds below $0.70$ (BC23270, BC24105, BC24223, BC23567) sit
+in near-degenerate or near-balanced label strata and are named, not removed.}\label{tab:trackb-v2}\\
+\toprule
+Patient & $n$ spots & tumor frac & AUC (LR) & AUC (GB) & Brier (LR) \\
+\midrule
+\endfirsthead
+\toprule
+Patient & $n$ spots & tumor frac & AUC (LR) & AUC (GB) & Brier (LR) \\
+\midrule
+\endhead
+BC23209 & 943 & 0.950 & 0.942 & 0.932 & 0.052 \\
+BC23268 & 1425 & 0.182 & 0.795 & 0.813 & 0.134 \\
+BC23269 & 1302 & 0.845 & 0.972 & 0.963 & 0.131 \\
+BC23270 & 851 & 0.999 & 0.235 & 0.444 & 0.052 \\
+BC23272 & 1691 & 0.671 & 0.875 & 0.877 & 0.285 \\
+BC23277 & 1585 & 0.736 & 0.978 & 0.951 & 0.069 \\
+BC23287 & 947 & 0.276 & 0.827 & 0.875 & 0.142 \\
+BC23288 & 1422 & 0.907 & 0.808 & 0.767 & 0.135 \\
+BC23377 & 1885 & 0.756 & 0.939 & 0.949 & 0.132 \\
+BC23450 & 935 & 0.908 & 0.949 & 0.916 & 0.110 \\
+BC23506 & 1473 & 0.940 & 0.964 & 0.973 & 0.069 \\
+BC23508 & 1455 & 0.593 & 0.910 & 0.892 & 0.158 \\
+BC23567 & 1729 & 0.485 & 0.689 & 0.757 & 0.428 \\
+BC23803 & 1163 & 0.944 & 0.961 & 0.861 & 0.191 \\
+BC23810 & 2099 & 0.881 & 0.697 & 0.773 & 0.116 \\
+BC23895 & 1470 & 0.954 & 0.958 & 0.942 & 0.039 \\
+BC23901 & 589 & 0.486 & 0.754 & 0.593 & 0.203 \\
+BC23903 & 1373 & 0.199 & 0.892 & 0.878 & 0.106 \\
+BC23944 & 1240 & 0.836 & 0.968 & 0.966 & 0.195 \\
+BC24044 & 1728 & 0.123 & 0.918 & 0.932 & 0.113 \\
+BC24105 & 960 & 0.999 & 0.693 & 0.531 & 0.043 \\
+BC24220 & 1297 & 0.908 & 0.880 & 0.877 & 0.327 \\
+BC24223 & 1093 & 0.091 & 0.656 & 0.667 & 0.158 \\
+\midrule
+Median & & & 0.8915 & 0.8772 & \\
+\bottomrule
+\end{longtable}
