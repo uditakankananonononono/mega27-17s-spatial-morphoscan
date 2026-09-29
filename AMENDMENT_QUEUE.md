@@ -28,7 +28,7 @@ BLOCKED marks items needing inputs destroyed in the 2026-09-27 sandbox wipe
 |---|----------|--------|-------------------|
 | 8 | Full MLP specification + result table (layers, units, optimizer, epochs, params) | TODO | Paper-level; extract from committed M3 code. |
 | 14 | Scanner subgroup analyses (AUC by subgroups per verdict) | DONE | results/p2_scanner_subgroups.json (29 sections): subtype-robust - HER2_luminal AUC 0.933 (n=14) vs HER2_non_luminal 0.926 (n=15); tumor-fraction tertiles 0.885-0.948; size tertiles ~0.93; hardest difficulty tertile (near-balanced labels) 0.847; one anti-predictive outlier (BC24105_D1, 0.065) sits in extreme-fraction stratum - named, not hidden. |
-| 15 | Scanner calibration diagnostics | TODO | Reliability curve, Brier, ECE. |
+| 15 | Scanner calibration diagnostics | DONE | results/p2_scanner_calibration.json (12,897 out-of-fold spots, 10 patients; replay check vs committed scanner AUCs exact, max |dAUC| 0.0). Brier 0.172 vs prevalence baseline 0.240 (BSS 0.283); 10-bin ECE 0.141. Reliability: systematic miscalibration - underconfident below 0.7 (e.g. pred 0.25 vs emp 0.58 in 0.2-0.3 bin), overconfident in the top decile (pred 0.98 vs emp 0.84); well-calibrated 0.7-0.9. Discrimination strong but probability magnitudes need post-hoc recalibration before thresholded use - stated as limitation, no recalibration applied (diagnostic only, pre-declared). |
 | 18 | Full pipeline reproducibility artifacts | PARTIAL | Repo scripts/results committed. Gap: per verdict sub-items (env lock, run manifest). |
 | 19 | Computational cost benchmarking | TODO | Rerun timing on committed pipelines; paper table. |
 

@@ -637,6 +637,25 @@ values in the scanner appendix tables).
 The mid-tertile dip and the single non-luminal outlier section (AUC $0.065$)
 are reported as measured; neither changes the gate.
 
+\subsection{Scanner calibration: discrimination strong, probabilities overconfident at the extremes}
+The scanner's AUC measures ranking only. Because thresholded downstream use
+also depends on probability magnitudes, we recomputed the exact committed
+scanner (same caches, train Standardizer, logistic $C=1.0$, patient-held-out
+folds) and pooled out-of-fold per-spot probabilities across all 12{,}897 spots;
+a replay check confirmed the refit reproduces the committed per-section AUCs
+exactly (max $|\\Delta$AUC$|$ $0.0$ over 27 sections). Calibration is
+imperfect: Brier $0.172$ beats the prevalence baseline ($0.240$; Brier skill
+score $0.283$), but the 10-bin expected calibration error is $0.141$. The
+reliability table shows a systematic pattern rather than noise: the scanner is
+underconfident below 0.7 (in the 0.2--0.3 bin the mean prediction is $0.25$
+against an empirical tumor rate of $0.58$) and overconfident in the top decile
+(mean prediction $0.98$ against $0.84$); the 0.7--0.9 range is well calibrated.
+This mirrors logistic regression's known behavior on strongly separable
+features. Consequence: AUC-based conclusions stand, but the raw probabilities
+need post-hoc recalibration (e.g. isotonic or Platt) before any thresholded
+application; we report this as a limitation and apply no recalibration here,
+as the diagnostic was pre-declared as descriptive.
+
 \subsection{What Phase 2 changes about the Phase-1 negatives}
 Phase-1's three failed gates (G-A2 smoothing advance, G-A3 benchmark, G-B1 scanner)
 stand as documented results of the handcrafted representation. Phase 2 re-asks two
