@@ -497,7 +497,13 @@ D2 & spatial pathway architecture non-random & niche Moran's $I$ $0.213$; 96.6\%
 \end{table}
 
 \subsection{The external-validity boundary (G2-X)}
-The frozen all-HER2$^+$ pathway model (29 sections, 12{,}897 spots, in-sample
+\label{sec:g2x}
+This is a frozen-pipeline unseen-cohort evaluation: evaluation code and model
+weights were committed before each run, the cohort never touched any fit or
+selection step, and the gates were locked before outcomes. (It is not an
+organizer-held hidden evaluation - the cohort is public, and we do not
+describe it as hidden.) The frozen all-HER2$^+$ pathway model (29 sections,
+12{,}897 spots, in-sample
 sanity $r=0.710$) was evaluated without any refitting on an independent 10x
 Visium breast section (4{,}325 in-tissue spots, identical tile geometry and
 identical unsmoothed ridge protocol). The transfer fails the locked gate:
