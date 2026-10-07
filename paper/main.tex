@@ -237,8 +237,8 @@ Spearman of logistic coefficient vectors).
 \paragraph{Phase-2 scanner (gate G2-S).} The tumor scanner is a class-balanced
 logistic regression over the 768-dim embeddings, patient-held-out, with the locked
 gate AUC $\ge 0.85$. Phase-1's scanner gate G-B1 failed at 0.642--0.676 under the
-geometry bug and passes at 0.892--0.877 after the corrected-geometry rerun
-(Section~\ref{sec:trackb-v2}); G2-S is a
+geometry bug and stays FAIL as locked; the corrected-geometry rerun reaches
+0.892--0.877 but is post-hoc and descriptive (Section~\ref{sec:trackb-v2}); G2-S is a
 new gate on a new representation, not a re-fish of the old one.
 
 \subsection{External tools and services}
