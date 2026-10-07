@@ -23,3 +23,12 @@ def test_read_metadata(tmp_path):
     p = tmp_path / "m.csv"
     p.write_text("a,b\n1,2\n")
     assert D.read_metadata(str(p)).shape == (1, 2)
+
+
+def test_read_tumor_coords_cr_terminated(tmp_path):
+    p = tmp_path / "c.tsv"
+    p.write_bytes(b"hdr\tx\ty\tl\tt\rs1\t1.5\t2.5\tA\ttumor\rs2\t3\t4\tB\tnon\r")
+    df = D.read_tumor_coords(str(p))
+    assert list(df.columns) == ["spot_key", "xcoord", "ycoord", "lab", "tumor"]
+    assert len(df) == 2 and df.loc[0, "spot_key"] == "s1" and df.loc[1, "tumor"] == "non"
+    assert df.loc[0, "xcoord"] == 1.5
