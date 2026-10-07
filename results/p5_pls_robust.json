@@ -1,0 +1,23 @@
+{
+ "prespec": "results/p5_pls_robust_prespec.json",
+ "n_folds": 10,
+ "committed": {
+  "wins": 10,
+  "median_delta": 0.010868349965646572,
+  "sign_p_one_sided": 0.0009765625,
+  "boot_ci95": [
+   0.006965780011774203,
+   0.02324746873101951
+  ]
+ },
+ "refold": {
+  "wins": 10,
+  "median_delta": 0.010236984857241546,
+  "sign_p_one_sided": 0.0009765625,
+  "boot_ci95": [
+   0.007041769701924119,
+   0.01851201518083251
+  ]
+ },
+ "verdict": "SURVIVES"
+}
