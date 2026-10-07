@@ -1,0 +1,28 @@
+{
+ "id": "P3-SN1",
+ "date": "2026-10-07",
+ "status": "LOCKED before any outcome computation; script and results follow in later commits",
+ "finding_under_test": "Patient-held-out tumor-vs-other scanner (frozen LOPO LogisticRegression C=1.0 on standardized CTransPath embeddings): median per-section AUC 0.926 (95% CI 0.887-0.954, 27 sections, results/p2_bootstrap_ci.json). Existing control (p2_scanner_labelperm.json) permutes spot labels independently inside a section, which destroys spatial structure and so is a weak null for spatially clustered labels.",
+ "question": "Does the scanner AUC exceed what a null that preserves the spatial clustering of the tumor label field produces?",
+ "why_this_one": "Strongest archived finding: measured effect, bootstrap CI, label-permutation control passed, replay-verified against committed CSV, frozen patient-held-out evaluation. Remaining weakness is the null's realism, which this study addresses with archived data only.",
+ "data": "Local features_cache/embeddings_cache for the same 27 HER2 sections used in p2_scanner_partial.csv (sections lacking both classes excluded exactly as in p2_scanner_labelperm.py). Predictions are re-generated with the identical classifier and must reproduce committed section AUCs within 1e-6; if not, the study halts and reports a replay failure.",
+ "null_construction": "For each held-out section, B=500 null label maps. Each draws a uniform random rotation angle in [0,2pi) about the section's spot-coordinate centroid and a fair coin reflection, applies it to the spot coordinates carrying the TRUE labels, and assigns each real spot the label of its nearest transformed labeled spot (nearest-neighbour resampling, scipy cKDTree). A draw is kept only if its tumor fraction is within 0.05 absolute of the true tumor fraction and both classes are present; otherwise redrawn (max 5000 attempts per section, section reported as null-infeasible if B not reached). Predictions are held fixed; only labels move. Seed 20261007.",
+ "statistics": {
+  "per_section": "null AUCs vs observed AUC; one-sided empirical p = (1+#null>=obs)/(1+B)",
+  "primary_endpoint": "median over sections of observed AUC compared with a null of the same statistic: 10000 resamples, each drawing one null AUC per section independently and taking the median",
+  "secondary_descriptive": ["null AUC mean/median/p95 pooled, to quantify how much AUC a spatially misaligned map earns", "number of sections with per-section p<0.05 and BH q<0.05 across sections", "per-section excess = observed minus section null median, median and bootstrap CI over sections (10000 patient-level boots, seed 20261007)"]
+ },
+ "gates_locked": {
+  "PASS": "primary endpoint one-sided p < 0.01 AND median per-section excess >= 0.15",
+  "PARTIAL": "primary p < 0.01 but median excess < 0.15 (signal real but modest over spatial-clustering baseline)",
+  "FAIL": "primary p >= 0.01",
+  "REPLAY_HALT": "any committed section AUC not reproduced within 1e-6"
+ },
+ "rules": [
+  "No change to gates, B, null construction, or exclusions after outcomes are seen.",
+  "Any deviation (e.g. infeasible sections) is declared in the output JSON, not tuned away.",
+  "No variant reruns if FAIL or PARTIAL; report as measured.",
+  "Free CPU only; existing PREREG gates and stats files untouched."
+ ],
+ "limitations_declared": "Same 27 sections as the original finding: this is a stronger null on the same data, not an independent cohort. Rigid rotation can still overlap tumor regions with real tumor by chance, which is the intended conservative behavior. Does not address external transport, which already failed for expression (G2-X)."
+}
