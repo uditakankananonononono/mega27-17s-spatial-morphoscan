@@ -33,7 +33,11 @@ jobs:
           path: paper/main.pdf
       - name: Commit rendered PDF
         run: |
+          set -x
           git config user.name 'github-actions'
           git config user.email 'actions@users.noreply.github.com'
           git add -f paper/main.pdf
-          git diff --cached --quiet || (git commit -m 'CI: render paper/main.pdf from main.tex (xelatex)' && git push)
+          git status --short
+          if git diff --cached --quiet; then echo "PDF unchanged"; exit 0; fi
+          git commit -m 'CI: render paper/main.pdf from main.tex (xelatex)'
+          git push origin HEAD:main
