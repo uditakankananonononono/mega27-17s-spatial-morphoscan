@@ -1,0 +1,6 @@
+{"id":"P5-PLS1","date":"2026-10-08","question":"Is the PLS(25) multitask advantage over per-gene ridge robust to the choice of ridge comparator and to resampling over folds?",
+"data":"results/p2_multitask.json folds (10 LOPO folds): pls_median_r, ridge_m1_committed, ridge_m1_refold. No new model fits.",
+"analysis":["delta_c = pls - ridge_m1_committed; delta_r = pls - ridge_m1_refold (per fold)","exact one-sided sign test (H0 P(delta>0)=0.5) for each","paired bootstrap over folds (10000 resamples, seed 20261008) 95% percentile CI of the median delta for each"],
+"gate":"SURVIVES if for BOTH comparators: wins in >=9/10 folds AND bootstrap CI lower bound of median delta > 0. Otherwise FAILS and is reported as such.",
+"limits_declared":"10 folds = 10 patients; same cohort, no independent data; fold medians not gene-level; bootstrap over 10 folds is coarse; sign test p floor is 2^-10=0.00098 one-sided.",
+"not_done":"No outcome has been computed at the time of this file."}
