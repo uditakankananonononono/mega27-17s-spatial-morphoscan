@@ -21,6 +21,15 @@ cross-subtype transport test. Gene universe: 11,787-gene intersection.
 
 ## Locked gates — outcomes exactly as measured
 
+**Superseded-measurement notice (2026-10-07 audit).** The table below is the Phase-1 record measured with a spot-to-image geometry mapping that placed most spots outside the decoded image (e.g. 210 of 256 spots NaN on BC23287_C1; see `PHASE1-GEOMETRY-BUG.md`). Those exact table values (Track A M1 0.014 over 280 genes; scanner AUC 0.642/0.676) match the buggy-geometry files in `results/phase1_buggy_geometry/` and are kept as the audit trail. They are NOT the current results. The locked gates in `PREREG.md` are unchanged.
+
+Corrected-geometry reruns exist (the "rerun queued" line in `PHASE1-GEOMETRY-BUG.md` is stale):
+- Track A rerun (commit 123b892, `results/trackA_results.json`): median held-out Pearson M1 0.0382 / M2 0.0408 across 278 evaluated genes, permutation p = 0.0196. The M2 - M1 gap is about +0.0025, still under the +0.005 G-A2 threshold. This file, not the 0.014 value, is the final Phase-1 Track A record.
+- Track B v2 (commit fe5b87f, `results/trackB_results_v2.json`): median AUC 0.892 (LR) / 0.877 (GB), sensitivity 0.807, specificity 0.774, Brier 0.152. A formal re-verdict of G-B1 on v2 is not recorded in this README.
+- Phase-2 pipeline (`results/p2_gate_verdicts.json`): median per-gene Pearson 0.0521 over 275 genes (G2-R and G2-P not passed; gap to ST-Net 0.19 is -0.138, characterization only) and scanner median AUC 0.926 (G2-S pass).
+
+Read the table as the superseded Phase-1 record.
+
 | Gate | Threshold (locked) | Measured | Outcome |
 |---|---|---|---|
 | G-A1 sanity | M1 > M0, permutation p < 0.05 | M0 0.000, M1 0.014, p = 0.020 | **PASS** |
@@ -44,11 +53,11 @@ the paper.
   `results/tools/`; failed attempts logged as attempted-failed, never counted).
 - **Datasets:** 629 accession-level records (`results/accession_ledger.csv`),
   level-of-use disclosed per row (69 analyzed-primary + 560 metadata-mined).
-- **Tests:** 32 unit tests, all passing (`pytest tests/`).
+- **Tests:** 50 unit tests (`pytest tests/`; re-run 2026-10-07: 50 passed). The earlier "32" figure was stale.
 
 ## Paper
 
-21-page research paper (Times New Roman, lualatex): `paper/main.pdf` in this
+Research paper (currently 51 pages per pdfinfo on `paper/main.pdf`, CI-rendered with xelatex per `paper/RENDER_STATUS.md`; the earlier 21-page / lualatex description is stale): `paper/main.pdf` in this
 repo, and the Drive copy:
 https://drive.google.com/file/d/1U6AETHusYxMZxdN4loNa8dpNA5z-u90N/view
 
@@ -71,6 +80,6 @@ columns, any case).
 
 `PREREG.md` locked gates · `src/morphoscan/` package (metrics, features,
 models, dataio, cli) · `scripts/` download, harvest, evidence, extraction,
-Track A/B, ledgers, figures, paper tables · `tests/` 32 unit tests ·
+Track A/B, ledgers, figures, paper tables · `tests/` unit tests ·
 `results/` ledgers, per-gene table, scanner model, evidence artifacts ·
 `figures/` · `paper/`. Randomness seeded (20260925).
