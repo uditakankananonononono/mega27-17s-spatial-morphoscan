@@ -83,3 +83,6 @@ models, dataio, cli) · `scripts/` download, harvest, evidence, extraction,
 Track A/B, ledgers, figures, paper tables · `tests/` unit tests ·
 `results/` ledgers, per-gene table, scanner model, evidence artifacts ·
 `figures/` · `paper/`. Randomness seeded (20260925).
+
+## Robustness unit P5-PLS1 (2026-10-08)
+PLS(25) multitask beats per-gene ridge in 10/10 LOPO folds against both the committed and the refit ridge (median delta +0.0109 / +0.0102, bootstrap CI lower bounds 0.0070; sign p floor 9.8e-4). Verdict SURVIVES under the prespec gate. Limits: 10 patients, same cohort, fold medians, robustness only. **Commit-order violation:** prespec and script were committed (37c124d) after the first run because a shell commit failed silently; prespec content was written before the run and not edited. Files: `results/p5_pls_robust_prespec.json`, `scripts/p5_pls_robust.py`, `results/p5_pls_robust.json`.

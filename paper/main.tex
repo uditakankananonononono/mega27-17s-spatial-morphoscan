@@ -864,6 +864,31 @@ taken from the committed scanner table (\texttt{results/p2\_scanner\_partial.csv
 The classifier uses only embeddings and labels, and the exact replay above
 confirms the shim did not change it. Results: \texttt{results/p3\_spatialnull.json}.
 
+\subsection{Robustness of the multi-task advantage over per-gene ridge (P5-PLS1)}
+The multi-task result above (PLS with 25 components against the committed per-gene
+ridge) was a fold-level comparison against one ridge number per fold. P5-PLS1 asks
+whether it survives the choice of comparator and resampling over folds. It uses
+only the committed fold medians in \texttt{results/p2\_multitask.json}; no model was
+refit. The gate, written in \texttt{results/p5\_pls\_robust\_prespec.json} before the
+run, was: wins in at least 9 of 10 folds and a bootstrap 95\% CI lower bound above
+zero for the median paired difference, against both the committed ridge and the
+same-fold refit ridge (10{,}000 fold resamples, seed 20261008).
+
+PLS beats both comparators in 10 of 10 leave-one-patient-out folds. The median
+paired difference is $+0.0109$ against the committed ridge (bootstrap 95\% CI
+$[0.0070, 0.0232]$) and $+0.0102$ against the refit ridge (CI $[0.0070, 0.0185]$).
+The exact one-sided sign test gives $p=0.00098$ for both, which is the floor for 10
+folds ($2^{-10}$). Verdict under the stated gate: \textbf{SURVIVES}.
+
+Limits. This is a robustness check, not new evidence: there are 10 folds, one per
+patient, all from the same cohort; the quantities are per-fold medians of per-gene
+correlations, not gene-level values; a bootstrap over 10 folds is coarse; and the
+absolute gain is small (about $+0.01$ in median Pearson $r$). Process note: the
+prespec and script were committed (37c124d) after the first execution because a
+shell error made the earlier commit fail silently; the prespec content was written
+before the run and was not edited afterwards, and the inputs are committed values.
+Results: \texttt{results/p5\_pls\_robust.json}.
+
 \subsection{Scanner calibration: discrimination strong, probabilities overconfident at the extremes}
 The scanner's AUC measures ranking only. Because thresholded downstream use
 also depends on probability magnitudes, we recomputed the exact committed
