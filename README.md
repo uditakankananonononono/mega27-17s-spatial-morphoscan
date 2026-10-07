@@ -25,7 +25,7 @@ cross-subtype transport test. Gene universe: 11,787-gene intersection.
 
 Corrected-geometry reruns exist (the "rerun queued" line in `PHASE1-GEOMETRY-BUG.md` is stale):
 - Track A rerun (commit 123b892, `results/trackA_results.json`): median held-out Pearson M1 0.0382 / M2 0.0408 across 278 evaluated genes, permutation p = 0.0196. The M2 - M1 gap is about +0.0025, still under the +0.005 G-A2 threshold. This file, not the 0.014 value, is the final Phase-1 Track A record.
-- Track B v2 (commit fe5b87f, `results/trackB_results_v2.json`): median AUC 0.892 (LR) / 0.877 (GB), sensitivity 0.807, specificity 0.774, Brier 0.152. A formal re-verdict of G-B1 on v2 is not recorded in this README.
+- Track B v2 (commit fe5b87f, `results/trackB_results_v2.json`): median AUC 0.892 (LR) / 0.877 (GB), sensitivity 0.807, specificity 0.774, Brier 0.152. v2 is post-hoc relative to the locked G-B1 gate, so G-B1 stays FAIL and the v2 numbers are descriptive (lineage in `docs/GATE_LEDGER.md`).
 - Phase-2 pipeline (`results/p2_gate_verdicts.json`): median per-gene Pearson 0.0521 over 275 genes (G2-R and G2-P not passed; gap to ST-Net 0.19 is -0.138, characterization only) and scanner median AUC 0.926 (G2-S pass).
 
 Read the table as the superseded Phase-1 record.

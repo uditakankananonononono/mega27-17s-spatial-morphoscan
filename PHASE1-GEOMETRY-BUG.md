@@ -27,5 +27,4 @@ cache carried 485.6 px from a different decode).
 ## Status
 - Phase-2 pipeline (scripts/p2_extract_ctranspath.py) uses the corrected
   geometry from the start.
-- Phase-1 rerun with corrected geometry is queued; old cache is preserved
-  untouched for the audit trail.
+- Phase-1 corrected-geometry reruns are DONE (updated 2026-10-07; this line previously said queued): Track A 123b892 (results/trackA_results.json), Track B v2 fe5b87f (results/trackB_results_v2.json). Old results are preserved in results/phase1_buggy_geometry/. Gate verdicts: docs/GATE_LEDGER.md.
