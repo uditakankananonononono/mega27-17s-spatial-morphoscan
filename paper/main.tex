@@ -821,6 +821,49 @@ values in the scanner appendix tables).
 The mid-tertile dip and the single non-luminal outlier section (AUC $0.065$)
 are reported as measured; neither changes the gate.
 
+\subsection{Scanner against a spatial-structure-preserving null (P3-SN1)}\label{sec:p3sn1}
+The label-permutation control above shuffles spot labels independently, which
+destroys the spatial clustering of the tumor label field. A fairer null keeps
+that clustering. P3-SN1 was pre-registered (commit 051b175, locked before any
+outcome was computed; script committed before the run) with the predictions held
+fixed and only the labels moved: for each held-out section, 500 null label maps
+were made by a random rotation (and coin-flip reflection) of the true label
+field about the section centroid, re-assigned to the real spots by nearest
+neighbour, and kept only if the tumor fraction stayed within $0.05$ of the true
+value. The primary endpoint compares the median per-section AUC with the same
+statistic under this null (10{,}000 resamples, one null draw per section). The
+locked gate was PASS if $p<0.01$ and the median excess over the section null
+median was at least $0.15$.
+
+The refit reproduced the committed per-section AUCs exactly (maximum absolute
+deviation $1.1\times10^{-16}$). Of the 29 rows in the committed scanner table,
+27 sections are scorable; the other two (BC24105\_C1 and BC24105\_C2) are
+all-tumor sections (tumor fraction $1.0$) for which AUC is undefined, matching
+their exclusion everywhere else in this paper. All 27 sections reached 500
+feasible nulls. The observed median AUC is $0.926$ against a null
+median-of-medians of $0.491$ (null 95th percentile $0.542$); primary
+$p=1\times10^{-4}$, the resolution floor of 10{,}000 resamples. The median
+per-section excess is $+0.412$ (patient-level bootstrap 95\% CI $[0.354,
+0.519]$). Verdict under the locked gates: \textbf{PASS}. In 25 of 27 sections
+the one-sided empirical $p<0.05$, and the same 25 survive Benjamini--Hochberg
+at $q<0.05$. The pooled null AUC has mean $0.512$ and median $0.490$, but its
+95th percentile is $0.826$: a spatially misaligned label map can occasionally
+earn a high AUC, which is why the per-section null matters.
+
+The two sections that do not clear the null are reported as measured.
+BC24105\_D1 is anti-predictive (observed AUC $0.065$ against a null median of
+$0.383$, $p=1.0$), the same outlier named earlier. BC23287\_D1 is weak (observed
+AUC $0.667$ against a null median of $0.461$, $p=0.138$).
+
+\emph{Scope.} This is a stronger null on the same 27 sections, not an
+independent cohort and not an external validation; it is a robustness advance.
+Transport to an external cohort was tested separately for expression (G2-X) and
+failed. One data-access deviation is declared: \texttt{data/her2st/metadata.csv}
+was absent from the rebuilt workspace, so the HER2 section and patient list was
+taken from the committed scanner table (\texttt{results/p2\_scanner\_partial.csv}).
+The classifier uses only embeddings and labels, and the exact replay above
+confirms the shim did not change it. Results: \texttt{results/p3\_spatialnull.json}.
+
 \subsection{Scanner calibration: discrimination strong, probabilities overconfident at the extremes}
 The scanner's AUC measures ranking only. Because thresholded downstream use
 also depends on probability magnitudes, we recomputed the exact committed
