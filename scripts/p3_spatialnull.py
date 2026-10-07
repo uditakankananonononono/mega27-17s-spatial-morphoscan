@@ -35,14 +35,23 @@ def null_labels(px, y, rng):
             out.append(yn)
     return out, tries
 
-meta = C.load_meta()
-all_secs = [s for s in meta["section"] if os.path.exists(os.path.join(C.FC, f"{s}.npz")) and os.path.exists(os.path.join(C.EC, f"{s}.npz"))]
-her2 = meta[meta["is_her2"]]
-her2_secs = [s for s in her2["section"] if s in all_secs]
-universe = C.build_universe(all_secs); upos = {g: i for i, g in enumerate(universe)}
-sections = C.load_sections(her2_secs, upos)
+# DATA-ACCESS SHIM (declared deviation, method unchanged): data/her2st/metadata.csv is absent from the
+# rebuilt workspace. HER2 section list/patients are taken from the committed results/p2_scanner_partial.csv
+# (one row per HER2 section). Only embeddings + labels are needed by the scanner (gene counts unused).
+import pandas as _pd
+_sc = _pd.read_csv("results/p2_scanner_partial.csv")
+her2 = _sc.rename(columns={"section": "section"})[["patient", "section"]]
 patients = sorted(her2["patient"].unique())
 committed = {(r["patient"], r["section"]): float(r["auc"]) for r in _csv.DictReader(open("results/p2_scanner_partial.csv")) if r["auc"] != ""}
+sections = {}
+for sec in her2["section"]:
+    zf = np.load(os.path.join(C.FC, f"{sec}.npz"), allow_pickle=True); ze = np.load(os.path.join(C.EC, f"{sec}.npz"), allow_pickle=True)
+    f_ids = [str(x) for x in zf["spot_ids"]]; e_pos = {x: i for i, x in enumerate(str(v) for v in ze["spot_ids"])}
+    order = [e_pos[x] for x in f_ids if x in e_pos]; keep_f = [i for i, x in enumerate(f_ids) if x in e_pos]
+    if len(order) < 20: continue
+    X = ze["X"][order].astype(np.float32); px = np.stack([ze["sx"][order], ze["sy"][order]], axis=1)
+    lab = zf["labels"][keep_f]; ok = np.isfinite(X).all(axis=1)
+    sections[sec] = dict(X=X[ok], px=px[ok], labels=lab[ok])
 
 def assemble(pats):
     Xs, Ls = [], []
