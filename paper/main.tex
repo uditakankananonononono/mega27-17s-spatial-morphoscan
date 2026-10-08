@@ -491,7 +491,7 @@ G2-A & shuffled controls at chance & gene 0.0004; pathway 0.0054 & PASS \\
 G2-S & scanner AUC $\ge 0.85$ & \pScannerAuc{} \pScannerCI & PASS \\
 G2-X & external Visium pathway $r \ge 0.10$ & $-0.155$ (v1); v2 stain-normalized below & FAIL (locked) \\
 D1 & $\ge 50$ genes at $r \ge 0.15$ + replicated enrichment & 22 genes & NOT MET \\
-D2 & spatial pathway architecture non-random & niche Moran's $I$ $0.213$; 96.6\% sections all-niches sig & MET \\
+D2 & spatial pathway architecture non-random & niche Moran's $I$ $0.213$; 96.6\% sections all-niches sig (shuffle null); vs matched random gene sets only 4/50 pathways survive (P7-PW1) & MET (shuffle null); narrower vs matched sets \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -540,18 +540,37 @@ with their pre-declared gates; no normalization variant beyond the single
 pre-specified one was attempted, and the G2-X line is closed with the boundary
 characterized quantitatively.
 
-\subsection{Spatial pathway architecture is non-random (D2)}
-The D2 discovery target asks whether predicted pathway activity forms a real
-spatial architecture rather than smooth noise. Clustering sections into eight
-expression niches and scoring them against 200 shuffled-coordinate nulls per
-section gives a median niche Moran's $I$ of $0.213$, with 96.6\% of the 29
-sections significant for every niche. At the pathway level, all 50 Hallmark
-programs are spatially non-random in at least 83\% of sections (median
-Moran's $I$ $0.072$--$0.362$); the proliferation programs lead (Myc targets
-V1 $0.362$, mitotic spindle $0.346$, G2-M checkpoint $0.340$, significant in
-100\% of sections), and the pre-declared PancreasBeta negative control sits
-at the bottom ($0.072$), so the architecture is not a smoothing artifact ---
-a control pathway that should not structure breast tissue does not. D2 is met.
+\subsection{Spatial pathway architecture (D2): proliferation programs exceed matched random gene sets}
+The D2 discovery target asks whether pathway activity forms a real spatial
+architecture rather than smooth noise. Against random gene sets matched on size and
+expression level, four of the 50 Hallmark programs show real excess spatial
+organization in the 29 HER2-positive sections (P7-PW1; prespec commit 1877e0a, script
+committed before the run; 200 random sets per pathway per section, seed 20261008).
+Survival required at least 60\% of sections with $p<0.05$ and a positive median
+excess in Moran's $I$. The G2-M checkpoint program leads (83\% of sections,
+median excess $+0.064$), followed by Protein Secretion (66\%, $+0.063$; not
+expected in advance), E2F targets (69\%, $+0.061$) and Myc targets V1 (62\%,
+$+0.043$): the proliferation programs, plus one secretory program. The
+pre-declared PancreasBeta negative control does not survive (7\% of sections,
+median excess $+0.017$), so the metric does discriminate; it is not simply
+passing everything.
+
+The original D2 evidence needs a plain qualification. The first analysis clustered
+sections into eight expression niches and scored them against 200 shuffled-coordinate
+nulls, giving a median niche Moran's $I$ of $0.213$ with 96.6\% of sections
+significant for every niche, and found all 50 Hallmark programs non-random in at
+least 83\% of sections (median Moran's $I$ $0.072$--$0.362$; Myc targets V1 $0.362$,
+mitotic spindle $0.346$, G2-M checkpoint $0.340$). That shuffle null removes all
+spatial structure, so any smooth, tissue-structured quantity passes it. Against
+expression-matched random gene sets the all-pathways claim does not survive: 46 of 50
+programs do not meet the survival rule, and mitotic spindle, one of the three
+pre-declared leading programs, fails it (45\% of sections, median excess $+0.032$).
+The prespecified claim for the three leading programs together is therefore not
+supported, and D2 is met only in the narrower form above. Limits (as prespecified):
+same 29 HER2-positive sections and no independent cohort; random sets are matched on
+expression level only, not on cell-type specificity or co-expression; a single
+fixed Moran's $I$ length scale; the check was designed after the D2 outcomes were
+known. Results: \texttt{results/p7\_pathway\_randomset.json}.
 
 \subsection{The headline positive: morphology predicts pathway activity}
 Across the ten HER2-positive leave-one-patient-out folds, ridge probes over frozen
