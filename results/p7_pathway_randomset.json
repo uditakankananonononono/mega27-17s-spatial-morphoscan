@@ -1,0 +1,515 @@
+{
+ "prespec": "results/p7_pathway_randomset_prespec.json",
+ "seed": 20261008,
+ "pathways": {
+  "TNF-alpha Signaling via NF-kB": {
+   "n_sections": 29,
+   "frac_p05": 0.3103448275862069,
+   "median_excess": 0.028553731298967988,
+   "excess_ci95": [
+    -0.02092091396538623,
+    0.0486633588722013
+   ],
+   "survives": false
+  },
+  "Hypoxia": {
+   "n_sections": 29,
+   "frac_p05": 0.13793103448275862,
+   "median_excess": -0.006373867719676907,
+   "excess_ci95": [
+    -0.01448667568091011,
+    0.01536440177064205
+   ],
+   "survives": false
+  },
+  "Cholesterol Homeostasis": {
+   "n_sections": 29,
+   "frac_p05": 0.4827586206896552,
+   "median_excess": 0.05424953172091945,
+   "excess_ci95": [
+    0.04343499567039072,
+    0.06506137032310494
+   ],
+   "survives": false
+  },
+  "Mitotic Spindle": {
+   "n_sections": 29,
+   "frac_p05": 0.4482758620689655,
+   "median_excess": 0.032318474726514265,
+   "excess_ci95": [
+    0.023295748291311147,
+    0.057555945451710194
+   ],
+   "survives": false
+  },
+  "Wnt-beta Catenin Signaling": {
+   "n_sections": 29,
+   "frac_p05": 0.20689655172413793,
+   "median_excess": 0.0064691475238723845,
+   "excess_ci95": [
+    -0.011770468805091111,
+    0.022785801600786297
+   ],
+   "survives": false
+  },
+  "TGF-beta Signaling": {
+   "n_sections": 29,
+   "frac_p05": 0.3103448275862069,
+   "median_excess": 0.019611773620220235,
+   "excess_ci95": [
+    0.0038405952638287805,
+    0.04419784521231834
+   ],
+   "survives": false
+  },
+  "IL-6/JAK/STAT3 Signaling": {
+   "n_sections": 29,
+   "frac_p05": 0.10344827586206896,
+   "median_excess": 0.0036090611603287193,
+   "excess_ci95": [
+    -0.00871442060090874,
+    0.014509149709610265
+   ],
+   "survives": false
+  },
+  "DNA Repair": {
+   "n_sections": 29,
+   "frac_p05": 0.1724137931034483,
+   "median_excess": 0.009659384212682587,
+   "excess_ci95": [
+    -0.0011949292523440458,
+    0.015559450903205263
+   ],
+   "survives": false
+  },
+  "G2-M Checkpoint": {
+   "n_sections": 29,
+   "frac_p05": 0.8275862068965517,
+   "median_excess": 0.06429387650201712,
+   "excess_ci95": [
+    0.05671686969592976,
+    0.07849544628538063
+   ],
+   "survives": true
+  },
+  "Apoptosis": {
+   "n_sections": 29,
+   "frac_p05": 0.1724137931034483,
+   "median_excess": 0.0019969984130382423,
+   "excess_ci95": [
+    -0.008104106048925364,
+    0.026034264155206877
+   ],
+   "survives": false
+  },
+  "Notch Signaling": {
+   "n_sections": 29,
+   "frac_p05": 0.20689655172413793,
+   "median_excess": 0.02413381762634781,
+   "excess_ci95": [
+    0.008768578140896904,
+    0.04136890421301098
+   ],
+   "survives": false
+  },
+  "Adipogenesis": {
+   "n_sections": 29,
+   "frac_p05": 0.10344827586206896,
+   "median_excess": -0.00897657213593988,
+   "excess_ci95": [
+    -0.024136354234695012,
+    0.017732012194315805
+   ],
+   "survives": false
+  },
+  "Estrogen Response Early": {
+   "n_sections": 29,
+   "frac_p05": 0.20689655172413793,
+   "median_excess": 0.012474020073378778,
+   "excess_ci95": [
+    0.005312261954787845,
+    0.03539263676693016
+   ],
+   "survives": false
+  },
+  "Estrogen Response Late": {
+   "n_sections": 29,
+   "frac_p05": 0.06896551724137931,
+   "median_excess": -0.006924733669422728,
+   "excess_ci95": [
+    -0.018168880190684467,
+    0.0184903325032479
+   ],
+   "survives": false
+  },
+  "Androgen Response": {
+   "n_sections": 29,
+   "frac_p05": 0.4827586206896552,
+   "median_excess": 0.04953630906943038,
+   "excess_ci95": [
+    0.033086269898258705,
+    0.08129096345718892
+   ],
+   "survives": false
+  },
+  "Myogenesis": {
+   "n_sections": 29,
+   "frac_p05": 0.06896551724137931,
+   "median_excess": -0.021409351436091843,
+   "excess_ci95": [
+    -0.05188465497845243,
+    0.004197389725947603
+   ],
+   "survives": false
+  },
+  "Protein Secretion": {
+   "n_sections": 29,
+   "frac_p05": 0.6551724137931034,
+   "median_excess": 0.06304955246015406,
+   "excess_ci95": [
+    0.04849951971017147,
+    0.08475257063021382
+   ],
+   "survives": true
+  },
+  "Interferon Alpha Response": {
+   "n_sections": 29,
+   "frac_p05": 0.41379310344827586,
+   "median_excess": 0.0409181019186432,
+   "excess_ci95": [
+    0.018888140301682677,
+    0.06365443342237942
+   ],
+   "survives": false
+  },
+  "Interferon Gamma Response": {
+   "n_sections": 29,
+   "frac_p05": 0.4482758620689655,
+   "median_excess": 0.036386277269787604,
+   "excess_ci95": [
+    0.003975862353963466,
+    0.05396530547523526
+   ],
+   "survives": false
+  },
+  "Apical Junction": {
+   "n_sections": 29,
+   "frac_p05": 0.034482758620689655,
+   "median_excess": 0.0013117130581219022,
+   "excess_ci95": [
+    -0.022072682394939536,
+    0.017834469454695745
+   ],
+   "survives": false
+  },
+  "Apical Surface": {
+   "n_sections": 29,
+   "frac_p05": 0.1724137931034483,
+   "median_excess": 0.027550481328627197,
+   "excess_ci95": [
+    0.016003091034807404,
+    0.03448461627447548
+   ],
+   "survives": false
+  },
+  "Hedgehog Signaling": {
+   "n_sections": 29,
+   "frac_p05": 0.034482758620689655,
+   "median_excess": 0.003347166068818505,
+   "excess_ci95": [
+    -0.005156951711455644,
+    0.01569728066352573
+   ],
+   "survives": false
+  },
+  "Complement": {
+   "n_sections": 29,
+   "frac_p05": 0.10344827586206896,
+   "median_excess": 0.010014301399139558,
+   "excess_ci95": [
+    -0.000875537859908293,
+    0.02390303600939883
+   ],
+   "survives": false
+  },
+  "Unfolded Protein Response": {
+   "n_sections": 29,
+   "frac_p05": 0.1724137931034483,
+   "median_excess": 0.032457729113896494,
+   "excess_ci95": [
+    0.01901614724141476,
+    0.03433517138866132
+   ],
+   "survives": false
+  },
+  "PI3K/AKT/mTOR  Signaling": {
+   "n_sections": 29,
+   "frac_p05": 0.20689655172413793,
+   "median_excess": 0.029050336035690627,
+   "excess_ci95": [
+    0.016929001689174883,
+    0.041295140084849524
+   ],
+   "survives": false
+  },
+  "mTORC1 Signaling": {
+   "n_sections": 29,
+   "frac_p05": 0.4827586206896552,
+   "median_excess": 0.03386355880772329,
+   "excess_ci95": [
+    0.026064917942538512,
+    0.05527936998359767
+   ],
+   "survives": false
+  },
+  "E2F Targets": {
+   "n_sections": 29,
+   "frac_p05": 0.6896551724137931,
+   "median_excess": 0.060853649718227765,
+   "excess_ci95": [
+    0.04754457005330931,
+    0.07784817556951609
+   ],
+   "survives": true
+  },
+  "Myc Targets V1": {
+   "n_sections": 29,
+   "frac_p05": 0.6206896551724138,
+   "median_excess": 0.042809003721721015,
+   "excess_ci95": [
+    0.023515468385659544,
+    0.05829512043412466
+   ],
+   "survives": true
+  },
+  "Myc Targets V2": {
+   "n_sections": 29,
+   "frac_p05": 0.13793103448275862,
+   "median_excess": 0.016929915304976395,
+   "excess_ci95": [
+    -0.014951851062867644,
+    0.02842905136635028
+   ],
+   "survives": false
+  },
+  "Epithelial Mesenchymal Transition": {
+   "n_sections": 29,
+   "frac_p05": 0.2413793103448276,
+   "median_excess": 0.014322207305013157,
+   "excess_ci95": [
+    0.004721666842687544,
+    0.03157553478480728
+   ],
+   "survives": false
+  },
+  "Inflammatory Response": {
+   "n_sections": 29,
+   "frac_p05": 0.13793103448275862,
+   "median_excess": -0.013590690296130914,
+   "excess_ci95": [
+    -0.035679730671110854,
+    0.012618655886771746
+   ],
+   "survives": false
+  },
+  "Xenobiotic Metabolism": {
+   "n_sections": 29,
+   "frac_p05": 0.034482758620689655,
+   "median_excess": -0.0007615813496451573,
+   "excess_ci95": [
+    -0.013445688725517407,
+    0.006325589681862809
+   ],
+   "survives": false
+  },
+  "Fatty Acid Metabolism": {
+   "n_sections": 29,
+   "frac_p05": 0.3103448275862069,
+   "median_excess": 0.009679743825622644,
+   "excess_ci95": [
+    -0.003865552247113109,
+    0.03815618071883847
+   ],
+   "survives": false
+  },
+  "Oxidative Phosphorylation": {
+   "n_sections": 29,
+   "frac_p05": 0.1724137931034483,
+   "median_excess": 0.009577729848040756,
+   "excess_ci95": [
+    -0.001345276191918987,
+    0.02465378623446618
+   ],
+   "survives": false
+  },
+  "Glycolysis": {
+   "n_sections": 29,
+   "frac_p05": 0.2413793103448276,
+   "median_excess": 0.026597910919398282,
+   "excess_ci95": [
+    0.007833855522226207,
+    0.04358033705832565
+   ],
+   "survives": false
+  },
+  "Reactive Oxygen Species Pathway": {
+   "n_sections": 29,
+   "frac_p05": 0.10344827586206896,
+   "median_excess": 0.01755386166061723,
+   "excess_ci95": [
+    -0.001480525992094306,
+    0.033867659332872835
+   ],
+   "survives": false
+  },
+  "p53 Pathway": {
+   "n_sections": 29,
+   "frac_p05": 0.034482758620689655,
+   "median_excess": -0.020654237760175248,
+   "excess_ci95": [
+    -0.03520208405218711,
+    -0.006814006887284181
+   ],
+   "survives": false
+  },
+  "UV Response Up": {
+   "n_sections": 29,
+   "frac_p05": 0.13793103448275862,
+   "median_excess": -0.00624800202859499,
+   "excess_ci95": [
+    -0.016559504908081196,
+    0.011788297844874507
+   ],
+   "survives": false
+  },
+  "UV Response Dn": {
+   "n_sections": 29,
+   "frac_p05": 0.13793103448275862,
+   "median_excess": 0.01822354387125172,
+   "excess_ci95": [
+    0.0025112240108515205,
+    0.025495440554742108
+   ],
+   "survives": false
+  },
+  "Angiogenesis": {
+   "n_sections": 29,
+   "frac_p05": 0.2413793103448276,
+   "median_excess": 0.04042204446110509,
+   "excess_ci95": [
+    0.01300483772973239,
+    0.05852631332526706
+   ],
+   "survives": false
+  },
+  "heme Metabolism": {
+   "n_sections": 29,
+   "frac_p05": 0.10344827586206896,
+   "median_excess": 0.005153852021672012,
+   "excess_ci95": [
+    -0.005230218206307313,
+    0.02081491370660707
+   ],
+   "survives": false
+  },
+  "Coagulation": {
+   "n_sections": 29,
+   "frac_p05": 0.41379310344827586,
+   "median_excess": 0.025211486348198447,
+   "excess_ci95": [
+    0.011703691375198055,
+    0.06294701097165889
+   ],
+   "survives": false
+  },
+  "IL-2/STAT5 Signaling": {
+   "n_sections": 29,
+   "frac_p05": 0.06896551724137931,
+   "median_excess": -0.0032903807261434603,
+   "excess_ci95": [
+    -0.01783190085097252,
+    0.01175666686209298
+   ],
+   "survives": false
+  },
+  "Bile Acid Metabolism": {
+   "n_sections": 29,
+   "frac_p05": 0.034482758620689655,
+   "median_excess": -0.01772976946639196,
+   "excess_ci95": [
+    -0.03911180115919699,
+    0.002109538729509322
+   ],
+   "survives": false
+  },
+  "Pperoxisome": {
+   "n_sections": 29,
+   "frac_p05": 0.1724137931034483,
+   "median_excess": 0.018620527738080483,
+   "excess_ci95": [
+    0.010247871769986316,
+    0.03959427561698514
+   ],
+   "survives": false
+  },
+  "Allograft Rejection": {
+   "n_sections": 29,
+   "frac_p05": 0.1724137931034483,
+   "median_excess": -0.008822481318365105,
+   "excess_ci95": [
+    -0.047289679124954076,
+    0.03512209247982656
+   ],
+   "survives": false
+  },
+  "Spermatogenesis": {
+   "n_sections": 29,
+   "frac_p05": 0.1724137931034483,
+   "median_excess": 0.024779016819693217,
+   "excess_ci95": [
+    0.008737551414115176,
+    0.029454209163489592
+   ],
+   "survives": false
+  },
+  "KRAS Signaling Up": {
+   "n_sections": 29,
+   "frac_p05": 0.20689655172413793,
+   "median_excess": -0.006358134811053406,
+   "excess_ci95": [
+    -0.028003681658047758,
+    0.007762279361804292
+   ],
+   "survives": false
+  },
+  "KRAS Signaling Dn": {
+   "n_sections": 29,
+   "frac_p05": 0.0,
+   "median_excess": -0.018928282261983148,
+   "excess_ci95": [
+    -0.036468333761415506,
+    -0.000568560692936454
+   ],
+   "survives": false
+  },
+  "Pancreas Beta Cells": {
+   "n_sections": 29,
+   "frac_p05": 0.06896551724137931,
+   "median_excess": 0.016797589546838784,
+   "excess_ci95": [
+    0.0009791930287753742,
+    0.021043050814269618
+   ],
+   "survives": false
+  }
+ },
+ "top3": [
+  "Myc Targets V1",
+  "Mitotic Spindle",
+  "G2-M Checkpoint"
+ ],
+ "negative_control": "Pancreas Beta Cells",
+ "n_survive": 4,
+ "n_pathways": 50,
+ "D2_claim": "NOT SUPPORTED"
+}
